@@ -80,7 +80,7 @@ bot.on('message', function (e) {
             const b = {q: parseInt(x2, 10), r: parseInt(y2, 10)};
             // console.log({a,b});
             if (typeof a.q === "number" && typeof a.r === "number" && typeof b.q === "number" && typeof b.r === "number")
-                e.channel.send(`Distance from (${a.q},${a.r}) and (${b.q},${b.r}) = ${distance(a, b)} hex`);
+                e.channel.send(`Distance between (${a.q},${a.r}) and (${b.q},${b.r}) = ${distance(a, b)} hex`);
 
         } catch (e) {
             console.error(e);

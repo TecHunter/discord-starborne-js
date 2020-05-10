@@ -6,7 +6,7 @@
   "author": "techunter",
   "scripts": {
     "test": "mocha --require @babel/polyfill --require @babel/register",
-    "start": "nodemon --exec babel-node ./bot.js"
+    "start": "pm2 start"
   },
   "dependencies": {
     "discord.js": "^12.2.0",
@@ -15,13 +15,13 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.6",
     "@babel/node": "^7.8.7",
     "@babel/polyfill": "^7.8.7",
     "@babel/preset-env": "^7.9.6",
     "@babel/register": "^7.9.0",
     "chai": "^4.2.0",
-    "mocha": "^7.1.2",
-    "nodemon": "^2.0.3"
+    "mocha": "^7.1.2"
   }
 }

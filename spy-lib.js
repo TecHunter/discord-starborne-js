@@ -114,9 +114,11 @@ const PARSERS = {
         return parseInt(lines[0].match(REGEX_LABOR)[1], 10);
     },
     [MARKER_BUILDINGS]: lines => {
-        return _
+        return lines.length === 0 || lines[0].startsWith('None') ? null : _
             .chain(lines)
+            .filter(_.isNotNull)
             .map(l => l.split(' - '))
+            .filter(_.isNotNull)
             .keyBy(0)
             .mapValues(o => ({
                 level: parseInt(o[1].substring(6).trim(), 10),

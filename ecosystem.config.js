@@ -4,7 +4,7 @@ module.exports = {
     watch: '.',
     // cwd: 'D:\\_projects\\starborne-js\\discord',
     // interpreter: '.\\node_modules\\@babel\\node\\bin\\babel-node.js'
-    interpreter: 'babel-node'
+    interpreter: './node_modules/.bin/babel-node'
   }],
 
   deploy : {

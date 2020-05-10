@@ -93,7 +93,7 @@ bot.on('message', function (e) {
                 Spy.getEmbed(parsed)
                     .setAuthor(e.author.username)
             );
-            e.delete();
+
         } catch (e) {
             console.log(e);
         }

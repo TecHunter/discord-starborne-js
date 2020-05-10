@@ -54,7 +54,86 @@ export const modifiers = {
             }
         }
     },
-    cards: {},
+    cards: {
+        'Ablative Armor': {
+            shipClasses: {
+                light: {hp: 50},
+                heavy: {hp: 250},
+                capital: {hp: 1250}
+            }
+        },
+        'Ammunition Bay': {
+            buildings: {
+                Fortress: {influence: 1},
+                Station: {harvest: {rate: 10}}
+            }
+        },
+        'Antimatter Missile': {
+            ships: {
+                Gunship: {
+                    bombing: 80
+                }
+            }
+        },
+        'Antimatter Torpedo': {
+            ships: {
+                Gunship: {
+                    bombing: 40
+                }
+            }
+        },
+        'AP Rounds': {
+            shipClasses: {
+                heavy: {
+                    bombing: 5
+                },
+                capital: {
+                    bombing: 25
+                }
+            }
+        },
+        'APEX Mining Laser': {
+            outposts: {
+                'Mining Colony': {influence: 1, harvest: {rate: 5}}
+            }
+        },
+        'Arc Veil': {
+            ships: {
+                Industrial: {time: {rate: -20}}
+            }
+        },
+        'Armed Garrison': {
+            outposts: {
+                'Missile Battery': {influence: 1}
+            }
+        },
+        'Astral Confluence': {
+            shipClasses: {
+                capital: {time: {rate: -15}}
+            }
+        },
+        'Atomic Maser': {
+            shipClasses: {
+                light: {firepower: 15},
+                heavy: {firepower: 75},
+                capital: {firepower: 375}
+            }
+        },
+        'Atomized Coating': {
+            shipClasses: {
+                light: {hp: 20},
+                heavy: {hp: 100},
+                capital: {hp: 500}
+            }
+        },
+        'Auto-Aim System': {
+            shipClasses: {
+                light: {firepower: {rate: 12}},
+                heavy: {firepower: {rate: 12}},
+                capital: {firepower: {rate: 12}}
+            }
+        },
+    },
     faction: {}
 };
 

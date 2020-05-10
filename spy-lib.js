@@ -2,7 +2,7 @@ import _ from 'lodash';
 import moment from 'moment';
 import Discord from "discord.js";
 
-import {levenshteinDistance} from './lib'
+import {levenshteinDistance, baseShipStats, modifiers} from './lib'
 
 const MARKER_HEADER = 'HEADER';
 const MARKER_CAPTURE = 'Capture Defense';
@@ -120,10 +120,19 @@ const PARSERS = {
             .map(l => l.split(' - '))
             .filter(_.isNotNull)
             .keyBy(0)
-            .mapValues(o => ({
-                level: parseInt(o[1].substring(6).trim(), 10),
-                ...(o.length > 2 ? {operational: o[2] === 'Operational'} : {})
-            }))
+            .mapValues(o => {
+                if (o.length > 2) {
+                    const op = o[2];
+                    return {
+                        level: parseInt(o[1].substring(6).trim(), 10),
+                        operational: op.startsWith('Operational'),
+                        boosted: op.substring(11).trim()
+                    }
+                }
+                return ({
+                    level: parseInt(o[1].substring(6).trim(), 10)
+                });
+            })
             .value();
     },
     [MARKER_QUEUE_BUILDINGS]: lines => {
@@ -135,14 +144,39 @@ const PARSERS = {
     // [MARKER_STATION_HIDDEN_RES]: lines => {
     //
     // },
-    [MARKER_FLEETS]: lines =>
-        _.chain(lines)
-            .map(l => {
-                return l.startsWith('None') ? null : l.match(REGEX_FLEET).groups
-            })
+    [MARKER_FLEETS]: ([firstLine, ...lines]) => {
+        let supplied = undefined;
+        if (firstLine.trim().endsWith('are supplied by this station')) {
+            supplied = parseInt(firstLine.split(' ')[0], 10);
+        }else if(firstLine.startsWith('None')){
+            return {
+                fleets: []
+            };
+        }
+        let firepower = 0;
+        let hp = 0;
+        const fleets = _.chain(lines)
+            .map(l=> l.match(REGEX_FLEET).groups)
             .filter(_.isNotNull)
             .map(({qty, type}) => ({qty: parseInt(qty, 10), type: normalizeShipType(type)}))
-            .value()
+            .map(({qty, type}) => {
+                firepower += qty*baseShipStats[type].firepower;
+                hp += qty*baseShipStats[type].hp;
+                return {
+                    qty,
+                    type,
+                    firepower: qty*baseShipStats[type].firepower,
+                    hp: qty*baseShipStats[type].hp
+                }
+            })
+            .value();
+        return {
+            supplied,
+            firepower,
+            hp,
+            fleets
+        }
+    }
     ,
     [MARKER_HANGAR]:
         lines =>
@@ -220,7 +254,7 @@ function getEmbed({
                       [MARKER_QUEUE_BUILDINGS]: buildingQueue,
                       [MARKER_QUEUE_FLEETS]: fleetQueue,
                       [MARKER_OUTPOSTS]: outposts,
-                      [MARKER_FLEETS]: fleets,
+                      [MARKER_FLEETS]: {firepower: fleetTotalFirepower, hp: fleetTotalHp, fleets, supplied},
                       [MARKER_HANGAR]: hangar
                   }) {
     return new Discord.MessageEmbed()
@@ -249,8 +283,8 @@ function getEmbed({
                 inline: true
             },
             {
-                "name": "Fleet",
-                "value": _.map(fleets, ({qty, type}) => `${qty} x ${type}`).join('\n') || '*empty*',
+                "name": supplied ? "Fleets ("+supplied+" supplied)" : "Fleets",
+                "value": _.map(fleets, ({hp, firepower, qty, type}) => `${qty} x ${type} ${firepower}:boom:/${hp}:heart:`).join('\n') || '*empty*',
             },
             {
                 "name": "Hangar",

@@ -168,43 +168,47 @@ Faust (Patrol Ship) 34
 `;
 
 const testSimpleReportParsed = {
-    HEADER: { name: 'Some-Dude', x: 14, y: 131 },
-    'Capture Defense': { current: 159, total: 160 },
-    'Station Resources': { Metal: 34530, Gas: 3450, Crystal: 670 },
+    HEADER: {name: 'Some-Dude', x: 14, y: 131},
+    'Capture Defense': {current: 159, total: 160},
+    'Station Resources': {Metal: 34530, Gas: 3450, Crystal: 670},
     'Station Labor': 930,
     Buildings: {
-        'Living Quarters': { level: 10 },
-        'Metal Refinery': { level: 9 },
-        'Gas Refinery': { level: 10 },
-        'Crystal Refinery': { level: 10 },
-        'Military Barracks': { level: 10 },
-        'Fleet Docks': { level: 10 },
-        'Container Port': { level: 10 },
-        'Department of Acquisitions': { level: 10 },
-        'Frachead Assembly': { level: 6 },
-        'Military Hangars': { level: 6 },
-        'Cadet School': { level: 6 },
-        'Distribution Hub': { level: 2 },
-        'Outpost Management Services': { level: 2 },
-        'Drone Launch Facility': { level: 2 },
-        'Colonial Relay': { level: 4 },
-        'Industrial Complex': { level: 2 },
-        "Governor's Mansion": { level: 4 }
+        'Living Quarters': {level: 10},
+        'Metal Refinery': {level: 9},
+        'Gas Refinery': {level: 10},
+        'Crystal Refinery': {level: 10},
+        'Military Barracks': {level: 10},
+        'Fleet Docks': {level: 10},
+        'Container Port': {level: 10},
+        'Department of Acquisitions': {level: 10},
+        'Frachead Assembly': {level: 6},
+        'Military Hangars': {level: 6},
+        'Cadet School': {level: 6},
+        'Distribution Hub': {level: 2},
+        'Outpost Management Services': {level: 2},
+        'Drone Launch Facility': {level: 2},
+        'Colonial Relay': {level: 4},
+        'Industrial Complex': {level: 2},
+        "Governor's Mansion": {level: 4}
     },
-    'Station Hidden Resources': { Metal: 8516, Gas: 6104, Crystal: 12699 },
+    'Station Hidden Resources': {Metal: 8516, Gas: 6104, Crystal: 12699},
     Outposts: {
-        'Mining Facility': { level: 5, operational: true },
-        'Mining Colony': { level: 3, operational: true },
-        'Trading Port': { level: 2, operational: true }
+        'Mining Facility': {level: 5, operational: true},
+        'Mining Colony': {level: 3, operational: true},
+        'Trading Port': {level: 2, operational: true}
     },
-    Fleets: [
-        { qty: 87, type: 'Corvette' },
-        { qty: 1, type: 'Patrol Ship' },
-        { qty: 160, type: 'Industrial' },
-        { qty: 1, type: 'Scout' },
-        { qty: 33, type: 'Scout' }
-    ],
-    Hangar: [ { qty: 34, type: 'Patrol Ship' } ]
+    Fleets: {
+        hp: undefined,
+        firepower: undefined,
+        fleets: [
+            {qty: 87, type: 'Corvette'},
+            {qty: 1, type: 'Patrol Ship'},
+            {qty: 160, type: 'Industrial'},
+            {qty: 1, type: 'Scout'},
+            {qty: 33, type: 'Scout'}
+        ]
+    },
+    Hangar: [{qty: 34, type: 'Patrol Ship'}]
 };
 
 const parsed = Spy.parseSpyReport(testSimpleReport);
@@ -216,6 +220,7 @@ describe('SpyParser', function () {
             expect(Spy.normalizeShipType('Corvettes')).to.equal('Corvette');
         });
     });
+
     describe('#parseSpyReport()', function () {
         it('should return an object', function () {
             expect(parsed).to.be.an('object');
@@ -287,11 +292,11 @@ describe('SpyParser', function () {
         it('should return correct fleets', function () {
             expect(parsed).to.have.any.keys(MARKERS.MARKER_FLEETS);
             expect(parsed[MARKERS.MARKER_FLEETS]).to.have.deep.members([
-                { qty: 87, type: 'Corvette' },
-                { qty: 1, type: 'Patrol Ship' },
-                { qty: 160, type: 'Industrial' },
-                { qty: 1, type: 'Scout' },
-                { qty: 33, type: 'Scout' }
+                {qty: 87, type: 'Corvette'},
+                {qty: 1, type: 'Patrol Ship'},
+                {qty: 160, type: 'Industrial'},
+                {qty: 1, type: 'Scout'},
+                {qty: 33, type: 'Scout'}
             ]);
         });
 
@@ -303,4 +308,11 @@ describe('SpyParser', function () {
         });
 
     });
+    describe('#getEmbed()', function () {
+        const embed = Spy.getEmbed(parsed);
+        it('should return an embed object', function () {
+            expect(embed).to.be.an('object');
+
+        });
+    })
 });

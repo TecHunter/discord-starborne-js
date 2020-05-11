@@ -151,10 +151,13 @@ const PARSERS = {
     // [MARKER_STATION_HIDDEN_RES]: lines => {
     //
     // },
-    [MARKER_FLEETS]: ([firstLine, ...lines]) => {
+    [MARKER_FLEETS]: (lines) => {
         let supplied = undefined;
+        const firstLine = lines[0];
+        let i = 0;
         if (firstLine.trim().endsWith('are supplied by this station')) {
             supplied = parseInt(firstLine.split(' ')[0], 10);
+            i++;
         } else if (firstLine.startsWith('None')) {
             return {
                 fleets: []
@@ -164,7 +167,7 @@ const PARSERS = {
         let fleets = [];
         let info;
         const totalLines = lines.length;
-        for (let i = 0; i < totalLines; i++) {
+        for (; i < totalLines; i++) {
             const l = lines[i];
             // console.log(l);
             try {

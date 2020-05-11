@@ -337,8 +337,8 @@ ${_.map(outposts, ({level: bLevel, operational: bOpe, boosted}, bName) =>
         }
 
 __Fleets:__ \`${String(totalFirepower).padStart(7, ' ')}\`:boom: | \`${String(totalHp).padStart(7, ' ')}\`:hearts: | \`${String(totalBombing).padStart(7, ' ')}\`:bomb: `
-        + (supplied ? ` **${supplied}** supplied` : '')
-        + _.map(fleetsDesc,
+        + (supplied ? ` | **${supplied}** supplied` : '')
+        + '\n' + _.map(fleetsDesc,
             ({hp, firepower, bombing, qty, cards, ship: {type}}) =>
                 `${qty} x ${type} \`${String(firepower).padStart(7, ' ')} \`:boom: | \`${String(hp).padStart(7, ' ')} \`:hearts: `
                 + (bombing ? `| \`${String(bombing).padStart(7, ' ')} \`:bomb:` : '')

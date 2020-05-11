@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import moment from 'moment';
+import numeral from 'numeral';
 import Discord from "discord.js";
 
 import {levenshteinDistance, Ship, Fleet, baseShipStats, modifiers, BUILDING_STATS} from './lib'
@@ -133,7 +133,7 @@ const PARSERS = {
                 console.log(o);
                 const level = parseInt(o[1].substring(6).trim(), 10);
                 const building = modifiers.buildings[o[0].trim()] || {tier: 1, type: 'building'};
-                console.log('found building',building);
+                console.log('found building', building);
                 return ({
                     name: o[0],
                     tier: building.tier,
@@ -300,6 +300,14 @@ function getFirepower(modifier, level) {
     return modifier && _.isNumber(modifier.firepower) ? modifier.firepower * level : 0;
 }
 
+function formatHpNumber(n) {
+    return numeral(n).format('0,0');
+}
+
+function formatFirepowerNumber(n) {
+    return numeral(n).format('0,0');
+}
+
 function getFormattedReport({
                                 [MARKER_HEADER]: {name, x, y},
                                 [MARKER_CAPTURE]: {current, total},
@@ -330,28 +338,29 @@ Metal / Gas / Crystal (hidden)
 ${metal} (${hiddenMetal || '*?*'}) / ${gas} (${hiddenGas || '*?*'}) / ${crystal} (${hiddenCrystal || '*?*'})
 Cards: ${_.map(stationCards, 'name').join(',')}
 Labor **${labor}**
-__Buildings:__ \`${String(totalBuildingHp).padStart(7, ' ')}\`:hearts:
+
+__Buildings:__ \`${formatHpNumber(totalBuildingHp).padStart(7, ' ')}\`:hearts:
 ${_.map(buildings, ({level: bLevel}, bName) =>
-            `${bName} lvl **${bLevel}**`).join('\n') || '*empty*'
+            `**${bLevel}** ${bName}`).join('\n') || '*empty*'
         }
 
-__Outposts:__ \`${String(totalOutpostFirepower).padStart(7, ' ')}\`:boom: | \`${String(totalOutpostHp).padStart(7, ' ')}\`:hearts:
-${_.map(outposts, ({level: bLevel, operational: bOpe, boosted}, bName) =>
-            `${bOpe ? ':white_check_mark: ' : ':zzz: '}${boosted ? '(' + boosted + ') - ' : ''}${bName} lvl **${bLevel}**`).join('\n') || '*empty*'
+__Outposts:__
+${_.map(outposts, ({level: bLevel, operational: bOpe, boosted, hp}, bName) =>
+            `${bOpe ? ':white_check_mark: ' : ':zzz: '}${boosted ? '(' + boosted + ') - ' : ''} **${bLevel}** ${bName} \`${formatHpNumber(hp)}\` :hearts:`).join('\n') || '*empty*'
         }
 
-__Fleets:__ \`${String(totalFirepower).padStart(7, ' ')}\`:boom: | \`${String(totalHp).padStart(7, ' ')}\`:hearts: | \`${String(totalBombing).padStart(7, ' ')}\`:bomb: `
+__Fleets:__ \`${formatFirepowerNumber(totalFirepower).padStart(7, ' ')}\`:boom: | \`${formatHpNumber(totalHp).padStart(7, ' ')}\`:hearts: | \`${formatFirepowerNumber(totalBombing).padStart(7, ' ')}\`:skull `
         + (supplied ? ` | **${supplied}** supplied` : '')
         + '\n' + _.map(fleetsDesc,
             ({hp, firepower, bombing, qty, cards, ship: {type}}) =>
-                `${qty} x ${type} \`${String(firepower).padStart(7, ' ')} \`:boom: | \`${String(hp).padStart(7, ' ')} \`:hearts: `
-                + (bombing ? `| \`${String(bombing).padStart(7, ' ')} \`:bomb:` : '')
+                `${qty} x ${type} \`${formatFirepowerNumber(firepower).padStart(7, ' ')} \`:boom: | \`${formatHpNumber(hp).padStart(7, ' ')} \`:hearts: `
+                + (bombing ? `| \`${formatFirepowerNumber(bombing).padStart(7, ' ')} \`:skull:` : '')
                 + (cards && cards.length > 0 ? 'Cards: ||' + _.map(cards, c => c.name.substring(0, 15)
                 //c => c.shortname || _.map(c.name.split(' '), namePart => namePart.substr(0,3)).join('')
                 ).join(', ') + `||` : '')
         ).join('\n')
         + `\n__Hangar:__\n`
-+ (_.map(hangar, ({qty, type}) => `${qty} x ${type}`
+        + (_.map(hangar, ({qty, type}) => `${qty} x ${type}`
         ).join('\n') || '*empty*');
 }
 
@@ -375,86 +384,27 @@ function getEmbed({
     const [totalFirepower, totalHp] = _.reduce(fleetsDesc,
         (result, {firepower, hp}) => [result[0] + firepower, result[1] + hp], [0, 0]);
     return new Discord.MessageEmbed()
-        .setTitle(
-            `
-    Spy
-    Report
-at **${name}
-**
-    `
-        )
-        .setDescription(
-            `\`
-/goto $
-{
-    x
-}
- $
-{
-    y
-}
-\`
-`
-)
-
-.
-setColor(0xff0000)
-    .setTimestamp()
-
-    .addFields({
-            "name": "Capture Defense",
-            "value": `
-$
-{
-    current
-}
-/**$
-{
-    total
-}
-**
-`,
-            inline: true
-        },
-        {
-            "name": "Labor",
-            "value": labor,
-            inline: true
-        },
-        {
-            "name": "Metal / Gas / Crystal (hidden)",
-            "value": `
-$
-{
-    metal
-}
- ($
-{
-    hiddenMetal || '*?*'
-}
-) / $
-{
-    gas
-}
- ($
-{
-    hiddenGas || '*?*'
-}
-) / $
-{
-    crystal
-}
- ($
-{
-    hiddenCrystal || '*?*'
-}
-)
-`,
-            inline: true
-        },
-        {
-            "name": "Buildings",
-            "value": _.map(buildings, ({level: bLevel}, bName) => `
+        .setTitle(`Spy Report at **${name}**`)
+        .setDescription(`\`/goto ${x} ${y}\``)
+        .setColor(0xff0000)
+        .setTimestamp()
+        .addFields({
+                "name": "Capture Defense",
+                "value": `${current}/**${total}**`, inline: true
+            },
+            {
+                "name": "Labor",
+                "value": labor,
+                inline: true
+            },
+            {
+                "name": "Metal / Gas / Crystal (hidden)",
+                "value": `${metal} (${hiddenMetal || '*?*'}) / ${gas} (${hiddenGas || '*?*'}) / ${crystal} (${hiddenCrystal || '*?*'})`,
+                inline: true
+            },
+            {
+                "name": "Buildings",
+                "value": _.map(buildings, ({level: bLevel}, bName) => `
 $
 {
     bName
@@ -465,11 +415,11 @@ $
 }
 **
 `).join('\n') || '*empty*',
-            inline: true
-        },
-        {
-            "name": "Outposts",
-            "value": _.map(outposts, ({level: bLevel, operational: bOpe}, bName) => `
+                inline: true
+            },
+            {
+                "name": "Outposts",
+                "value": _.map(outposts, ({level: bLevel, operational: bOpe}, bName) => `
 $
 {
     bName
@@ -483,15 +433,15 @@ $
     bOpe ? ':white_check_mark:' : ':zzz:'
 }
 `).join('\n') || '*empty*',
-            inline: true
-        },
-        {
-            "name": "Fleets Total: " + '`' + String(totalFirepower).padStart(7, ' ') + '`:boom: | `' + String(totalHp).padStart(7, ' ') + '`:heart:',
-            "value": (supplied ? " *" + supplied + " supplied*" : ''),
-        },
-        ..._.map(fleetsDesc,
-            ({hp, firepower, qty, cards, ship: {type}}) => ({
-                name: '`' + String(firepower).padStart(7, ' ') + '`:boom: | `' + String(hp).padStart(7, ' ') + '`:heart: ' + `
+                inline: true
+            },
+            {
+                "name": "Fleets Total: " + '`' + String(totalFirepower).padStart(7, ' ') + '`:boom: | `' + String(totalHp).padStart(7, ' ') + '`:heart:',
+                "value": (supplied ? " *" + supplied + " supplied*" : ''),
+            },
+            ..._.map(fleetsDesc,
+                ({hp, firepower, qty, cards, ship: {type}}) => ({
+                    name: '`' + String(firepower).padStart(7, ' ') + '`:boom: | `' + String(hp).padStart(7, ' ') + '`:heart: ' + `
 $
 {
     qty
@@ -501,7 +451,7 @@ $
     type
 }
 `,
-                value: `
+                    value: `
 $
 {
     cards && cards.length > 0 ? 'Cards: ' + _.map(cards,
@@ -510,11 +460,11 @@ $
     ).join(',') : '\u200b'
 }
 `
-            })),
+                })),
 
-        {
-            "name": "Hangar",
-            "value": _.map(hangar, ({qty, type}) => `
+            {
+                "name": "Hangar",
+                "value": _.map(hangar, ({qty, type}) => `
 $
 {
     qty
@@ -524,9 +474,9 @@ $
     type
 }
 `).join('\n') || '*empty*',
-            "inline": true
-        }
-    );
+                "inline": true
+            }
+        );
 //channel.send("this `supports` __a__ **subset** *of* ~~markdown~~ 😃 ```js\nfunction foo(bar) {\n  console.log(bar);\n}\n\nfoo(1);```", { embed });
 }
 

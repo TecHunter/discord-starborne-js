@@ -346,7 +346,7 @@ ${_.map(buildings, ({level: bLevel}, bName) =>
 
 __Outposts:__
 ${_.map(outposts, ({level: bLevel, operational: bOpe, boosted, hp}, bName) =>
-            `${bOpe ? ':white_check_mark: ' : ':zzz: '}${boosted ? '(' + boosted + ') - ' : ''} **${bLevel}** ${bName} \`${formatHpNumber(hp)}\` :hearts:`).join('\n') || '*empty*'
+            `${bOpe ? ':white_check_mark: ' : ':zzz: '}${boosted ? ':arrow_double_up: ' : ''} **${bLevel}** ${bName} \`${formatHpNumber(hp)}\` :hearts:`).join('\n') || '*empty*'
         }
 
 __Fleets:__ \`${formatFirepowerNumber(totalFirepower).padStart(7, ' ')}\`:boom: | \`${formatHpNumber(totalHp).padStart(7, ' ')}\`:hearts: | \`${formatFirepowerNumber(totalBombing).padStart(7, ' ')}\`:skull `

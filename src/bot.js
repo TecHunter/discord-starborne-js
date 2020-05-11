@@ -47,6 +47,27 @@ bot.on('ready', function (evt) {
 });
 
 const regexDistance = /^(?<x1>-?\d+)\s(?<y1>-?\d+)\s(?<x2>-?\d+)\s(?<y2>-?\d+)\D*$/i;
+
+function send(channel, message) {
+    if (message.length > 1997)
+        for (let i = 0; i < message.length;) {
+            const max = Math.min(message.length, i + 2000 - 4);
+            const lastIndexCRLF = message.substring(i, i + 1997).lastIndexOf('\n');
+            const maxIndex = lastIndexCRLF > 0 ? lastIndexCRLF : max;
+            console.log({i, maxIndex});
+            const toSend = '>>> ' + message.substring(i, i + maxIndex);
+            channel.send(toSend);
+            if (lastIndexCRLF > 0) {
+                i = i + maxIndex + 1;
+            } else {
+                i = i + maxIndex
+            }
+
+        }
+    else
+        channel.send('>>> ' + message);
+}
+
 bot.on('message', function (e) {
     // Our bot needs to know if it will execute a command
     // It will listen for messages that will start with `!
@@ -67,7 +88,8 @@ bot.on('message', function (e) {
         try {
             const parsed = Spy.parseSpyReport(e.content);
             // console.log(parsed);
-            e.channel.send(Spy.getFormattedReport(parsed));
+            const formatted = Spy.getFormattedReport(parsed);
+            send(e.channel, formatted);
             e.delete();
         } catch (e) {
             console.log(e);
@@ -82,7 +104,7 @@ bot.on('message', function (e) {
                     if (data.startsWith('Spy Report on hex')) {
                         const parsed = Spy.parseSpyReport(data);
                         // console.log(parsed);
-                        e.channel.send(Spy.getFormattedReport(parsed));
+                        send(e.channel, Spy.getFormattedReport(parsed));
                         // e.delete();
                     }
                 });

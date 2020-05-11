@@ -133,6 +133,7 @@ const PARSERS = {
                 console.log(o);
                 const level = parseInt(o[1].substring(6).trim(), 10);
                 const building = modifiers.buildings[o[0].trim()] || {tier: 1, type: 'building'};
+                console.log('found building',building);
                 return ({
                     name: o[0],
                     tier: building.tier,

@@ -346,7 +346,7 @@ __Fleets:__ \`${String(totalFirepower).padStart(7, ' ')}\`:boom: | \`${String(to
                 //c => c.shortname || _.map(c.name.split(' '), namePart => namePart.substr(0,3)).join('')
                 ).join(', ') + `||` : '')
         ).join('\n')
-        + `__Hangar:__\n`
+        + `\n__Hangar:__\n`
 + (_.map(hangar, ({qty, type}) => `${qty} x ${type}`
         ).join('\n') || '*empty*');
 }

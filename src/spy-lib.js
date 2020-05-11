@@ -120,7 +120,14 @@ const PARSERS = {
         return parseCards(line.substring(0, line.length - 1));
     },
     [MARKER_STATION_LABOR]: lines => {
-        return parseInt(lines[0].match(REGEX_LABOR)[1], 10);
+        try {
+            if (!lines || lines.length < 1 || lines [0].trim() === 'None') {
+                return false;
+            }
+            return parseInt(lines[0].match(REGEX_LABOR)[1], 10);
+        } catch (e) {
+            return false;
+        }
     },
     [MARKER_BUILDINGS]: lines => {
         return lines.length === 0 || lines[0].startsWith('None') ? null : _
@@ -337,7 +344,7 @@ Capture Defense: **${current}/${total}**
 Metal / Gas / Crystal (hidden)
 ${metal} (${hiddenMetal || '*?*'}) / ${gas} (${hiddenGas || '*?*'}) / ${crystal} (${hiddenCrystal || '*?*'})
 Cards: ${_.map(stationCards, 'name').join(',')}
-Labor **${labor}**
+Labor **${labor === false ? 'None' : labor}**
 
 __Buildings:__ \`${formatHpNumber(totalBuildingHp).padStart(7, ' ')}\`:hearts:
 ${_.map(buildings, ({level: bLevel}, bName) =>

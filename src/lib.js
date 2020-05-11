@@ -428,6 +428,10 @@ export class Ship {
     getFirepower(level = 0) {
         return (this.perLevel.firepower || 0) * level + this.firepower;
     }
+
+    getBombing(level = 0) {
+        return (this.perLevel.bombing || 0) * level + this.bombing;
+    }
 }
 
 export class Fleet {
@@ -439,7 +443,7 @@ export class Fleet {
     }
 
     get(stationCards) {
-        const {firepower, hp} = getShipModifiers(this.ship, this.cards, stationCards);
+        const {firepower, hp, bombing} = getShipModifiers(this.ship, this.cards, stationCards);
         return {
             hp: (
                     this.ship.getHp(this.level) * 100
@@ -457,30 +461,34 @@ export class Fleet {
                 * (firepower && _.isNumber(firepower.rate) && firepower.rate !== 100 ? firepower.rate : 100)
                 / 10000,
 
+            bombing: (
+                    this.ship.getBombing(this.level) * 100
+                    + (bombing && _.isNumber(bombing.value) ? bombing.value : 0)
+                )
+                * this.qty
+                * (bombing && _.isNumber(bombing.rate) && bombing.rate !== 100 ? bombing.rate : 100)
+                / 10000,
+
             cards: this.cards,
             qty: this.qty,
             ship: {...this.ship}
         };
     }
 }
-
-function reduce(result, {cardFirepower, cardHp}) {
-    if (typeof cardFirepower === 'object') {
-        if (cardFirepower.hasOwnProperty('rate'))
-            result.firepower.rate += cardFirepower.rate * 100
-        if (cardFirepower.hasOwnProperty('value'))
-            result.firepower.value += cardFirepower.value * 100;
-    } else if (_.isNumber(cardFirepower)) {
-        result.firepower.value += cardFirepower * 100;
+function _getRateAndValue(stats, result, stat) {
+    if (typeof stats === 'object') {
+        if (stats.hasOwnProperty('rate'))
+            result[stat].rate += stats.rate * 100
+        if (stats.hasOwnProperty('value'))
+            result[stat].value += stats.value * 100;
+    } else if (_.isNumber(stats)) {
+        result[stat].value += stats * 100;
     }
-    if (typeof cardHp === 'object') {
-        if (cardHp.hasOwnProperty('rate'))
-            result.hp.rate += cardHp.rate * 100
-        if (cardHp.hasOwnProperty('value'))
-            result.hp.value += cardHp.value * 100;
-    } else if (_.isNumber(cardFirepower)) {
-        result.hp.value += cardHp * 100;
-    }
+}
+function reduce(result, {cardFirepower, cardHp, cardBombing}) {
+    _getRateAndValue(cardFirepower, result, 'firepower');
+    _getRateAndValue(cardHp, result, 'hp');
+    _getRateAndValue(cardBombing, result, 'bombing');
 }
 
 export function getShipModifiers({type, shipClass}, fleetCards = [], stationCards = []) {
@@ -499,7 +507,7 @@ export function getShipModifiers({type, shipClass}, fleetCards = [], stationCard
             }
 
             return result;
-        }, {firepower: {rate: 100, value: 0}, hp: {rate: 100, value: 0}})
+        }, {firepower: {rate: 100, value: 0}, bombing: {rate: 100, value: 0}, hp: {rate: 100, value: 0}})
         .value();
 }
 

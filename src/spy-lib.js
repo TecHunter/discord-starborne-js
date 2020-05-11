@@ -317,43 +317,38 @@ function getFormattedReport({
     const [totalOutpostFirepower, totalOutpostHp] = _.reduce(outposts,
         (result, {hp, name, level}) =>
             [result[0] + getFirepower(modifiers.outposts[name], level), result[1] + hp], [0, 0]);
-    const [totalFirepower, totalHp] = _.reduce(fleetsDesc,
-        (result, {firepower, hp}) => [result[0] + firepower, result[1] + hp], [0, 0]);
+    const [totalFirepower, totalHp, totalBombing] = _.reduce(fleetsDesc,
+        (result, {firepower, hp, bombing}) => [result[0] + firepower, result[1] + hp, result[2] + bombing], [0, 0, 0]);
     return `>>> ====================================================================
-__Spy Report at **${name}**__ \`/goto 39 134\`
+__Spy Report at **${name}**__ \`/goto ${x} ${y}\`
 Capture Defense: **${current}/${total}**
 Metal / Gas / Crystal (hidden)
 ${metal} (${hiddenMetal || '*?*'}) / ${gas} (${hiddenGas || '*?*'}) / ${crystal} (${hiddenCrystal || '*?*'})
 Cards: ${_.map(stationCards, 'name').join(',')}
 Labor **${labor}**
-====================================================================
 __Buildings:__ \`${String(totalBuildingHp).padStart(7, ' ')}\`:hearts:
 ${_.map(buildings, ({level: bLevel}, bName) =>
-        `${bName} lvl **${bLevel}**`).join('\n') || '*empty*'
-    }
+            `${bName} lvl **${bLevel}**`).join('\n') || '*empty*'
+        }
 
 __Outposts:__ \`${String(totalOutpostFirepower).padStart(7, ' ')}\`:boom: | \`${String(totalOutpostHp).padStart(7, ' ')}\`:hearts:
 ${_.map(outposts, ({level: bLevel, operational: bOpe, boosted}, bName) =>
-        `${bOpe ? ':white_check_mark: ' : ':zzz: '}${boosted ? '(' + boosted + ') - ' : ''}${bName} lvl **${bLevel}**`).join('\n') || '*empty*'
-    }
+            `${bOpe ? ':white_check_mark: ' : ':zzz: '}${boosted ? '(' + boosted + ') - ' : ''}${bName} lvl **${bLevel}**`).join('\n') || '*empty*'
+        }
 
-__Fleets:__ \`${String(totalFirepower).padStart(7, ' ')}\`:boom: | \`${String(totalHp).padStart(7, ' ')}\`:hearts:
-**2** fleets are supplied by this station
-${_.map(fleetsDesc,
-        ({hp, firepower, qty, cards, ship: {type}}) =>
-            `${qty} x ${type} \`${String(firepower).padStart(7, ' ')} \`:boom: | \`${String(hp).padStart(7, ' ')} \`:hearts: ${
-                cards && cards.length > 0 ? 'Cards: ||' + _.map(cards,
-                    c => c.name.substring(0, 15)
-                    //c => c.shortname || _.map(c.name.split(' '), namePart => namePart.substr(0,3)).join('')
-                ).join(', ') + `||` : ''
-            }`
-    ).join('\n')}
-
-
-__Hangar:__
- ${_.map(hangar, ({qty, type}) => `${qty} x ${type}`).join('\n') || '*empty*'}
-`;
-    //channel.send("this `supports` __a__ **subset** *of* ~~markdown~~ 😃 ```js\nfunction foo(bar) {\n  console.log(bar);\n}\n\nfoo(1);```", { embed });
+__Fleets:__ \`${String(totalFirepower).padStart(7, ' ')}\`:boom: | \`${String(totalHp).padStart(7, ' ')}\`:hearts: | \`${String(totalBombing).padStart(7, ' ')}\`:bomb: `
+        + (supplied ? ` **${supplied}** supplied` : '')
+        + _.map(fleetsDesc,
+            ({hp, firepower, bombing, qty, cards, ship: {type}}) =>
+                `${qty} x ${type} \`${String(firepower).padStart(7, ' ')} \`:boom: | \`${String(hp).padStart(7, ' ')} \`:hearts: `
+                + (bombing ? `| \`${String(bombing).padStart(7, ' ')} \`:bomb:` : '')
+                + (cards && cards.length > 0 ? 'Cards: ||' + _.map(cards, c => c.name.substring(0, 15)
+                //c => c.shortname || _.map(c.name.split(' '), namePart => namePart.substr(0,3)).join('')
+                ).join(', ') + `||` : '')
+        ).join('\n')
+        + `__Hangar:__\n`
++ (_.map(hangar, ({qty, type}) => `${qty} x ${type}`
+        ).join('\n') || '*empty*');
 }
 
 
@@ -377,7 +372,12 @@ function getEmbed({
         (result, {firepower, hp}) => [result[0] + firepower, result[1] + hp], [0, 0]);
     return new Discord.MessageEmbed()
         .setTitle(
-            `Spy Report at **${name}**`
+            `
+    Spy
+    Report
+at **${name}
+**
+    `
         )
         .setDescription(
             `\`
@@ -390,13 +390,16 @@ function getEmbed({
     y
 }
 \`
-`)
-        .setColor(0xff0000)
-        .setTimestamp()
+`
+)
 
-        .addFields({
-                "name": "Capture Defense",
-                "value": `
+.
+setColor(0xff0000)
+    .setTimestamp()
+
+    .addFields({
+            "name": "Capture Defense",
+            "value": `
 $
 {
     current
@@ -407,16 +410,16 @@ $
 }
 **
 `,
-                inline: true
-            },
-            {
-                "name": "Labor",
-                "value": labor,
-                inline: true
-            },
-            {
-                "name": "Metal / Gas / Crystal (hidden)",
-                "value": `
+            inline: true
+        },
+        {
+            "name": "Labor",
+            "value": labor,
+            inline: true
+        },
+        {
+            "name": "Metal / Gas / Crystal (hidden)",
+            "value": `
 $
 {
     metal
@@ -443,11 +446,11 @@ $
 }
 )
 `,
-                inline: true
-            },
-            {
-                "name": "Buildings",
-                "value": _.map(buildings, ({level: bLevel}, bName) => `
+            inline: true
+        },
+        {
+            "name": "Buildings",
+            "value": _.map(buildings, ({level: bLevel}, bName) => `
 $
 {
     bName
@@ -458,11 +461,11 @@ $
 }
 **
 `).join('\n') || '*empty*',
-                inline: true
-            },
-            {
-                "name": "Outposts",
-                "value": _.map(outposts, ({level: bLevel, operational: bOpe}, bName) => `
+            inline: true
+        },
+        {
+            "name": "Outposts",
+            "value": _.map(outposts, ({level: bLevel, operational: bOpe}, bName) => `
 $
 {
     bName
@@ -476,15 +479,15 @@ $
     bOpe ? ':white_check_mark:' : ':zzz:'
 }
 `).join('\n') || '*empty*',
-                inline: true
-            },
-            {
-                "name": "Fleets Total: " + '`' + String(totalFirepower).padStart(7, ' ') + '`:boom: | `' + String(totalHp).padStart(7, ' ') + '`:heart:',
-                "value": (supplied ? " *" + supplied + " supplied*" : ''),
-            },
-            ..._.map(fleetsDesc,
-                ({hp, firepower, qty, cards, ship: {type}}) => ({
-                    name: '`' + String(firepower).padStart(7, ' ') + '`:boom: | `' + String(hp).padStart(7, ' ') + '`:heart: ' + `
+            inline: true
+        },
+        {
+            "name": "Fleets Total: " + '`' + String(totalFirepower).padStart(7, ' ') + '`:boom: | `' + String(totalHp).padStart(7, ' ') + '`:heart:',
+            "value": (supplied ? " *" + supplied + " supplied*" : ''),
+        },
+        ..._.map(fleetsDesc,
+            ({hp, firepower, qty, cards, ship: {type}}) => ({
+                name: '`' + String(firepower).padStart(7, ' ') + '`:boom: | `' + String(hp).padStart(7, ' ') + '`:heart: ' + `
 $
 {
     qty
@@ -494,7 +497,7 @@ $
     type
 }
 `,
-                    value: `
+                value: `
 $
 {
     cards && cards.length > 0 ? 'Cards: ' + _.map(cards,
@@ -503,11 +506,11 @@ $
     ).join(',') : '\u200b'
 }
 `
-                })),
+            })),
 
-            {
-                "name": "Hangar",
-                "value": _.map(hangar, ({qty, type}) => `
+        {
+            "name": "Hangar",
+            "value": _.map(hangar, ({qty, type}) => `
 $
 {
     qty
@@ -517,10 +520,10 @@ $
     type
 }
 `).join('\n') || '*empty*',
-                "inline": true
-            }
-        );
-    //channel.send("this `supports` __a__ **subset** *of* ~~markdown~~ 😃 ```js\nfunction foo(bar) {\n  console.log(bar);\n}\n\nfoo(1);```", { embed });
+            "inline": true
+        }
+    );
+//channel.send("this `supports` __a__ **subset** *of* ~~markdown~~ 😃 ```js\nfunction foo(bar) {\n  console.log(bar);\n}\n\nfoo(1);```", { embed });
 }
 
 export default {

@@ -349,7 +349,7 @@ ${_.map(outposts, ({level: bLevel, operational: bOpe, boosted, hp}, bName) =>
             `${bOpe ? ':white_check_mark: ' : ':zzz: '}${boosted ? ':arrow_double_up: ' : ':black_small_square:'} **${bLevel}** ${bName} \`${formatHpNumber(hp)}\` :hearts:`).join('\n') || '*empty*'
         }
 
-__Fleets:__ \`${formatFirepowerNumber(totalFirepower).padStart(7, ' ')}\`:boom: | \`${formatHpNumber(totalHp).padStart(7, ' ')}\`:hearts: | \`${formatFirepowerNumber(totalBombing).padStart(7, ' ')}\`:skull `
+__Fleets:__ \`${formatFirepowerNumber(totalFirepower).padStart(7, ' ')}\`:boom: | \`${formatHpNumber(totalHp).padStart(7, ' ')}\`:hearts: | \`${formatFirepowerNumber(totalBombing).padStart(7, ' ')}\`:skull: `
         + (supplied ? ` | **${supplied}** supplied` : '')
         + '\n' + _.map(fleetsDesc,
             ({hp, firepower, bombing, qty, cards, ship: {type}}) =>

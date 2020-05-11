@@ -2,7 +2,7 @@ import _ from 'lodash';
 import moment from 'moment';
 import Discord from "discord.js";
 
-import {levenshteinDistance, Ship, Fleet, baseShipStats, modifiers} from './lib'
+import {levenshteinDistance, Ship, Fleet, baseShipStats, modifiers, BUILDING_STATS} from './lib'
 
 const MARKER_HEADER = 'HEADER';
 const MARKER_CAPTURE = 'Capture Defense';
@@ -86,6 +86,14 @@ const REGEX_LABOR = /^Labor\s(\w+)$/i;
 const REGEX_FLEET = /^(?<qty>\d+)\s(?<type>[a-z\s]+)$/i;
 const REGEX_HANGAR = /^[a-z\s]*\((?<type>[a-z\s]+)\)\s(?<qty>\d+)$/i;
 const REGEX_CARD = /cardTooltip\((\d+)\)\s([\w\s\-']+)/i;
+
+function parseCards(line) {
+    return _.map(line.split(','), (card) => {
+        const [, cardId, name] = card.match(REGEX_CARD);
+        return {cardId, name, modifiers};
+    })
+}
+
 const PARSERS = {
     [MARKER_HEADER]: lines => {
         const header = lines[0].substring(18).split(' completed')[0].match(REGEX_HEADER).groups;
@@ -108,8 +116,8 @@ const PARSERS = {
         }
         return r;
     },
-    [MARKER_STATION_CARDS]: lines => {
-        return lines[0].split(',');
+    [MARKER_STATION_CARDS]: ([line]) => {
+        return parseCards(line.substring(0, line.length - 1));
     },
     [MARKER_STATION_LABOR]: lines => {
         return parseInt(lines[0].match(REGEX_LABOR)[1], 10);
@@ -122,16 +130,14 @@ const PARSERS = {
             .filter(_.isNotNull)
             .keyBy(0)
             .mapValues(o => {
-                if (o.length > 2) {
-                    const op = o[2];
-                    return {
-                        level: parseInt(o[1].substring(6).trim(), 10),
-                        operational: op.startsWith('Operational'),
-                        boosted: op.substring(11).trim() || false
-                    }
-                }
+                console.log(o);
+                const level = parseInt(o[1].substring(6).trim(), 10);
+                const building = modifiers.buildings[o[0].trim()] || {tier: 1, type: 'building'};
                 return ({
-                    level: parseInt(o[1].substring(6).trim(), 10)
+                    name: o[0],
+                    tier: building.tier,
+                    level,
+                    hp: BUILDING_STATS[building.type || 'building'][building.tier - 1][level - 1].hp
                 });
             })
             .value();
@@ -154,7 +160,7 @@ const PARSERS = {
                 fleets: []
             };
         }
-        let cards = null;
+
         let fleets = [];
         let info;
         const totalLines = lines.length;
@@ -169,12 +175,10 @@ const PARSERS = {
                     const qty = parseInt(grps.qty, 10);
                     const type = normalizeShipType(grps.type);
                     const ship = baseShipStats[type];
+                    let cards = null;
                     try {
-                        if (i < totalLines && lines[i+1].startsWith('Cards:')) {
-                            cards = _.map(lines[i+1].substring(7).split(','), (card) => {
-                                const [, cardId, name] = card.match(REGEX_CARD);
-                                return {cardId, name, modifiers};
-                            });
+                        if (i + 1 < totalLines && lines[i + 1].startsWith('Cards:')) {
+                            cards = parseCards(lines[i + 1].substring(7, lines[i + 1].length - 1));
                             //skiping nextline
                             i++;
                         }
@@ -204,11 +208,43 @@ const PARSERS = {
                 })
                 .filter(_.isNotNull)
                 .map(({qty, type}) => ({qty: parseInt(qty, 10), type: normalizeShipType(type)}))
-                .value()
+                .value(),
+    [MARKER_OUTPOSTS]: lines => {
+        return lines.length === 0 || lines[0].startsWith('None') ? null : _
+            .chain(lines)
+            .filter(_.isNotNull)
+            .map(l => l.split(' - '))
+            .filter(_.isNotNull)
+            .keyBy(0)
+            .mapValues(o => {
+                console.log(o);
+                const level = parseInt(o[1].substring(6).trim(), 10);
+                const building = modifiers.outposts[o[0].trim()];
+                const hp = BUILDING_STATS[building.type || 'outpost'][building.tier - 1][level - 1].hp;
+                if (o.length > 2) {
+                    const op = o[2];
+
+                    return {
+                        name: o[0],
+                        tier: building.tier,
+                        hp: BUILDING_STATS.outpost[building.tier - 1][level - 1].hp,
+                        level,
+                        operational: op.startsWith('Operational'),
+                        boosted: op.substring(11).trim() || false
+                    }
+                }
+                return ({
+                    name: o[0],
+                    tier: building.tier,
+                    level,
+                    hp
+                });
+            })
+            .value();
+    }
 }
 // same parsers
 PARSERS[MARKER_STATION_HIDDEN_RES] = PARSERS[MARKER_STATION_RES];
-PARSERS[MARKER_OUTPOSTS] = PARSERS[MARKER_BUILDINGS];
 
 // privates
 
@@ -256,10 +292,70 @@ function parseSpyReport(raw) {
     };
 }
 
-
-function getFormattedReport(report) {
-    return ">>> " + report;
+function getFirepower(modifier, level) {
+    return modifier && _.isNumber(modifier.firepower) ? modifier.firepower * level : 0;
 }
+
+function getFormattedReport({
+                                [MARKER_HEADER]: {name, x, y},
+                                [MARKER_CAPTURE]: {current, total},
+                                [MARKER_STATION_RES]: {Metal: metal, Gas: gas, Crystal: crystal},
+                                [MARKER_STATION_HIDDEN_RES]: {Metal: hiddenMetal, Gas: hiddenGas, Crystal: hiddenCrystal},
+                                [MARKER_STATION_CARDS]: stationCards,
+                                [MARKER_STATION_LABOR]: labor,
+                                [MARKER_BUILDINGS]: buildings,
+                                [MARKER_QUEUE_BUILDINGS]: buildingQueue,
+                                [MARKER_QUEUE_FLEETS]: fleetQueue,
+                                [MARKER_OUTPOSTS]: outposts,
+                                [MARKER_FLEETS]: {fleets, supplied},
+                                [MARKER_HANGAR]: hangar
+                            }) {
+    const fleetsDesc = _.invokeMap(fleets, 'get');
+    // console.log(fleetsDesc);
+    const totalBuildingHp = _.reduce(buildings,
+        (result, {hp}, name) => result + hp, 0);
+    const [totalOutpostFirepower, totalOutpostHp] = _.reduce(outposts,
+        (result, {hp, name, level}) =>
+            [result[0] + getFirepower(modifiers.outposts[name], level), result[1] + hp], [0, 0]);
+    const [totalFirepower, totalHp] = _.reduce(fleetsDesc,
+        (result, {firepower, hp}) => [result[0] + firepower, result[1] + hp], [0, 0]);
+    return `>>> ====================================================================
+__Spy Report at **${name}**__ \`/goto 39 134\`
+Capture Defense: **${current}/${total}**
+Metal / Gas / Crystal (hidden)
+${metal} (${hiddenMetal || '*?*'}) / ${gas} (${hiddenGas || '*?*'}) / ${crystal} (${hiddenCrystal || '*?*'})
+Cards: ${_.map(stationCards, 'name').join(',')}
+Labor **${labor}**
+====================================================================
+__Buildings:__ \`${String(totalBuildingHp).padStart(7, ' ')}\`:hearts:
+${_.map(buildings, ({level: bLevel}, bName) =>
+        `${bName} lvl **${bLevel}**`).join('\n') || '*empty*'
+    }
+
+__Outposts:__ \`${String(totalOutpostFirepower).padStart(7, ' ')}\`:boom: | \`${String(totalOutpostHp).padStart(7, ' ')}\`:hearts:
+${_.map(outposts, ({level: bLevel, operational: bOpe, boosted}, bName) =>
+        `${bOpe ? ':white_check_mark: ' : ':zzz: '}${boosted ? '(' + boosted + ') - ' : ''}${bName} lvl **${bLevel}**`).join('\n') || '*empty*'
+    }
+
+__Fleets:__ \`${String(totalFirepower).padStart(7, ' ')}\`:boom: | \`${String(totalHp).padStart(7, ' ')}\`:hearts:
+**2** fleets are supplied by this station
+${_.map(fleetsDesc,
+        ({hp, firepower, qty, cards, ship: {type}}) =>
+            `${qty} x ${type} \`${String(firepower).padStart(7, ' ')} \`:boom: | \`${String(hp).padStart(7, ' ')} \`:hearts: ${
+                cards && cards.length > 0 ? 'Cards: ||' + _.map(cards,
+                    c => c.name.substring(0, 15)
+                    //c => c.shortname || _.map(c.name.split(' '), namePart => namePart.substr(0,3)).join('')
+                ).join(', ') + `||` : ''
+            }`
+    ).join('\n')}
+
+
+__Hangar:__
+ ${_.map(hangar, ({qty, type}) => `${qty} x ${type}`).join('\n') || '*empty*'}
+`;
+    //channel.send("this `supports` __a__ **subset** *of* ~~markdown~~ 😃 ```js\nfunction foo(bar) {\n  console.log(bar);\n}\n\nfoo(1);```", { embed });
+}
+
 
 function getEmbed({
                       [MARKER_HEADER]: {name, x, y},
@@ -280,14 +376,37 @@ function getEmbed({
     const [totalFirepower, totalHp] = _.reduce(fleetsDesc,
         (result, {firepower, hp}) => [result[0] + firepower, result[1] + hp], [0, 0]);
     return new Discord.MessageEmbed()
-        .setTitle(`Spy Report at **${name}**`)
-        .setDescription(`\`/goto ${x} ${y}\``)
+        .setTitle(
+            `Spy Report at **${name}**`
+        )
+        .setDescription(
+            `\`
+/goto $
+{
+    x
+}
+ $
+{
+    y
+}
+\`
+`)
         .setColor(0xff0000)
         .setTimestamp()
 
         .addFields({
                 "name": "Capture Defense",
-                "value": `${current}/**${total}**`,
+                "value": `
+$
+{
+    current
+}
+/**$
+{
+    total
+}
+**
+`,
                 inline: true
             },
             {
@@ -297,17 +416,66 @@ function getEmbed({
             },
             {
                 "name": "Metal / Gas / Crystal (hidden)",
-                "value": `${metal} (${hiddenMetal || '*?*'}) / ${gas} (${hiddenGas || '*?*'}) / ${crystal} (${hiddenCrystal || '*?*'})`,
+                "value": `
+$
+{
+    metal
+}
+ ($
+{
+    hiddenMetal || '*?*'
+}
+) / $
+{
+    gas
+}
+ ($
+{
+    hiddenGas || '*?*'
+}
+) / $
+{
+    crystal
+}
+ ($
+{
+    hiddenCrystal || '*?*'
+}
+)
+`,
                 inline: true
             },
             {
                 "name": "Buildings",
-                "value": _.map(buildings, ({level: bLevel}, bName) => `${bName} lvl **${bLevel}**`).join('\n') || '*empty*',
+                "value": _.map(buildings, ({level: bLevel}, bName) => `
+$
+{
+    bName
+}
+ lvl **$
+{
+    bLevel
+}
+**
+`).join('\n') || '*empty*',
                 inline: true
             },
             {
                 "name": "Outposts",
-                "value": _.map(outposts, ({level: bLevel, operational: bOpe}, bName) => `${bName} lvl **${bLevel}** ${bOpe ? ':white_check_mark:' : ':zzz:'}`).join('\n') || '*empty*',
+                "value": _.map(outposts, ({level: bLevel, operational: bOpe}, bName) => `
+$
+{
+    bName
+}
+ lvl **$
+{
+    bLevel
+}
+** $
+{
+    bOpe ? ':white_check_mark:' : ':zzz:'
+}
+`).join('\n') || '*empty*',
                 inline: true
             },
             {
@@ -315,17 +483,40 @@ function getEmbed({
                 "value": (supplied ? " *" + supplied + " supplied*" : ''),
             },
             ..._.map(fleetsDesc,
-            ({hp, firepower, qty, cards, ship: {type}}) => ({
-                name: '`' + String(firepower).padStart(7, ' ') + '`:boom: | `' + String(hp).padStart(7, ' ') + '`:heart: ' + `${qty} x ${type}`  ,
-                value: `${cards && cards.length > 0 ? 'Cards: '+ _.map(cards, 
-                        c => c.name.substring(0, 15)
-                        //c => c.shortname || _.map(c.name.split(' '), namePart => namePart.substr(0,3)).join('')
-                ).join(',') : '\u200b'}`
-            })),
+                ({hp, firepower, qty, cards, ship: {type}}) => ({
+                    name: '`' + String(firepower).padStart(7, ' ') + '`:boom: | `' + String(hp).padStart(7, ' ') + '`:heart: ' + `
+$
+{
+    qty
+}
+ x $
+{
+    type
+}
+`,
+                    value: `
+$
+{
+    cards && cards.length > 0 ? 'Cards: ' + _.map(cards,
+        c => c.name.substring(0, 15)
+        //c => c.shortname || _.map(c.name.split(' '), namePart => namePart.substr(0,3)).join('')
+    ).join(',') : '\u200b'
+}
+`
+                })),
 
             {
                 "name": "Hangar",
-                "value": _.map(hangar, ({qty, type}) => `${qty} x ${type}`).join('\n') || '*empty*',
+                "value": _.map(hangar, ({qty, type}) => `
+$
+{
+    qty
+}
+ x $
+{
+    type
+}
+`).join('\n') || '*empty*',
                 "inline": true
             }
         );

@@ -67,10 +67,7 @@ bot.on('message', function (e) {
         try {
             const parsed = Spy.parseSpyReport(e.content);
             // console.log(parsed);
-            e.channel.send(
-                Spy.getEmbed(parsed)
-                    .setAuthor(e.author.username)
-            );
+            e.channel.send(Spy.getFormattedReport(parsed));
 
         } catch (e) {
             console.log(e);

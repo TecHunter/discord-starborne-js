@@ -68,11 +68,10 @@ bot.on('message', function (e) {
             const parsed = Spy.parseSpyReport(e.content);
             // console.log(parsed);
             e.channel.send(Spy.getFormattedReport(parsed));
-
+            e.delete();
         } catch (e) {
             console.log(e);
         }
-        e.delete();
 
     } else if (e.attachments && e.content.startsWith('/spy')) {
         e.attachments.each(attachment => {
@@ -83,10 +82,7 @@ bot.on('message', function (e) {
                         if (data.startsWith('Spy Report on hex')) {
                             const parsed = Spy.parseSpyReport(data);
                             // console.log(parsed);
-                            e.channel.send(
-                                Spy.getEmbed(parsed)
-                                    .setAuthor(e.author.username)
-                            );
+                            e.channel.send(Spy.getFormattedReport(parsed));
                             e.delete();
                         }
                     });

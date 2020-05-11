@@ -75,18 +75,16 @@ bot.on('message', function (e) {
 
     } else if (e.attachments && e.content.startsWith('/spy')) {
         e.attachments.each(attachment => {
-            if (attachment.name === 'message.txt') {
-                axios
-                    .get(attachment.url, {responseType: 'text'})
-                    .then(({data}) => {
-                        if (data.startsWith('Spy Report on hex')) {
-                            const parsed = Spy.parseSpyReport(data);
-                            // console.log(parsed);
-                            e.channel.send(Spy.getFormattedReport(parsed));
-                            e.delete();
-                        }
-                    });
-            }
+            axios
+                .get(attachment.url, {responseType: 'text'})
+                .then(({data}) => {
+                    if (data.startsWith('Spy Report on hex')) {
+                        const parsed = Spy.parseSpyReport(data);
+                        // console.log(parsed);
+                        e.channel.send(Spy.getFormattedReport(parsed));
+                        // e.delete();
+                    }
+                });
         })
     }
 

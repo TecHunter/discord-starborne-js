@@ -602,8 +602,8 @@ export const baseShipStats = {
         bombing: 0,
         perLevel: {hp: 50, firepower: 20}
     }),
-    'Recon': new Ship({
-        type: 'Recon',
+    'Heavy Scouts': new Ship({
+        type: 'Heavy Scouts',
         shipClass: 'heavy', labor: 3,
         cost: [495, 825, 330, 1920],
         speed: 8,

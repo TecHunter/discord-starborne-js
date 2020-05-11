@@ -12,6 +12,7 @@
     "build": "babel src -d dist"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "discord.js": "^12.2.0",
     "dotenv": "^8.2.0",
     "lodash": "^4.17.15",

@@ -160,17 +160,18 @@ const PARSERS = {
         const totalLines = lines.length;
         for (let i = 0; i < totalLines; i++) {
             const l = lines[i];
+            // console.log(l);
             try {
                 if (l === null || l.trim() === '') {
                 } else {
-                    console.log(l);
+                    // console.log(l);
                     const grps = l.match(REGEX_FLEET).groups;
                     const qty = parseInt(grps.qty, 10);
                     const type = normalizeShipType(grps.type);
                     const ship = baseShipStats[type];
                     try {
-                        if (i < totalLines && lines[i].startsWith('Cards:')) {
-                            cards = _.map(lines[i].substring(7).split(','), (card) => {
+                        if (i < totalLines && lines[i+1].startsWith('Cards:')) {
+                            cards = _.map(lines[i+1].substring(7).split(','), (card) => {
                                 const [, cardId, name] = card.match(REGEX_CARD);
                                 return {cardId, name, modifiers};
                             });
@@ -181,7 +182,7 @@ const PARSERS = {
                         info = 'Cannot read cards';
                         console.error(lines[i], e);
                     }
-                    console.log(`adding fleet of ${qty} ${type}`);
+                    // console.log(`adding fleet of ${qty} ${type}`);
                     fleets.push(new Fleet(ship, qty, cards));
                 }
             } catch (eregex) {
@@ -275,7 +276,7 @@ function getEmbed({
                       [MARKER_HANGAR]: hangar
                   }) {
     const fleetsDesc = _.invokeMap(fleets, 'get');
-    console.log(fleetsDesc);
+    // console.log(fleetsDesc);
     const [totalFirepower, totalHp] = _.reduce(fleetsDesc,
         (result, {firepower, hp}) => [result[0] + firepower, result[1] + hp], [0, 0]);
     return new Discord.MessageEmbed()
@@ -310,32 +311,18 @@ function getEmbed({
                 inline: true
             },
             {
-                "name": "\u200B",
-                "value": '\u200B',
+                "name": "Fleets Total: " + '`' + String(totalFirepower).padStart(7, ' ') + '`:boom: | `' + String(totalHp).padStart(7, ' ') + '`:heart:',
+                "value": (supplied ? " *" + supplied + " supplied*" : ''),
             },
-            {
-                "name": `Fleets` + (supplied ? "*" + supplied + " supplied*" : ''),
-                "value":
-                    _.map(fleetsDesc,
-                        ({hp, firepower, qty, cards, ship: {type}}) => `${qty} x ${type}`)
-                        .join('\n') || '*empty*',
-                inline: true
-            },
-            {
-                "name": '`' + String(totalFirepower).padStart(7, ' ') + '`:boom: | `' + String(totalHp).padStart(7, ' ') + '`:heart:',
-                "value":
-                    _.map(fleetsDesc,
-                        ({hp, firepower}) => '`' + String(firepower).padStart(7, ' ') + '`:boom: | `' + String(hp).padStart(7, ' ') + '`:heart:')
-                        .join('\n') || '*empty*',
-                inline: true
-            },
-            {
-                "name": `Fleet Cards`,
-                "value":
-                    _.map(fleetsDesc, ({cards}) => `${cards && cards.length > 0 ? _.map(cards, 'name').join(',') : '\u200b'}`)
-                        .join('\n') || '*empty*',
-                inline: true
-            },
+            ..._.map(fleetsDesc,
+            ({hp, firepower, qty, cards, ship: {type}}) => ({
+                name: '`' + String(firepower).padStart(7, ' ') + '`:boom: | `' + String(hp).padStart(7, ' ') + '`:heart: ' + `${qty} x ${type}`  ,
+                value: `${cards && cards.length > 0 ? 'Cards: '+ _.map(cards, 
+                        c => c.name.substring(0, 15)
+                        //c => c.shortname || _.map(c.name.split(' '), namePart => namePart.substr(0,3)).join('')
+                ).join(',') : '\u200b'}`
+            })),
+
             {
                 "name": "Hangar",
                 "value": _.map(hangar, ({qty, type}) => `${qty} x ${type}`).join('\n') || '*empty*',

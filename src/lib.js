@@ -59,6 +59,7 @@ export const modifiers = {
     cards: {
         'Ablative Armor': {
             name: 'Ablative Armor',
+            shortname: 'AblArm',
             shipClasses: {
                 light: {hp: 50},
                 heavy: {hp: 250},
@@ -67,6 +68,7 @@ export const modifiers = {
         },
         'Ammunition Bay': {
             name: 'Ammunition Bay',
+            shortname: 'AmmuBay',
             buildings: {
                 Fortress: {influence: 1},
                 Station: {harvest: {rate: 10}}
@@ -74,6 +76,7 @@ export const modifiers = {
         },
         'Antimatter Missile': {
             name: 'Antimatter Missile',
+            shortname: 'AMMiss',
             ships: {
                 Gunship: {
                     bombing: 80
@@ -82,6 +85,7 @@ export const modifiers = {
         },
         'Antimatter Torpedo': {
             name: 'Antimatter Torpedo',
+            shortname: 'AMTorp',
             ships: {
                 Gunship: {
                     bombing: 40
@@ -90,6 +94,7 @@ export const modifiers = {
         },
         'AP Rounds': {
             name: 'AP Rounds',
+            shortname: 'APRnds',
             shipClasses: {
                 heavy: {
                     bombing: 5
@@ -101,30 +106,35 @@ export const modifiers = {
         },
         'APEX Mining Laser': {
             name: 'APEX Mining Laser',
+            shortname: 'ApexML',
             outposts: {
                 'Mining Colony': {influence: 1, harvest: {rate: 5}}
             }
         },
         'Arc Veil': {
             name: 'Arc Veil',
+            shortname: 'ArcV',
             ships: {
                 Industrial: {time: {rate: -20}}
             }
         },
         'Armed Garrison': {
             name: 'Armed Garrison',
+            shortname: 'ArmGarr',
             outposts: {
                 'Missile Battery': {influence: 1}
             }
         },
         'Astral Confluence': {
             name: 'Astral Confluence',
+            shortname: 'AsConfl',
             shipClasses: {
                 capital: {time: {rate: -15}}
             }
         },
         'Atomic Maser': {
             name: 'Atomic Maser',
+            shortname: 'AtoMas',
             shipClasses: {
                 light: {firepower: 15},
                 heavy: {firepower: 75},
@@ -133,6 +143,7 @@ export const modifiers = {
         },
         'Atomized Coating': {
             name: 'Atomized Coating',
+            shortname: 'AtoCoat',
             shipClasses: {
                 light: {hp: 20},
                 heavy: {hp: 100},
@@ -141,12 +152,14 @@ export const modifiers = {
         },
         'Auto-Aim System': {
             name: 'Auto-Aim System',
+            shortname: 'AAimSys',
             shipClasses: {
                 light: {firepower: {rate: 12}},
                 heavy: {firepower: {rate: 12}},
                 capital: {firepower: {rate: 12}}
             }
-        },
+        }
+
     },
     faction: {}
 };
@@ -209,7 +222,24 @@ export class Fleet {
         };
     }
 }
-
+function reduce(result, {cardFirepower, cardHp}){
+    if (typeof cardFirepower === 'object') {
+        if (cardFirepower.hasOwnProperty('rate'))
+            result.firepower.rate += cardFirepower.rate * 100
+        if (cardFirepower.hasOwnProperty('value'))
+            result.firepower.value += cardFirepower.value * 100;
+    } else if (_.isNumber(cardFirepower)) {
+        result.firepower.value += cardFirepower * 100;
+    }
+    if (typeof cardHp === 'object') {
+        if (cardHp.hasOwnProperty('rate'))
+            result.hp.rate += cardHp.rate * 100
+        if (cardHp.hasOwnProperty('value'))
+            result.hp.value += cardHp.value * 100;
+    } else if (_.isNumber(cardFirepower)) {
+        result.hp.value += cardHp * 100;
+    }
+}
 export function getShipModifiers({type, shipClass}, fleetCards = [], stationCards = []) {
     return _.chain(fleetCards)
         .concat(stationCards)
@@ -217,25 +247,14 @@ export function getShipModifiers({type, shipClass}, fleetCards = [], stationCard
         .map(({name}) => modifiers.cards[name])
         .filter(_.isNotNull)
         .reduce((result, cardModifier, key) => {
+            // console.log(cardModifier);
             if (cardModifier.shipClasses && cardModifier.shipClasses[shipClass]) {
-                const {firepower: cardFirepower, hp: cardHp} = cardModifier.shipClasses[shipClass];
-                if (typeof cardFirepower === 'object') {
-                    if (cardFirepower.hasOwnProperty('rate'))
-                        result.firepower.rate += cardFirepower.rate * 100
-                    if (cardFirepower.hasOwnProperty('value'))
-                        result.firepower.value += cardFirepower.value * 100;
-                } else if (_.isNumber(cardFirepower)) {
-                    result.firepower.value += cardFirepower * 100;
-                }
-                if (typeof cardHp === 'object') {
-                    if (cardHp.hasOwnProperty('rate'))
-                        result.hp.rate += cardHp.rate * 100
-                    if (cardHp.hasOwnProperty('value'))
-                        result.hp.value += cardHp.value * 100;
-                } else if (_.isNumber(cardFirepower)) {
-                    result.hp.value += cardHp * 100;
-                }
+                reduce(result, cardModifier.shipClasses[shipClass]);
             }
+            if (cardModifier.ships && cardModifier.ships[type]) {
+                reduce(result, cardModifier.ships[type]);
+            }
+
             return result;
         }, {firepower: {rate: 100, value: 0}, hp: {rate: 100, value: 0}})
         .value();

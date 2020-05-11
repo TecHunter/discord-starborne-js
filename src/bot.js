@@ -4,7 +4,24 @@ import Spy from "./spy-lib";
 import {distance} from "./lib";
 import Discord from "discord.js";
 import logger from "winston";
+import axios from "axios";
+import http from 'http';
+import fs from 'fs';
+
+const download = function (url, dest, cb) {
+    const file = fs.createWriteStream(dest);
+    const request = http.get(url, function (response) {
+        response.pipe(file);
+        file.on('finish', function () {
+            file.close(cb);  // close() is async, call cb after close completes.
+        });
+    }).on('error', function (err) { // Handle errors
+        fs.unlink(dest); // Delete the file async. (But we don't check the result)
+        if (cb) cb(err.message);
+    });
+};
 // Configure logger settings
+
 console.log("starting");
 logger.remove(logger.transports.Console);
 logger.add(new logger.transports.Console, {
@@ -13,13 +30,13 @@ logger.add(new logger.transports.Console, {
 logger.level = 'debug';
 // Initialize Discord Bot
 const bot = new Discord.Client();
-if(process.env.TOKEN_DEV){
+if (process.env.TOKEN_DEV) {
     logger.info('Using DEV token');
     bot.login(process.env.TOKEN_DEV);
-}else if (process.env.TOKEN_PROD){
+} else if (process.env.TOKEN_PROD) {
     logger.info('Using PROD token');
     bot.login(process.env.TOKEN_PROD);
-}else {
+} else {
     logger.error('Missing token');
     process.exit(-1);
 }
@@ -32,7 +49,7 @@ bot.on('ready', function (evt) {
 const regexDistance = /^(?<x1>-?\d+)\s(?<y1>-?\d+)\s(?<x2>-?\d+)\s(?<y2>-?\d+)\D*$/i;
 bot.on('message', function (e) {
     // Our bot needs to know if it will execute a command
-    // It will listen for messages that will start with `!`
+    // It will listen for messages that will start with `!
     if (e.content.startsWith('/distance')) {
         try {
             // console.log(e.content.substring(10));
@@ -58,5 +75,26 @@ bot.on('message', function (e) {
         } catch (e) {
             console.log(e);
         }
+        e.delete();
+
+    } else if (e.attachments && e.content.startsWith('/spy')) {
+        e.attachments.each(attachment => {
+            if (attachment.name === 'message.txt') {
+                axios
+                    .get(attachment.url, {responseType: 'text'})
+                    .then(({data}) => {
+                        if (data.startsWith('Spy Report on hex')) {
+                            const parsed = Spy.parseSpyReport(data);
+                            // console.log(parsed);
+                            e.channel.send(
+                                Spy.getEmbed(parsed)
+                                    .setAuthor(e.author.username)
+                            );
+                            e.delete();
+                        }
+                    });
+            }
+        })
     }
+
 });

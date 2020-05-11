@@ -74,6 +74,7 @@ bot.on('message', function (e) {
         }
 
     } else if (e.attachments && e.content.startsWith('/spy')) {
+        console.log('parsing')
         e.attachments.each(attachment => {
             axios
                 .get(attachment.url, {responseType: 'text'})

@@ -83,7 +83,7 @@ function normalizeShipType(type) {
 const REGEX_HEADER = /^\((?<x>-?\d+)[\s,+]+(?<y>-?\d+)\)\s+(?<name>.+)$/i;
 const REGEX_STATION_RES = /(?<res>\w+)\s(?<val>\d+)\s*/gi;
 const REGEX_LABOR = /^Labor\s(\w+)$/i;
-const REGEX_FLEET = /^(?<qty>\d+)\s(?<type>[a-z\s]+)$/i;
+const REGEX_FLEET = /^(?<qty>\d+)\s(?<type>[a-z\s]+)(?<noCards> - No cards\.)?$/i;
 const REGEX_HANGAR = /^[a-z\s]*\((?<type>[a-z\s]+)\)\s(?<qty>\d+)$/i;
 const REGEX_CARD = /cardTooltip\((\d+)\)\s([\w\s\-']+)/i;
 
@@ -170,14 +170,14 @@ const PARSERS = {
             try {
                 if (l === null || l.trim() === '') {
                 } else {
-                    // console.log(l);
+                    console.log(l);
                     const grps = l.match(REGEX_FLEET).groups;
                     const qty = parseInt(grps.qty, 10);
                     const type = normalizeShipType(grps.type);
                     const ship = baseShipStats[type];
                     let cards = null;
                     try {
-                        if (i + 1 < totalLines && lines[i + 1].startsWith('Cards:')) {
+                        if (!grps.noCards && i + 1 < totalLines && lines[i + 1].startsWith('Cards:')) {
                             cards = parseCards(lines[i + 1].substring(7, lines[i + 1].length - 1));
                             //skiping nextline
                             i++;

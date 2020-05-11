@@ -1,8 +1,9 @@
+require('dotenv').config();
+
 import Spy from "./spy-lib";
 import {distance} from "./lib";
 import Discord from "discord.js";
 import logger from "winston";
-import auth from "./auth.json";
 // Configure logger settings
 console.log("starting");
 logger.remove(logger.transports.Console);
@@ -12,7 +13,16 @@ logger.add(new logger.transports.Console, {
 logger.level = 'debug';
 // Initialize Discord Bot
 const bot = new Discord.Client();
-bot.login(auth.token);
+if(process.env.TOKEN_DEV){
+    logger.info('Using DEV token');
+    bot.login(process.env.TOKEN_DEV);
+}else if (process.env.TOKEN_PROD){
+    logger.info('Using PROD token');
+    bot.login(process.env.TOKEN_PROD);
+}else {
+    logger.error('Missing token');
+    process.exit(-1);
+}
 bot.on('ready', function (evt) {
     logger.info('Connected');
     logger.info('Logged in as: ');

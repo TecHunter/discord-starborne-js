@@ -1,4 +1,4 @@
-import Spy, {MARKERS} from '../spy-lib';
+import Spy, {MARKERS} from '../src/spy-lib';
 import {describe, it} from "mocha";
 import {expect} from 'chai';
 
@@ -282,7 +282,7 @@ describe('SpyParser', function () {
         });
         it('should return correct outposts', function () {
             expect(parsed).to.have.any.keys(MARKERS.MARKER_OUTPOSTS);
-            expect(parsed[MARKERS.MARKER_OUTPOSTS]).to.deep.equal({
+            expect(parsed[MARKERS.MARKER_OUTPOSTS]).to.deep.include({
                 'Mining Facility': {level: 5, operational: true},
                 'Mining Colony': {level: 3, operational: true},
                 'Trading Port': {level: 2, operational: true}
@@ -291,12 +291,15 @@ describe('SpyParser', function () {
 
         it('should return correct fleets', function () {
             expect(parsed).to.have.any.keys(MARKERS.MARKER_FLEETS);
-            expect(parsed[MARKERS.MARKER_FLEETS]).to.have.deep.members([
-                {qty: 87, type: 'Corvette'},
-                {qty: 1, type: 'Patrol Ship'},
-                {qty: 160, type: 'Industrial'},
-                {qty: 1, type: 'Scout'},
-                {qty: 33, type: 'Scout'}
+            expect(parsed[MARKERS.MARKER_FLEETS]).to.be.an('object');
+            expect(parsed[MARKERS.MARKER_FLEETS].fleets).to.have.deep.members([
+                [
+                    {qty: 87, ship: {type: 'Corvette'}},
+                    {qty: 1, ship: {type: 'Patrol Ship'}},
+                    {qty: 160, ship: {type: 'Industrial'}},
+                    {qty: 1, ship: {type: 'Scout'}},
+                    {qty: 33, ship: {type: 'Scout'}}
+                ]
             ]);
         });
 

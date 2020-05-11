@@ -1,4 +1,4 @@
-import Spy, {MARKERS} from '../spy-lib';
+import Spy, {MARKERS} from '../src/spy-lib';
 import {describe, it} from "mocha";
 import {expect} from 'chai';
 

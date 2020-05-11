@@ -1,10 +1,6 @@
 module.exports = {
   apps : [{
-    script: 'bot.js',
-    watch: '.',
-    // cwd: 'D:\\_projects\\starborne-js\\discord',
-    // interpreter: '.\\node_modules\\@babel\\node\\bin\\babel-node.js'
-    interpreter: './node_modules/.bin/babel-node'
+    script: 'dist/bot.js'
   }],
 
   deploy : {
@@ -15,7 +11,7 @@ module.exports = {
       repo : 'git@github.com:TecHunter/discord-starborne-js.git',
       path : '/opt/discord-starborne-bot',
       'pre-deploy-local': '',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
+      'post-deploy' : 'npm install && && npm run build && pm2 reload ecosystem.config.js --env production',
       'pre-setup': ''
     }
   }

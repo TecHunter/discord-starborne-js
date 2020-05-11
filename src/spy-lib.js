@@ -2,7 +2,7 @@ import _ from 'lodash';
 import moment from 'moment';
 import Discord from "discord.js";
 
-import {levenshteinDistance, baseShipStats, modifiers} from './lib'
+import {levenshteinDistance, Ship, Fleet, baseShipStats, modifiers} from './lib'
 
 const MARKER_HEADER = 'HEADER';
 const MARKER_CAPTURE = 'Capture Defense';
@@ -85,6 +85,7 @@ const REGEX_STATION_RES = /(?<res>\w+)\s(?<val>\d+)\s*/gi;
 const REGEX_LABOR = /^Labor\s(\w+)$/i;
 const REGEX_FLEET = /^(?<qty>\d+)\s(?<type>[a-z\s]+)$/i;
 const REGEX_HANGAR = /^[a-z\s]*\((?<type>[a-z\s]+)\)\s(?<qty>\d+)$/i;
+const REGEX_CARD = /cardTooltip\((\d+)\)\s([\w\s\-']+)/i;
 const PARSERS = {
     [MARKER_HEADER]: lines => {
         const header = lines[0].substring(18).split(' completed')[0].match(REGEX_HEADER).groups;
@@ -126,7 +127,7 @@ const PARSERS = {
                     return {
                         level: parseInt(o[1].substring(6).trim(), 10),
                         operational: op.startsWith('Operational'),
-                        boosted: op.substring(11).trim()
+                        boosted: op.substring(11).trim() || false
                     }
                 }
                 return ({
@@ -148,32 +149,48 @@ const PARSERS = {
         let supplied = undefined;
         if (firstLine.trim().endsWith('are supplied by this station')) {
             supplied = parseInt(firstLine.split(' ')[0], 10);
-        }else if(firstLine.startsWith('None')){
+        } else if (firstLine.startsWith('None')) {
             return {
                 fleets: []
             };
         }
-        let firepower = 0;
-        let hp = 0;
-        const fleets = _.chain(lines)
-            .map(l=> l.match(REGEX_FLEET).groups)
-            .filter(_.isNotNull)
-            .map(({qty, type}) => ({qty: parseInt(qty, 10), type: normalizeShipType(type)}))
-            .map(({qty, type}) => {
-                firepower += qty*baseShipStats[type].firepower;
-                hp += qty*baseShipStats[type].hp;
-                return {
-                    qty,
-                    type,
-                    firepower: qty*baseShipStats[type].firepower,
-                    hp: qty*baseShipStats[type].hp
+        let cards = null;
+        let fleets = [];
+        let info;
+        const totalLines = lines.length;
+        for (let i = 0; i < totalLines; i++) {
+            const l = lines[i];
+            try {
+                if (l === null || l.trim() === '') {
+                } else {
+                    console.log(l);
+                    const grps = l.match(REGEX_FLEET).groups;
+                    const qty = parseInt(grps.qty, 10);
+                    const type = normalizeShipType(grps.type);
+                    const ship = baseShipStats[type];
+                    try {
+                        if (i < totalLines && lines[i].startsWith('Cards:')) {
+                            cards = _.map(lines[i].substring(7).split(','), (card) => {
+                                const [, cardId, name] = card.match(REGEX_CARD);
+                                return {cardId, name, modifiers};
+                            });
+                            //skiping nextline
+                            i++;
+                        }
+                    } catch (e) {
+                        info = 'Cannot read cards';
+                        console.error(lines[i], e);
+                    }
+                    console.log(`adding fleet of ${qty} ${type}`);
+                    fleets.push(new Fleet(ship, qty, cards));
                 }
-            })
-            .value();
+            } catch (eregex) {
+                console.error('fleet line parse error', eregex);
+            }
+        }
+
         return {
             supplied,
-            firepower,
-            hp,
             fleets
         }
     }
@@ -254,9 +271,13 @@ function getEmbed({
                       [MARKER_QUEUE_BUILDINGS]: buildingQueue,
                       [MARKER_QUEUE_FLEETS]: fleetQueue,
                       [MARKER_OUTPOSTS]: outposts,
-                      [MARKER_FLEETS]: {firepower: fleetTotalFirepower, hp: fleetTotalHp, fleets, supplied},
+                      [MARKER_FLEETS]: {fleets, supplied},
                       [MARKER_HANGAR]: hangar
                   }) {
+    const fleetsDesc = _.invokeMap(fleets, 'get');
+    console.log(fleetsDesc);
+    const [totalFirepower, totalHp] = _.reduce(fleetsDesc,
+        (result, {firepower, hp}) => [result[0] + firepower, result[1] + hp], [0, 0]);
     return new Discord.MessageEmbed()
         .setTitle(`Spy Report at **${name}**`)
         .setDescription(`\`/goto ${x} ${y}\``)
@@ -269,13 +290,19 @@ function getEmbed({
                 inline: true
             },
             {
+                "name": "Labor",
+                "value": labor,
+                inline: true
+            },
+            {
                 "name": "Metal / Gas / Crystal (hidden)",
-                "value": `${metal} (${hiddenMetal || '*0*'}) / ${gas} (${hiddenGas || '*0*'}) / ${crystal} (${hiddenCrystal || '*0*'})`,
+                "value": `${metal} (${hiddenMetal || '*?*'}) / ${gas} (${hiddenGas || '*?*'}) / ${crystal} (${hiddenCrystal || '*?*'})`,
                 inline: true
             },
             {
                 "name": "Buildings",
                 "value": _.map(buildings, ({level: bLevel}, bName) => `${bName} lvl **${bLevel}**`).join('\n') || '*empty*',
+                inline: true
             },
             {
                 "name": "Outposts",
@@ -283,8 +310,31 @@ function getEmbed({
                 inline: true
             },
             {
-                "name": supplied ? "Fleets ("+supplied+" supplied)" : "Fleets",
-                "value": _.map(fleets, ({hp, firepower, qty, type}) => `${qty} x ${type} ${firepower}:boom:/${hp}:heart:`).join('\n') || '*empty*',
+                "name": "\u200B",
+                "value": '\u200B',
+            },
+            {
+                "name": `Fleets` + (supplied ? "*" + supplied + " supplied*" : ''),
+                "value":
+                    _.map(fleetsDesc,
+                        ({hp, firepower, qty, cards, ship: {type}}) => `${qty} x ${type}`)
+                        .join('\n') || '*empty*',
+                inline: true
+            },
+            {
+                "name": '`' + String(totalFirepower).padStart(7, ' ') + '`:boom: | `' + String(totalHp).padStart(7, ' ') + '`:heart:',
+                "value":
+                    _.map(fleetsDesc,
+                        ({hp, firepower}) => '`' + String(firepower).padStart(7, ' ') + '`:boom: | `' + String(hp).padStart(7, ' ') + '`:heart:')
+                        .join('\n') || '*empty*',
+                inline: true
+            },
+            {
+                "name": `Fleet Cards`,
+                "value":
+                    _.map(fleetsDesc, ({cards}) => `${cards && cards.length > 0 ? _.map(cards, 'name').join(',') : '\u200b'}`)
+                        .join('\n') || '*empty*',
+                inline: true
             },
             {
                 "name": "Hangar",

@@ -439,15 +439,18 @@ export class Ship {
 }
 
 export class Fleet {
-    constructor(ship, qty = 0, cards = [], level = 0) {
+    constructor(ship, qty = 0, cards = [], level = 0, fromPlayer) {
         this.level = level;
         this.ship = ship;
         this.cards = cards;
         this.qty = qty;
+        this.fromPlayer = fromPlayer;
+        // console.log(this);
     }
 
     get(stationCards) {
         const {firepower, hp, bombing} = getShipModifiers(this.ship, this.cards, stationCards);
+        // console.log({firepower, hp, bombing});
         return {
             hp: (
                     this.ship.getHp(this.level) * 100
@@ -472,7 +475,7 @@ export class Fleet {
                 * this.qty
                 * (bombing && _.isNumber(bombing.rate) && bombing.rate !== 100 ? bombing.rate : 100)
                 / 10000,
-
+            fromPlayer: this.fromPlayer,
             cards: this.cards,
             qty: this.qty,
             ship: {...this.ship}
@@ -602,8 +605,8 @@ export const baseShipStats = {
         bombing: 0,
         perLevel: {hp: 50, firepower: 20}
     }),
-    'Heavy Scouts': new Ship({
-        type: 'Heavy Scouts',
+    'Heavy Scout': new Ship({
+        type: 'Heavy Scout',
         shipClass: 'heavy', labor: 3,
         cost: [495, 825, 330, 1920],
         speed: 8,

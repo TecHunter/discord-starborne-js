@@ -47,6 +47,7 @@ export const MARKERS = {
     MARKER_HANGAR
 };
 const shipTypes = [
+    'Heavy Scout',
     'Patrol Ship',
     'Corvette',
     'Scout', 'Industrial',
@@ -68,13 +69,13 @@ function normalizeShipType(type) {
             selected = shipTypes[i];
             closest = dist;
         } else if (dist < 2 && closest === dist) {
-            console.error("ambiguous");
+            console.error("ambiguous " + type);
             return type;
         }
         i++;
     }
     if (closest > 4) {
-        console.error("ambiguous");
+        console.error("very ambiguous" + type);
         return type;
     }
     return selected;
@@ -83,15 +84,20 @@ function normalizeShipType(type) {
 const REGEX_HEADER = /^\((?<x>-?\d+)[\s,+]+(?<y>-?\d+)\)\s+(?<name>.+)$/i;
 const REGEX_STATION_RES = /(?<res>\w+)\s(?<val>\d+)\s*/gi;
 const REGEX_LABOR = /^Labor\s(\w+)$/i;
-const REGEX_FLEET = /^(?<qty>\d+)\s(?<type>[a-z\s]+)(?<noCards> - No cards\.)?$/i;
+const REGEX_FLEET = /^(?<qty>\d+)\s(?<type>[a-z\s]+\w)(?<noCards> - No cards\.)?\s?(?<fromPlayer>From\splayerProfile\()?(?<player>[\w\s\d]*)\)?.*/i;
 const REGEX_HANGAR = /^[a-z\s]*\((?<type>[a-z\s]+)\)\s(?<qty>\d+)$/i;
 const REGEX_CARD = /cardTooltip\((\d+)\)\s([\w\s\-']+)/i;
 
 function parseCards(line) {
-    return _.map(line.split(','), (card) => {
-        const [, cardId, name] = card.match(REGEX_CARD);
-        return {cardId, name, modifiers};
-    })
+    return _.chain(line.split(',')).map((card) => {
+        try {
+            const [, cardId, name] = card.match(REGEX_CARD);
+            return {cardId, name, modifiers};
+        } catch {
+            return null;
+        }
+    }).filter(_.isNotNull)
+        .value();
 }
 
 const PARSERS = {
@@ -137,10 +143,10 @@ const PARSERS = {
             .filter(_.isNotNull)
             .keyBy(0)
             .mapValues(o => {
-                console.log(o);
+                // console.log(o);
                 const level = parseInt(o[1].substring(6).trim(), 10);
                 const building = modifiers.buildings[o[0].trim()] || {tier: 1, type: 'building'};
-                console.log('found building', building);
+                // console.log('found building', building);
                 return ({
                     name: o[0],
                     tier: building.tier,
@@ -181,24 +187,42 @@ const PARSERS = {
             try {
                 if (l === null || l.trim() === '') {
                 } else {
-                    console.log(l);
+                    // console.log(l);
                     const grps = l.match(REGEX_FLEET).groups;
+                    // console.log(grps);
                     const qty = parseInt(grps.qty, 10);
                     const type = normalizeShipType(grps.type);
                     const ship = baseShipStats[type];
+                    let fromPlayer = null;
                     let cards = null;
                     try {
-                        if (!grps.noCards && i + 1 < totalLines && lines[i + 1].startsWith('Cards:')) {
-                            cards = parseCards(lines[i + 1].substring(7, lines[i + 1].length - 1));
-                            //skiping nextline
-                            i++;
+                        if (!grps.noCards && i + 1 < totalLines) {
+                            const nextLine = lines[i + 1];
+                            if (nextLine.startsWith('Cards:')) {
+                                cards = parseCards(nextLine.substring(7, lines[i + 1].length - 1));
+                                // console.log('found cards: ',cards);
+                                //skiping nextline
+                                i++;
+
+                                if (!grps.player && i + 1 < totalLines) {
+                                    // from player is onthe next line
+                                    const playerMatchLine = lines[i + 1].match(/^From playerProfile\(([\d\w\s]+)\)/);
+                                    // console.log('matching ', playerMatchLine)
+                                    fromPlayer = playerMatchLine && playerMatchLine.length > 1 && playerMatchLine[1];
+                                    i++;
+                                }
+                            }
+                        }
+                        if (grps.noCards && grps.player) {
+                            console.error(grps.player);
+                            fromPlayer = grps.player;
                         }
                     } catch (e) {
                         info = 'Cannot read cards';
                         console.error(lines[i], e);
                     }
                     // console.log(`adding fleet of ${qty} ${type}`);
-                    fleets.push(new Fleet(ship, qty, cards));
+                    fleets.push(new Fleet(ship, qty, cards,0, fromPlayer));
                 }
             } catch (eregex) {
                 console.error('fleet line parse error', eregex);
@@ -228,7 +252,7 @@ const PARSERS = {
             .filter(_.isNotNull)
             .keyBy(0)
             .mapValues(o => {
-                console.log(o);
+                // console.log(o);
                 const level = parseInt(o[1].substring(6).trim(), 10);
                 const building = modifiers.outposts[o[0].trim()];
                 const hp = BUILDING_STATS[building.type || 'outpost'][building.tier - 1][level - 1].hp;
@@ -359,10 +383,11 @@ ${_.map(outposts, ({level: bLevel, operational: bOpe, boosted, hp}, bName) =>
 __Fleets:__ \`${formatFirepowerNumber(totalFirepower).padStart(7, ' ')}\`:boom: | \`${formatHpNumber(totalHp).padStart(10, ' ')}\`:hearts: | \`${formatFirepowerNumber(totalBombing).padStart(10, ' ')}\`:skull: `
         + (supplied ? ` | **${supplied}** supplied` : '')
         + '\n' + _.map(fleetsDesc,
-            ({hp, firepower, bombing, qty, cards, ship: {type}}) =>
+            ({hp, firepower, bombing, qty, cards, fromPlayer, ship: {type}}) =>
                 `\`${String(qty).padStart(5)}\` x \`${type.padStart(20)}\` \`${formatFirepowerNumber(firepower).padStart(10, ' ')} \`:boom: | \`${formatHpNumber(hp).padStart(10, ' ')} \`:hearts: `
                 + (bombing ? `| \`${formatFirepowerNumber(bombing).padStart(7, ' ')} \`:skull:` : '')
-                + (cards && cards.length > 0 ? 'Cards: ||' + _.map(cards, c => c.name.substring(0, 15)
+                + (fromPlayer ? `From: \`${fromPlayer}\`` : '')
+                + (cards && cards.length > 0 ? ':card_box: ||' + _.map(cards, c => c.name.substring(0, 15)
                 //c => c.shortname || _.map(c.name.split(' '), namePart => namePart.substr(0,3)).join('')
                 ).join(', ') + `||` : '')
         ).join('\n')
@@ -371,126 +396,9 @@ __Fleets:__ \`${formatFirepowerNumber(totalFirepower).padStart(7, ' ')}\`:boom: 
         ).join('\n') || '*empty*');
 }
 
-
-function getEmbed({
-                      [MARKER_HEADER]: {name, x, y},
-                      [MARKER_CAPTURE]: {current, total},
-                      [MARKER_STATION_RES]: {Metal: metal, Gas: gas, Crystal: crystal},
-                      [MARKER_STATION_HIDDEN_RES]: {Metal: hiddenMetal, Gas: hiddenGas, Crystal: hiddenCrystal},
-                      [MARKER_STATION_CARDS]: {},
-                      [MARKER_STATION_LABOR]: labor,
-                      [MARKER_BUILDINGS]: buildings,
-                      [MARKER_QUEUE_BUILDINGS]: buildingQueue,
-                      [MARKER_QUEUE_FLEETS]: fleetQueue,
-                      [MARKER_OUTPOSTS]: outposts,
-                      [MARKER_FLEETS]: {fleets, supplied},
-                      [MARKER_HANGAR]: hangar
-                  }) {
-    const fleetsDesc = _.invokeMap(fleets, 'get');
-    // console.log(fleetsDesc);
-    const [totalFirepower, totalHp] = _.reduce(fleetsDesc,
-        (result, {firepower, hp}) => [result[0] + firepower, result[1] + hp], [0, 0]);
-    return new Discord.MessageEmbed()
-        .setTitle(`Spy Report at **${name}**`)
-        .setDescription(`\`/goto ${x} ${y}\``)
-        .setColor(0xff0000)
-        .setTimestamp()
-        .addFields({
-                "name": "Capture Defense",
-                "value": `${current}/**${total}**`, inline: true
-            },
-            {
-                "name": "Labor",
-                "value": labor,
-                inline: true
-            },
-            {
-                "name": "Metal / Gas / Crystal (hidden)",
-                "value": `${metal} (${hiddenMetal || '*?*'}) / ${gas} (${hiddenGas || '*?*'}) / ${crystal} (${hiddenCrystal || '*?*'})`,
-                inline: true
-            },
-            {
-                "name": "Buildings",
-                "value": _.map(buildings, ({level: bLevel}, bName) => `
-$
-{
-    bName
-}
- lvl **$
-{
-    bLevel
-}
-**
-`).join('\n') || '*empty*',
-                inline: true
-            },
-            {
-                "name": "Outposts",
-                "value": _.map(outposts, ({level: bLevel, operational: bOpe}, bName) => `
-$
-{
-    bName
-}
- lvl **$
-{
-    bLevel
-}
-** $
-{
-    bOpe ? ':white_check_mark:' : ':zzz:'
-}
-`).join('\n') || '*empty*',
-                inline: true
-            },
-            {
-                "name": "Fleets Total: " + '`' + String(totalFirepower).padStart(7, ' ') + '`:boom: | `' + String(totalHp).padStart(7, ' ') + '`:heart:',
-                "value": (supplied ? " *" + supplied + " supplied*" : ''),
-            },
-            ..._.map(fleetsDesc,
-                ({hp, firepower, qty, cards, ship: {type}}) => ({
-                    name: '`' + String(firepower).padStart(7, ' ') + '`:boom: | `' + String(hp).padStart(7, ' ') + '`:heart: ' + `
-$
-{
-    qty
-}
- x $
-{
-    type
-}
-`,
-                    value: `
-$
-{
-    cards && cards.length > 0 ? 'Cards: ' + _.map(cards,
-        c => c.name.substring(0, 15)
-        //c => c.shortname || _.map(c.name.split(' '), namePart => namePart.substr(0,3)).join('')
-    ).join(',') : '\u200b'
-}
-`
-                })),
-
-            {
-                "name": "Hangar",
-                "value": _.map(hangar, ({qty, type}) => `
-$
-{
-    qty
-}
- x $
-{
-    type
-}
-`).join('\n') || '*empty*',
-                "inline": true
-            }
-        );
-//channel.send("this `supports` __a__ **subset** *of* ~~markdown~~ 😃 ```js\nfunction foo(bar) {\n  console.log(bar);\n}\n\nfoo(1);```", { embed });
-}
-
 export default {
     PARSERS,
     normalizeShipType,
     parseSpyReport,
-    getFormattedReport,
-    getEmbed
+    getFormattedReport
 };

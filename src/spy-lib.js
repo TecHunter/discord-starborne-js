@@ -156,10 +156,10 @@ const PARSERS = {
             .value();
     },
     [MARKER_QUEUE_BUILDINGS]: lines => {
-
+        return lines;
     },
     [MARKER_QUEUE_FLEETS]: lines => {
-
+        return lines;
     },
     // [MARKER_STATION_HIDDEN_RES]: lines => {
     //
@@ -345,7 +345,9 @@ function formatHpNumber(n) {
 function formatFirepowerNumber(n) {
     return numeral(n).format('0,0').padStart(10, ' ');
 }
+
 const TEMPLATE_FLEETS_H1 = `__Fleets:__\`` + String().padStart(22, ' ') + '`';
+
 function getFormattedReport({
                                 [MARKER_HEADER]: {name, x, y},
                                 [MARKER_CAPTURE]: {current, total},
@@ -370,8 +372,9 @@ function getFormattedReport({
             [result[0] + getFirepower(modifiers.outposts[name], level), result[1] + hp], [0, 0]);
     const [totalFirepower, totalHp, totalBombing] = _.reduce(fleetsDesc,
         (result, {firepower, hp, bombing}) => [result[0] + firepower, result[1] + hp, result[2] + bombing], [0, 0, 0]);
-
-    return `===================== __**${name}**__ ===================\`/goto ${x} ${y}\`
+    // console.log(buildingQueue);
+    // console.log(fleetQueue);
+    return `=== __**${name}**__ ===================\`/goto ${x} ${y}\`
 :shield:  **${current}/${total}**:black_small_square::purple_square: ${defaultFormatNumber(metal)} | ${defaultFormatNumber(hiddenMetal)}:black_small_square::large_blue_diamond: ${defaultFormatNumber(gas)} | ${defaultFormatNumber(hiddenGas)}:black_small_square::green_square: ${defaultFormatNumber(crystal)} | ${defaultFormatNumber(hiddenCrystal)}:black_small_square::construction_worker: **${labor || 'None'}**
 Cards:  ${_.map(stationCards, 'name').join(',')}
 
@@ -381,8 +384,10 @@ ${_.map(buildings, ({level: bLevel, name: bName}) =>
         }
 
 __Outposts:__
-${_.map(outposts, ({level: bLevel, operational: bOpe, boosted, hp, name: bName}) =>
-            `${bOpe ? ':white_check_mark: ' : ':zzz: '}${boosted ? ':arrow_double_up: ' : ':black_small_square:'} **${bLevel}** ${bName} \`${formatHpNumber(hp)}\` :hearts:`).join('\n') || '*empty*'
+${
+            _.map(outposts, ({level: bLevel, operational: bOpe, boosted, hp, name: bName}) =>
+                `${bOpe ? ':white_check_mark: ' : ':zzz: '}${boosted ? ':arrow_double_up:' : ':black_small_square:'}\`${formatHpNumber(hp)}\` :hearts: **${bLevel}** ${bName}`
+            ).join('\n') || '*empty*'
         }
 
 ${TEMPLATE_FLEETS_H1} \`${formatFirepowerNumber(totalFirepower)} \`:boom: | \`${formatHpNumber(totalHp)} \`:hearts: | \`${formatFirepowerNumber(totalBombing)} \`:skull: `
@@ -398,8 +403,12 @@ ${TEMPLATE_FLEETS_H1} \`${formatFirepowerNumber(totalFirepower)} \`:boom: | \`${
         ).join('\n')
         + `\n__Hangar:__\n`
         + (_.map(hangar, ({qty, type}) => `${qty} x ${type}`
-        ).join('\n') || '*empty*');
+        ).join('\n') || '*empty*')
+
+        + (buildingQueue ? `\n\n__Building Construction Queue:__\n${buildingQueue.join('\n')}` : '')
+        + (fleetQueue ? `\n\n__Fleet Construction Queue:__\n${fleetQueue.join('\n')}` : '');
 }
+
 
 export default {
     PARSERS,

@@ -389,8 +389,8 @@ ${TEMPLATE_FLEETS_H1} \`${formatFirepowerNumber(totalFirepower)} \`:boom: | \`${
         + (supplied ? ` | **${supplied}** supplied` : '')
         + '\n' + _.map(fleetsDesc,
             ({hp, firepower, bombing, qty, cards, fromPlayer, ship: {type}}) =>
-                `\`${String(qty).padStart(5)}\` x \`${type.padStart(20)}\` \`${formatFirepowerNumber(firepower)} \`:boom: | \`${formatHpNumber(hp)} \`:hearts: `
-                + `| \`${formatFirepowerNumber(bombing || 0)} \`:skull:`
+                `\`${String(qty).padStart(5)}\` x \`${type.padStart(20)}\` \`${formatFirepowerNumber(firepower)} \`:black_small_square: | \`${formatHpNumber(hp)} \`:black_small_square: `
+                + `| \`${formatFirepowerNumber(bombing || 0)} \`:black_small_square:`
                 + (fromPlayer ? `From: \`${fromPlayer}\`` : '')
                 + (cards && cards.length > 0 ? ':card_box: ||' + _.map(cards, c => c.name.substring(0, 15)
                 //c => c.shortname || _.map(c.name.split(' '), namePart => namePart.substr(0,3)).join('')

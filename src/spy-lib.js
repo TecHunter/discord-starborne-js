@@ -364,7 +364,7 @@ function getFormattedReport({
         (result, {firepower, hp, bombing}) => [result[0] + firepower, result[1] + hp, result[2] + bombing], [0, 0, 0]);
 
     return `===================== __**${name}**__ ===================\`/goto ${x} ${y}\`
-:shield:  **${current}/${total}**:black_small_square::large_blue_diamond:  ${metal}  / ${gas} / ${crystal}:black_small_square::grey_question: ${hiddenMetal ||'?'}  / ${hiddenGas || '?'} / ${hiddenCrystal || '?'}:black_small_square::construction_worker: **${labor || 'None'}**
+:shield:  **${current}/${total}**:black_small_square::money_bag:  ${metal}  / ${gas} / ${crystal}:black_small_square::grey_question: ${hiddenMetal ||'?'}  / ${hiddenGas || '?'} / ${hiddenCrystal || '?'}:black_small_square::construction_worker: **${labor || 'None'}**
 Cards:  ${_.map(stationCards, 'name').join(',')}
 
 __Buildings:__ \`${formatHpNumber(totalBuildingHp).padStart(7, ' ')}\`:hearts:

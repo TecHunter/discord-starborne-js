@@ -187,42 +187,47 @@ const PARSERS = {
             try {
                 if (l === null || l.trim() === '') {
                 } else {
-                    // console.log(l);
-                    const grps = l.match(REGEX_FLEET).groups;
-                    // console.log(grps);
-                    const qty = parseInt(grps.qty, 10);
-                    const type = normalizeShipType(grps.type);
-                    const ship = baseShipStats[type];
-                    let fromPlayer = null;
-                    let cards = null;
-                    try {
-                        if (!grps.noCards && i + 1 < totalLines) {
-                            const nextLine = lines[i + 1];
-                            if (nextLine.startsWith('Cards:')) {
-                                cards = parseCards(nextLine.substring(7, lines[i + 1].length - 1));
-                                // console.log('found cards: ',cards);
-                                //skiping nextline
-                                i++;
-
-                                if (!grps.player && i + 1 < totalLines) {
-                                    // from player is onthe next line
-                                    const playerMatchLine = lines[i + 1].match(/^From playerProfile\(([\d\w\s]+)\)/);
-                                    // console.log('matching ', playerMatchLine)
-                                    fromPlayer = playerMatchLine && playerMatchLine.length > 1 && playerMatchLine[1];
+                    console.log(l);
+                    const match = l.match(REGEX_FLEET);
+                    if (match !== null) {
+                        const grps = match.groups;
+                        console.log(grps);
+                        const qty = parseInt(grps.qty, 10);
+                        const type = normalizeShipType(grps.type);
+                        const ship = baseShipStats[type];
+                        let fromPlayer = null;
+                        let cards = null;
+                        try {
+                            if (!grps.noCards && i + 1 < totalLines) {
+                                const nextLine = lines[i + 1];
+                                if (nextLine.startsWith('Cards:')) {
+                                    cards = parseCards(nextLine.substring(7, lines[i + 1].length - 1));
+                                    // console.log('found cards: ',cards);
+                                    //skiping nextline
                                     i++;
+
+                                    if (!grps.player && i + 1 < totalLines) {
+                                        // from player is onthe next line
+                                        const playerMatchLine = lines[i + 1].match(/^From playerProfile\(([\d\w\s]+)\)/);
+                                        if (playerMatchLine) {
+                                            // console.log('matching ', playerMatchLine)
+                                            fromPlayer = playerMatchLine.length > 1 && playerMatchLine[1];
+                                            i++;
+                                        }
+                                    }
                                 }
                             }
+                            if (grps.noCards && grps.player) {
+                                console.error(grps.player);
+                                fromPlayer = grps.player;
+                            }
+                        } catch (e) {
+                            info = 'Cannot read cards';
+                            console.error(lines[i], e);
                         }
-                        if (grps.noCards && grps.player) {
-                            console.error(grps.player);
-                            fromPlayer = grps.player;
-                        }
-                    } catch (e) {
-                        info = 'Cannot read cards';
-                        console.error(lines[i], e);
+                        // console.log(`adding fleet of ${qty} ${type}`);
+                        fleets.push(new Fleet(ship, qty, cards, 0, fromPlayer));
                     }
-                    // console.log(`adding fleet of ${qty} ${type}`);
-                    fleets.push(new Fleet(ship, qty, cards,0, fromPlayer));
                 }
             } catch (eregex) {
                 console.error('fleet line parse error', eregex);
@@ -334,6 +339,7 @@ function getFirepower(modifier, level) {
 function defaultFormatNumber(n) {
     return _.isNumber(n) ? numeral(n).format('0,0') : '?';
 }
+
 function formatHpNumber(n) {
     return numeral(n).format('0,0');
 }

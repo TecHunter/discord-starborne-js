@@ -187,11 +187,11 @@ const PARSERS = {
             try {
                 if (l === null || l.trim() === '') {
                 } else {
-                    console.log(l);
+                    // console.log(l);
                     const match = l.match(REGEX_FLEET);
                     if (match !== null) {
                         const grps = match.groups;
-                        console.log(grps);
+                        // console.log(grps);
                         const qty = parseInt(grps.qty, 10);
                         const type = normalizeShipType(grps.type);
                         const ship = baseShipStats[type];

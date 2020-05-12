@@ -48,14 +48,17 @@ bot.on('ready', function (evt) {
 
 const regexDistance = /^(?<x1>-?\d+)\s(?<y1>-?\d+)\s(?<x2>-?\d+)\s(?<y2>-?\d+)\D*$/i;
 
-function send(channel, message) {
-    if (message.length > 1997)
+function send({channel, author}, message) {
+    const {username} = author;
+    const authorName= (username.substring(0,29)+' ').padEnd(30, '=');
+    const overheadSize = authorName.length + ':detective:  '.length + 4;
+    if (message.length + overheadSize >= 2000)
         for (let i = 0; i < message.length;) {
             const max = Math.min(message.length, i + 2000 - 4);
             const lastIndexCRLF = message.substring(i, i + 1997).lastIndexOf('\n');
             const maxIndex = lastIndexCRLF > 0 ? lastIndexCRLF : max;
             // console.log({i, maxIndex});
-            const toSend = '>>> ' + message.substring(i, i + maxIndex);
+            const toSend = '>>> ' + (i === 0 ? `:detective: ${authorName}` : ``) + message.substring(i, i + maxIndex);
             channel.send(toSend);
             if (lastIndexCRLF > 0) {
                 i = i + maxIndex + 1;
@@ -65,7 +68,7 @@ function send(channel, message) {
 
         }
     else
-        channel.send('>>> ' + message);
+        channel.send(`>>> :detective: ${authorName}` + message);
 }
 
 bot.on('message', function (e) {
@@ -87,9 +90,9 @@ bot.on('message', function (e) {
     } else if (e.content.substring(0, 17) === 'Spy Report on hex') {
         try {
             const parsed = Spy.parseSpyReport(e.content);
-            // console.log(parsed);
+            console.log(parsed);
             const formatted = Spy.getFormattedReport(parsed);
-            send(e.channel, formatted);
+            send(e, formatted);
             e.delete();
         } catch (e) {
             console.log(e);
@@ -103,8 +106,8 @@ bot.on('message', function (e) {
                 .then(({data}) => {
                     if (data.startsWith('Spy Report on hex')) {
                         const parsed = Spy.parseSpyReport(data);
-                        // console.log(parsed);
-                        send(e.channel, Spy.getFormattedReport(parsed));
+                        console.log(parsed);
+                        send(e, Spy.getFormattedReport(parsed));
                         // e.delete();
                     }
                 });

@@ -54,7 +54,7 @@ function send(channel, message) {
             const max = Math.min(message.length, i + 2000 - 4);
             const lastIndexCRLF = message.substring(i, i + 1997).lastIndexOf('\n');
             const maxIndex = lastIndexCRLF > 0 ? lastIndexCRLF : max;
-            console.log({i, maxIndex});
+            // console.log({i, maxIndex});
             const toSend = '>>> ' + message.substring(i, i + maxIndex);
             channel.send(toSend);
             if (lastIndexCRLF > 0) {
@@ -96,7 +96,7 @@ bot.on('message', function (e) {
         }
 
     } else if (e.attachments && e.content.startsWith('/spy')) {
-        console.log('parsing')
+        // console.log('parsing')
         e.attachments.each(attachment => {
             axios
                 .get(attachment.url, {responseType: 'text'})

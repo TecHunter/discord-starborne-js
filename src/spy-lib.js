@@ -362,13 +362,10 @@ function getFormattedReport({
             [result[0] + getFirepower(modifiers.outposts[name], level), result[1] + hp], [0, 0]);
     const [totalFirepower, totalHp, totalBombing] = _.reduce(fleetsDesc,
         (result, {firepower, hp, bombing}) => [result[0] + firepower, result[1] + hp, result[2] + bombing], [0, 0, 0]);
-    return `====================================================================
-__Spy Report at **${name}**__ \`/goto ${x} ${y}\`
-Capture Defense: **${current}/${total}**
-Metal / Gas / Crystal (hidden)
-${metal} (${hiddenMetal || '*?*'}) / ${gas} (${hiddenGas || '*?*'}) / ${crystal} (${hiddenCrystal || '*?*'})
-Cards: ${_.map(stationCards, 'name').join(',')}
-Labor **${labor === false ? 'None' : labor}**
+
+    return `===================== __**${name}**__ ===================\`/goto ${x} ${y}\`
+:shield:  **${current}/${total}**:black_small_square::large_blue_diamond:  ${metal}  / ${gas} / ${crystal}:black_small_square::grey_question: ${hiddenMetal ||'?'}  / ${hiddenGas || '?'} / ${hiddenCrystal || '?'}:black_small_square::construction_worker: **${labor || 'None'}**
+Cards:  ${_.map(stationCards, 'name').join(',')}
 
 __Buildings:__ \`${formatHpNumber(totalBuildingHp).padStart(7, ' ')}\`:hearts:
 ${_.map(buildings, ({level: bLevel}, bName) =>

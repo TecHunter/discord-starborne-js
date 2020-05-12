@@ -141,8 +141,7 @@ const PARSERS = {
             .filter(_.isNotNull)
             .map(l => l.split(' - '))
             .filter(_.isNotNull)
-            .keyBy(0)
-            .mapValues(o => {
+            .map(o => {
                 // console.log(o);
                 const level = parseInt(o[1].substring(6).trim(), 10);
                 const building = modifiers.buildings[o[0].trim()] || {tier: 1, type: 'building'};
@@ -255,8 +254,7 @@ const PARSERS = {
             .filter(_.isNotNull)
             .map(l => l.split(' - '))
             .filter(_.isNotNull)
-            .keyBy(0)
-            .mapValues(o => {
+            .map(o => {
                 // console.log(o);
                 const level = parseInt(o[1].substring(6).trim(), 10);
                 const building = modifiers.outposts[o[0].trim()];
@@ -366,6 +364,7 @@ function getFormattedReport({
     // console.log(fleetsDesc);
     const totalBuildingHp = _.reduce(buildings,
         (result, {hp}, name) => result + hp, 0);
+    // console.log(outposts);
     const [totalOutpostFirepower, totalOutpostHp] = _.reduce(outposts,
         (result, {hp, name, level}) =>
             [result[0] + getFirepower(modifiers.outposts[name], level), result[1] + hp], [0, 0]);
@@ -377,12 +376,12 @@ function getFormattedReport({
 Cards:  ${_.map(stationCards, 'name').join(',')}
 
 __Buildings:__ \`${formatHpNumber(totalBuildingHp).padStart(7, ' ')}\`:hearts:
-${_.map(buildings, ({level: bLevel}, bName) =>
+${_.map(buildings, ({level: bLevel, name: bName}) =>
             `**${bLevel}** ${bName}`).join('\n') || '*empty*'
         }
 
 __Outposts:__
-${_.map(outposts, ({level: bLevel, operational: bOpe, boosted, hp}, bName) =>
+${_.map(outposts, ({level: bLevel, operational: bOpe, boosted, hp, name: bName}) =>
             `${bOpe ? ':white_check_mark: ' : ':zzz: '}${boosted ? ':arrow_double_up: ' : ':black_small_square:'} **${bLevel}** ${bName} \`${formatHpNumber(hp)}\` :hearts:`).join('\n') || '*empty*'
         }
 

@@ -49,8 +49,9 @@ bot.on('ready', function (evt) {
 const regexDistance = /^(?<x1>-?\d+)\s(?<y1>-?\d+)\s(?<x2>-?\d+)\s(?<y2>-?\d+)\D*$/i;
 
 function send({channel, author}, message) {
-    const {username} = author;
-    const authorName= (username.substring(0,29)+' ').padEnd(30, '=');
+    const {id} = author;
+    const {guild} = channel;
+    const authorName= `<@${id}>`;
     const overheadSize = authorName.length + ':detective:  '.length + 4;
     if (message.length + overheadSize >= 2000)
         for (let i = 0; i < message.length;) {
@@ -90,7 +91,7 @@ bot.on('message', function (e) {
     } else if (e.content.substring(0, 17) === 'Spy Report on hex') {
         try {
             const parsed = Spy.parseSpyReport(e.content);
-            console.log(parsed);
+            // console.log(parsed);
             const formatted = Spy.getFormattedReport(parsed);
             send(e, formatted);
             e.delete();
@@ -106,7 +107,7 @@ bot.on('message', function (e) {
                 .then(({data}) => {
                     if (data.startsWith('Spy Report on hex')) {
                         const parsed = Spy.parseSpyReport(data);
-                        console.log(parsed);
+                        // console.log(parsed);
                         send(e, Spy.getFormattedReport(parsed));
                         // e.delete();
                     }

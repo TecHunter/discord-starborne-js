@@ -339,13 +339,13 @@ function defaultFormatNumber(n) {
 }
 
 function formatHpNumber(n) {
-    return numeral(n).format('0,0');
+    return numeral(n).format('0,0').padStart(10, ' ');
 }
 
 function formatFirepowerNumber(n) {
-    return numeral(n).format('0,0');
+    return numeral(n).format('0,0').padStart(10, ' ');
 }
-
+const TEMPLATE_FLEETS_H1 = `__Fleets:__\`` + String().padStart(22, ' ') + '`';
 function getFormattedReport({
                                 [MARKER_HEADER]: {name, x, y},
                                 [MARKER_CAPTURE]: {current, total},
@@ -385,12 +385,12 @@ ${_.map(outposts, ({level: bLevel, operational: bOpe, boosted, hp, name: bName})
             `${bOpe ? ':white_check_mark: ' : ':zzz: '}${boosted ? ':arrow_double_up: ' : ':black_small_square:'} **${bLevel}** ${bName} \`${formatHpNumber(hp)}\` :hearts:`).join('\n') || '*empty*'
         }
 
-__Fleets:__ \`${formatFirepowerNumber(totalFirepower).padStart(7, ' ')}\`:boom: | \`${formatHpNumber(totalHp).padStart(10, ' ')}\`:hearts: | \`${formatFirepowerNumber(totalBombing).padStart(10, ' ')}\`:skull: `
+${TEMPLATE_FLEETS_H1} \`${formatFirepowerNumber(totalFirepower)} \`:boom: | \`${formatHpNumber(totalHp)} \`:hearts: | \`${formatFirepowerNumber(totalBombing)} \`:skull: `
         + (supplied ? ` | **${supplied}** supplied` : '')
         + '\n' + _.map(fleetsDesc,
             ({hp, firepower, bombing, qty, cards, fromPlayer, ship: {type}}) =>
-                `\`${String(qty).padStart(5)}\` x \`${type.padStart(20)}\` \`${formatFirepowerNumber(firepower).padStart(10, ' ')} \`:boom: | \`${formatHpNumber(hp).padStart(10, ' ')} \`:hearts: `
-                + (bombing ? `| \`${formatFirepowerNumber(bombing).padStart(7, ' ')} \`:skull:` : '')
+                `\`${String(qty).padStart(5)}\` x \`${type.padStart(20)}\` \`${formatFirepowerNumber(firepower)} \`:boom: | \`${formatHpNumber(hp)} \`:hearts: `
+                + `| \`${formatFirepowerNumber(bombing || 0)} \`:skull:`
                 + (fromPlayer ? `From: \`${fromPlayer}\`` : '')
                 + (cards && cards.length > 0 ? ':card_box: ||' + _.map(cards, c => c.name.substring(0, 15)
                 //c => c.shortname || _.map(c.name.split(' '), namePart => namePart.substr(0,3)).join('')

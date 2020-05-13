@@ -5,21 +5,13 @@ import {distance} from "./lib";
 import Discord from "discord.js";
 import logger from "winston";
 import axios from "axios";
-import http from 'http';
-import fs from 'fs';
+import _ from 'lodash';
+// import http from 'http';
+// import fs from 'fs';
+import redis from 'redis';
+// const redisClient = redis.createClient();
 
-const download = function (url, dest, cb) {
-    const file = fs.createWriteStream(dest);
-    const request = http.get(url, function (response) {
-        response.pipe(file);
-        file.on('finish', function () {
-            file.close(cb);  // close() is async, call cb after close completes.
-        });
-    }).on('error', function (err) { // Handle errors
-        fs.unlink(dest); // Delete the file async. (But we don't check the result)
-        if (cb) cb(err.message);
-    });
-};
+
 // Configure logger settings
 
 console.log("starting");
@@ -27,7 +19,11 @@ logger.remove(logger.transports.Console);
 logger.add(new logger.transports.Console, {
     colorize: true
 });
-logger.level = 'debug';
+logger.level = 'info';
+// redisClient.on("error", function(error) {
+//     logger.error(error);
+// });
+
 // Initialize Discord Bot
 const bot = new Discord.Client();
 if (process.env.TOKEN_DEV) {
@@ -46,12 +42,50 @@ bot.on('ready', function (evt) {
     logger.info(bot.username + ' - (' + bot.id + ')');
 });
 
+const patreon = 'https://www.patreon.com/techunter_chaos'
+const helpEmbed = new Discord.MessageEmbed()
+    .setColor('#0099ff')
+    .setTitle('Support me on Patreon!')
+    .setURL(patreon)
+    .setAuthor('TecHunter')
+    .setDescription('Starborne Tool list of commands')
+    .addFields(
+        {name: 'Get hex distance', value: '`/distance x1 y1 x2 y2`'},
+        {name: 'Spy report', value: 'send raw report in chat'},
+        // {name: 'Last Spy report', value: '`/spy x y`\nwill try to remember the last known report in this channel for hex (x,y)'},
+    )
+    .addField(            'Big spy report', 'add `/spy` in the message when uploading file(s)', true)
+    .setImage('https://i.ibb.co/hddtj03/big-Report.png')
+    .setTimestamp();
+
 const regexDistance = /^(?<x1>-?\d+)\s(?<y1>-?\d+)\s(?<x2>-?\d+)\s(?<y2>-?\d+)\D*$/i;
 
-function send({channel, author}, message) {
+function getKey({channel, author}, {x, y}) {
+
+    let key = channel.guild.id + ':' + channel.id + ':' + x + ':' + y;
+    if (author) {
+        return key + ':' + author.id;
+    }
+    return key + ':*'
+}
+
+function registerReport(key, report) {
+    try {
+        //console.log(key, JSON.stringify(report))
+        // client.set("key", "value", redis.print);
+        // client.get("key", redis.print);
+    } catch (e) {
+        logger.error(e);
+    }
+}
+
+function send({channel, author, createdAt}, report) {
     const {id} = author;
     const {guild} = channel;
-    const authorName= `<@${id}>`;
+    report.timestamp = createdAt;
+    registerReport(getKey({channel, author}, report.HEADER), report);
+    const message = Spy.getFormattedReport(report);
+    const authorName = `<@${id}>`;
     const overheadSize = authorName.length + ':detective:  '.length + 4;
     if (message.length + overheadSize >= 2000)
         for (let i = 0; i < message.length;) {
@@ -92,27 +126,42 @@ bot.on('message', function (e) {
         try {
             const parsed = Spy.parseSpyReport(e.content);
             // console.log(parsed);
-            const formatted = Spy.getFormattedReport(parsed);
-            send(e, formatted);
+            send(e, parsed);
             e.delete();
         } catch (e) {
             console.log(e);
         }
 
-    } else if (e.attachments && e.content.startsWith('/spy')) {
-        // console.log('parsing')
-        e.attachments.each(attachment => {
-            axios
-                .get(attachment.url, {responseType: 'text'})
-                .then(({data}) => {
-                    if (data.startsWith('Spy Report on hex')) {
-                        const parsed = Spy.parseSpyReport(data);
-                        // console.log(parsed);
-                        send(e, Spy.getFormattedReport(parsed));
-                        // e.delete();
-                    }
-                });
-        })
+    } else if (e.content.startsWith('/spy')) {
+
+        if (e.attachments && e.attachments.size > 0) {
+            // console.log('parsing')
+            e.attachments.each(attachment => {
+                axios
+                    .get(attachment.url, {responseType: 'text'})
+                    .then(({data}) => {
+                        if (data.startsWith('Spy Report on hex')) {
+                            const parsed = Spy.parseSpyReport(data);
+                            // console.log(parsed);
+                            send(e, parsed);
+                            // e.delete();
+                        }
+                    });
+            })
+        } else {
+            const commands = e.content.substr(4).trimLeft().match(/^(-?\d+) (-?\d+)/i);
+            if (!commands || commands.length !== 3) {
+                e.channel.send(helpEmbed);
+            } else {
+                const x = parseInt(commands[1], 10);
+                const y = parseInt(commands[2], 10);
+                if (_.isNaN(x) || _.isNaN(y)) {
+                    e.channel.send('Invalid coordinates, use `/spy {x} {y}`')
+                } else {
+                    console.log('getting report for ' + getKey({channel: e.channel}, {x, y}))
+                }
+            }
+        }
     }
 
 });

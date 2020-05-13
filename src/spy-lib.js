@@ -268,7 +268,7 @@ const PARSERS = {
                         hp: BUILDING_STATS.outpost[building.tier - 1][level - 1].hp,
                         level,
                         operational: op.startsWith('Operational'),
-                        boosted: op.substring(11).trim() || false
+                        boosted: op.substring(11).trim().length>0
                     }
                 }
                 return ({
@@ -405,8 +405,8 @@ ${TEMPLATE_FLEETS_H1} \`${formatFirepowerNumber(totalFirepower)} \`:boom: | \`${
         + (_.map(hangar, ({qty, type}) => `${qty} x ${type}`
         ).join('\n') || '*empty*')
 
-        + (buildingQueue ? `\n\n__Building Construction Queue:__\n${buildingQueue.join('\n')}` : '')
-        + (fleetQueue ? `\n\n__Fleet Construction Queue:__\n${fleetQueue.join('\n')}` : '');
+        + (buildingQueue && buildingQueue.length>0 ? `\n\n__Building Construction Queue:__\n${buildingQueue.join('\n')}` : '')
+        + (fleetQueue && fleetQueue.length>0? `\n\n__Fleet Construction Queue:__\n${fleetQueue.join('\n')}` : '');
 }
 
 

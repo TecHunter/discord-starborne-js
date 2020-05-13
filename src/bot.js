@@ -8,7 +8,7 @@ import axios from "axios";
 import _ from 'lodash';
 // import http from 'http';
 // import fs from 'fs';
-import redis from 'redis';
+// import redis from 'redis';
 // const redisClient = redis.createClient();
 
 

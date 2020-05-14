@@ -87,10 +87,11 @@ function send({channel, author, createdAt}, report) {
     const message = Spy.getFormattedReport(report);
     const authorName = `<@${id}>`;
     const overheadSize = authorName.length + ':detective:  '.length + 4;
+    const firstMessageHeader = `:detective: ${authorName}`.length;
     if (message.length + overheadSize >= 2000)
         for (let i = 0; i < message.length;) {
-            const max = Math.min(message.length, i + 2000 - 4);
-            const lastIndexCRLF = message.substring(i, i + 1997).lastIndexOf('\n');
+            const max = Math.min(message.length, i + 2000 - ((i === 0 ? firstMessageHeader : 4)));
+            const lastIndexCRLF = message.substring(i, i + max).lastIndexOf('\n');
             const maxIndex = lastIndexCRLF > 0 ? lastIndexCRLF : max;
             // console.log({i, maxIndex});
             const toSend = '>>> ' + (i === 0 ? `:detective: ${authorName}` : ``) + message.substring(i, i + maxIndex);

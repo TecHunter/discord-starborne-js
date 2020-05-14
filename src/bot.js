@@ -103,7 +103,7 @@ function send({channel, author, createdAt}, report) {
 
         }
     else
-        channel.send(`>>> ${prefix}` + message);
+        channel.send(`>>> ` + message);
 }
 
 bot.on('message', function (e) {

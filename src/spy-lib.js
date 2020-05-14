@@ -30,6 +30,7 @@ function Report() {
     this[MARKER_OUTPOSTS] = {};
     this[MARKER_FLEETS] = [];
     this[MARKER_HANGAR] = [];
+    this.failedReport = false;
 }
 
 export const MARKERS = {
@@ -85,7 +86,7 @@ const REGEX_HEADER = /^\((?<x>-?\d+)[\s,+]+(?<y>-?\d+)\)\s+(?<name>.+)$/i;
 const REGEX_STATION_RES = /(?<res>\w+)\s(?<val>\d+)\s*/gi;
 const REGEX_LABOR = /^Labor\s(\w+)$/i;
 const REGEX_FLEET = /^(?<qty>\d+)\s(?<type>[a-z\s]+\w)(?<noCards> - No cards\.)?\s?(?<fromPlayer>From\splayerProfile\()?(?<player>[\w\s\d]*)\)?.*/i;
-const REGEX_HANGAR = /^[a-z\s]*\((?<type>[a-z\s]+)\)\s(?<qty>\d+)$/i;
+const REGEX_HANGAR = /^[a-z\s]*\((?<type>[a-z\s]+)\)\s(?<qty>\d+)/i;
 const REGEX_CARD = /cardTooltip\((\d+)\)\s([\w\s\-']+)/i;
 
 function parseCards(line) {
@@ -143,15 +144,30 @@ const PARSERS = {
             .filter(_.isNotNull)
             .map(o => {
                 // console.log(o);
-                const level = parseInt(o[1].substring(6).trim(), 10);
+                const levelString = o[1].substring(6).trim();
                 const building = modifiers.buildings[o[0].trim()] || {tier: 1, type: 'building'};
-                // console.log('found building', building);
-                return ({
-                    name: o[0],
-                    tier: building.tier,
-                    level,
-                    hp: BUILDING_STATS[building.type || 'building'][building.tier - 1][level - 1].hp
-                });
+                let level;
+                if(levelString.startsWith('unknown')){
+                   level = false;
+                    // console.log('found building', building);
+                    return ({
+                        name: o[0],
+                        tier: building.tier,
+                        level,
+                        hp: BUILDING_STATS[building.type || 'building'][building.tier - 1][0].hp
+                    });
+                }else {
+                    level = parseInt(levelString, 10);
+
+
+                    // console.log('found building', building);
+                    return ({
+                        name: o[0],
+                        tier: building.tier,
+                        level,
+                        hp: BUILDING_STATS[building.type || 'building'][building.tier - 1][level - 1].hp
+                    });
+                }
             })
             .value();
     },
@@ -256,8 +272,20 @@ const PARSERS = {
             .filter(_.isNotNull)
             .map(o => {
                 // console.log(o);
-                const level = parseInt(o[1].substring(6).trim(), 10);
                 const building = modifiers.outposts[o[0].trim()];
+                const levelString = o[1].substring(6).trim();
+
+                if(levelString.startsWith('??')){
+                    // console.log('found building', building);
+                    return ({
+                        name: o[0],
+                        tier: building.tier,
+                        level: false,
+                        hp: BUILDING_STATS[building.type || 'building'][building.tier - 1][0].hp
+                    });
+                }
+
+                const level = parseInt(levelString, 10);
                 const hp = BUILDING_STATS[building.type || 'outpost'][building.tier - 1][level - 1].hp;
                 if (o.length > 2) {
                     const op = o[2];
@@ -268,7 +296,7 @@ const PARSERS = {
                         hp: BUILDING_STATS.outpost[building.tier - 1][level - 1].hp,
                         level,
                         operational: op.startsWith('Operational'),
-                        boosted: op.substring(11).trim().length>0
+                        boosted: op.substring(11).trim().length > 0
                     }
                 }
                 return ({
@@ -310,8 +338,12 @@ function parseSpyReport(raw) {
             } else if (line.startsWith(MARKER_CAPTURE)) {
                 byMarkers[MARKER_CAPTURE] = PARSERS[MARKER_CAPTURE](line);
             } else {
-                if (line !== '')
-                    byMarkers[marker].push(line.trim());
+                if(i> lines.length-3 && line.startsWith('Could not get')){
+                    byMarkers.failedReport = true;
+                }else {
+                    if (line !== '')
+                        byMarkers[marker].push(line.trim());
+                }
             }
         }
         if (marker != null) {
@@ -360,7 +392,8 @@ function getFormattedReport({
                                 [MARKER_QUEUE_FLEETS]: fleetQueue,
                                 [MARKER_OUTPOSTS]: outposts,
                                 [MARKER_FLEETS]: {fleets, supplied},
-                                [MARKER_HANGAR]: hangar
+                                [MARKER_HANGAR]: hangar,
+                                failedReport
                             }) {
     const fleetsDesc = _.invokeMap(fleets, 'get');
     // console.log(fleetsDesc);
@@ -380,13 +413,13 @@ Cards:  ${_.map(stationCards, 'name').join(',')}
 
 __Buildings:__ \`${formatHpNumber(totalBuildingHp).padStart(7, ' ')}\`:hearts:
 ${_.map(buildings, ({level: bLevel, name: bName}) =>
-            `**${bLevel}** ${bName}`).join('\n') || '*empty*'
+            `**${bLevel || '?'}** ${bName}`).join('\n') || '*empty*'
         }
 
 __Outposts:__
 ${
             _.map(outposts, ({level: bLevel, operational: bOpe, boosted, hp, name: bName}) =>
-                `${bOpe ? ':white_check_mark: ' : ':zzz: '}${boosted ? ':arrow_double_up:' : ':black_small_square:'}\`${formatHpNumber(hp)}\` :hearts: **${bLevel}** ${bName}`
+                `${bOpe ? ':white_check_mark: ' : ':zzz: '}${boosted ? ':arrow_double_up:' : ':black_small_square:'}\`${formatHpNumber(hp)}\` :hearts: **${bLevel || '?'}** ${bName}`
             ).join('\n') || '*empty*'
         }
 
@@ -406,7 +439,10 @@ ${TEMPLATE_FLEETS_H1} \`${formatFirepowerNumber(totalFirepower)} \`:boom: | \`${
         ).join('\n') || '*empty*')
 
         + (buildingQueue && buildingQueue.length>0 ? `\n\n__Building Construction Queue:__\n${buildingQueue.join('\n')}` : '')
-        + (fleetQueue && fleetQueue.length>0? `\n\n__Fleet Construction Queue:__\n${fleetQueue.join('\n')}` : '');
+        + (fleetQueue && fleetQueue.length>0? `\n\n__Fleet Construction Queue:__\n${fleetQueue.join('\n')}` : '')
+        + (failedReport ? `\`\`\`diff
+- Spy report not reliable, your scan strength is lower than target spy defense.
+\`\`\``: '');
 }
 
 

@@ -37,9 +37,9 @@ if (process.env.TOKEN_DEV) {
     process.exit(-1);
 }
 bot.on('ready', function (evt) {
-    logger.info('Connected');
-    logger.info('Logged in as: ');
-    logger.info(bot.username + ' - (' + bot.id + ')');
+    // bot.user.setGame("Starborne");
+    // bot.user.setStatus("online");
+    logger.info('Shard online');
 });
 
 const patreon = 'https://www.patreon.com/techunter_chaos'
@@ -78,33 +78,32 @@ function registerReport(key, report) {
         logger.error(e);
     }
 }
-
+function getPrefix({author}){
+    return `:detective:  <@${author.id}>`;
+}
 function send({channel, author, createdAt}, report) {
-    const {id} = author;
-    const {guild} = channel;
     report.timestamp = createdAt;
-    registerReport(getKey({channel, author}, report.HEADER), report);
-    const message = Spy.getFormattedReport(report);
-    const authorName = `<@${id}>`;
-    const overheadSize = authorName.length + ':detective:  '.length + 4;
-    const firstMessageHeader = `:detective: ${authorName}`.length;
-    if (message.length + overheadSize >= 2000)
+    // registerReport(getKey({channel, author}, report.HEADER), report);
+    const prefix = getPrefix({author});
+    const message = prefix + Spy.getFormattedReport(report);
+    // console.log(`message size: ${message.length}`);
+    if (message.length >= 2000)
         for (let i = 0; i < message.length;) {
-            const max = Math.min(message.length, i + 2000 - ((i === 0 ? firstMessageHeader : 4)));
-            const lastIndexCRLF = message.substring(i, i + max).lastIndexOf('\n');
-            const maxIndex = lastIndexCRLF > 0 ? lastIndexCRLF : max;
-            // console.log({i, maxIndex});
-            const toSend = '>>> ' + (i === 0 ? `:detective: ${authorName}` : ``) + message.substring(i, i + maxIndex);
-            channel.send(toSend);
+            const chunkSize = Math.min(message.length - i + 4, 2000);
+            // console.log(`sending part of ${chunkSize} long`);
+            const lastIndexCRLF = message.substring(i, i + chunkSize - 4).lastIndexOf('\n');
+            const realChunkSize = lastIndexCRLF > 0 ? lastIndexCRLF : chunkSize - 4;
+            // console.log({i, realChunkSize});
+            channel.send( '>>> ' + message.substring(i, i + realChunkSize));
             if (lastIndexCRLF > 0) {
-                i = i + maxIndex + 1;
+                i = i + realChunkSize + 1; //ignoring next char since it's `\n`
             } else {
-                i = i + maxIndex
+                i = i + realChunkSize;
             }
 
         }
     else
-        channel.send(`>>> :detective: ${authorName}` + message);
+        channel.send(`>>> ${prefix}` + message);
 }
 
 bot.on('message', function (e) {
@@ -166,3 +165,5 @@ bot.on('message', function (e) {
     }
 
 });
+
+export default bot;

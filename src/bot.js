@@ -51,10 +51,12 @@ const helpEmbed = new Discord.MessageEmbed()
     .setDescription('Starborne Tool list of commands')
     .addFields(
         {name: 'Get hex distance', value: '`/distance x1 y1 x2 y2`'},
-        {name: 'Spy report', value: 'send raw report in chat'},
+        {name: 'Spy report', value: 'send raw report in chat\nyou can also mention someone in the very first char\n'
+        + 'i.e. `@techunter Spy Report on hex [...]`'
+        },
         // {name: 'Last Spy report', value: '`/spy x y`\nwill try to remember the last known report in this channel for hex (x,y)'},
     )
-    .addField('Big spy report', 'add `/spy` in the message when uploading file(s)', true)
+    .addField('Big spy report', 'add `/spy [some message]` in the message when uploading file(s)', true)
     .setImage('https://i.ibb.co/hddtj03/big-Report.png')
     .setTimestamp();
 

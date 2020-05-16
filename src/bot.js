@@ -54,7 +54,7 @@ const helpEmbed = new Discord.MessageEmbed()
         {name: 'Spy report', value: 'send raw report in chat'},
         // {name: 'Last Spy report', value: '`/spy x y`\nwill try to remember the last known report in this channel for hex (x,y)'},
     )
-    .addField(            'Big spy report', 'add `/spy` in the message when uploading file(s)', true)
+    .addField('Big spy report', 'add `/spy` in the message when uploading file(s)', true)
     .setImage('https://i.ibb.co/hddtj03/big-Report.png')
     .setTimestamp();
 
@@ -78,13 +78,15 @@ function registerReport(key, report) {
         logger.error(e);
     }
 }
-function getPrefix({author}){
+
+function getPrefix({author}) {
     return `:detective:  <@${author.id}>`;
 }
-function send({channel, author, createdAt}, report) {
+
+function send({channel, author, createdAt}, report, extra) {
     report.timestamp = createdAt;
     // registerReport(getKey({channel, author}, report.HEADER), report);
-    const prefix = getPrefix({author});
+    const prefix = getPrefix({author}) + (extra ? `: ${extra}` : '');
     const message = prefix + Spy.getFormattedReport(report);
     // console.log(`message size: ${message.length}`);
     if (message.length >= 2000)
@@ -94,7 +96,7 @@ function send({channel, author, createdAt}, report) {
             const lastIndexCRLF = message.substring(i, i + chunkSize - 4).lastIndexOf('\n');
             const realChunkSize = lastIndexCRLF > 0 ? lastIndexCRLF : chunkSize - 4;
             // console.log({i, realChunkSize});
-            channel.send( '>>> ' + message.substring(i, i + realChunkSize));
+            channel.send('>>> ' + message.substring(i, i + realChunkSize));
             if (lastIndexCRLF > 0) {
                 i = i + realChunkSize + 1; //ignoring next char since it's `\n`
             } else {
@@ -106,9 +108,11 @@ function send({channel, author, createdAt}, report) {
         channel.send(`>>> ` + message);
 }
 
+const REPORT_REGEX = /^(<@![a-z0-9]+>)?\s?Spy\sReport\son\shex/i
 bot.on('message', function (e) {
     // Our bot needs to know if it will execute a command
     // It will listen for messages that will start with `!
+
     if (e.content.startsWith('/distance')) {
         try {
             // console.log(e.content.substring(10));
@@ -122,20 +126,11 @@ bot.on('message', function (e) {
         } catch (e) {
             console.error(e);
         }
-    } else if (e.content.substring(0, 17) === 'Spy Report on hex') {
-        try {
-            const parsed = Spy.parseSpyReport(e.content);
-            // console.log(parsed);
-            send(e, parsed);
-            e.delete();
-        } catch (e) {
-            console.log(e);
-        }
-
     } else if (e.content.startsWith('/spy')) {
 
         if (e.attachments && e.attachments.size > 0) {
             // console.log('parsing')
+            const extra = e.content.substring(4).trim();
             e.attachments.each(attachment => {
                 axios
                     .get(attachment.url, {responseType: 'text'})
@@ -143,7 +138,7 @@ bot.on('message', function (e) {
                         if (data.startsWith('Spy Report on hex')) {
                             const parsed = Spy.parseSpyReport(data);
                             // console.log(parsed);
-                            send(e, parsed);
+                            send(e, parsed, extra);
                             // e.delete();
                         }
                     });
@@ -161,6 +156,19 @@ bot.on('message', function (e) {
                     console.log('getting report for ' + getKey({channel: e.channel}, {x, y}))
                 }
             }
+        }
+    } else {
+        const reportMatch = e.content.match(REPORT_REGEX);
+        if (reportMatch) {
+            try {
+                const parsed = Spy.parseSpyReport(reportMatch.length > 0 && reportMatch[1] ? e.content.substring(reportMatch[1].length+1) : e.content);
+                // console.log(parsed);
+                send(e, parsed, reportMatch.length > 0 && reportMatch[1]);
+                e.delete();
+            } catch (e) {
+                console.log(e);
+            }
+
         }
     }
 

@@ -26,6 +26,7 @@ logger.level = 'info';
 
 // Initialize Discord Bot
 const bot = new Discord.Client();
+let totalReport = 0;
 if (process.env.TOKEN_DEV) {
     logger.info('Using DEV token');
     bot.login(process.env.TOKEN_DEV);
@@ -87,6 +88,7 @@ function getPrefix({author}) {
 
 function send({channel, author, createdAt}, report, extra) {
     report.timestamp = createdAt;
+    console.log(`Sending report #${totalReport++}`);
     // registerReport(getKey({channel, author}, report.HEADER), report);
     const prefix = getPrefix({author}) + (extra ? `: ${extra}` : '');
     const message = prefix + Spy.getFormattedReport(report);

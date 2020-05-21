@@ -60,7 +60,7 @@ const helpEmbed = new Discord.MessageEmbed()
     .setImage('https://i.ibb.co/hddtj03/big-Report.png')
     .setTimestamp();
 
-const regexDistance = /^(?<x1>-?\d+)\s(?<y1>-?\d+)\s(?<x2>-?\d+)\s(?<y2>-?\d+)\D*$/i;
+const regexDistance = /^(?<x1>-?\d+)\s+(?<y1>-?\d+)\s+(?<x2>-?\d+)\s+(?<y2>-?\d+)/i;
 
 function getKey({channel, author}, {x, y}) {
 
@@ -118,7 +118,7 @@ bot.on('message', function (e) {
     if (e.content.startsWith('/distance')) {
         try {
             // console.log(e.content.substring(10));
-            const {x1, y1, x2, y2} = e.content.substring(10).match(regexDistance).groups;
+            const {x1, y1, x2, y2} = e.content.substring(10).trim().match(regexDistance).groups;
             const a = {q: parseInt(x1, 10), r: parseInt(y1, 10)};
             const b = {q: parseInt(x2, 10), r: parseInt(y2, 10)};
             // console.log({a,b});

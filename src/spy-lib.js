@@ -441,7 +441,7 @@ ${TEMPLATE_FLEETS_H1} \`${formatFirepowerNumber(totalFirepower)} \`:boom: | \`${
         + (buildingQueue && buildingQueue.length>0 ? `\n\n__Building Construction Queue:__\n${buildingQueue.join('\n')}` : '')
         + (fleetQueue && fleetQueue.length>0? `\n\n__Fleet Construction Queue:__\n${fleetQueue.join('\n')}` : '')
         + (failedReport ? `\`\`\`diff
-- Spy report not reliable, your scan strength is lower than target spy defense.
+- Spy report not reliable, your spy strength is lower than target spy defense.
 \`\`\``: '');
 }
 

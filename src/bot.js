@@ -88,7 +88,7 @@ function getPrefix({author}) {
 
 function send({channel, author, createdAt}, report, extra) {
     report.timestamp = createdAt;
-    console.log(`Sending report #${totalReport++}`);
+    console.log(`Sending report #${totalReport++} for ${author.id}`);
     // registerReport(getKey({channel, author}, report.HEADER), report);
     const prefix = getPrefix({author}) + (extra ? `: ${extra}` : '');
     const message = prefix + Spy.getFormattedReport(report);
@@ -143,7 +143,6 @@ bot.on('message', function (e) {
                             const parsed = Spy.parseSpyReport(data);
                             // console.log(parsed);
                             send(e, parsed, extra);
-                            // e.delete();
                         }
                     });
             })
@@ -168,9 +167,13 @@ bot.on('message', function (e) {
                 const parsed = Spy.parseSpyReport(reportMatch.length > 0 && reportMatch[1] ? e.content.substring(reportMatch[1].length+1) : e.content);
                 // console.log(parsed);
                 send(e, parsed, reportMatch.length > 0 && reportMatch[1]);
-                e.delete();
             } catch (e) {
                 console.log(e);
+            }
+            try{
+                e.delete();
+            }catch (e) {
+                //ignore
             }
 
         }

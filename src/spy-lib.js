@@ -145,7 +145,7 @@ const PARSERS = {
             .map(o => {
                 // console.log(o);
                 const levelString = o[1].substring(6).trim();
-                const building = modifiers.buildings[o[0].trim()] || {tier: 1, type: 'building'};
+                const building = modifiers.buildings[o[0].trim()] || {name: o[0].trim(), tier: 1, type: 'building'};
                 let level;
                 if(levelString.startsWith('unknown')){
                    level = false;
@@ -165,7 +165,7 @@ const PARSERS = {
                         name: o[0],
                         tier: building.tier,
                         level,
-                        hp: BUILDING_STATS[building.type || 'building'][building.tier - 1][level - 1].hp
+                        hp: BUILDING_STATS[building.type || 'building'][building.tier - 1][Math.min(level - 1, 9)].hp
                     });
                 }
             })

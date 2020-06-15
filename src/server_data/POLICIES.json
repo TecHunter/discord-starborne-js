@@ -1,0 +1,2625 @@
+﻿[
+	{
+		"Id": 100,
+		"Name": "Heavy Metals",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 2,
+		"Slot": "Wildcard",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+80</color> metal   <sprite=\"ResIcons\" name=\"Metal\"> in all your stations."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+90</color> metal   <sprite=\"ResIcons\" name=\"Metal\"> in all your stations."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+100</color> metal   <sprite=\"ResIcons\" name=\"Metal\"> in all your stations."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+110</color> metal   <sprite=\"ResIcons\" name=\"Metal\"> in all your stations."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+120</color> metal   <sprite=\"ResIcons\" name=\"Metal\"> in all your stations."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "PROD_MTL",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 80, 90, 100, 110, 120 ]
+			}
+		]
+	},
+	{
+		"Id": 101,
+		"Name": "Noble Gases",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 2,
+		"Slot": "Wildcard",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+80</color> gas   <sprite=\"ResIcons\" name=\"Gas\"> in all your stations."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+90</color> gas   <sprite=\"ResIcons\" name=\"Gas\"> in all your stations."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+100</color> gas   <sprite=\"ResIcons\" name=\"Gas\"> in all your stations."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+110</color> gas   <sprite=\"ResIcons\" name=\"Gas\"> in all your stations."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+120</color> gas   <sprite=\"ResIcons\" name=\"Gas\"> in all your stations."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "PROD_GAS",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 80, 90, 100, 110, 120 ]
+			}
+		]
+	},
+	{
+		"Id": 102,
+		"Name": "Precious Stones",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 2,
+		"Slot": "Wildcard",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+80</color> crystal   <sprite=\"ResIcons\" name=\"Crystal\"> in all your stations."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+90</color> crystal   <sprite=\"ResIcons\" name=\"Crystal\"> in all your stations."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+100</color> crystal   <sprite=\"ResIcons\" name=\"Crystal\"> in all your stations."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+110</color> crystal   <sprite=\"ResIcons\" name=\"Crystal\"> in all your stations."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+120</color> crystal   <sprite=\"ResIcons\" name=\"Crystal\"> in all your stations."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "PROD_CRS",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 80, 90, 100, 110, 120 ]
+			}
+		]
+	},
+	{
+		"Id": 103,
+		"Name": "Army First",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 5,
+		"Slot": "Military",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>-6%</color> resource cost for military buildings."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>-7%</color> resource cost for military buildings."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>-8%</color> resource cost for military buildings."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>-9%</color> resource cost for military buildings."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>-10%</color> resource cost for military buildings."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "MilitaryBuildings",
+				"TargetAttribute": "COST_MTL",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.06, -0.07, -0.08, -0.09, -0.1 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "MilitaryBuildings",
+				"TargetAttribute": "COST_GAS",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.06, -0.07, -0.08, -0.09, -0.1 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "MilitaryBuildings",
+				"TargetAttribute": "COST_CRS",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.06, -0.07, -0.08, -0.09, -0.1 ]
+			}
+		]
+	},
+	{
+		"Id": 104,
+		"Name": "Populace First",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 5,
+		"Slot": "Domain",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>-6%</color> resource cost for  domain buildings."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>-7%</color> resource cost for domain buildings."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>-8%</color> resource cost for domain buildings."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>-9%</color> resource cost for domain buildings."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>-10%</color> resource cost for domain buildings."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "DomainBuildings",
+				"TargetAttribute": "COST_MTL",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.06, -0.07, -0.08, -0.09, -0.1 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "DomainBuildings",
+				"TargetAttribute": "COST_GAS",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.06, -0.07, -0.08, -0.09, -0.1 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "DomainBuildings",
+				"TargetAttribute": "COST_CRS",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.06, -0.07, -0.08, -0.09, -0.1 ]
+			}
+		]
+	},
+	{
+		"Id": 105,
+		"Name": "Industry First",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 5,
+		"Slot": "Industry",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>-6%</color> resource cost for industry buildings."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>-7%</color> resource cost for industry buildings."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>-8%</color> resource cost for industry buildings."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>-9%</color> resource cost for industry buildings."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>-10%</color> resource cost for industry buildings."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "IndustrialBuildings",
+				"TargetAttribute": "COST_MTL",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.06, -0.07, -0.08, -0.09, -0.1 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "IndustrialBuildings",
+				"TargetAttribute": "COST_GAS",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.06, -0.07, -0.08, -0.09, -0.1 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "IndustrialBuildings",
+				"TargetAttribute": "COST_CRS",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.06, -0.07, -0.08, -0.09, -0.1 ]
+			}
+		]
+	},
+	{
+		"Id": 106,
+		"Name": "Belligerence",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 8,
+		"Slot": "Military",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+6%</color> plunder for Corvettes and Destroyers."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+7%</color> plunder for Corvettes and Destroyers."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+8%</color> plunder for Corvettes and Destroyers."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+9%</color> plunder for Corvettes and Destroyers."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+10%</color> plunder for Corvettes and Destroyers."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "LightAssault",
+				"TargetAttribute": "UNIT_PLUNDER",
+				"Conditions": [
+					{
+						"$type": "OperationCondition",
+						"AcceptedTypes": [ "Raid" ]
+					}
+				],
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 0.06, 0.07, 0.08, 0.09, 0.1 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "HeavyAssault",
+				"TargetAttribute": "UNIT_PLUNDER",
+				"Conditions": [
+					{
+						"$type": "OperationCondition",
+						"AcceptedTypes": [ "Raid" ]
+					}
+				],
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 0.06, 0.07, 0.08, 0.09, 0.1 ]
+			}
+		]
+	},
+	{
+		"Id": 107,
+		"Name": "Obeyance",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 8,
+		"Slot": "Domain",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>-6%</color> mission requirements."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>-7%</color> mission requirements."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>-8%</color> mission requirements."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>-9%</color> mission requirements."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>-10%</color> mission requirements."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "GE_MISSION_RECOMMENDED_TOTAL_MODIFIER",
+				"UseArray": "true",
+				"ModifierArray": [ -0.06, -0.07, -0.08, -0.09, -0.1 ]
+			}
+		]
+	},
+	{
+		"Id": 108,
+		"Name": "Diligence",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 8,
+		"Slot": "Industry",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+6%</color> Plasma Cargo for Industrial fleets."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+7%</color> Plasma Cargo for Industrial fleets."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+8%</color> Plasma Cargo for Industrial fleets."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+9%</color> Plasma Cargo for Industrial fleets."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+10%</color> Plasma Cargo for Industrial fleets."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Industrial",
+				"TargetAttribute": "UNIT_PLASMA_HARVESTING",
+				"UseArray": "true",
+				"ModifierArray": [ 0.06, 0.07, 0.08, 0.09, 0.1 ]
+			}
+		]
+	},
+	{
+		"Id": 109,
+		"Name": "Frontier Piracy",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 11,
+		"Slot": "Military",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>-8%</color> resource cost for Corvettes."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>-11%</color> resource cost for Corvettes."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>-14%</color> resource cost for Corvettes."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>-17%</color> resource cost for Corvettes."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>-20%</color> resource cost for Corvettes."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "LightAssault",
+				"TargetAttribute": "COST_MTL",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.08, -0.11, -0.14, -0.17, -0.2 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "LightAssault",
+				"TargetAttribute": "COST_GAS",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.08, -0.11, -0.14, -0.17, -0.2 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "LightAssault",
+				"TargetAttribute": "COST_CRS",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.08, -0.11, -0.14, -0.17, -0.2 ]
+			}
+		]
+	},
+	{
+		"Id": 110,
+		"Name": "Cartography",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 11,
+		"Slot": "Domain",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>-8%</color> resource cost for Scouts."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>-11%</color> resource cost for Scouts."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>-14%</color> resource cost for Scouts."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>-17%</color> resource cost for Scouts."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>-20%</color> resource cost for Scouts."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Scout",
+				"TargetAttribute": "COST_MTL",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.08, -0.11, -0.14, -0.17, -0.2 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Scout",
+				"TargetAttribute": "COST_GAS",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.08, -0.11, -0.14, -0.17, -0.2 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Scout",
+				"TargetAttribute": "COST_CRS",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.08, -0.11, -0.14, -0.17, -0.2 ]
+			}
+		]
+	},
+	{
+		"Id": 111,
+		"Name": "Trucker's Union",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 11,
+		"Slot": "Industry",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>-8%</color> resource cost for Industrials."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>-11%</color> resource cost for Industrials."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>-14%</color> resource cost for Industrials."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>-17%</color> resource cost for Industrials."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>-20%</color> resource cost for Industrials."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Industrial",
+				"TargetAttribute": "COST_MTL",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.08, -0.11, -0.14, -0.17, -0.2 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Industrial",
+				"TargetAttribute": "COST_GAS",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.08, -0.11, -0.14, -0.17, -0.2 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Industrial",
+				"TargetAttribute": "COST_CRS",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.08, -0.11, -0.14, -0.17, -0.2 ]
+			}
+		]
+	},
+	{
+		"Id": 112,
+		"Name": "Professional Raiders",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 13,
+		"Slot": "Military",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+6%</color> plunder for all fleets while raiding."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+7%</color> plunder for all fleets while raiding."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+8%</color> plunder for all fleets while raiding."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+9%</color> plunder for all fleets while raiding."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+10%</color> plunder for all fleets while raiding."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Fleet",
+				"TargetAttribute": "UNIT_PLUNDER",
+				"UseArray": "true",
+				"ModifierArray": [ 0.06, 0.07, 0.08, 0.09, 0.1 ]
+			}
+		]
+	},
+	{
+		"Id": 113,
+		"Name": "Deep Space Patrols",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 13,
+		"Slot": "Domain",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+24</color> Firepower for Patrol Ships and Scouts while running missions."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+28</color> Firepower for Patrol Ships and Scouts while running missions."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+32</color> Firepower for Patrol Ships and Scouts while running missions."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+36</color> Firepower for Patrol Ships and Scouts while running missions."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+40</color> Firepower for Patrol Ships and Scouts while running missions."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "LightDefense",
+				"TargetAttribute": "UNIT_FIREPOWER",
+				"Conditions": [
+					{
+						"$type": "OperationCondition",
+						"AcceptedTypes": [ "CompleteMission" ]
+					}
+				],
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 24, 28, 32, 36, 40 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Scout",
+				"TargetAttribute": "UNIT_FIREPOWER",
+				"Conditions": [
+					{
+						"$type": "OperationCondition",
+						"AcceptedTypes": [ "CompleteMission" ]
+					}
+				],
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 24, 28, 32, 36, 40 ]
+			}
+		]
+	},
+	{
+		"Id": 114,
+		"Name": "Heavy Duty",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 13,
+		"Slot": "Industry",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+6%</color> Cargo for Industrial fleets."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+7%</color> Cargo for Industrial fleets."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+8%</color> Cargo for Industrial fleets."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+9%</color> Cargo for Industrial fleets."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+10%</color> Cargo for Industrial fleets."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Industrial",
+				"TargetAttribute": "UNIT_CARGO",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ 0.06, 0.07, 0.08, 0.09, 0.1 ]
+			}
+		]
+	},
+	{
+		"Id": 115,
+		"Name": "Volunteer Program",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 15,
+		"Slot": "Wildcard",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>-10</color> labor cost for all light fleets."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>-15</color> labor cost for all light fleets."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>-20</color> labor cost for all light fleets."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>-25</color> labor cost for all light fleets."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>-30</color> labor cost for all light fleets."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "SmallShips",
+				"TargetAttribute": "COST_UPKEEP_FLAT",
+				"UseArray": "true",
+				"ModifierArray": [ -10, -15, -20, -25, -30 ]
+			}
+		]
+	},
+	{
+		"Id": 116,
+		"Name": "Scramble",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 15,
+		"Slot": "Wildcard",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+2</color> speed for all light fleets.",
+				"Effect2Description": "<color=red>+10</color> Labor upkeep cost of all fleets."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+2</color> speed for all light fleets.",
+				"Effect2Description": "<color=red>+9</color> Labor upkeep cost of all fleets."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+2</color> speed for all light fleets.",
+				"Effect2Description": "<color=red>+8</color> Labor upkeep cost of all fleets."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+2</color> speed for all light fleets.",
+				"Effect2Description": "<color=red>+7</color> Labor upkeep cost of all fleets."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+2</color> speed for all light fleets.",
+				"Effect2Description": "<color=red>+6</color> Labor upkeep cost of all fleets."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "SmallShips",
+				"TargetAttribute": "UNIT_SPD",
+				"UseArray": "true",
+				"ModifierArray": [ 2, 2, 2, 2, 2 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Fleet",
+				"TargetAttribute": "COST_UPKEEP_FLAT",
+				"UseArray": "true",
+				"ModifierArray": [ 10, 9, 8, 7, 6 ]
+			}
+		]
+	},
+	{
+		"Id": 117,
+		"Name": "Patriotism",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 15,
+		"Slot": "Wildcard",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+12%</color> Station harvest rate.",
+				"Effect2Description": "<color=green>+1</color> Claim Strength in all Stations"
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+14%</color> Station harvest rate.",
+				"Effect2Description": "<color=green>+1</color> Claim Strength in all Stations"
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+16%</color> Station harvest rate.",
+				"Effect2Description": "<color=green>+1</color> Claim Strength in all Stations"
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+18%</color> Station harvest rate.",
+				"Effect2Description": "<color=green>+1</color> Claim Strength in all Stations"
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+20%</color> Station harvest rate.",
+				"Effect2Description": "<color=green>+1</color> Claim Strength in all Stations"
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "STAT_LOCAL_HARVEST_MODIFIER",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 0.12, 0.14, 0.16, 0.18, 0.2 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "S_CLAIMSTR",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 1, 1, 1, 1, 1 ]
+			}
+		]
+	},
+	{
+		"Id": 118,
+		"Name": "Patrol Routes",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 18,
+		"Slot": "Military",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>-6%</color> time cost for Patrol Ship units."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>-7%</color> time cost for Patrol Ship units."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>-8%</color> time cost for Patrol Ship units."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>-9%</color> time cost for Patrol Ship units."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>-10%</color> time cost for Patrol Ship units."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "LightDefense",
+				"TargetAttribute": "COST_TIME",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.06, -0.07, -0.08, -0.09, -0.1 ]
+			}
+		]
+	},
+	{
+		"Id": 119,
+		"Name": "Little Birds",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 18,
+		"Slot": "Domain",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+1</color> spy.",
+				"Effect2Description": "Your full spy reports reveal hidden resources."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+2</color> spy.",
+				"Effect2Description": "Your full spy reports reveal hidden resources."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+3</color> spy.",
+				"Effect2Description": "Your full spy reports reveal hidden resources."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+4</color> spy.",
+				"Effect2Description": "Your full spy reports reveal hidden resources."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+5</color> spy.",
+				"Effect2Description": "Your full spy reports reveal hidden resources."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "Empire",
+				"Target": "Commander",
+				"TargetAttribute": "OPERATIVES_COUNT",
+				"UseArray": "true",
+				"ModifierArray": [ 1, 2, 3, 4, 5 ]
+			}
+		]
+	},
+	{
+		"Id": 120,
+		"Name": "Pillars of Industry",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 18,
+		"Slot": "Industry",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>-6%</color> resource cost for production buildings."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>-7%</color> resource cost for production buildings."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>-8%</color> resource cost for production buildings."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>-9%</color> resource cost for production buildings."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>-10%</color> resource cost for production buildings."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "RefineryBuildings",
+				"TargetAttribute": "COST_MTL",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.06, -0.07, -0.08, -0.09, -0.1 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "RefineryBuildings",
+				"TargetAttribute": "COST_GAS",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.06, -0.07, -0.08, -0.09, -0.1 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "RefineryBuildings",
+				"TargetAttribute": "COST_CRS",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.06, -0.07, -0.08, -0.09, -0.1 ]
+			}
+		]
+	},
+	{
+		"Id": 121,
+		"Name": "Battle Stations",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 21,
+		"Slot": "Military",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+2</color> speed while raiding and assaulting.",
+				"Effect2Description": "<color=red>+10</color> Labor upkeep cost of all fleets."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+2</color> speed while raiding and assaulting.",
+				"Effect2Description": "<color=red>+9</color> Labor upkeep cost of all fleets."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+2</color> speed while raiding and assaulting.",
+				"Effect2Description": "<color=red>+8</color> Labor upkeep cost of all fleets."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+2</color> speed while raiding and assaulting.",
+				"Effect2Description": "<color=red>+7</color> Labor upkeep cost of all fleets."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+2</color> speed while raiding and assaulting.",
+				"Effect2Description": "<color=red>+6</color> Labor upkeep cost of all fleets."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Fleet",
+				"TargetAttribute": "UNIT_SPD",
+				"Conditions": [
+					{
+						"$type": "OperationCondition",
+						"AcceptedTypes": [ "Raid", "Assault" ]
+					}
+				],
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 2, 2, 2, 2, 2 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Fleet",
+				"TargetAttribute": "COST_UPKEEP_FLAT",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 10, 9, 8, 7, 6 ]
+			}
+		]
+	},
+	{
+		"Id": 122,
+		"Name": "National Security",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 21,
+		"Slot": "Domain",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>-6%</color> time cost for Scout units.",
+				"Effect2Description": "<color=green>+1</color> Firepower to Scout units."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>-7%</color> time cost for Scout units.",
+				"Effect2Description": "<color=green>+2</color> Firepower to Scout units."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>-8%</color> time cost for Scout units.",
+				"Effect2Description": "<color=green>+3</color> Firepower to Scout units."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>-9%</color> time cost for Scout units.",
+				"Effect2Description": "<color=green>+4</color> Firepower to Scout units."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>-10%</color> time cost for Scout units.",
+				"Effect2Description": "<color=green>+5</color> Firepower to Scout units."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Scout",
+				"TargetAttribute": "COST_TIME",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.06, -0.07, -0.08, -0.09, -0.1 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Scout",
+				"TargetAttribute": "UNIT_FIREPOWER",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 1, 2, 3, 4, 5 ]
+			}
+		]
+	},
+	{
+		"Id": 123,
+		"Name": "Nationalization",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 21,
+		"Slot": "Industry",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+3%</color> resource output in all stations."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+3.5%</color> resource output in all stations."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+4%</color> resource output in all stations."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+4.5%</color> resource output in all stations."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+5%</color> resource output in all stations."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "PROD_MTL",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ 0.03, 0.035, 0.04, 0.045, 0.05 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "PROD_GAS",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ 0.03, 0.035, 0.04, 0.045, 0.05 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "PROD_CRS",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ 0.03, 0.035, 0.04, 0.045, 0.05 ]
+			}
+		]
+	},
+	{
+		"Id": 124,
+		"Name": "Overkill",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 24,
+		"Slot": "Military",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+4%</color> Firepower for all fleets."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+4.5%</color> Firepower for all fleets."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+5%</color> Firepower for all fleets."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+5.5%</color> Firepower for all fleets."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+6%</color> Firepower for all fleets."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Fleet",
+				"TargetAttribute": "UNIT_FIREPOWER",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ 0.04, 0.045, 0.05, 0.055, 0.06 ]
+			}
+		]
+	},
+	{
+		"Id": 125,
+		"Name": "Military Intelligence",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 24,
+		"Slot": "Domain",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+2</color> spy strength for your covert operatives",
+				"Effect2Description": "<color=green>+2</color> station spy defense in all your stations."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+4</color> spy strength for your covert operatives",
+				"Effect2Description": "<color=green>+4</color> station spy defense in all your stations."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+6</color> spy strength for your covert operatives",
+				"Effect2Description": "<color=green>+6</color> station spy defense in all your stations."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+8</color> spy strength for your covert operatives",
+				"Effect2Description": "<color=green>+8</color> station spy defense in all your stations."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+10</color> spy strength for your covert operatives",
+				"Effect2Description": "<color=green>+10</color> station spy defense in all your stations."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "STAT_SIGINT",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 2, 4, 6, 8, 10 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "Empire",
+				"Target": "Commander",
+				"TargetAttribute": "OPERATIVES_STRENGTH",
+				"UseArray": "true",
+				"ModifierArray": [ 2, 4, 6, 8, 10 ]
+			}
+		]
+	},
+	{
+		"Id": 126,
+		"Name": "Gemini Express",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 24,
+		"Slot": "Industry",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+2</color> speed for industrial fleets.",
+				"Effect2Description": "<color=green>+4%</color> cargo for industrial fleets."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+2</color> speed for industrial fleets.",
+				"Effect2Description": "<color=green>+5%</color> cargo for industrial fleets."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+2</color> speed for industrial fleets.",
+				"Effect2Description": "<color=green>+6%</color> cargo for industrial fleets."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+2</color> speed for industrial fleets.",
+				"Effect2Description": "<color=green>+7%</color> cargo for industrial fleets."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+2</color> speed for industrial fleets.",
+				"Effect2Description": "<color=green>+8%</color> cargo for industrial fleets."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Industrial",
+				"TargetAttribute": "UNIT_SPD",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 2, 2, 2, 2, 2 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Industrial",
+				"TargetAttribute": "UNIT_CARGO",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ 0.04, 0.05, 0.06, 0.07, 0.08 ]
+			}
+		]
+	},
+	{
+		"Id": 127,
+		"Name": "Elite Navy",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 27,
+		"Slot": "Military",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+4%</color> Hit Points for all fleets."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+4.5%</color> Hit Points for all fleets."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+5%</color> Hit Points for all fleets."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+5.5%</color> Hit Points for all fleets."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+6%</color> Hit Points for all fleets."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Fleet",
+				"TargetAttribute": "UNIT_HP",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ 0.04, 0.045, 0.05, 0.055, 0.06 ]
+			}
+		]
+	},
+	{
+		"Id": 128,
+		"Name": "Keep the Vigil",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 27,
+		"Slot": "Domain",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+2</color> Station Scan Radius in all stations.",
+				"Effect2Description": "<color=green>-6%</color> mission requirements."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+2</color> Station Scan Radius in all stations.",
+				"Effect2Description": "<color=green>-7%</color> mission requirements."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+2</color> Station Scan Radius in all stations.",
+				"Effect2Description": "<color=green>-8%</color> mission requirements."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+2</color> Station Scan Radius in all stations.",
+				"Effect2Description": "<color=green>-9%</color> mission requirements."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+2</color> Station Scan Radius in all stations.",
+				"Effect2Description": "<color=green>-10%</color> mission requirements."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "STAT_SCAN_RADIUS",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 2, 2, 2, 2, 2 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "GE_MISSION_RECOMMENDED_TOTAL_MODIFIER",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.06, -0.07, -0.08, -0.09, -0.1 ]
+			}
+		]
+	},
+	{
+		"Id": 129,
+		"Name": "Merchant Fleet",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 27,
+		"Slot": "Industry",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+3</color> speed for freighters."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+6</color> speed for freighters."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+9</color> speed for freighters."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+12</color> speed for freighters."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+15</color> speed for freighters."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "STAT_FREIGHTER_SPD",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 3, 6, 9, 12, 15 ]
+			}
+		]
+	},
+	{
+		"Id": 130,
+		"Name": "Localization",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 30,
+		"Slot": "Wildcard",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+12%</color> resource cap in all your stations."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+14%</color> resource cap in all your stations."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+16%</color> resource cap in all your stations."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+18%</color> resource cap in all your stations."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+20%</color> resource cap in all your stations."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "STAT_PROD_CAP",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ 0.12, 0.14, 0.16, 0.18, 0.2 ]
+			}
+		]
+	},
+	{
+		"Id": 131,
+		"Name": "Space Lane",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 30,
+		"Slot": "Wildcard",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+2</color> speed for all fleets.",
+				"Effect2Description": "<color=red>+20</color> labor cost for all your fleets."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+2</color> speed for all fleets.",
+				"Effect2Description": "<color=red>+18</color> labor cost for all your fleets."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+2</color> speed for all fleets.",
+				"Effect2Description": "<color=red>+16</color> labor cost for all your fleets."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+2</color> speed for all fleets.",
+				"Effect2Description": "<color=red>+14</color> labor cost for all your fleets."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+2</color> speed for all fleets.",
+				"Effect2Description": "<color=red>+12</color> labor cost for all your fleets."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Fleet",
+				"TargetAttribute": "UNIT_SPD",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 2, 2, 2, 2, 2 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Fleet",
+				"TargetAttribute": "COST_UPKEEP_FLAT",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 20, 18, 16, 14, 12 ]
+			}
+		]
+	},
+	{
+		"Id": 132,
+		"Name": "Conscription",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 30,
+		"Slot": "Wildcard",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+120</color> Labor in all your stations."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+130</color> Labor in all your stations."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+140</color> Labor in all your stations."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+150</color> Labor in all your stations."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+160</color> Labor in all your stations."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "STAT_PROD_ENERGY",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 120, 130, 140, 150, 160 ]
+			}
+		]
+	},
+	{
+		"Id": 133,
+		"Name": "Protective State",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 35,
+		"Slot": "Military",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+1</color> Radius of Influence for Missile Batteries.",
+				"Effect2Description": "<color=green>+4000</color> firepower for Missile Batteries"
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>\n+1</color> Radius of Influence for Missile Batteries.",
+				"Effect2Description": "<color=green>+5000</color> firepower for Missile Batteries"
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>\n+1</color> Radius of Influence for Missile Batteries.",
+				"Effect2Description": "<color=green>+6000</color> firepower for Missile Batteries"
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>\n+1</color> Radius of Influence for Missile Batteries.",
+				"Effect2Description": "<color=green>+7000</color> firepower for Missile Batteries"
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>\n+1</color> Radius of Influence for Missile Batteries.",
+				"Effect2Description": "<color=green>+8000</color> firepower for Missile Batteries"
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireOutposts",
+				"Target": "MissileBattery",
+				"TargetAttribute": "OP_RADIUS",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 1, 1, 1, 1, 1 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireOutposts",
+				"Target": "MissileBattery",
+				"TargetAttribute": "OP_MBAT_FIREPOWER",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 4000, 5000, 6000, 7000, 8000 ]
+			}
+		]
+	},
+	{
+		"Id": 134,
+		"Name": "Monitor the People",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 35,
+		"Slot": "Domain",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+120</color> scan strength from Scanners."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+140</color> scan strength from Scanners."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+160</color> scan strength from Scanners."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+180</color> scan strength from Scanners."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+200</color> scan strength from Scanners."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireOutposts",
+				"Target": "Scanner",
+				"TargetAttribute": "OP_SCANNER_STRENGTH",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 120, 140, 160, 180, 200 ]
+			}
+		]
+	},
+	{
+		"Id": 135,
+		"Name": "Worker Regulations",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 35,
+		"Slot": "Industry",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+30%</color> harvest rate for all your Mining Facilities."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+35%</color> harvest rate for all your Mining Facilities."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+40%</color> harvest rate for all your Mining Facilities."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+45%</color> harvest rate for all your Mining Facilities."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+50%</color> harvest rate for all your Mining Facilities."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireOutposts",
+				"Target": "MiningFacility",
+				"TargetAttribute": "OP_MOP_YIELD",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 0.3, 0.35, 0.4, 0.45, 0.5 ]
+			}
+		]
+	},
+	{
+		"Id": 148,
+		"Name": "Gunboat Diplomacy",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 40,
+		"Slot": "Military",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+6</color> Station Bombing for Destroyers, Frigates and Gunships."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+7</color> Station Bombing for Destroyers, Frigates and Gunships."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+8</color> Station Bombing for Destroyers, Frigates and Gunships."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+9</color> Station Bombing for Destroyers, Frigates and Gunships."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+10</color> Station Bombing for Destroyers, Frigates and Gunships."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "HeavyAssault",
+				"TargetAttribute": "UNIT_BOMB",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 6, 7, 8, 9, 10 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "HeavyDefense",
+				"TargetAttribute": "UNIT_BOMB",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 6, 7, 8, 9, 10 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Bomber",
+				"TargetAttribute": "UNIT_BOMB",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 6, 7, 8, 9, 10 ]
+			}
+		]
+	},
+	{
+		"Id": 137,
+		"Name": "Cloak & Dagger",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 40,
+		"Slot": "Domain",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+60</color> stealth for Scout fleets."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+70</color> stealth for Scout fleets."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+80</color> stealth for Scout fleets."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+90</color> stealth for Scout fleets."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+100</color> stealth for Scout fleets."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Scout",
+				"TargetAttribute": "UNIT_SIGINT",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 60, 70, 80, 90, 100 ]
+			}
+		]
+	},
+	{
+		"Id": 138,
+		"Name": "Support Network",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 40,
+		"Slot": "Industry",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "Your stations can stream an additional <color=green>100</color> metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\">.",
+				"Effect2Description": "<color=green>+13%</color> cargo for freighters."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "Your stations can stream an additional <color=green>125</color> metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\">.",
+				"Effect2Description": "<color=green>+16%</color> cargo for freighters."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "Your stations can stream an additional <color=green>150</color> metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\">.",
+				"Effect2Description": "<color=green>+19%</color> cargo for freighters."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "Your stations can stream an additional <color=green>175</color> metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\">.",
+				"Effect2Description": "<color=green>+22%</color> cargo for freighters."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "Your stations can stream an additional <color=green>200</color> metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\">.",
+				"Effect2Description": "<color=green>+25%</color> cargo for freighters."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "STAT_FREIGHTER_CARGO",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ 0.13, 0.16, 0.19, 0.22, 0.25 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "STREAM_METAL",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 100, 125, 150, 175, 200 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "STREAM_GAS",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 100, 125, 150, 175, 200 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "STREAM_CRYSTAL",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 100, 125, 150, 175, 200 ]
+			}
+		]
+	},
+	{
+		"Id": 139,
+		"Name": "Justified Hostilites",
+		"UnlockedAtLevel": 45,
+		"Slot": "Military",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>-20%</color> Firepower for units on NPC stations while affected by your station sabotage.",
+				"Effect2Description": "<color=green>+11%</color> Hitpoints while raiding."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>-20%</color> Firepower for units on NPC stations while affected by your station sabotage.",
+				"Effect2Description": "<color=green>+12%</color> Hitpoints while raiding."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>-20%</color> Firepower for units on NPC stations while affected by your station sabotage.",
+				"Effect2Description": "<color=green>+13%</color> Hitpoints while raiding."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>-20%</color> Firepower for units on NPC stations while affected by your station sabotage.",
+				"Effect2Description": "<color=green>+14%</color> Hitpoints while raiding."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>-20%</color> Firepower for units on NPC stations while affected by your station sabotage.",
+				"Effect2Description": "<color=green>+15%</color> Hitpoints while raiding."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Fleet",
+				"TargetAttribute": "UNIT_HP",
+				"Conditions": [
+					{
+						"$type": "OperationCondition",
+						"AcceptedTypes": [ "Raid" ]
+					}
+				],
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ 0.11, 0.12, 0.13, 0.14, 0.15 ]
+			}
+		]
+	},
+	{
+		"Id": 140,
+		"Name": "Assert Authority",
+		"UnlockedAtLevel": 45,
+		"Slot": "Domain",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "You can now harvest from and build outposts on contested hexes.",
+				"Effect2Description": "<color=green>+12%</color> Station harvest rate."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "You can now harvest from and build outposts on contested hexes.",
+				"Effect2Description": "<color=green>+14%</color> Station harvest rate."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "You can now harvest from and build outposts on contested hexes.",
+				"Effect2Description": "<color=green>+16%</color> Station harvest rate."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "You can now harvest from and build outposts on contested hexes.",
+				"Effect2Description": "<color=green>+18%</color> Station harvest rate."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "You can now harvest from and build outposts on contested hexes.",
+				"Effect2Description": "<color=green>+20%</color> Station harvest rate."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "STAT_LOCAL_HARVEST_MODIFIER",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 0.12, 0.14, 0.16, 0.18, 0.2 ]
+			}
+		]
+	},
+	{
+		"Id": 141,
+		"Name": "Commercial Empire",
+		"UnlockedAtLevel": 45,
+		"Slot": "Industry",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+1</color> Freighters for each station you own.",
+				"Effect2Description": "<color=green>+12%</color> Freighter cargo."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+2</color> Freighters for each station you own.",
+				"Effect2Description": "<color=green>+14%</color> Freighter cargo."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+3</color> Freighters for each station you own.",
+				"Effect2Description": "<color=green>+16%</color> Freighter cargo."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+4</color> Freighters for each station you own.",
+				"Effect2Description": "<color=green>+18%</color> Freighter cargo."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+5</color> Freighters for each station you own.",
+				"Effect2Description": "<color=green>+20%</color> Freighter cargo."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "STAT_FREIGHTCOUNT",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 1, 2, 3, 4, 5 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "STAT_FREIGHTER_CARGO",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ 0.12, 0.14, 0.16, 0.18, 0.2 ]
+			}
+		]
+	},
+	{
+		"Id": 142,
+		"Name": "Pre-emptive Demolition",
+		"UnlockedAtLevel": 50,
+		"Slot": "Military",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "Plunder now additionally allows your raiding fleets to fire on units hidden by Military Hangar.",
+				"Effect2Description": "<color=green>+6%</color> Firepower while raiding."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "Plunder now additionally allows your raiding fleets to fire on units hidden by Military Hangar.",
+				"Effect2Description": "<color=green>+7%</color> Firepower while raiding."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "Plunder now additionally allows your raiding fleets to fire on units hidden by Military Hangar.",
+				"Effect2Description": "<color=green>+8%</color> Firepower while raiding."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "Plunder now additionally allows your raiding fleets to fire on units hidden by Military Hangar.",
+				"Effect2Description": "<color=green>+9%</color> Firepower while raiding."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "Plunder now additionally allows your raiding fleets to fire on units hidden by Military Hangar.",
+				"Effect2Description": "<color=green>+10%</color> Firepower while raiding."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Fleet",
+				"TargetAttribute": "UNIT_FIREPOWER",
+				"Conditions": [
+					{
+						"$type": "OperationCondition",
+						"AcceptedTypes": [ "Raid" ]
+					}
+				],
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ 0.06, 0.07, 0.08, 0.09, 0.1 ]
+			}
+		]
+	},
+	{
+		"Id": 143,
+		"Name": "Unveil Universe",
+		"UnlockedAtLevel": 50,
+		"Slot": "Domain",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+1</color> radius for your scan probes.",
+				"Effect2Description": "<color=green>+16</color> hour duration for your scan probes."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+1</color> radius for your scan probes.",
+				"Effect2Description": "<color=green>+20</color> hour duration for your scan probes."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+1</color> radius for your scan probes.",
+				"Effect2Description": "<color=green>+24</color> hour duration for your scan probes."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+1</color> radius for your scan probes.",
+				"Effect2Description": "<color=green>+28</color> hour duration for your scan probes."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+1</color> radius for your scan probes.",
+				"Effect2Description": "<color=green>+32</color> hour duration for your scan probes."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Fleet",
+				"TargetAttribute": "UNIT_SCAN_RADIUS",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 1, 1, 1, 1, 1 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "UNIT_PROBE_LIFETIME",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 960, 1200, 1440, 1680, 1920 ]
+			}
+		]
+	},
+	{
+		"Id": 144,
+		"Name": "Centralization",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 50,
+		"Slot": "Industry",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+12%</color> Mining Colony harvest rate."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+14%</color> Mining Colony harvest rate."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+16%</color> Mining Colony harvest rate."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+18%</color> Mining Colony harvest rate."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+20%</color> Mining Colony harvest rate."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireOutposts",
+				"Target": "MiningColony",
+				"TargetAttribute": "OP_MC_YIELD",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 0.12, 0.14, 0.16, 0.18, 0.2 ]
+			}
+		]
+	},
+	{
+		"Id": 145,
+		"Name": "Attack Doctrine",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 55,
+		"Slot": "Wildcard",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+10%</color> firepower when assaulting and raiding.",
+				"Effect2Description": "<color=red>-18%</color> firepower when defending."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+11%</color> firepower when assaulting and raiding.",
+				"Effect2Description": "<color=red>-18%</color> firepower when defending."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+12%</color> firepower when assaulting and raiding.",
+				"Effect2Description": "<color=red>-18%</color> firepower when defending."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+13%</color> firepower when assaulting and raiding.",
+				"Effect2Description": "<color=red>-18%</color> firepower when defending."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+14%</color> firepower when assaulting and raiding.",
+				"Effect2Description": "<color=red>-18%</color> firepower when defending."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Fleet",
+				"TargetAttribute": "UNIT_FIREPOWER",
+				"Conditions": [
+					{
+						"$type": "OperationCondition",
+						"AcceptedTypes": [ "Raid", "Assault" ]
+					}
+				],
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ 0.1, 0.11, 0.12, 0.13, 0.14 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Fleet",
+				"TargetAttribute": "UNIT_FIREPOWER",
+				"Conditions": [ { "$type": "DefenderCondition" } ],
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.18, -0.18, -0.18, -0.18, -0.18 ]
+			}
+		]
+	},
+	{
+		"Id": 146,
+		"Name": "Defense Doctrine",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 55,
+		"Slot": "Wildcard",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+10%</color> firepower when defending.",
+				"Effect2Description": "<color=red>-18%</color> firepower while raiding and assaulting.."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+11%</color> firepower when defending.",
+				"Effect2Description": "<color=red>-18%</color> firepower while raiding and assaulting.."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+12%</color> firepower when defending.",
+				"Effect2Description": "<color=red>-18%</color> firepower while raiding and assaulting.."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+13%</color> firepower when defending.",
+				"Effect2Description": "<color=red>-18%</color> firepower while raiding and assaulting.."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+14%</color> firepower when defending.",
+				"Effect2Description": "<color=red>-18%</color> firepower while raiding and assaulting.."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Fleet",
+				"TargetAttribute": "UNIT_FIREPOWER",
+				"Conditions": [ { "$type": "DefenderCondition" } ],
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ 0.1, 0.11, 0.12, 0.13, 0.14 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Fleet",
+				"TargetAttribute": "UNIT_FIREPOWER",
+				"Conditions": [
+					{
+						"$type": "OperationCondition",
+						"AcceptedTypes": [ "Raid", "Assault" ]
+					}
+				],
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.18, -0.18, -0.18, -0.18, -0.18 ]
+			}
+		]
+	},
+	{
+		"Id": 147,
+		"Name": "Radio Silence",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 55,
+		"Slot": "Wildcard",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+200</color> stealth for all fleets.",
+				"Effect2Description": "<color=red>-20%</color> Firepower for all units."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+200</color> stealth for all fleets.",
+				"Effect2Description": "<color=red>-15%</color> Firepower for all units."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+200</color> stealth for all fleets.",
+				"Effect2Description": "<color=red>-10%</color> Firepower for all units."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+200</color> stealth for all fleets.",
+				"Effect2Description": "<color=red>-5%</color> Firepower for all units."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+200</color> stealth for all fleets."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Fleet",
+				"TargetAttribute": "UNIT_SIGINT",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 200, 200, 200, 200, 200 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Fleet",
+				"TargetAttribute": "UNIT_FIREPOWER",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.2, -0.15, -0.1, -0.05, 0 ]
+			}
+		]
+	},
+	{
+		"Id": 151,
+		"Name": "Viva La Resistance!",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 60,
+		"Slot": "Military",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "Corvette and Patrol Ship fleet size increased by <color=green>13%</color>.\n\nScout time cost reduced by <color=green>3%</color>.",
+				"Effect2Description": "Labor cost for heavy and capital ships increased by <color=red>300%</color>."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "Corvette and Patrol Ship fleet size increased by <color=green>16%</color>.\n\nScout time cost reduced by <color=green>4%</color>.",
+				"Effect2Description": "Labor cost for heavy and capital ships increased by <color=red>300%</color>."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "Corvette and Patrol Ship fleet size increased by <color=green>19%</color>.\n\nScout time cost reduced by <color=green>5%</color>.",
+				"Effect2Description": "Labor cost for heavy and capital ships increased by <color=red>300%</color>."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "Corvette and Patrol Ship fleet size increased by <color=green>22%</color>.\n\nScout time cost reduced by <color=green>6%</color>.",
+				"Effect2Description": "Labor cost for heavy and capital ships increased by <color=red>300%</color>."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "Corvette and Patrol Ship fleet size increased by <color=green>25%</color>.\n\nScout time cost reduced by <color=green>7%</color>.",
+				"Effect2Description": "Labor cost for heavy and capital ships increased by <color=red>300%</color>."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Scout",
+				"TargetAttribute": "COST_TIME",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.03, -0.04, -0.05, -0.06, -0.07 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "LightCombatShips",
+				"TargetAttribute": "UNIT_FSIZE",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ 0.13, 0.16, 0.19, 0.22, 0.25 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "LargeShips",
+				"TargetAttribute": "COST_UPKEEP",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ 3, 3, 3, 3, 3 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "CapitalShips",
+				"TargetAttribute": "COST_UPKEEP",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ 3, 3, 3, 3, 3 ]
+			}
+		]
+	},
+	{
+		"Id": 149,
+		"Name": "Land Leasing",
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"UnlockedAtLevel": 60,
+		"Slot": "Domain",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>+6%</color> labor in all stations.",
+				"Effect2Description": "<color=red>-15%</color> resource generation in all stations."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>+7%</color> labor in all stations.",
+				"Effect2Description": "<color=red>-15%</color> resource generation in all stations."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>+8%</color> labor in all stations.",
+				"Effect2Description": "<color=red>-15%</color> resource generation in all stations."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>+9%</color> labor in all stations.",
+				"Effect2Description": "<color=red>-15%</color> resource generation in all stations."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>+10%</color> labor in all stations.",
+				"Effect2Description": "<color=red>-15%</color> resource generation in all stations."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "STAT_LABOR_MULTIPLIER",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ 0.06, 0.07, 0.08, 0.09, 0.1 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "STAT_RESOURCE_YIELD_BONUS",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.15, -0.15, -0.15, -0.15, -0.15 ]
+			}
+		]
+	},
+	{
+		"Id": 150,
+		"Name": "Upgrade Infrastructure",
+		"UnlockedAtLevel": 60,
+		"Slot": "Industry",
+		"Levels": [
+			{
+				"Level": 1,
+				"Effect1Description": "<color=green>-10%</color> resource cost for your outposts.",
+				"Effect2Description": "Your empire gains <color=green>1</color> outpost augmentation point."
+			},
+			{
+				"Level": 2,
+				"Effect1Description": "<color=green>-15%</color> resource cost for your outposts.",
+				"Effect2Description": "Your empire gains <color=green>1</color> outpost augmentation point."
+			},
+			{
+				"Level": 3,
+				"Effect1Description": "<color=green>-20%</color> resource cost for your outposts.",
+				"Effect2Description": "Your empire gains <color=green>1</color> outpost augmentation point."
+			},
+			{
+				"Level": 4,
+				"Effect1Description": "<color=green>-25%</color> resource cost for your outposts.",
+				"Effect2Description": "Your empire gains <color=green>1</color> outpost augmentation point."
+			},
+			{
+				"Level": 5,
+				"Effect1Description": "<color=green>-30%</color> resource cost for your outposts.",
+				"Effect2Description": "Your empire gains <color=green>1</color> outpost augmentation point."
+			}
+		],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "STAT_OP_BUILDCOST",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.1, -0.15, -0.2, -0.25, -0.3 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireOutposts",
+				"Target": "Outpost",
+				"TargetAttribute": "STAT_OP_UPGRCOST",
+				"Type": "Multiplier",
+				"UseArray": "true",
+				"ModifierArray": [ -0.1, -0.15, -0.2, -0.25, -0.3 ]
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "Empire",
+				"Target": "Commander",
+				"TargetAttribute": "BOOST_OUTPOST_POINTS_COUNT",
+				"Type": "Modifier",
+				"UseArray": "true",
+				"ModifierArray": [ 1, 1, 1, 1, 1 ]
+			}
+		]
+	}
+]

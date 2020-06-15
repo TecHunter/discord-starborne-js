@@ -1,0 +1,99 @@
+{
+	"CommissionPackage": {
+		"CacheIds": [
+			1101
+		]
+	},
+
+	"CarePackage": {
+		"CacheIds": [
+			1102
+		]
+	},
+
+	"PrestigeCache1": {
+		"Prestige": 100
+	},
+
+	"PrestigeCache2": {
+		"Prestige": 200
+	},
+
+	"PrestigeCache3": {
+		"Prestige": 300
+	},
+
+	"PrestigeCache4": {
+		"Prestige": 400
+	},
+
+	"PrestigeCache5": {
+		"Prestige": 600
+	},
+
+	"PrestigeCache6": {
+		"Prestige": 1200
+	},
+
+	"StarterPackage": {
+		"CacheIds": [
+			1100
+		]
+	},
+
+	"RankedRewardCache": {
+		"CacheIds": [
+			1103
+		]
+	},
+
+	"SpecialCache": {
+		"CacheIds": [
+			1104
+		]
+	},
+
+	"PremiumCache": {
+		"CacheIds": [
+			1105
+		]
+	},
+
+	// Traders
+
+	"SupplyCacheBasic": {
+		"CacheIds": [
+			4
+		]
+	},
+
+	"SupplyCacheAdvanced": {
+		"CacheIds": [
+			14
+		]
+	},
+
+	"SupplyContractBasicInitialReward": {},
+
+	"SupplyContractAdvancedInitialReward": {},
+
+	"SupplyContractBasicUnlocker": {},
+
+	"SupplyContractAdvancedUnlocker": {},
+
+	"CommanderOverhaul": {},
+	"CleanSlate": {},
+	"BuildR1": {},
+	"BuildR2": {},
+	"BuildR3": {},
+	"BuildR4": {},
+	"BuildR5": {},
+	"BuildR6": {},
+	"BuildR7": {},
+	"Trader1": {},
+	"Trader2": {},
+	"Trader3": {},
+	"Trader4": {},
+	"Trader5": {},
+	"UserNameChangeToken": {}
+}

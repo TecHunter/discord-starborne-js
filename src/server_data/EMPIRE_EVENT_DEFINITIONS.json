@@ -1,0 +1,658 @@
+﻿{
+	"MercenaryLevelMustBeExactLevel": true,
+	"EmpireEventLevelRules": [
+		{
+			"Level": 1,
+			"Category": 1,
+			"DurationInMinutes": 120,
+			"WeeklyCompletionCap": 10
+		},
+		{
+			"Level": 2,
+			"Category": 2,
+			"DurationInMinutes": 240,
+			"WeeklyCompletionCap": 8
+		},
+		{
+			"Level": 3,
+			"Category": 3,
+			"DurationInMinutes": 480,
+			"WeeklyCompletionCap": 5
+		},
+		{
+			"Level": 4,
+			"Category": 4,
+			"DurationInMinutes": 720,
+			"WeeklyCompletionCap": 5
+		}
+	],
+	"EmpireEventDefinitions": [
+  {
+    "ID": 1001,
+    "Name": "Survey Shuttle Crash",
+    "Description": "Reports are coming of a shuttle crashing while surveying. We should send some ships over to make sure the rescue operation succeeds without a hitch.",
+    "Level": 1,
+    "Weight": 20,
+    "Category": 1,
+    "GuaranteedReward": "Steel Slab",
+    "NormalReward": {
+      "CacheIds": [
+        5
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        15
+      ]
+    }
+  },
+  {
+    "ID": 1002,
+    "Name": "Transport Shuttle Crash",
+    "Description": "Reports are coming of a shuttle crashing while ferrying contract workers to a nearby colony. We should send some ships over to make sure the rescue operation succeeds without a hitch.",
+    "Level": 1,
+    "Weight": 20,
+    "Category": 1,
+    "GuaranteedReward": "Steel Slab",
+    "NormalReward": {
+      "CacheIds": [
+        5
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        15
+      ]
+    }
+  },
+  {
+    "ID": 1003,
+    "Name": "Luxury Shuttle Crash",
+    "Description": "Reports are coming of a shuttle crashing with a VIP on board. We should send some ships over to make sure the rescue operation succeeds without a hitch.",
+    "Level": 1,
+    "Weight": 20,
+    "Category": 1,
+    "GuaranteedReward": "Steel Slab",
+    "NormalReward": {
+      "CacheIds": [
+        5
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        15
+      ]
+    }
+  },
+  {
+    "ID": 1004,
+    "Name": "Mystery Shuttle Crash",
+    "Description": "Reports are coming of an unidentified shuttle crashing nearby. We need to install a traffic beacon and direct any incoming shuttles to our neighbor.",
+    "Level": 1,
+    "Weight": 20,
+    "Category": 1,
+    "GuaranteedReward": "Steel Slab",
+    "NormalReward": {
+      "CacheIds": [
+        5
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        15
+      ]
+    }
+  },
+  {
+    "ID": 1005,
+    "Name": "Gold Fever",
+    "Description": "News of recently found mineral riches are spreading and prospectors are flocking in. A show of force is needed to remind them who owns the area, and to get a piece of the pie of course.",
+    "Level": 1,
+    "Weight": 20,
+    "Category": 1,
+    "GuaranteedReward": "Steel Slab",
+    "NormalReward": {
+      "CacheIds": [
+        5
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        15
+      ]
+    }
+  },
+  {
+    "ID": 1006,
+    "Name": "Smuggling Operation",
+    "Description": "Smugglers are operating from a hidden base in our area. We need to deal with them swiflty before more of their ilk arrives and undermines our economy.",
+    "Level": 1,
+    "Weight": 20,
+    "Category": 1,
+    "GuaranteedReward": "Steel Slab",
+    "NormalReward": {
+      "CacheIds": [
+        5
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        15
+      ]
+    }
+  },
+  {
+    "ID": 1007,
+    "Name": "Cloud Chaser",
+    "Description": "A large, heavily armed harvesting ship is operating within our territory, scooping up our gas. A powerful force is required to make it part with its loot and drive it out.",
+    "Level": 1,
+    "Weight": 20,
+    "Category": 1,
+    "GuaranteedReward": "Steel Slab",
+    "NormalReward": {
+      "CacheIds": [
+        5
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        15
+      ]
+    }
+  },
+  {
+    "ID": 1008,
+    "Name": "Deep Core Miner",
+    "Description": "An audacious miner has been spotted in a Crystal field within our borders. We don't want a reputation for being easy pickings so we need to take him out, as a warning to others.",
+    "Level": 1,
+    "Weight": 20,
+    "Category": 1,
+    "GuaranteedReward": "Steel Slab",
+    "NormalReward": {
+      "CacheIds": [
+        5
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        15
+      ]
+    }
+  },
+  {
+    "ID": 1009,
+    "Name": "Pure Water",
+    "Description": "Space nomads have discovered an Ice field with unusually pure water quality and are now starting to gather there in large numbers. We need to disperse them quickly before they get too numerous.",
+    "Level": 1,
+    "Weight": 20,
+    "Category": 1,
+    "GuaranteedReward": "Steel Slab",
+    "NormalReward": {
+      "CacheIds": [
+        5
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        15
+      ]
+    }
+  },
+  {
+    "ID": 1010,
+    "Name": "Highwaymen",
+    "Description": "A group of bandits are making hit-and-run attacks against traders in the area. Let's show our strength in the area to drive their operation somewhere else.",
+    "Level": 1,
+    "Weight": 20,
+    "Category": 1,
+    "GuaranteedReward": "Steel Slab",
+    "NormalReward": {
+      "CacheIds": [
+        5
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        15
+      ]
+    }
+  },
+  {
+    "ID": 1011,
+    "Name": "Tow Service",
+    "Description": "A fleet of freighters is having difficulties navigating  a dense resource field. They're willing to pay us good money to help them get through intact.",
+    "Level": 1,
+    "Weight": 20,
+    "Category": 1,
+    "GuaranteedReward": "Steel Slab",
+    "NormalReward": {
+      "CacheIds": [
+        5
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        15
+      ]
+    }
+  },
+  {
+    "ID": 1012,
+    "Name": "Nature's Bounty",
+    "Description": "A comet crashed into a resource field in the area, leaving a debris field full of goodies just waiting to be picked up. We should send in a task force to patrol the area and claim anything of value.",
+    "Level": 1,
+    "Weight": 20,
+    "Category": 1,
+    "GuaranteedReward": "Steel Slab",
+    "NormalReward": {
+      "CacheIds": [
+        5
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        15
+      ]
+    }
+  },
+  {
+    "ID": 1013,
+    "Name": "Escort Duty",
+    "Description": "Some big wig from the Lunar Colony is requesting an escort through the area. Having friends in high places never hurts, this can reap some future rewards.",
+    "Level": 1,
+    "Weight": 20,
+    "Category": 1,
+    "GuaranteedReward": "Steel Slab",
+    "NormalReward": {
+      "CacheIds": [
+        5
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        15
+      ]
+    }
+  },
+  {
+    "ID": 1014,
+    "Name": "Scrapped",
+    "Description": "We've received a transmission of a derelict freighter left for scrap in the area. Seems it broke down and it wasn't worth it to fix it. It's in our territory so we should check if it has any valuables still.",
+    "Level": 1,
+    "Weight": 20,
+    "Category": 1,
+    "GuaranteedReward": "Steel Slab",
+    "NormalReward": {
+      "CacheIds": [
+        5
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        15
+      ]
+    }
+  },
+  {
+    "ID": 1015,
+    "Name": "Junkyard",
+    "Description": "More and more people are complaining about the abundance of junk in the area. It's not glorious, but cleaning it up improves morale and there are always some valuable nuggets hidden in between.",
+    "Level": 1,
+    "Weight": 20,
+    "Category": 1,
+    "GuaranteedReward": "Steel Slab",
+    "NormalReward": {
+      "CacheIds": [
+        5
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        15
+      ]
+    }
+  },
+  {
+    "ID": 2001,
+    "Name": "Binderburg Scout",
+    "Description": "There are reports of a scout working for Binderburg operating in the area, probably snooping for relics or other valuables. Chase her away and confiscate whatever illgotten gains she has.",
+    "Level": 2,
+    "Weight": 20,
+    "Category": 2,
+    "GuaranteedReward": "Carbon Plate",
+    "NormalReward": {
+      "CacheIds": [
+        6
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        16
+      ]
+    }
+  },
+  {
+    "ID": 2002,
+    "Name": "Labor Transit Attack",
+    "Description": "An emergency call is coming in from a transport ship full of workers. They are being attacked by an unknown assailant, seemingly uncaring about putting people at risk. Immediate help is required.",
+    "Level": 2,
+    "Weight": 20,
+    "Category": 2,
+    "GuaranteedReward": "Carbon Plate",
+    "NormalReward": {
+      "CacheIds": [
+        6
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        16
+      ]
+    }
+  },
+  {
+    "ID": 2003,
+    "Name": "Marooned",
+    "Description": "We have picked up an emergency signal from a group of people marooned on a planet. Sending ships to aid them is the decent thing to do, and there is rescue reward involved.",
+    "Level": 2,
+    "Weight": 20,
+    "Category": 2,
+    "GuaranteedReward": "Carbon Plate",
+    "NormalReward": {
+      "CacheIds": [
+        6
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        16
+      ]
+    }
+  },
+  {
+    "ID": 2004,
+    "Name": "Surveillance Station",
+    "Description": "A Child of Mars had the audacity to order a surveillance station built on one of our planets. We need to deal with it quickly before its marauders arrive on the scene.",
+    "Level": 2,
+    "Weight": 20,
+    "Category": 2,
+    "GuaranteedReward": "Carbon Plate",
+    "NormalReward": {
+      "CacheIds": [
+        6
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        16
+      ]
+    }
+  },
+  {
+    "ID": 2005,
+    "Name": "Volcanic Activity",
+    "Description": "One of our moons had an abrupt volcanic activity, fissures are forming and toxic vapors coming out. Science and surveying teams are in great peril and we need to send in ships to rescue them.",
+    "Level": 2,
+    "Weight": 20,
+    "Category": 2,
+    "GuaranteedReward": "Carbon Plate",
+    "NormalReward": {
+      "CacheIds": [
+        6
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        16
+      ]
+    }
+  },
+  {
+    "ID": 2006,
+    "Name": "Martian Bulk Miner",
+    "Description": "The Martian Prosper League has no regards for sovereignty and sends its miners anywhere it pleases. We need to send them a strong message that we protect what is ours.",
+    "Level": 2,
+    "Weight": 20,
+    "Category": 2,
+    "GuaranteedReward": "Carbon Plate",
+    "NormalReward": {
+      "CacheIds": [
+        6
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        16
+      ]
+    }
+  },
+  {
+    "ID": 2007,
+    "Name": "Warlord Surveyor",
+    "Description": "A Tianchao surveyor is mapping out celestial bodies within our borders. We should send a force to escort him out. Confiscate any valuables to send a message they should stay out.",
+    "Level": 2,
+    "Weight": 20,
+    "Category": 2,
+    "GuaranteedReward": "Carbon Plate",
+    "NormalReward": {
+      "CacheIds": [
+        6
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        16
+      ]
+    }
+  },
+  {
+    "ID": 2008,
+    "Name": "Harvest Harassment",
+    "Description": "We have reports of ruffians hanging around our stations, intercepting and stealing our harvested resources as they are coming in. We need to respond quickly before we lose more resources.",
+    "Level": 2,
+    "Weight": 20,
+    "Category": 2,
+    "GuaranteedReward": "Carbon Plate",
+    "NormalReward": {
+      "CacheIds": [
+        6
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        16
+      ]
+    }
+  },
+  {
+    "ID": 2009,
+    "Name": "Mining Robots",
+    "Description": "An unknown entity is conducting a clandestine gas mining operation within our empire, using small, hard to detect robots to sneak in and out. A large force is needed to sweep the area clean.",
+    "Level": 2,
+    "Weight": 20,
+    "Category": 2,
+    "GuaranteedReward": "Carbon Plate",
+    "NormalReward": {
+      "CacheIds": [
+        6
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        16
+      ]
+    }
+  },
+  {
+    "ID": 2010,
+    "Name": "Lunar Artificer",
+    "Description": "Some crazy Lunar scientist is sampling Crystals in our territory, and making a general nuisance of herself. She has some hi-tech gadgets, so a strong force is needed to chase her out.",
+    "Level": 2,
+    "Weight": 20,
+    "Category": 2,
+    "GuaranteedReward": "Carbon Plate",
+    "NormalReward": {
+      "CacheIds": [
+        6
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        16
+      ]
+    }
+  },
+  {
+    "ID": 2011,
+    "Name": "Squatters",
+    "Description": "Squatters have taken up illegal residence in one of our Ice fields. Water is a valuable resource and we need to take a hard stance on anyone trying to steal it from us.",
+    "Level": 2,
+    "Weight": 20,
+    "Category": 2,
+    "GuaranteedReward": "Carbon Plate",
+    "NormalReward": {
+      "CacheIds": [
+        6
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        16
+      ]
+    }
+  },
+  {
+    "ID": 3001,
+    "Name": "Anarchist Attack",
+    "Description": "A rampaging Xaox fleet cannot be reasoned with. The only language they understand is force, so make sure we muster enough to make them understand.",
+    "Level": 3,
+    "Weight": 20,
+    "Category": 3,
+    "GuaranteedReward": "Titanium Block",
+    "NormalReward": {
+      "CacheIds": [
+        7
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        17
+      ]
+    }
+  },
+  {
+    "ID": 3002,
+    "Name": "Gelecek Research Team",
+    "Description": "A Gelecek Research team has wandered into our territory. They have well-equipped escorts, so make sure we send enough ships to convince them to conduct their research elsewhere.",
+    "Level": 3,
+    "Weight": 20,
+    "Category": 3,
+    "GuaranteedReward": "Titanium Block",
+    "NormalReward": {
+      "CacheIds": [
+        7
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        17
+      ]
+    }
+  },
+  {
+    "ID": 3003,
+    "Name": "Perihelion",
+    "Description": "This planet is now closest to the sun in its orbit. It is attracting scavangers of every kind and we need a strong force to disperse them.",
+    "Level": 3,
+    "Weight": 20,
+    "Category": 3,
+    "GuaranteedReward": "Titanium Block",
+    "NormalReward": {
+      "CacheIds": [
+        7
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        17
+      ]
+    }
+  },
+			{
+				"ID": 3004,
+				"Name": "Tianchao Settler",
+				"Description": "A huge Tianchao colony ship was detected close to one of our planets recently. The Tianchao have no regard for sovereignty and we need to investigate to see if they are trying to colonize.",
+				"Level": 3,
+				"Weight": 20,
+				"Category": 3,
+				"GuaranteedReward": "Titanium Block",
+				"NormalReward": {
+					"CacheIds": [
+						7
+					]
+				},
+				"MercenaryReward": {
+					"CacheIds": [
+						17
+					]
+				}
+			},
+  {
+    "ID": 3005,
+    "Name": "MPL Mining Base",
+    "Description": "An informant of ours has revealed the location of an underground mining base operated by the nefarious MPL. The base has some decent defenses, so make sure enough ships are sent to take it out.",
+    "Level": 3,
+    "Weight": 20,
+    "Category": 3,
+    "GuaranteedReward": "Titanium Block",
+    "NormalReward": {
+      "CacheIds": [
+        7
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        17
+      ]
+    }
+  },
+  {
+    "ID": 4001,
+    "Name": "Sabotage",
+    "Description": "Our operatives have uncovered a sinister plot to undermine our empire. We must act quickly and decisively before the saboteurs manage to wreak havoc in our realm.",
+    "Level": 4,
+    "Weight": 20,
+    "Category": 4,
+    "GuaranteedReward": "Diamond Nanorod",
+    "NormalReward": {
+      "CacheIds": [
+        8
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        18
+      ]
+    }
+  },
+  {
+    "ID": 4002,
+    "Name": "XAOC Raider Base",
+    "Description": "A group of anarchists has set up a base within our territory, preparing to send out raiding parties. They can become a thorn in our side, so send a strong force to deal with them for good.",
+    "Level": 4,
+    "Weight": 20,
+    "Category": 4,
+    "GuaranteedReward": "Diamond Nanorod",
+    "NormalReward": {
+      "CacheIds": [
+        8
+      ]
+    },
+    "MercenaryReward": {
+      "CacheIds": [
+        18
+      ]
+    }
+  }
+]
+}

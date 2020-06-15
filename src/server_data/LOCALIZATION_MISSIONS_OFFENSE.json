@@ -1,0 +1,930 @@
+﻿[
+
+  /* Offense Missions */
+  {
+    "Id": 0,
+    "Name": "Illicit Settlers",
+    "Faction": "Tianchao",
+    "OneLiner": "You find a group of Tianchao settlers, armed to the teeth.", 
+    "Discovery": "You have discovered Tianchao settlers in hostile mood.",
+    "Completion": "The Tianchao settlers have been dealt with."
+  },
+  {
+    "Id": 1,
+    "Name": "Scavanger Locust",
+    "Faction": "Tianchao",
+    "OneLiner": "You've found a group of Tianchao scavangers salvaging anything in sight.", 
+    "Discovery": "You've found a group of Tianchao scavangers salvaging anything in sight.",
+    "Completion": "The Tianchao scavangers have been taken care of."
+  },
+  {
+    "Id": 2,
+    "Name": "Colony Ships",
+    "Faction": "Tianchao", 
+    "OneLiner": "You've discovered a Tianchao colony ship with armed escorts.",
+    "Discovery": "You've discovered a Tianchao colony ship with armed escorts.",
+    "Completion": "The Tianchao colony ship has been destroyed."
+  },
+  {
+    "Id": 3,
+    "Name": "Drifter Colonists",
+    "Faction": "Tianchao",
+    "OneLiner": "You pick up a signal of a small group of Tianchao colonists trespassing in a system.",
+    "Discovery": "You pick up a signal of a small group of Tianchao colonists trespassing in a system.",
+    "Completion": "You have turned the Tianchao drifters away."
+  },
+  {
+    "Id": 4,
+    "Name": "Xaoc Encampment",
+    "Faction": "Xaoc",
+    "OneLiner": "You have discovered a secret Xaoc camp on a planet.",
+    "Discovery": "You've found a Xaoc band gaining a foothold on a planet.",
+    "Completion": "The Xaoc camp and everyone in it has been eliminated."
+  },
+  {
+    "Id": 5,
+    "Name": "Anarch Haven",
+    "Faction": "Xaoc",
+    "OneLiner": "You've found a Xaoc-operated service station.",
+    "Discovery": "You have found a Xaoc service station.",
+    "Completion": "The service station has been destroyed."
+  },
+  {
+    "Id": 6,
+    "Name": "Anarchy in Space",
+    "Faction": "Xaoc",
+    "OneLiner": "You discover a band of Xaoc anarchs on the loose.",
+    "Discovery": "Xaoc anarchs are on the loose, wreaking havoc!",
+    "Completion": "The Xaoc anarchs have been neutralized."
+  },
+  {
+    "Id": 7,
+    "Name": "Settler Shakedown",
+    "Faction": "Xaoc",
+    "OneLiner": "You have found a group of Xaoc thugs terrorizing peaceful settlers.",
+    "Discovery": "You have found a group of Xaoc thugs terrorizing peaceful settlers.",
+    "Completion": "The Xaoc thugs have been dealt with."
+  },
+  {
+    "Id": 8,
+    "Name": "Criminal Takedown",
+    "Faction": "Neutral",
+    "OneLiner": "You uncover dangerous criminals in hiding.",
+    "Discovery": "We have discovered the hideout of a wanted crime lord.",
+    "Completion": "'Operation Takedown' was a success! The criminals have been apprehended."
+  },
+  {
+    "Id": 9,
+    "Name": "Asteroid Factory",
+    "Faction": "Neutral",
+    "OneLiner": "You've managed to find a drug factory operating in a hollow asteroid.",
+    "Discovery": "You have found a drug factory hidden in an asteroid!",
+    "Completion": "The drug factory has been blown to bits."
+  },
+  {
+    "Id": 10,
+    "Name": "Illicit Settlers",
+    "Faction": "Tianchao",
+    "OneLiner": "You find a large group of Tianchao settlers, armed to the teeth.",
+    "Discovery": "You have discovered illegal settlers in hostile mood.",
+    "Completion": "The Tianchao settlers have been dealt with."
+  },
+  {
+    "Id": 11,
+    "Name": "Scavanger Locust",
+    "Faction": "Tianchao",
+    "OneLiner": "You've found a large group of Tianchao scavangers salvaging anything in sight.",
+    "Discovery": "You've found a group of Tianchao scavangers salvaging anything in sight.",
+    "Completion": "The Tianchao scavangers have been taken care of."
+  },
+  {
+    "Id": 12,
+    "Name": "Colony Ships",
+    "Faction": "Tianchao",
+    "OneLiner": "You've discovered a Tianchao colony ship with heavily armed escorts.",
+    "Discovery": "You've discovered a Tianchao colony ship with armed escorts.",
+    "Completion": "The Tianchao colony ship has been destroyed."
+  },
+  {
+    "Id": 13,
+    "Name": "Drifter Colonists",
+    "Faction": "Tianchao",
+    "OneLiner": "You pick up a signal of a group of Tianchao colonists trespassing in a system.",
+    "Discovery": "You pick up a signal of a group of Tianchao colonists trespassing in a system.",
+    "Completion": "You have turned the Tianchao drifters away."
+  },
+  {
+    "Id": 14,
+    "Name": "Xaoc Encampment",
+    "Faction": "Xaoc",
+    "OneLiner": "You have discovered a large Xaoc camp on a planet.",
+    "Discovery": "You've found a Xaoc band gaining a foothold on a planet.",
+    "Completion": "The Xaoc camp and everyone in it has been eliminated."
+  },
+  {
+    "Id": 15,
+    "Name": "Anarch Haven",
+    "Faction": "Xaoc",
+    "OneLiner": "You've found a big Xaoc-operated service station.",
+    "Discovery": "You have found a Xaoc service station.",
+    "Completion": "The service station has been destroyed."
+  },
+  {
+    "Id": 16,
+    "Name": "Anarchy in Space",
+    "Faction": "Xaoc",
+    "OneLiner": "You discover a large band of Xaoc anarchs on the loose.",
+    "Discovery": "Xaoc anarchs are on the loose, wreaking havoc!",
+    "Completion": "The Xaoc anarchs have been neutralized."
+  },
+  {
+    "Id": 17,
+    "Name": "Settler Shakedown",
+    "Faction": "Xaoc",
+    "OneLiner": "You have found a large group of Xaoc thugs terrorizing peaceful settlers.",
+    "Discovery": "You have found a group of Xaoc thugs terrorizing peaceful settlers.",
+    "Completion": "The Xaoc thugs have been dealt with."
+  },
+  {
+    "Id": 18,
+    "Name": "Criminal Takedown",
+    "Faction": "Neutral",
+    "OneLiner": "You uncover very dangerous criminals in hiding.",
+    "Discovery": "We have discovered the hideout of a wanted crime lord.",
+    "Completion": "'Operation Takedown' was a success! The criminals have been apprehended."
+  },
+  {
+    "Id": 19,
+    "Name": "Asteroid Factory",
+    "Faction": "Neutral",
+    "OneLiner": "You've managed to find a large drug factory operating in a hollow asteroid.",
+    "Discovery": "You have found a drug factory hidden in an asteroid!",
+    "Completion": "The drug factory has been blown to bits."
+  },
+  {
+    "Id": 20,
+    "Name": "Illicit Settlers",
+    "Faction": "Tianchao",
+    "OneLiner": "You find a colony of Tianchao settlers, armed to the teeth.",
+    "Discovery": "You have discovered Tianchao settlers in hostile mood.",
+    "Completion": "The Tianchao settlers have been dealt with."
+  },
+  {
+    "Id": 21,
+    "Name": "Xaoc Encampment",
+    "Faction": "Xaoc",
+    "OneLiner": "You have discovered an extensive Xaoc camp on a planet.",
+    "Discovery": "You've found a Xaoc band gaining a foothold on a planet.",
+    "Completion": "The Xaoc camp and everyone in it has been eliminated."
+  },
+  {
+    "Id": 22,
+    "Name": "Settler Shakedown",
+    "Faction": "Xaoc",
+    "OneLiner": "You have found a legion of Xaoc thugs terrorizing peaceful settlers.",
+    "Discovery": "You have found a group of Xaoc thugs terrorizing peaceful settlers.",
+    "Completion": "The Xaoc thugs have been dealt with."
+  },
+  {
+    "Id": 23,
+    "Name": "Asteroid Factory",
+    "Faction": "Neutral",
+    "OneLiner": "You've managed to find a massive drug factory operating in a hollow asteroid.",
+    "Discovery": "You have found a drug factory hidden in an asteroid!",
+    "Completion": "The drug factory has been blown to bits."
+  },
+    {
+    "Id": 24,
+    "Name": "Settlers Inbound",
+    "Faction": "Tianchao",
+    "OneLiner": "You've detected a large contingent of colonists on the move.",
+    "Discovery": "You've detected a large contingent of colonists on the move.",
+    "Completion": "You have driven the colonists away."
+  },
+    {
+    "Id": 25,
+    "Name": "Xaoc Site",
+    "Faction": "Xaoc",
+    "OneLiner": "You've found a sprawling impromptu Xaoc site brimming with hostiles.",
+    "Discovery": "You've found a sprawling impromptu Xaoc site brimming with hostiles.",
+    "Completion": "The Xoac threat has been taken care of."
+  },
+    {
+    "Id": 26,
+    "Name": "Xaoc Training Camp",
+    "Faction": "Xaoc",
+    "OneLiner": "You have discovered a camp run by Xaoc to train new recruits in space banditry.",
+    "Discovery": "You have discovered a camp run by Xaoc to train new recruits in space banditry.",
+    "Completion": "The camp has been destroyed, its inhabitants scattered."
+  },
+    {
+    "Id": 27,
+    "Name": "Pirate Hideout",
+    "Faction": "Neutral",
+    "OneLiner": "You've found a hidden base of thugs and bandits.",
+    "Discovery": "You've found a hidden base of thugs and bandits.",
+    "Completion": "The pirate hideout has been exterminated."
+  },
+    {
+    "Id": 28,
+    "Name": "Colonization Hub",
+    "Faction": "Tianchao",
+    "OneLiner": "You find an extensive Tianchao colonization effort under way.",
+    "Discovery": "You find an extensive Tianchao colonization effort under way.",
+    "Completion": "The Tianchao colony has been dealt with."
+  },
+    {
+    "Id": 29,
+    "Name": "Raider Sanctuary",
+    "Faction": "Xaoc",
+    "OneLiner": "You have found one of the main Xaoc bases in the sector.",
+    "Discovery": "You have found one of the main Xaoc bases in the sector.",
+    "Completion": "The Xaoc sanctuary has been eliminated."
+  },
+    {
+    "Id": 30,
+    "Name": "Xaoc Armament Factory",
+    "Faction": "Xaoc",
+    "OneLiner": "You've tracked down a hidden weapon factory run by Xaoc.",
+    "Discovery": "You've tracked down a hidden weapon factory run by Xaoc.",
+    "Completion": "The armament factory has been blown up."
+  },
+
+
+  /* Defense Missions */
+  {
+    "ID": 100,
+    "Name": "Distress Call",
+    "Faction": "Marauders",
+    "OneLiner": "A distress call leads you to a group of Marauders attacking a cargo convoy.",
+    "Discovery": "We are recieving a distress signal!",
+    "Completion": "Your fleets have chased off the Marauders."
+  },
+  {
+    "ID": 101,
+    "Name": "Marauder Base",
+    "Faction": "Marauders",
+    "OneLiner": "You have discovered a hidden Marauder base on a planet.",
+    "Discovery": "We have discovered a Marauder base on a planet.",
+    "Completion": "The Marauder base has been exterminated."
+  },
+  {
+    "ID": 102,
+    "Name": "Hostile Force",
+    "Faction": "Marauders",
+    "OneLiner": "You've detected an incoming squadron of armed Marauder ships.",
+    "Discovery": "We've detected an armed Marauder squadron on inbound trajectory.",
+    "Completion": "The Marauder squadron has been dealt with."
+  },
+  {
+    "ID": 103,
+    "Name": "Raider Threat",
+    "Faction": "Marauders",
+    "OneLiner": "You have found a Maurader fleet on the prowl for targets to raid.",
+    "Discovery": "We have discovered a Marauder fleet on the prowl.",
+    "Completion": "The Marauder raiders have been destroyed."
+  },
+  {
+    "ID": 104,
+    "Name": "Serf Armada",
+    "Faction": "MPL",
+    "OneLiner": "You've discovered a fleet of MPL ships forcing colonists into serfdom.",
+    "Discovery": "You've found a MPL fleet forcing colonists into serfdom.",
+    "Completion": "The MPL fleet has been scattered to the wind."
+  },
+  {
+    "ID": 105,
+    "Name": "Mapel Mining Rig",
+    "Faction": "MPL",
+    "OneLiner": "You've discovered a mining rig illegally operated by MPL.",
+    "Discovery": "You've discovered a mining rig illegally operated by MPL.",
+    "Completion": "You have confiscated the resources from the mining rig."
+  },
+  {
+    "ID": 106,
+    "Name": "Hidden Cache",
+    "Faction": "MPL",
+    "OneLiner": "You've stumbled upon a cache hidden by the MPL.",
+    "Discovery": "You've stumbled upon a cache hidden by the MPL.",
+    "Completion": "You have collected the cache."
+  },
+  {
+    "ID": 107,
+    "Name": "Golden Nuggets",
+    "Faction": "MPL",
+    "OneLiner": "You've tracked a signal from some Mapel units to a resource field.",
+    "Discovery": "You've tracked a signal from some Mapel units to a resource field.",
+    "Completion": "You have confiscated all valuables."
+  },
+  {
+    "ID": 108,
+    "Name": "Smuggling Cartel",
+    "Faction": "Neutral",
+    "OneLiner": "You have found the base of operation of a smuggling ring.",
+    "Discovery": "You have found the base of operation of a smuggling ring.",
+    "Completion": "You have taken out the smuggler's base."
+  },
+  {
+    "ID": 109,
+    "Name": "Rogue Scientist",
+    "Faction": "Neutral",
+    "OneLiner": "You've discovered a lone scientist conducting dangerous experiments.",
+    "Discovery": "You've discovered a lone scientist conducting dangerous experiments.",
+    "Completion": "You have seized the scientist's equipment."
+  },
+  {
+    "ID": 110,
+    "Name": "Distress Call",
+    "Faction": "Marauders",
+    "OneLiner": "A distress call leads you to a large group of Marauders attacking a cargo convoy.",
+    "Discovery": "We are recieving a distress signal!",
+    "Completion": "Your fleets have chased off the Marauders."
+  },
+  {
+    "ID": 111,
+    "Name": "Marauder Base",
+    "Faction": "Marauders",
+    "OneLiner": "You have discovered a large Marauder base on a planet.",
+    "Discovery": "We have discovered a Marauder base on a planet.",
+    "Completion": "The Marauder base has been exterminated."
+  },
+  {
+    "ID": 112,
+    "Name": "Hostile Force",
+    "Faction": "Marauders",
+    "OneLiner": "You've detected an incoming squadron of heavily armed Marauder ships.",
+    "Discovery": "We've detected an armed Marauder squadron on inbound trajectory.",
+    "Completion": "The Marauder squadron has been dealt with."
+  },
+  {
+    "ID": 113,
+    "Name": "Raider Threat",
+    "Faction": "Marauders",
+    "OneLiner": "You have found a sizeable Maurader fleet on the prowl for targets to raid.",
+    "Discovery": "We have discovered a Marauder fleet on the prowl.",
+    "Completion": "The Marauder raiders have been destroyed."
+  },
+  {
+    "ID": 114,
+    "Name": "Serf Armada",
+    "Faction": "MPL",
+    "OneLiner": "You've discovered a large fleet of MPL ships forcing colonists into serfdom.",
+    "Discovery": "You've found a MPL fleet forcing colonists into serfdom.",
+    "Completion": "The MPL fleet has been scattered to the wind."
+  },
+  {
+    "ID": 115,
+    "Name": "Mapel Mining Rig",
+    "Faction": "MPL",
+    "OneLiner": "You've discovered a large mining rig illegally operated by MPL.",
+    "Discovery": "You've discovered a large mining rig illegally operated by MPL.",
+    "Completion": "You have confiscated the resources from the mining rig."
+  },
+  {
+    "ID": 116,
+    "Name": "Hidden Cache",
+    "Faction": "MPL",
+    "OneLiner": "You've stumbled upon a great cache hidden by the MPL.",
+    "Discovery": "You've stumbled upon a cache hidden by the MPL.",
+    "Completion": "You have collected the cache."
+  },
+  {
+    "ID": 117,
+    "Name": "Golden Nuggets",
+    "Faction": "MPL",
+    "OneLiner": "You've tracked a signal from some Mapel units to a resource field.",
+    "Discovery": "You've tracked a signal from some Mapel units to a resource field.",
+    "Completion": "You have confiscated all valuables."
+  },
+  {
+    "ID": 118,
+    "Name": "Smuggling Cartel",
+    "Faction": "Neutral",
+    "OneLiner": "You have found the base of operation of a wealthy smuggling ring.",
+    "Discovery": "You have found the base of operation of a smuggling ring.",
+    "Completion": "You have taken out the smuggler's base."
+  },
+  {
+    "ID": 119,
+    "Name": "Rogue Scientist",
+    "Faction": "Neutral",
+    "OneLiner": "You've discovered a lone scientist conducting extremely dangerous experiments.",
+    "Discovery": "You've discovered a lone scientist conducting extremely dangerous experiments.",
+    "Completion": "You have seized the scientist's equipment."
+  },
+  {
+    "ID": 120,
+    "Name": "Marauder Base",
+    "Faction": "Marauders",
+    "OneLiner": "You have discovered a sprawling Marauder base on a planet.",
+    "Discovery": "We have discovered a Marauder base on a planet.",
+    "Completion": "The Marauder base has been exterminated."
+  },
+  {
+    "ID": 121,
+    "Name": "Hostile Force",
+    "Faction": "Marauders",
+    "OneLiner": "You've detected an incoming squadron of heavily armed Marauder ships.",
+    "Discovery": "We've detected an armed Marauder squadron on inbound trajectory.",
+    "Completion": "The Marauder squadron has been dealt with."
+  },
+  {
+    "ID": 122,
+    "Name": "Mapel Mining Rig",
+    "Faction": "MPL",
+    "OneLiner": "You've discovered a group of mining rigs illegally operated by MPL.",
+    "Discovery": "You've discovered a group of mining rigs illegally operated by MPL.",
+    "Completion": "You have confiscated the resources from the mining rigs."
+  },
+  {
+    "ID": 123,
+    "Name": "Rogue Scientist",
+    "Faction": "Neutral",
+    "OneLiner": "You've discovered a lone scientist conducting life-threatening experiments.",
+    "Discovery": "You've discovered a lone scientist conducting dangerous experiments.",
+    "Completion": "You have seized the scientist's equipment."
+  },
+    {
+    "ID": 124,
+    "Name": "Marauder Stronghold",
+    "Faction": "Marauders",
+    "OneLiner": "You've tracked down a major Marauder stronghold in space.",
+    "Discovery": "You've tracked down a major Marauder stronghold in space.",
+    "Completion": "The stronghold has been destroyed."
+  },
+    {
+    "ID": 125,
+    "Name": "Mapel Industry Center",
+    "Faction": "MPL",
+    "OneLiner": "You discover a MPL industry center teeming with serfs hard at work.",
+    "Discovery": "You discover a MPL industry center teeming with serfs hard at work.",
+    "Completion": "You have stripped the industrial center and freed the serfs."
+  },
+    {
+    "ID": 126,
+    "Name": "Hidden Supply Station",
+    "Faction": "Neutral",
+    "OneLiner": "You discover a clandestine logistic depot used by unsavory elements.",
+    "Discovery": "You discover a clandestine logistic depot used by unsavory elements.",
+    "Completion": "The logistic depot has been stripped."
+  },
+    {
+    "ID": 127,
+    "Name": "Marauder Sector Hub",
+    "Faction": "Marauders",
+    "OneLiner": "You have discovered one of the Marauder headquarters in this sector.",
+    "Discovery": "You have discovered one of the Marauder headquarters in this sector.",
+    "Completion": "The sector hub has been taken out."
+  },
+    {
+    "ID": 128,
+    "Name": "Mapel Mass Harvester",
+    "Faction": "MPL",
+    "OneLiner": "You come upon a huge MPL harvesting facility, thousands of serfs toiling.",
+    "Discovery": "You come upon a huge MPL harvesting facility.",
+    "Completion": "You harvest all the resources and liberate the serfs."
+  },
+
+
+  /* Recon Missions */
+
+  {
+    "ID": 200,
+    "Name": "Emergency Beacon",
+    "Faction": "Gelecek",
+    "OneLiner": "You pick up a signal of an emergency beacon located at an abandoned space factory.",
+    "Discovery": "You pick up a signal of an emergency beacon located at an abandoned space factory.",
+    "Completion": "You found Gelecek scouts in the factory."
+  },
+  {
+    "ID": 201,
+    "Name": "Gelecek Surveillance",
+    "Faction": "Gelecek",
+    "OneLiner": "You uncover a surveillance team from Gelecek.",
+    "Discovery": "You uncover a surveillance team from Gelecek.",
+    "Completion": "You've taken out the surveillance team."
+  },
+  {
+    "ID": 202,
+    "Name": "Deep Space Salvage",
+    "Faction": "Gelecek",
+    "OneLiner": "You have discovered a derelict Gelecek ship full of goodies.",
+    "Discovery": "You have discovered a derelict Gelecek ship full of goodies.",
+    "Completion": "You have harvested the derelict ship."
+  },
+  {
+    "ID": 203,
+    "Name": "Lurking Infiltrator",
+    "Faction": "Gelecek",
+    "OneLiner": "You find a small Gelecek vessel sneaking around.",
+    "Discovery": "You find a small Gelecek vessel sneaking around.",
+    "Completion": "You have intercepted the Gelecek scout."
+  },
+  {
+    "ID": 204,
+    "Name": "Spy Drones",
+    "Faction": "Gelecek",
+    "OneLiner": "You have found a pair of espionage drones sent by Gelecek.",
+    "Discovery": "You have found a pair of espionage drones sent by Gelecek.",
+    "Completion": "The Gelecek spy drones have been tracked down and destroyed."
+  },
+  {
+    "ID": 205,
+    "Name": "Machine Pod",
+    "Faction": "Gelecek",
+    "OneLiner": "You've picked up a faint signal of a Gelecek pod containing droid machinery.",
+    "Discovery": "You've picked up a faint signal of a Gelecek pod containing droid machinery.",
+    "Completion": "The Gelecek machine pod has been destroyed."
+  },
+  {
+    "ID": 206,
+    "Name": "Lost Surveyor Stash",
+    "Faction": "Neutral",
+    "OneLiner": "You've found a stash left by ESA surveyors.",
+    "Discovery": "You've found a stash left by ESA surveyors.",
+    "Completion": "You have picked up the ESA stash."
+  },
+  {
+    "ID": 207,
+    "Name": "Lost in Space",
+    "Faction": "Neutral",
+    "OneLiner": "You have discovered a luxury yacht floating in space.",
+    "Discovery": "You have discovered a luxury yacht floating in space.",
+    "Completion": "You have investigated the yacht."
+  },
+  {
+    "ID": 208,
+    "Name": "Forgotten Lair",
+    "Faction": "Neutral",
+    "OneLiner": "You discover an old bandit lair full of hidden treasures.",
+    "Discovery": "You discover an old bandit lair full of hidden treasures.",
+    "Completion": "You have inspected the bandit lair."
+  },
+  {
+    "ID": 209,
+    "Name": "Emergency Beacon",
+    "Faction": "Gelecek",
+    "OneLiner": "You pick up a signal of an emergency beacon located at an abandoned space factory.",
+    "Discovery": "You pick up a signal of an emergency beacon located at an abandoned space factory.",
+    "Completion": "You found Gelecek scouts in the factory."
+  },
+  {
+    "ID": 210,
+    "Name": "Gelecek Surveillance",
+    "Faction": "Gelecek",
+    "OneLiner": "You uncover a large surveillance team from Gelecek.",
+    "Discovery": "You uncover a large surveillance team from Gelecek.",
+    "Completion": "You've taken out the surveillance team."
+  },
+  {
+    "ID": 211,
+    "Name": "Deep Space Salvage",
+    "Faction": "Gelecek",
+    "OneLiner": "You have discovered a derelict Gelecek ship full of goodies.",
+    "Discovery": "You have discovered a derelict Gelecek ship full of goodies.",
+    "Completion": "You have harvested the derelict ship."
+  },
+  {
+    "ID": 212,
+    "Name": "Lurking Infiltrator",
+    "Faction": "Gelecek",
+    "OneLiner": "You find a Gelecek vessel sneaking around.",
+    "Discovery": "You find a Gelecek vessel sneaking around.",
+    "Completion": "You have intercepted the Gelecek scout."
+  },
+  {
+    "ID": 213,
+    "Name": "Spy Drones",
+    "Faction": "Gelecek",
+    "OneLiner": "You have found a pair of espionage drones sent by Gelecek.",
+    "Discovery": "You have found a pair of espionage drones sent by Gelecek.",
+    "Completion": "The Gelecek spy drones have been tracked down and destroyed."
+  },
+  {
+    "ID": 214,
+    "Name": "Machine Pod",
+    "Faction": "Gelecek",
+    "OneLiner": "You've picked up a faint signal of a Gelecek pod containing droid machinery.",
+    "Discovery": "You've picked up a faint signal of a Gelecek pod containing droid machinery.",
+    "Completion": "The Gelecek machine pod has been destroyed."
+  },
+  {
+    "ID": 215,
+    "Name": "Lost Surveyor Stash",
+    "Faction": "Neutral",
+    "OneLiner": "You've found a stash left by ESA surveyors.",
+    "Discovery": "You've found a stash left by ESA surveyors.",
+    "Completion": "You have picked up the ESA stash."
+  },
+  {
+    "ID": 216,
+    "Name": "Lost in Space",
+    "Faction": "Neutral",
+    "OneLiner": "You have discovered a large luxury yacht floating in space.",
+    "Discovery": "You have discovered a large luxury yacht floating in space.",
+    "Completion": "You have investigated the yacht."
+  },
+  {
+    "ID": 217,
+    "Name": "Forgotten Lair",
+    "Faction": "Neutral",
+    "OneLiner": "You discover an old bandit lair full of hidden treasures.",
+    "Discovery": "You discover an old bandit lair full of hidden treasures.",
+    "Completion": "You have inspected the bandit lair."
+  },
+  {
+    "ID": 218,
+    "Name": "Gelecek Surveillance",
+    "Faction": "Gelecek",
+    "OneLiner": "You uncover a well-equipped surveillance team from Gelecek.",
+    "Discovery": "You uncover a well-equipped surveillance team from Gelecek.",
+    "Completion": "You've taken out the surveillance team."
+  },
+  {
+    "ID": 219,
+    "Name": "Lurking Infiltrator",
+    "Faction": "Gelecek",
+    "OneLiner": "You find a Gelecek vessel sneaking around.",
+    "Discovery": "You find a Gelecek vessel sneaking around.",
+    "Completion": "You have intercepted the Gelecek scout."
+  },
+  {
+    "ID": 220,
+    "Name": "Lost Surveyor Stash",
+    "Faction": "Neutral",
+    "OneLiner": "You've found a stash left by ESA surveyors.",
+    "Discovery": "You've found a stash left by ESA surveyors.",
+    "Completion": "You have picked up the ESA stash."
+  },
+  {
+    "ID": 221,
+    "Name": "Forgotten Lair",
+    "Faction": "Neutral",
+    "OneLiner": "You discover an old bandit lair full of hidden treasures.",
+    "Discovery": "You discover an old bandit lair full of hidden treasures.",
+    "Completion": "You have inspected the bandit lair."
+  },
+  {
+    "ID": 222,
+    "Name": "Gelecek Listening Post",
+    "Faction": "Gelecek",
+    "OneLiner": "You've discovered a hi-tech Gelecek listening post running surveillance in the area.",
+    "Discovery": "You've discovered a hi-tech Gelecek listening post running surveillance in the area.",
+    "Completion": "The listening post has been knocked out."
+  },
+  {
+    "ID": 223,
+    "Name": "Gelecek Research Facility",
+    "Faction": "Gelecek",
+    "OneLiner": "You've found an advanced research facility run by Gelecek Tech.",
+    "Discovery": "You've found an advanced research facility run by Gelecek Tech.",
+    "Completion": "The research facility has been stripped clean."
+  },
+    {
+    "ID": 224,
+    "Name": "Covert Ops Team",
+    "Faction": "Neutral",
+    "OneLiner": "You have tracked down an elusive covert ops team, working for an unknown faction.",
+    "Discovery": "You have tracked down an elusive covert ops team, working for an unknown faction.",
+    "Completion": "The covert ops team has been eliminated."
+  },
+    {
+    "ID": 225,
+    "Name": "Gelecek Sector Command",
+    "Faction": "Gelecek",
+    "OneLiner": "You've uncovered one of the key Gelecek facilities in the sector.",
+    "Discovery": "You've uncovered one of the key Gelecek facilities in the sector.",
+    "Completion": "The Gelecek command has been obliterated."
+  },
+    {
+    "ID": 226,
+    "Name": "Gelecek Supply Depot",
+    "Faction": "Gelecek",
+    "OneLiner": "You have a found a large depot supplying the Gelecek forces in the area.",
+    "Discovery": "You have a found a large depot supplying the Gelecek forces in the area.",
+    "Completion": "The Gelecek supply depot has been terminated."
+  },
+
+
+
+  /* Alien Missions */
+  {
+    "ID": 300,
+    "Name": "Ancient Ruins",
+    "Faction": "Binderburg",
+    "OneLiner": "You find a Binderburg archaeology team in ancient alien ruins.",
+    "Discovery": "You find a Binderburg archaeology team in ancient alien ruins.",
+    "Completion": "You have collected valuables from the ruins."
+  },
+  {
+    "ID": 301,
+    "Name": "Mysterious Remains",
+    "Faction": "Binderburg",
+    "OneLiner": "You have have come across a Binderburg expedition in a massive rubble of mysterious origins.",
+    "Discovery": "You have have come across a Binderburg expedition in a massive rubble of mysterious origins.",
+    "Completion": "You have scavenged everything of interest."
+  },
+  {
+    "ID": 302,
+    "Name": "Alien Space Debris",
+    "Faction": "Binderburg",
+    "OneLiner": "You found a team of Binderburg scouts investigating the remains of a Symbiont structure in space.",
+    "Discovery": "You found a team of Binderburg scouts investigating the remains of a Symbiont structure in space.",
+    "Completion": "You have taken the Symbiont remains for yourself."
+  },
+  {
+    "ID": 303,
+    "Name": "Alien Treasure",
+    "Faction": "Binderburg",
+    "OneLiner": "You've found a stash of alien relics collected by Binderburg operatives.",
+    "Discovery": "You've found a stash of alien relics collected by Binderburg operatives.",
+    "Completion": "You have collected the alien stash."
+  },
+  {
+    "ID": 304,
+    "Name": "Symbiont Site Ruins",
+    "Faction": "Binderburg",
+    "OneLiner": "You've tracked Binderburg researchers to an ancient Symbiont site.",
+    "Discovery": "You've tracked Binderburg researchers to an ancient Symbiont site.",
+    "Completion": "The Symbiont site has been stripped clean of valuables."
+  },
+  {
+    "ID": 305,
+    "Name": "Binderburg Research Post",
+    "Faction": "Binderburg",
+    "OneLiner": "You've discovered a small research facility run by Binderburg.",
+    "Discovery": "You've discovered a small research facility run by Binderburg.",
+    "Completion": "You have closed down the Binderburg facility."
+  },
+  {
+    "ID": 306,
+    "Name": "Artifact Smugglers",
+    "Faction": "Neutral",
+    "OneLiner": "You intercept a group of smugglers carrying alien artifacts.",
+    "Discovery": "You intercept a group of smugglers carrying alien artifacts.",
+    "Completion": "You’ve apprehended the group of smugglers."
+  },
+  {
+    "ID": 307,
+    "Name": "Rune Thief",
+    "Faction": "Neutral",
+    "OneLiner": "You have tracked down a notorious thief with a stash of stolen runes.",
+    "Discovery": "You have tracked down a notorious thief with a stash of stolen runes.",
+    "Completion": "You have apprehended the thief and recovered the stolen runes."
+  },
+  {
+    "ID": 308,
+    "Name": "Private Collector",
+    "Faction": "Neutral",
+    "OneLiner": "You have intercepted a private collector of rare artifacts, illegally scavenging.",
+    "Discovery": "You have intercepted a private collector of rare artifacts, illegally scavenging.",
+    "Completion": "You have taken the collector into custody and confiscated his runes."
+  },
+  {
+    "ID": 309,
+    "Name": "Ancient Ruins",
+    "Faction": "Binderburg",
+    "OneLiner": "You find a Binderburg archaeology team in ancient alien ruins.",
+    "Discovery": "You find a Binderburg archaeology team in ancient alien ruins.",
+    "Completion": "You have collected valuables from the ruins."
+  },
+  {
+    "ID": 310,
+    "Name": "Mysterious Remains",
+    "Faction": "Binderburg",
+    "OneLiner": "You have have come across a Binderburg expedition in a massive rubble of mysterious origins.",
+    "Discovery": "You have have come across a Binderburg expedition in a massive rubble of mysterious origins.",
+    "Completion": "You have scavenged everything of interest."
+  },
+  {
+    "ID": 311,
+    "Name": "Alien Space Debris",
+    "Faction": "Binderburg",
+    "OneLiner": "You found a team of Binderburg scouts investigating the remains of a Symbiont structure in space.",
+    "Discovery": "You found a team of Binderburg scouts investigating the remains of a Symbiont structure in space.",
+    "Completion": "You have taken the Symbiont remains for yourself."
+  },
+  {
+    "ID": 312,
+    "Name": "Alien Treasure",
+    "Faction": "Binderburg",
+    "OneLiner": "You've found a stash of alien relics collected by Binderburg operatives.",
+    "Discovery": "You've found a stash of alien relics collected by Binderburg operatives.",
+    "Completion": "You have collected the alien stash."
+  },
+  {
+    "ID": 313,
+    "Name": "Symbiont Site Ruins",
+    "Faction": "Binderburg",
+    "OneLiner": "You've tracked Binderburg researchers to an ancient Symbiont site.",
+    "Discovery": "You've tracked Binderburg researchers to an ancient Symbiont site.",
+    "Completion": "The Symbiont site has been stripped clean of valuables."
+  },
+  {
+    "ID": 314,
+    "Name": "Binderburg Research Post",
+    "Faction": "Binderburg",
+    "OneLiner": "You've discovered a research facility run by Binderburg",
+    "Discovery": "You've discovered a research facility run by Binderburg",
+    "Completion": "You have closed down the Binderburg facility."
+  },
+  {
+    "ID": 315,
+    "Name": "Artifact Smugglers",
+    "Faction": "Neutral",
+    "OneLiner": "You intercept a large group of smugglers carrying alien artifacts.",
+    "Discovery": "You intercept a large group of smugglers carrying alien artifacts.",
+    "Completion": "You've intercepted the group of smugglers."
+  },
+  {
+    "ID": 316,
+    "Name": "Rune Thief",
+    "Faction": "Neutral",
+    "OneLiner": "You have tracked down a notorious thief with a stash of stolen runes.",
+    "Discovery": "You have tracked down a notorious thief with a stash of stolen runes.",
+    "Completion": "You have apprehended the thief and recovered the stolen runes."
+  },
+  {
+    "ID": 317,
+    "Name": "Private Collector",
+    "Faction": "Neutral",
+    "OneLiner": "You have intercepted a private collector of rare artifacts, illegally scavenging.",
+    "Discovery": "You have intercepted a private collector of rare artifacts, illegally scavenging.",
+    "Completion": "You have taken the collector into custody and confiscated his runes."
+  },
+  {
+    "ID": 318,
+    "Name": "Alien Treasure",
+    "Faction": "Binderburg",
+    "OneLiner": "You've found a stash of alien relics collected by Binderburg operatives.",
+    "Discovery": "You've found a stash of alien relics collected by Binderburg operatives.",
+    "Completion": "You have collected the alien stash."
+  },
+  {
+    "ID": 319,
+    "Name": "Symbiont Site Ruins",
+    "Faction": "Binderburg",
+    "OneLiner": "You've tracked Binderburg researchers to an ancient Symbiont site.",
+    "Discovery": "You've tracked Binderburg researchers to an ancient Symbiont site.",
+    "Completion": "The Symbiont site has been stripped clean of valuables."
+  },
+  {
+    "ID": 320,
+    "Name": "Binderburg Research Post",
+    "Faction": "Binderburg",
+    "OneLiner": "You've discovered a small research facility run by Binderburg.",
+    "Discovery": "You've discovered a small research facility run by Binderburg.",
+    "Completion": "You have closed down the Binderburg facility."
+  },
+  {
+    "ID": 321,
+    "Name": "Artifact Smugglers",
+    "Faction": "Neutral",
+    "OneLiner": "You intercept a smuggler fleet carrying alien artifacts.",
+    "Discovery": "You intercept a smuggler fleet carrying alien artifacts.",
+    "Completion": "You've engaged the smuggler fleet."
+  },
+  {
+    "ID": 322,
+    "Name": "Xeno Experiment Lab",
+    "Faction": "Binderburg",
+    "OneLiner": "You find a Binderburg-run lab running Symbiont experiments.",
+    "Discovery": "You find a Binderburg-run lab running Symbiont experiments.",
+    "Completion": "You have confiscated everything in the lab."
+  },
+  {
+    "ID": 323,
+    "Name": "Relic Testing Facility",
+    "Faction": "Binderburg",
+    "OneLiner": "You have found a hidden facility run by Binderburg where they run experiments on runes.",
+    "Discovery": "You have found a hidden testing facility run by Binderburg.",
+    "Completion": "You have destroyed the facility and retrieved all runes stored there."
+  },
+    {
+    "ID": 324,
+    "Name": "Gaia's Gift",
+    "Faction": "Neutral",
+    "OneLiner": "You find a natural paradise, enjoyed by numerous visitors, past and present.",
+    "Discovery": "You find a natural paradise, enjoyed by numerous visitors, past and present.",
+    "Completion": "The Gelecek command has been obliterated."
+  },
+    {
+    "ID": 325,
+    "Name": "Xeno Specimen Terminal",
+    "Faction": "Binderburg",
+    "OneLiner": "You have discovered a large Binderburg structure housing a massive xeno collection.",
+    "Discovery": "You have discovered a large Binderburg structure housing a massive xeno collection.",
+    "Completion": "The terminal has been destroyed."
+  },
+    {
+    "ID": 326,
+    "Name": "Binderburg Shipping Port",
+    "Faction": "Binderburg",
+    "OneLiner": "You have found a Binderburg transport hub, shipping research material in and out.",
+    "Discovery": "You have found a Binderburg transport hub, shipping research material in and out.",
+    "Completion": "The shipping port has been closed down."
+  }
+
+
+
+]

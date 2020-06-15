@@ -1,0 +1,14 @@
+﻿{
+  "Reward": {
+    "Influence": 0,
+    "Prestige": 0,
+    "Cards": [],
+    "Ships": {},
+    "CacheIds": [],
+    "Resources": {
+      "Metals": 0,
+      "Gases": 0,
+      "Crystals": 0
+    }
+  }
+}

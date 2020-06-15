@@ -1,0 +1,424 @@
+﻿[
+	{
+		"Id": 1,
+		"Name": "Produce 10 Units",
+		"Description": "Produce 10 Units",
+		"Type": "DailyEvents",
+		"Level": 0,
+		"Weight": 10,
+		"MinCommanderLevel": 0,
+		"RequiredExpansionsPoints": 0,
+		"Reward": {
+			"XPPercentage": 0.175,
+			"CacheIds": [ 10 ]
+		},
+		"Triggers": [
+			{
+				"$type": "ProduceUnits",
+				"ID": 0,
+				"Needed": 10
+			}
+		]
+	},
+	{
+		"Id": 2,
+		"Name": "Upgrade Buildings 5 times",
+		"Description": "Upgrade Buildings 5 times",
+		"Type": "Buildings",
+		"Level": 0,
+		"Weight": 10,
+		"MinCommanderLevel": 0,
+		"RequiredExpansionsPoints": 0,
+		"Reward": {
+			"XPPercentage": 0.175,
+			"CacheIds": [ 10 ]
+		},
+		"Triggers": [
+			{
+				"$type": "UpgradeBuildings",
+				"ID": 0,
+				"Needed": 5
+			}
+		]
+	},
+	{
+		"Id": 3,
+		"Name": "Discover a Mission",
+		"Description": "Discover a Mission",
+		"Type": "Mission",
+		"Level": 0,
+		"Weight": 10,
+		"MinCommanderLevel": 0,
+		"RequiredExpansionsPoints": 0,
+		"Reward": {
+			"XPPercentage": 0.175,
+			"CacheIds": [ 10 ]
+		},
+		"Triggers": [
+			{
+				"$type": "DiscoverMission",
+				"ID": 0,
+				"Needed": 1
+			}
+		]
+	},
+	{
+		"Id": 4,
+		"Name": "Build an Outpost",
+		"Description": "Build an Outpost",
+		"Type": "Outposts",
+		"Level": 0,
+		"Weight": 10,
+		"MinCommanderLevel": 0,
+		"RequiredExpansionsPoints": 0,
+		"Reward": {
+			"XPPercentage": 0.175,
+			"CacheIds": [ 10 ]
+		},
+		"Triggers": [
+			{
+				"$type": "ConstructOutposts",
+				"ID": 0,
+				"Needed": 1
+			}
+		]
+	},
+	{
+		"Id": 5,
+		"Name": "Solar Harvest",
+		"Description": "Solar Harvest",
+		"Type": "Mission",
+		"Level": 1,
+		"Weight": 9,
+		"MinCommanderLevel": 0,
+		"RequiredExpansionsPoints": 0,
+		"Reward": {
+			"XPPercentage": 0.175,
+			"CacheIds": [ 11 ]
+		},
+		"Triggers": [
+			{
+				"$type": "CompleteStarMission",
+				"ID": 0,
+				"Needed": 1
+			}
+		]
+	},
+	{
+		"Id": 6,
+		"Name": "Upgrade an Outpost",
+		"Description": "Upgrade an Outpost",
+		"Type": "Outposts",
+		"Level": 1,
+		"Weight": 9,
+		"MinCommanderLevel": 0,
+		"RequiredExpansionsPoints": 0,
+		"Reward": {
+			"XPPercentage": 0.175,
+			"CacheIds": [ 11 ]
+		},
+		"Triggers": [
+			{
+				"$type": "UpgradeOutposts",
+				"ID": 0,
+				"Needed": 1
+			}
+		]
+	},
+	{
+		"Id": 7,
+		"Name": "Complete a Mission",
+		"Description": "Complete a Mission",
+		"Type": "Mission",
+		"Level": 1,
+		"Weight": 9,
+		"MinCommanderLevel": 0,
+		"RequiredExpansionsPoints": 0,
+		"Reward": {
+			"XPPercentage": 0.175,
+			"CacheIds": [ 11 ]
+		},
+		"Triggers": [
+			{
+				"$type": "CompleteMissions",
+				"ID": 0,
+				"Needed": 1
+			}
+		]
+	},
+	{
+		"Id": 8,
+		"Name": "Raid a Station",
+		"Description": "Raid a Station",
+		"Type": "Combat",
+		"Level": 1,
+		"Weight": 9,
+		"MinCommanderLevel": 0,
+		"RequiredExpansionsPoints": 0,
+		"Reward": {
+			"XPPercentage": 0.175,
+			"CacheIds": [ 11 ]
+		},
+		"Triggers": [
+			{
+				"$type": "MovementCompleted",
+				"ID": 0,
+				"Type": "Raid",
+				"Needed": 1
+			}
+		]
+	},
+	{
+		"Id": 9,
+		"Name": "Produce 25 Units",
+		"Description": "Produce 25 Units",
+		"Type": "DailyEvents",
+		"Level": 2,
+		"Weight": 3,
+		"MinCommanderLevel": 0,
+		"RequiredExpansionsPoints": 0,
+		"Reward": {
+			"XPPercentage": 0.175,
+			"CacheIds": [ 12 ]
+		},
+		"Triggers": [
+			{
+				"$type": "ProduceUnits",
+				"ID": 0,
+				"Needed": 25
+			}
+		]
+	},
+	{
+		"Id": 10,
+		"Name": "Upgrade Buildings 10 times",
+		"Description": "Upgrade Buildings 10 times",
+		"Type": "Buildings",
+		"Level": 2,
+		"Weight": 3,
+		"MinCommanderLevel": 0,
+		"RequiredExpansionsPoints": 0,
+		"Reward": {
+			"XPPercentage": 0.175,
+			"CacheIds": [ 12 ]
+		},
+		"Triggers": [
+			{
+				"$type": "UpgradeBuildings",
+				"ID": 0,
+				"Needed": 10
+			}
+		]
+	},
+	{
+		"Id": 11,
+		"Name": "Complete a Mission 2 times",
+		"Description": "Complete a Mission 2 times",
+		"Type": "Mission",
+		"Level": 2,
+		"Weight": 3,
+		"MinCommanderLevel": 0,
+		"RequiredExpansionsPoints": 0,
+		"Reward": {
+			"XPPercentage": 0.175,
+			"CacheIds": [ 12 ]
+		},
+		"Triggers": [
+			{
+				"$type": "CompleteMissions",
+				"ID": 0,
+				"Needed": 2
+			}
+		]
+	},
+	{
+		"Id": 12,
+		"Name": "Raid a Station 2 times",
+		"Description": "Raid a Station 2 times",
+		"Type": "Combat",
+		"Level": 2,
+		"Weight": 3,
+		"MinCommanderLevel": 0,
+		"RequiredExpansionsPoints": 0,
+		"Reward": {
+			"XPPercentage": 0.175,
+			"CacheIds": [ 12 ]
+		},
+		"Triggers": [
+			{
+				"$type": "MovementCompleted",
+				"ID": 0,
+				"Type": "Raid",
+				"Needed": 2
+			}
+		]
+	},
+	{
+		"Id": 13,
+		"Name": "Produce 30 Units",
+		"Description": "Produce 30 Units",
+		"Type": "DailyEvents",
+		"Level": 3,
+		"Weight": 2,
+		"MinCommanderLevel": 0,
+		"RequiredExpansionsPoints": 0,
+		"Reward": {
+			"XPPercentage": 0.175,
+			"CacheIds": [ 13 ]
+		},
+		"Triggers": [
+			{
+				"$type": "ProduceUnits",
+				"ID": 0,
+				"Needed": 30
+			}
+		]
+	},
+	{
+		"Id": 14,
+		"Name": "Upgrade Buildings 13 times",
+		"Description": "Upgrade Buildings 13 times",
+		"Type": "Buildings",
+		"Level": 3,
+		"Weight": 2,
+		"MinCommanderLevel": 0,
+		"RequiredExpansionsPoints": 0,
+		"Reward": {
+			"XPPercentage": 0.175,
+			"CacheIds": [ 13 ]
+		},
+		"Triggers": [
+			{
+				"$type": "UpgradeBuildings",
+				"ID": 0,
+				"Needed": 13
+			}
+		]
+	},
+	{
+		"Id": 15,
+		"Name": "Craft a Card",
+		"Description": "Craft a Card",
+		"Type": "DailyEvents",
+		"Level": 3,
+		"Weight": 2,
+		"MinCommanderLevel": 0,
+		"RequiredExpansionsPoints": 0,
+		"Reward": {
+			"XPPercentage": 0.175,
+			"CacheIds": [ 13 ]
+		},
+		"Triggers": [
+			{
+				"$type": "AssembleCard",
+				"ID": 0,
+				"Needed": 1
+			}
+		]
+	},
+	{
+		"Id": 16,
+		"Name": "Break down a Card 3 times",
+		"Description": "Break down a Card 3 times",
+		"Type": "DailyEvents",
+		"Level": 3,
+		"Weight": 2,
+		"MinCommanderLevel": 0,
+		"RequiredExpansionsPoints": 0,
+		"Reward": {
+			"XPPercentage": 0.175,
+			"CacheIds": [ 13 ]
+		},
+		"Triggers": [
+			{
+				"$type": "DisbandCard",
+				"ID": 0,
+				"Needed": 3
+			}
+		]
+	},
+	{
+		"Id": 17,
+		"Name": "Produce 45 Units",
+		"Description": "Produce 45 Units",
+		"Type": "DailyEvents",
+		"Level": 4,
+		"Weight": 1,
+		"MinCommanderLevel": 0,
+		"RequiredExpansionsPoints": 0,
+		"Reward": {
+			"XPPercentage": 0.175,
+			"CacheIds": [ 14 ]
+		},
+		"Triggers": [
+			{
+				"$type": "ProduceUnits",
+				"ID": 0,
+				"Needed": 45
+			}
+		]
+	},
+	{
+		"Id": 18,
+		"Name": "Upgrade Buildings 15 times",
+		"Description": "Upgrade Buildings 15 times",
+		"Type": "Buildings",
+		"Level": 4,
+		"Weight": 1,
+		"MinCommanderLevel": 0,
+		"RequiredExpansionsPoints": 0,
+		"Reward": {
+			"XPPercentage": 0.175,
+			"CacheIds": [ 14 ]
+		},
+		"Triggers": [
+			{
+				"$type": "UpgradeBuildings",
+				"ID": 0,
+				"Needed": 15
+			}
+		]
+	},
+	{
+		"Id": 19,
+		"Name": "Craft 3 Cards",
+		"Description": "Craft 3 Cards",
+		"Type": "DailyEvents",
+		"Level": 4,
+		"Weight": 1,
+		"MinCommanderLevel": 0,
+		"RequiredExpansionsPoints": 0,
+		"Reward": {
+			"XPPercentage": 0.175,
+			"CacheIds": [ 14 ]
+		},
+		"Triggers": [
+			{
+				"$type": "AssembleCard",
+				"ID": 0,
+				"Needed": 3
+			}
+		]
+	},
+	{
+		"Id": 20,
+		"Name": "Break down a Card 5 times",
+		"Description": "Break down a Card 5 times",
+		"Type": "DailyEvents",
+		"Level": 4,
+		"Weight": 1,
+		"MinCommanderLevel": 0,
+		"RequiredExpansionsPoints": 0,
+		"Reward": {
+			"XPPercentage": 0.175,
+			"CacheIds": [ 14 ]
+		},
+		"Triggers": [
+			{
+				"$type": "DisbandCard",
+				"ID": 0,
+				"Needed": 5
+			}
+		]
+	}
+]

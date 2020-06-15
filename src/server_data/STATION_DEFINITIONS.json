@@ -1,0 +1,1097 @@
+﻿{
+	"MaxLevel": 3,
+
+	"FOBsCanJumpIntoAlliedClaim": true,
+	"FOBsCanJumpDirectlyToAlliedGT": false,
+	"FOBsCanJumpToControlledSuperStructure": false,
+
+	"IsGarrisonRallyPointCapitalOnly": true,
+
+	"ExpansionPointCost": 10,
+	"HarvestCountPerLevel": 1,
+	"AllianceStationMinDistanceFromSuperStructure": 5,
+	"NormalStationMinDistanceFromSuperStructure": 10,
+	"SelfDestructDurationInHours": 24,
+	"NormalStationRecipesByLevel": [
+		{
+			"metals": 3000,
+			"gas": 3000,
+			"crystals": 3000
+		},
+		{
+			"metals": 200,
+			"gas": 200,
+			"crystals": 200
+		},
+		{
+			"metals": 500,
+			"gas": 500,
+			"crystals": 500
+		},
+		{
+			"metals": 1000,
+			"gas": 1000,
+			"crystals": 1000
+		}
+	],
+	"BuildRecipes": 
+	{
+		"AllianceStation": {
+			"metals": 200000,
+			"gas": 200000,
+			"crystals": 200000
+		},
+		"ForwardBase": 
+		{
+			"metals": 300000,
+			"gas": 300000,
+			"crystals": 300000
+		}
+	},
+	"InfluenceThresholds": [ 20, 50, 120 ],
+
+	"CapitalStartingResources": {
+		"Metals": 2000,
+		"Gases": 2000,
+		"Crystals": 2000
+	},
+	"NormalStartingResources": {
+		"Metals": 1000,
+		"Gases": 1000,
+		"Crystals": 1000
+	},
+	"CapitalStats": [
+		{
+			"TargetAttribute": "STREAM_ICE",
+			"UseArray": true,
+			"ModifierArray": [ 0, 0, 0, 0 ]
+		},
+		{
+			"TargetAttribute": "STREAM_METAL",
+			"UseArray": true,
+			"ModifierArray": [ 0, 0, 0, 0 ]
+		},
+		{
+			"TargetAttribute": "STREAM_GAS",
+			"UseArray": true,
+			"ModifierArray": [ 0, 0, 0, 0 ]
+		},
+		{
+			"TargetAttribute": "STREAM_CRYSTAL",
+			"UseArray": true,
+			"ModifierArray": [ 0, 0, 0, 0 ]
+		},
+		{
+			"TargetAttribute": "STAT_CLAIMRADIUS",
+			"UseArray": true,
+			"ModifierArray": [ 1, 2, 3, 4 ]
+		},
+		{
+			"TargetAttribute": "UNIT_PROBE_LIFETIME",
+			"Base": 1440,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_BUILDING_CONSTRUCTION_TIME",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_SHIP_PRODUCTION_TIME",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_SHIP_PRODUCTION_TIME_SMALL",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_SHIP_PRODUCTION_TIME_LARGE",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_SIGINT",
+			"UseArray": true,
+			"ModifierArray": [ 10, 20, 30, 40 ]
+		},
+		{
+			"TargetAttribute": "STAT_SCANSTR",
+			"Base": 100,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_SCAN_RADIUS",
+			"Base": 10,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_PRODQ",
+			"Base": 720,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_CONSTRQ",
+			"Base": 240,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_FLEETLIM",
+			"Base": 0,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_OCT",
+			"UseArray": true,
+			"ModifierArray": [ 6, 8, 12, 20 ]
+		},
+		{
+			"TargetAttribute": "STAT_OP_BUILDCOST",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_OP_UPGRCOST",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_OP_REPAIRCOST",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_RESHIDDEN",
+			"Base": 0,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_B_HP",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_INFLTHRESH",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "S_CLAIMSTR",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_FLEET_STARMISSION_CARGO",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_FLEET_OUTPOSTOPERATION_SPD",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_FLEET_OUTPOSTOPERATION_CARGO",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_LABOR_MULTIPLIER",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_FREIGHTER_SPD",
+			"Base": 30,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_FREIGHTER_CARGO",
+			"Base": 500,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_FREIGHTER_SIGINT",
+			"Base": 0,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_SABOTAGE_PROTECTION",
+			"UseArray": true,
+			"ModifierArray": [ 44000, 176000, 616000, 1320000 ]
+		},
+		{
+			"TargetAttribute": "STAT_PROD_ENERGY",
+			"Base": 50,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_PROD_MTL",
+			"Base": 100,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_PROD_GAS",
+			"Base": 100,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_PROD_CRS",
+			"Base": 100,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_PROD_CAP",
+			"UseArray": true,
+			"ModifierArray": [ 12000, 25000, 52000, 126000 ]
+		},
+		{
+			"TargetAttribute": "GE_MISSION_RECOMMENDED_TOTAL_MODIFIER",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "GE_FLEETEVENT_RECOMMENDED_TOTAL_MODIFIER",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_LOCAL_HARVEST_MODIFIER",
+			"Base": 0.4,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_LOCAL_HARVEST_METAL_MODIFIER",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_LOCAL_HARVEST_GAS_MODIFIER",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_LOCAL_HARVEST_CRYSTAL_MODIFIER",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_LOCAL_HARVEST_ICE_MODIFIER",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_RESOURCE_YIELD_BONUS",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_TACTIC_BOOST_CAP",
+			"Base": 0.1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_CAPTURE_DEFENSE",
+			"Base": 100,
+			"ParameterA": 40,
+			"CalculationMethod": 3
+		},
+		{
+			"TargetAttribute": "STAT_CAPTURE_DEFENSE_REGENERATION",
+			"Base": 1,
+			"CalculationMethod": 6
+		}
+	],
+	"NormalStats": [
+		{
+			"TargetAttribute": "STREAM_ICE",
+			"UseArray": true,
+			"ModifierArray": [ 0, 0, 0, 0 ]
+		},
+		{
+			"TargetAttribute": "STREAM_METAL",
+			"UseArray": true,
+			"ModifierArray": [ 0, 0, 0, 0 ]
+		},
+		{
+			"TargetAttribute": "STREAM_GAS",
+			"UseArray": true,
+			"ModifierArray": [ 0, 0, 0, 0 ]
+		},
+		{
+			"TargetAttribute": "STREAM_CRYSTAL",
+			"UseArray": true,
+			"ModifierArray": [ 0, 0, 0, 0 ]
+		},
+		{
+			"TargetAttribute": "STAT_CLAIMRADIUS",
+			"UseArray": true,
+			"ModifierArray": [ 1, 2, 3, 4 ]
+		},
+		{
+			"TargetAttribute": "UNIT_PROBE_LIFETIME",
+			"Base": 1440,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_BUILDING_CONSTRUCTION_TIME",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_SHIP_PRODUCTION_TIME",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_SHIP_PRODUCTION_TIME_SMALL",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_SHIP_PRODUCTION_TIME_LARGE",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_SIGINT",
+			"UseArray": true,
+			"ModifierArray": [ 10, 20, 30, 40 ]
+		},
+		{
+			"TargetAttribute": "STAT_SCANSTR",
+			"Base": 100,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_PRODQ",
+			"Base": 720,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_CONSTRQ",
+			"Base": 240,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_FLEETLIM",
+			"Base": 0,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_OCT",
+			"UseArray": true,
+			"ModifierArray": [ 6, 8, 12, 20 ]
+		},
+		{
+			"TargetAttribute": "STAT_OP_BUILDCOST",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_OP_UPGRCOST",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_OP_REPAIRCOST",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_RESHIDDEN",
+			"Base": 0,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_B_HP",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_INFLTHRESH",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "S_CLAIMSTR",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_FLEET_STARMISSION_CARGO",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_FLEET_OUTPOSTOPERATION_SPD",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_FLEET_OUTPOSTOPERATION_CARGO",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": 147,
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_LABOR_MULTIPLIER",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_FREIGHTER_SPD",
+			"Base": 30,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_FREIGHTER_CARGO",
+			"Base": 500,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_FREIGHTER_SIGINT",
+			"Base": 0,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_SABOTAGE_PROTECTION",
+			"UseArray": true,
+			"ModifierArray": [ 44000, 176000, 616000, 1320000 ]
+		},
+		{
+			"TargetAttribute": "STAT_PROD_ENERGY",
+			"Base": 50,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_PROD_MTL",
+			"Base": 0,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_PROD_GAS",
+			"Base": 0,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_PROD_CRS",
+			"Base": 0,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_PROD_CAP",
+			"UseArray": true,
+			"ModifierArray": [ 12000, 25000, 52000, 126000 ]
+		},
+		{
+			"TargetAttribute": "GE_MISSION_RECOMMENDED_TOTAL_MODIFIER",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "GE_FLEETEVENT_RECOMMENDED_TOTAL_MODIFIER",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_LOCAL_HARVEST_MODIFIER",
+			"Base": 0.4,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_LOCAL_HARVEST_METAL_MODIFIER",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_LOCAL_HARVEST_GAS_MODIFIER",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_LOCAL_HARVEST_CRYSTAL_MODIFIER",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_LOCAL_HARVEST_ICE_MODIFIER",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_TACTIC_BOOST_CAP",
+			"Base": 0.1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_RESOURCE_YIELD_BONUS",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_CAPTURE_DEFENSE",
+			"Base": 0,
+			"ParameterA": 40,
+			"CalculationMethod": 3
+		},
+		{
+			"TargetAttribute": "STAT_CAPTURE_DEFENSE_REGENERATION",
+			"Base": 1,
+			"CalculationMethod": 6
+		}
+	],
+	"CapitalInitialBuildings": [],
+	"NormalInitialBuildings": [],
+	"HurriedInitialBuildings": [],
+	"AllianceInitialBuildings": [
+		{
+			"Id": 25,
+			"BuildingTypeId": 710,
+			"Level": 1
+		},
+		{
+			"Id": 26,
+			"BuildingTypeId": 750,
+			"Level": 1
+		}
+	],
+	"SuperStructureInitialBuildings": [],
+	"ForwardBaseInitialBuildings": [
+		{
+			"Id": 34,
+			"BuildingTypeId": 940,
+			"Level": 1
+		},
+		{
+			"Id": 35,
+			"BuildingTypeId": 950,
+			"Level": 1
+		}
+	],
+
+	"CardSlotConfiguration": [
+		{
+			"$type": "PermanentSlot",
+			"Index": "Structure"
+		},
+		{
+			"$type": "PermanentSlot",
+			"Index": "System"
+		},
+		{
+			"$type": "PermanentSlot",
+			"Index": "Engineering"
+		},
+		{
+			"$type": "TimedSlot",
+			"Index": "StationCharacter"
+		},
+		{
+			"$type": "TimedSlot",
+			"Index": "StationRune"
+		},
+		{
+			"$type": "StationModuleSlot",
+			"Index": "StationModule_10001",
+			"RequiredCardIds": [ 9005, 9008, 9009, 9116, 9010, 9011, 9012, 9013, 9014, 9015, 9016, 9017, 9018, 9019, 9020, 9021 ],
+			"HideDependencies": true,
+			"DependentBuildingIds": [ 0 ]
+		},
+		{
+			"$type": "StationModuleSlot",
+			"Index": "StationModule_10002",
+			"RequiredCardIds": [ 9005, 9008, 9009, 9116, 9010, 9011, 9012, 9013, 9014, 9015, 9016, 9017, 9018, 9019, 9020, 9021 ],
+			"HideDependencies": true,
+			"DependentBuildingIds": [ 0 ]
+		},
+		{
+			"$type": "StationModuleSlot",
+			"Index": "StationModule_10003",
+			"RequiredCardIds": [ 9005, 9008, 9009, 9116, 9010, 9011, 9012, 9013, 9014, 9015, 9016, 9017, 9018, 9019, 9020, 9021 ],
+			"HideDependencies": true,
+			"DependentBuildingIds": [ 0 ]
+		},
+		{
+			"$type": "StationModuleSlot",
+			"Index": "StationModule_10004",
+			"RequiredCardIds": [ 9005, 9008, 9009, 9116, 9010, 9011, 9012, 9013, 9014, 9015, 9016, 9017, 9018, 9019, 9020, 9021 ],
+			"HideDependencies": true,
+			"DependentBuildingIds": [ 0 ]
+		},
+		{
+			"$type": "StationModuleSlot",
+			"Index": "StationModule_10005",
+			"RequiredCardIds": [ 9005, 9008, 9009, 9116, 9010, 9011, 9012, 9013, 9014, 9015, 9016, 9017, 9018, 9019, 9020, 9021 ],
+			"HideDependencies": true,
+			"DependentBuildingIds": [ 0 ]
+		},
+		{
+			"$type": "StationModuleSlot",
+			"Index": "StationModule_10006",
+			"RequiredCardIds": [ 9005, 9008, 9009, 9116, 9010, 9011, 9012, 9013, 9014, 9015, 9016, 9017, 9018, 9019, 9020, 9021 ],
+			"HideDependencies": true,
+			"DependentBuildingIds": [ 0 ]
+		},
+		{
+			"$type": "StationModuleSlot",
+			"Index": "StationModule_10101",
+			"RequiredCardIds": [ 9001 ],
+			"DependentOutpostEntries": [
+				{
+					"OutpostType": "LogisticsHub",
+					"SubIndex": 0
+				}
+			]
+		},
+		{
+			"$type": "StationModuleSlot",
+			"Index": "StationModule_10201",
+			"RequiredCardIds": [ 9002 ],
+			"DependentOutpostEntries": [
+				{
+					"OutpostType": "CapitalShipAssembly",
+					"SubIndex": 0
+				}
+			]
+		},
+		{
+			"$type": "StationModuleSlot",
+			"Index": "StationModule_10301",
+			"RequiredCardIds": [ 9006 ],
+			"DependentOutpostEntries": [
+				{
+					"OutpostType": "CommerceHub",
+					"SubIndex": 0
+				}
+			]
+		},
+		{
+			"$type": "StationModuleSlot",
+			"Index": "StationModule_MissileBattery2",
+			"RequiredCardIds": [ 9003 ],
+			"DependentOutpostEntries": [
+				{
+					"OutpostType": "MissileBattery",
+					"SubIndex": 1
+				}
+			]
+		},
+		{
+			"$type": "StationModuleSlot",
+			"Index": "StationModule_MiningOutpost4",
+			"RequiredCardIds": [ 9004 ],
+			"DependentOutpostEntries": [
+				{
+					"OutpostType": "MiningFacility",
+					"SubIndex": 3
+				}
+			]
+		},
+		{
+			"$type": "StationModuleSlot",
+			"Index": "StationModule_GunshipBuilding",
+			"RequiredCardIds": [ 9007 ],
+			"DependentBuildingIds": [ 103 ]
+		},
+		{
+			"$type": "StationModuleSlot",
+			"Index": "StationModule_7",
+			"RequiredCardIds": [ 0 ]
+		},
+		{
+			"$type": "StationModuleSlot",
+			"Index": "StationModule_8",
+			"RequiredCardIds": [ 0 ]
+		},
+		{
+			"$type": "StationModuleSlot",
+			"Index": "StationModule_9",
+			"RequiredCardIds": [ 0 ]
+		}
+	],
+	"AllianceStationStats": [
+		{
+			"TargetAttribute": "STAT_CLAIMRADIUS",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "UNIT_PROBE_LIFETIME",
+			"Base": 1440,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_BUILDING_CONSTRUCTION_TIME",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_SHIP_PRODUCTION_TIME",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_SHIP_PRODUCTION_TIME_SMALL",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_SHIP_PRODUCTION_TIME_LARGE",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_SIGINT",
+			"UseArray": true,
+			"ModifierArray": [ 10, 20, 30, 40, 50, 60 ]
+		},
+		{
+			"TargetAttribute": "STAT_SCANSTR",
+			"Base": 0,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_PRODQ",
+			"Base": 720,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_CONSTRQ",
+			"Base": 360,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_FLEETLIM",
+			"Base": 0,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_OCT",
+			"Base": 40,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_OP_BUILDCOST",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_OP_UPGRCOST",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_OP_REPAIRCOST",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_RESHIDDEN",
+			"Base": 0,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_B_HP",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_INFLTHRESH",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "S_CLAIMSTR",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_FLEET_STARMISSION_CARGO",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_FLEET_OUTPOSTOPERATION_SPD",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_FLEET_OUTPOSTOPERATION_CARGO",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_LOCAL_HARVEST_MODIFIER",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": 147,
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_LABOR_MULTIPLIER",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_FREIGHTER_SPD",
+			"Base": 21,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_FREIGHTER_CARGO",
+			"Base": 500,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_FREIGHTER_SIGINT",
+			"Base": 0,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_SABOTAGE_PROTECTION",
+			"Base": 2016000,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_TACTIC_BOOST_CAP",
+			"Base": 0.1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": 408,
+			"Base": 0,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": 409,
+			"Base": 0,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": 410,
+			"Base": 0,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": 411,
+			"Base": 0,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_PROD_CAP",
+			"Base": 12500,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "GE_MISSION_RECOMMENDED_TOTAL_MODIFIER",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "GE_FLEETEVENT_RECOMMENDED_TOTAL_MODIFIER",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_LOCAL_HARVEST_METAL_MODIFIER",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_LOCAL_HARVEST_CRYSTAL_MODIFIER",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_LOCAL_HARVEST_GAS_MODIFIER",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_LOCAL_HARVEST_ICE_MODIFIER",
+			"Base": 1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_RESOURCE_YIELD_BONUS",
+			"Base": 1,
+			"CalculationMethod": 6
+		}
+	],
+	"SuperStructureStats": [
+		{
+			"TargetAttribute": "STAT_CLAIMRADIUS",
+			"Base": 0,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "PROD_CAP",
+			"Base": 50000,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_CONSTRQ",
+			"Base": 60,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_TACTIC_BOOST_CAP",
+			"Base": 0.1,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_OCT",
+			"Base": 60,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_SABOTAGE_PROTECTION",
+			"Base": 3000000,
+			"CalculationMethod": 6
+		}
+	],
+	"ForwardBaseStats": [
+		{
+			"TargetAttribute": "STAT_CLAIMRADIUS",
+			"Base": 0,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "PROD_CAP",
+			"Base": 7500,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_CONSTRQ",
+			"Base": 360,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_OCT",
+			"Base": 40,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "FOB_LOCAL_JUMP_RANGE",
+			"Base": 100,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "FOB_JUMP_PREP_TIME",
+			"Base": 24,
+			"CalculationMethod": 6
+		},
+		{
+			"TargetAttribute": "STAT_SABOTAGE_PROTECTION",
+			"Base": 1660000,
+			"CalculationMethod": 6
+		}
+	],
+
+	"SuperStructurePowerUps": [
+		{
+			"Type": "Type1",
+			"DurationTime": 4320,
+			"Effects": [
+				{
+					"Target": 1,
+					"TargetAttribute": 110,
+					"Origin": "PowerUp",
+					"Destination": "Station",
+					"Type": 0,
+					"Modifier": 20
+				}
+			],
+			"Cost": {
+				"metals": 3000,
+				"gas": 3000,
+				"crystals": 3000
+			}
+		},
+		{
+			"Type": "Type2",
+			"DurationTime": 2880,
+			"Effects": [
+				{
+					"Target": 1,
+					"TargetAttribute": 110,
+					"Origin": "PowerUp",
+					"Destination": "Station",
+					"Type": 0,
+					"Modifier": 20
+				}
+			],
+			"Cost": {
+				"metals": 3000,
+				"gas": 3000,
+				"crystals": 3000
+			}
+		},
+		{
+			"Type": "Type3",
+			"DurationTime": 1440,
+			"Effects": [
+				{
+					"Target": 1,
+					"TargetAttribute": 110,
+					"Origin": "PowerUp",
+					"Destination": "Station",
+					"Type": 0,
+					"Modifier": 20
+				}
+			],
+			"Cost": {
+				"metals": 3000,
+				"gas": 3000,
+				"crystals": 3000
+			}
+		},
+		{
+			"Type": "Type4",
+			"DurationTime": 720,
+			"Effects": [
+				{
+					"Target": 1,
+					"TargetAttribute": 110,
+					"Origin": "PowerUp",
+					"Destination": "Station",
+					"Type": 0,
+					"Modifier": 20
+				}
+			],
+			"Cost": {
+				"metals": 3000,
+				"gas": 3000,
+				"crystals": 3000
+			}
+		},
+		{
+			"Type": "Type5",
+			"DurationTime": 360,
+			"Effects": [
+				{
+					"Target": 1,
+					"TargetAttribute": 110,
+					"Origin": "PowerUp",
+					"Destination": "Station",
+					"Type": 0,
+					"Modifier": 20
+				}
+			],
+			"Cost": {
+				"metals": 3000,
+				"gas": 3000,
+				"crystals": 3000
+			}
+		}
+	]
+}

@@ -1,0 +1,272 @@
+﻿[
+	{
+		"Id": 1,
+		"Type": 0,
+		"RequiredLevel": 5,
+		"FreeReward": { "Assets": { "CardBlueprintCurrency": 60 } },
+		"PremiumReward": { "Assets": { "CardBlueprintCurrency": 15 } }
+	},
+	{
+		"Id": 2,
+		"Type": 0,
+		"RequiredLevel": 9,
+		"FreeReward": { "Assets": { "CardBlueprintCurrency": 110 } },
+		"PremiumReward": { "Assets": { "CardBlueprintCurrency": 30 } }
+	},
+	{
+		"Id": 3,
+		"Type": 0,
+		"RequiredLevel": 13,
+		"FreeReward": { "Assets": { "CardBlueprintCurrency": 160 } },
+		"PremiumReward": { "Assets": { "CardBlueprintCurrency": 40 } }
+	},
+	{
+		"Id": 4,
+		"Type": 0,
+		"RequiredLevel": 17,
+		"FreeReward": { "Assets": { "CardBlueprintCurrency": 200 } },
+		"PremiumReward": { "Assets": { "CardBlueprintCurrency": 50 } }
+	},
+	{
+		"Id": 5,
+		"Type": 0,
+		"RequiredLevel": 21,
+		"FreeReward": { "Assets": { "CardBlueprintCurrency": 250 } },
+		"PremiumReward": { "Assets": { "CardBlueprintCurrency": 65 } }
+	},
+	{
+		"Id": 6,
+		"Type": 0,
+		"RequiredLevel": 25,
+		"FreeReward": { "Assets": { "CardBlueprintCurrency": 300 } },
+		"PremiumReward": { "Assets": { "CardBlueprintCurrency": 75 } }
+	},
+	{
+		"Id": 7,
+		"Type": 0,
+		"RequiredLevel": 29,
+		"FreeReward": { "Assets": { "CardBlueprintCurrency": 350 } },
+		"PremiumReward": { "Assets": { "CardBlueprintCurrency": 90 } }
+	},
+	{
+		"Id": 8,
+		"Type": 0,
+		"RequiredLevel": 33,
+		"FreeReward": { "Assets": { "CardBlueprintCurrency": 400 } },
+		"PremiumReward": { "Assets": { "CardBlueprintCurrency": 100 } }
+	},
+	{
+		"Id": 9,
+		"Type": 0,
+		"RequiredLevel": 37,
+		"FreeReward": { "Assets": { "CardBlueprintCurrency": 450 } },
+		"PremiumReward": { "Assets": { "CardBlueprintCurrency": 110 } }
+	},
+	{
+		"Id": 10,
+		"Type": 0,
+		"RequiredLevel": 41,
+		"FreeReward": { "Assets": { "CardBlueprintCurrency": 490 } },
+		"PremiumReward": { "Assets": { "CardBlueprintCurrency": 125 } }
+	},
+	{
+		"Id": 11,
+		"Type": 1,
+		"RequiredLevel": 45,
+		"FreeReward": { "Assets": { "CardBlueprintCurrency": 540 } },
+		"PremiumReward": { "Assets": { "CardBlueprintCurrency": 135 } }
+	},
+	{
+		"Id": 12,
+		"Type": 1,
+		"RequiredLevel": 49,
+		"FreeReward": { "Assets": { "CardBlueprintCurrency": 590 } },
+		"PremiumReward": { "Assets": { "CardBlueprintCurrency": 150 } }
+	},
+	{
+		"Id": 13,
+		"Type": 1,
+		"RequiredLevel": 53,
+		"FreeReward": { "Assets": { "CardBlueprintCurrency": 640 } },
+		"PremiumReward": { "Assets": { "CardBlueprintCurrency": 160 } }
+	},
+	{
+		"Id": 14,
+		"Type": 1,
+		"RequiredLevel": 57,
+		"FreeReward": { "Assets": { "CardBlueprintCurrency": 690 } },
+		"PremiumReward": { "Assets": { "CardBlueprintCurrency": 170 } }
+	},
+	{
+		"Id": 15,
+		"Type": 1,
+		"RequiredLevel": 61,
+		"FreeReward": { "Assets": { "CardBlueprintCurrency": 730 } },
+		"PremiumReward": { "Assets": { "CardBlueprintCurrency": 185 } }
+	},
+	{
+		"Id": 16,
+		"Type": 1,
+		"RequiredLevel": 65,
+		"FreeReward": { "Assets": { "CardBlueprintCurrency": 780 } },
+		"PremiumReward": { "Assets": { "CardBlueprintCurrency": 195 } }
+	},
+	{
+		"Id": 17,
+		"Type": 1,
+		"RequiredLevel": 69,
+		"FreeReward": { "Assets": { "CardBlueprintCurrency": 830 } },
+		"PremiumReward": { "Assets": { "CardBlueprintCurrency": 210 } }
+	},
+	{
+		"Id": 18,
+		"Type": 1,
+		"RequiredLevel": 73,
+		"FreeReward": { "Assets": { "CardBlueprintCurrency": 880 } },
+		"PremiumReward": { "Assets": { "CardBlueprintCurrency": 220 } }
+	},
+	{
+		"Id": 19,
+		"Type": 1,
+		"RequiredLevel": 77,
+		"FreeReward": { "Assets": { "CardBlueprintCurrency": 920 } },
+		"PremiumReward": { "Assets": { "CardBlueprintCurrency": 230 } }
+	},
+	{
+		"Id": 20,
+		"Type": 1,
+		"RequiredLevel": 81,
+		"FreeReward": { "Assets": { "CardBlueprintCurrency": 970 } },
+		"PremiumReward": { "Assets": { "CardBlueprintCurrency": 245 } }
+	},
+	{
+		"Id": 21,
+		"Type": 2,
+		"RequiredLevel": 87,
+		"FreeReward": {
+			"Assets": { "CardBlueprintCurrency": 1050 },
+			"Cards": [ 8500, 8500, 8500, 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"Assets": { "CardBlueprintCurrency": 260 },
+			"Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500 ]
+		}
+	},
+	{
+		"Id": 22,
+		"Type": 2,
+		"RequiredLevel": 93,
+		"FreeReward": {
+			"Assets": { "CardBlueprintCurrency": 1120 },
+			"Cards": [ 8500, 8500, 8500, 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"Assets": { "CardBlueprintCurrency": 280 },
+			"Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500 ]
+		}
+	},
+	{
+		"Id": 23,
+		"Type": 2,
+		"RequiredLevel": 99,
+		"FreeReward": {
+			"Assets": { "CardBlueprintCurrency": 1190 },
+			"Cards": [ 8500, 8500, 8500, 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"Assets": { "CardBlueprintCurrency": 300 },
+			"Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500 ]
+		}
+	},
+	{
+		"Id": 24,
+		"Type": 2,
+		"RequiredLevel": 105,
+		"FreeReward": {
+			"Assets": { "CardBlueprintCurrency": 1260 },
+			"Cards": [ 8500, 8500, 8500, 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"Assets": { "CardBlueprintCurrency": 315 },
+			"Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500 ]
+		}
+	},
+	{
+		"Id": 25,
+		"Type": 2,
+		"RequiredLevel": 111,
+		"FreeReward": {
+			"Assets": { "CardBlueprintCurrency": 1330 },
+			"Cards": [ 8500, 8500, 8500, 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"Assets": { "CardBlueprintCurrency": 335 },
+			"Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500 ]
+		}
+	},
+	{
+		"Id": 26,
+		"Type": 2,
+		"RequiredLevel": 117,
+		"FreeReward": {
+			"Assets": { "CardBlueprintCurrency": 1400 },
+			"Cards": [ 8500, 8500, 8500, 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"Assets": { "CardBlueprintCurrency": 350 },
+			"Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500 ]
+		}
+	},
+	{
+		"Id": 27,
+		"Type": 2,
+		"RequiredLevel": 123,
+		"FreeReward": {
+			"Assets": { "CardBlueprintCurrency": 1480 },
+			"Cards": [ 8500, 8500, 8500, 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"Assets": { "CardBlueprintCurrency": 370 },
+			"Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500 ]
+		}
+	},
+	{
+		"Id": 28,
+		"Type": 2,
+		"RequiredLevel": 129,
+		"FreeReward": {
+			"Assets": { "CardBlueprintCurrency": 1550 },
+			"Cards": [ 8500, 8500, 8500, 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"Assets": { "CardBlueprintCurrency": 390 },
+			"Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500 ]
+		}
+	},
+	{
+		"Id": 29,
+		"Type": 2,
+		"RequiredLevel": 135,
+		"FreeReward": {
+			"Assets": { "CardBlueprintCurrency": 1620 },
+			"Cards": [ 8500, 8500, 8500, 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"Assets": { "CardBlueprintCurrency": 405 },
+			"Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500 ]
+		}
+	},
+	{
+		"Id": 30,
+		"Type": 2,
+		"RequiredLevel": 141,
+		"FreeReward": {
+			"Assets": { "CardBlueprintCurrency": 1690 },
+			"Cards": [ 8500, 8500, 8500, 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"Assets": { "CardBlueprintCurrency": 425 },
+			"Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500 ]
+		}
+	}
+]

@@ -1,0 +1,212 @@
+﻿[
+  {
+    "Id": "AttackIncoming",
+    "Type": "Alert",
+    "Message": "{0}: INCOMING ATTACK!"
+  },
+
+  {
+    "Id": "RaidIncoming",
+    "Type": "Alert",
+    "Message":  "{0}: INCOMING RAID!" 
+  },
+
+  {
+    "Id": "Attacking",
+    "Type": "Alert",
+    "Message": "{0}\nYour forces have assaulted the enemy {1}"
+  },
+
+  {
+    "Id": "Attacked",
+    "Type": "Alert",
+    "Message": "{0} has just been assaulted by {1}!"
+  },
+
+  {
+    "Id": "Raiding",
+    "Type": "Completion",
+    "Message": "{0}\nYour forces have raided the enemy {1}"
+  },
+
+  {
+    "Id": "Raided",
+    "Type": "Completion",
+    "Message": "{0} has just been raided by {1}!"
+  },
+
+  {
+    "Id": "BuildOutpost",
+    "Type": "Construction",
+    "Message": "Your industrial fleet has finished constructing."
+  },
+
+  {
+    "Id": "UpgradeOutpost",
+    "Type": "Construction",
+    "Message": "{0}\nYour industrial fleets have finished."
+  },
+
+
+  {
+    "Id": "Scanning",
+    "Type": "Discovery",
+    "Message": "Your scout has begun scanning its vicinity."
+  },
+
+  {
+    "Id": "Scanned",
+    "Type": "Discovery",
+    "Message": "Someone has scanned one of your positions"
+  },
+
+
+  {
+    "Id": "Reconning",
+    "Type": "Discovery",
+    "Message": "Your scout has begun scanning its vicinity."
+  },
+
+  {
+    "Id": "Reconned",
+    "Type": "Discovery",
+    "Message": "Someone has scanned one of your positions"
+  },
+
+  {
+    "Id": "Freight",
+    "Type": "Resources",
+    "Message": "Freighters have arrived at {0}"
+  },
+
+  {
+    "Id": "ReturnFromRaid",
+    "Type": "Resources",
+    "Message": "Your fleets are returning to {0}."
+  },
+
+  {
+    "Id": "DeploymentByForeigners",
+    "Type": "Completion",
+    "Message": "Visitors have arrived at {0}"
+  },
+
+  {
+    "Id": "ReturnByForeigners",
+    "Type": "Completion",
+    "Message": "Visitors have arrived at {0}"
+  },
+
+  {
+    "Id": "ReturnFromAttackByForeigners",
+    "Type": "Completion",
+    "Message": "Visitors have arrived at {0}"
+  },
+
+  {
+    "Id": "ReturnFromReconByForeigners",
+    "Type": "Completion",
+    "Message": "Visitors have arrived at {0}"
+  },
+
+  {
+    "Id": "ReturnFromBuildOutpostByForeigners",
+    "Type": "Completion",
+    "Message": "Visitors have arrived at {0}"
+  },
+
+  {
+    "Id": "ReturnFromUpgradeOutpostByForeigners",
+    "Type": "Completion",
+    "Message": "Visitors have arrived at {0}"
+  },
+
+  {
+    "Id": "ReturnFromScanByForeigners",
+    "Type": "Completion",
+    "Message": "Visitors have arrived at {0}"
+  },
+
+  {
+    "Id": "UnitProductionStarted",
+    "Type": "Production",
+    "Message": "{0}: Started {1}"
+  },
+
+  {
+    "Id": "UnitsDelivered",
+    "Type": "Production",
+    "Message": "{0}x {1} delivered to {2}"
+  },
+
+  {
+    "Id": "UnitProductionEnded",
+    "Type": "Production",
+    "Message": "{0}: Produced {1} {2}"
+  },
+
+  {
+    "Id": "ConstructionStarted",
+    "Type": "Construction",
+    "Message": "{0}: {1} started"
+  },
+
+  {
+    "Id": "ConstructionCanceled",
+    "Type": "Construction",
+    "Message": "{0}: {1} cancelled"
+  },
+
+	{
+		"Id": "ConstructionCompleted",
+		"Type": "Construction",
+		"Message": "{0}: {1} completed"
+	},
+	{
+		"Id": "ConstructionRushed",
+		"Type": "Construction",
+		"Message": "{0}: Construction rushed" 
+	},
+
+  {
+    "Id": "StationLevelUpdated",
+    "Type": "Politics",
+    "Message": "{0} has expanded its influence!"
+  },
+
+  {
+    "Id": "FleetsAssembled",
+    "Type": "Completion",
+    "Message": "{0}\n{1} fleet assembled."
+  },
+
+  {
+    "Id": "GameEventCompleted",
+    "Type": "Mission",
+    "Message": "{0}"
+  },
+
+  {
+    "Id": "MissionDiscovered",
+    "Type": "Discovery",
+    "Message": "{0} {1}"
+  },
+
+  {
+    "Id": "MissionHintsReceived",
+    "Type": "Discovery",
+    "Message": "Anomalous readings detected..."
+  },
+
+	{
+		"Id": "Return",
+		"Type": "Resources",
+		"Message": "Your fleets are returning to {0}."
+	},
+	{
+		"Id": "OperativeSpy",
+		"Type": "Discovery",
+		"Message": "Your spy has reported back from its mission." 
+	}
+
+]

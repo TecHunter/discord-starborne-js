@@ -1,0 +1,1674 @@
+{
+	"FleetCards": [
+		{
+			"CardId": 1001,
+			"TypeOfCard": "Fleet card",
+			"Name": "Fleet Cadet",
+			"EffectDescription": "Adds <color=green>[ 2 | 10 | 50 ]</color> firepower and <color=green>[ 5 | 25 | 125 ]</color> hit points to <color=green>[ light | heavy | capital ]</color> ships in the fleet.\n\nAdds <color=green>[ 2 | 10 ]</color> cargo space to <color=green>[ light | heavy ]</color> ships in the fleet.\n\nAdds <color=green>1</color> speed to the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+2 | +10 | +50</color> firepower\n<color=green>+5 | +25 | +125</color> hit points\n<color=green>+2 | +10</color> cargo\n<color=green>+1</color> speed" } ],
+			"FlavorText": "Sometimes, knowing a little bit of everything beats expertise."
+		},
+		{
+			"CardId": 1002,
+			"TypeOfCard": "Fleet card",
+			"Name": "Gas Laser",
+			"EffectDescription": "Adds <color=green>[ 10 | 50 | 250 ]</color> firepower to <color=green>[ light | heavy | capital ]</color> ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+10 | +50 | +250</color>\nfirepower" } ],
+			"FlavorText": "You've got to start somewhere."
+		},
+		{
+			"CardId": 1003,
+			"TypeOfCard": "Fleet card",
+			"Name": "Fiber Laser",
+			"EffectDescription": "Adds <color=green>[ 20 | 100 | 500 ]</color> firepower to <color=green>[ light | heavy | capital ]</color> ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+20 | +100 | +500</color>\nfirepower" } ],
+			"FlavorText": "A couple of centuries ago the fiber laser's most deadly application was balloon popping."
+		},
+		{
+			"CardId": 1004,
+			"TypeOfCard": "Fleet card",
+			"Name": "Pulse Laser",
+			"EffectDescription": "Adds <color=green>[ 30 | 150 | 750 ]</color> firepower to <color=green>[ light | heavy | capital ]</color> ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+30 | +150 | +750</color>\nfirepower" } ],
+			"FlavorText": "Sometimes trading precision for power is a sound strategy."
+		},
+		{
+			"CardId": 1005,
+			"TypeOfCard": "Fleet card",
+			"Name": "Laser Cannon",
+			"EffectDescription": "Adds <color=green>[ 40 | 200 | 1000 ]</color> firepower to <color=green>[ light | heavy | capital ]</color> ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+40 | +200 | +1000</color>\nfirepower" } ],
+			"FlavorText": "\"It's poetic how dark matter produces such bright flashes.\"\n--Anarch Anastasia."
+		},
+		{
+			"CardId": 1006,
+			"TypeOfCard": "Fleet card",
+			"Name": "Hydrogen Maser",
+			"EffectDescription": "Adds <color=green>[ 5 | 25 | 125 ]</color> firepower to <color=green>[ light | heavy | capital ]</color> ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+5 | +25 | +125</color>\nfirepower" } ]
+		},
+		{
+			"CardId": 1007,
+			"TypeOfCard": "Fleet card",
+			"Name": "Higgs Maser",
+			"EffectDescription": "Adds <color=green>[ 10 | 50 | 250 ]</color> firepower to <color=green>[ light | heavy | capital ]</color> ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+10 | +50 | +250</color>\nfirepower" } ]
+		},
+		{
+			"CardId": 1008,
+			"TypeOfCard": "Fleet card",
+			"Name": "Atomic Maser",
+			"EffectDescription": "Adds <color=green>[ 15 | 75 | 375 ]</color> firepower to <color=green>[ light | heavy | capital ]</color> ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+15 | +75 | +375</color>\nfirepower" } ]
+		},
+		{
+			"CardId": 1009,
+			"TypeOfCard": "Fleet card",
+			"Name": "Maser Cannon",
+			"EffectDescription": "Adds <color=green>[ 20 | 100 | 500 ]</color> firepower to <color=green>[ light | heavy | capital ]</color> ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+20 | +100 | +500</color>\nfirepower" } ]
+		},
+		{
+			"CardId": 1010,
+			"TypeOfCard": "Fleet card",
+			"Name": "Reactive Armor",
+			"EffectDescription": "Adds <color=green>[ 25 | 125 | 625 ]</color> hit points to <color=green>[ light | heavy | capital ]</color> ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+25 | +125 | +625</color>\nhit points" } ],
+			"FlavorText": "Some assembly required."
+		},
+		{
+			"CardId": 1011,
+			"TypeOfCard": "Fleet card",
+			"Name": "Ablative Armor",
+			"EffectDescription": "Adds <color=green>[ 50 | 250 | 1250 ]</color> hit points to <color=green>[ light | heavy | capital ]</color> ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+50 | +250 | +1250</color>\nhit points" } ],
+			"FlavorText": "Decreases the risk of death by 11.7%."
+		},
+		{
+			"CardId": 1012,
+			"TypeOfCard": "Fleet card",
+			"Name": "Silksteel Armor",
+			"EffectDescription": "Adds <color=green>[ 75 | 375 | 1875 ]</color> hit points to <color=green>[ light | heavy | capital ]</color> ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+75 | +375 | +1875</color>\nhit points" } ],
+			"FlavorText": "\"A fine choice!\"\n--MPL salesman."
+		},
+		{
+			"CardId": 1013,
+			"TypeOfCard": "Fleet card",
+			"Name": "Graphene Armor",
+			"EffectDescription": "Adds <color=green>[ 100 | 500 | 2500 ]</color> hit points to <color=green>[ light | heavy | capital ]</color> ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+100 | +500 | +2500</color>\nhit points" } ],
+			"FlavorText": "It is said that Mumei Nakamura's swords can cut through graphene."
+		},
+		{
+			"CardId": 1014,
+			"TypeOfCard": "Fleet card",
+			"Name": "Atomized Coating",
+			"EffectDescription": "Adds <color=green>[ 20 | 100 | 500 ]</color> hit points to <color=green>[ light | heavy | capital ]</color> ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+20 | +100 | +500</color>\nhit points" } ]
+		},
+		{
+			"CardId": 1015,
+			"TypeOfCard": "Fleet card",
+			"Name": "Nanofiber Coating",
+			"EffectDescription": "Adds <color=green>[ 30 | 150 | 750 ]</color> hit points to <color=green>[ light | heavy | capital ]</color> ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+30 | +150 | +750</color>\nhit points" } ]
+		},
+		{
+			"CardId": 1016,
+			"TypeOfCard": "Fleet card",
+			"Name": "Nanotube Coating",
+			"EffectDescription": "Adds <color=green>[ 40 | 200 | 1000 ]</color> hit points to <color=green>[ light | heavy | capital ]</color> ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+40 | +200 | +1000</color>\nhit points" } ]
+		},
+		{
+			"CardId": 1017,
+			"TypeOfCard": "Fleet card",
+			"Name": "Rhodium Coating",
+			"EffectDescription": "Adds <color=green>[ 50 | 250 | 1250 ]</color> hit points to <color=green>[ light | heavy | capital ]</color> ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+50 | +250 | +1250</color>\nhit points" } ]
+		},
+		{
+			"CardId": 1018,
+			"TypeOfCard": "Fleet card",
+			"Name": "SimuLink",
+			"EffectDescription": "Increases the firepower and hit points of the fleet by <color=green>4%</color>.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+4%</color> firepower & hit points" } ],
+			"FlavorText": "\"He who knows when he can fight and when he cannot, will be victorious.\"\n\n--Sun Tzu"
+		},
+		{
+			"CardId": 1019,
+			"TypeOfCard": "Fleet card",
+			"Name": "Fleet Synchronizer",
+			"EffectDescription": "Increases the firepower and hit points of the fleet by <color=green>8%</color>.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+8%</color> firepower & hit points" } ],
+			"FlavorText": "A skilled tactician can predict a myriad of outcomes. A brilliant one has a plan for each of them."
+		},
+		{
+			"CardId": 1020,
+			"TypeOfCard": "Fleet card",
+			"Name": "Auto-Aim System",
+			"EffectDescription": "Increases the firepower and hit points of the fleet by <color=green>12%</color>.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+12%</color> firepower & hit points" } ],
+			"FlavorText": "\"With range comes safety.\"\n--George 'Rocket' O'Doyle."
+		},
+		{
+			"CardId": 1021,
+			"TypeOfCard": "Fleet card",
+			"Name": "Target Computer",
+			"EffectDescription": "Increases the firepower and hit points of the fleet by <color=green>16%</color>.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+16%</color> firepower & hit points" } ],
+			"FlavorText": "\"Feels like we were fighting in the dark ages before this baby came along!\"\n\n--George 'Rocket' O'Doyle."
+		},
+		{
+			"CardId": 1022,
+			"TypeOfCard": "Fleet card",
+			"Name": "Mini VSC",
+			"EffectDescription": "Adds <color=green>16%</color> plunder to the fleet.\n\nYour armada's average plunder value lowers the amount of resources hidden by a defender's Container Port building.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+16%</color> plunder" } ],
+			"FlavorText": "Void to Structure Cannons are an essential tool in the raider's toolbox.  Few things produce ransom as readily as the sight of VSCs staring back."
+		},
+		{
+			"CardId": 1023,
+			"TypeOfCard": "Fleet card",
+			"Name": "Medi VSC",
+			"EffectDescription": "Adds <color=green>24%</color> plunder to the fleet.\n\nYour armada's average plunder value lowers the amount of resources hidden by a defender's Container Port building.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+24%</color> plunder" } ],
+			"FlavorText": "\"This VSC will tear through any armored structure in two seconds flat!\"\n--MPL salesman."
+		},
+		{
+			"CardId": 1024,
+			"TypeOfCard": "Fleet card",
+			"Name": "Maxi VSC",
+			"EffectDescription": "Adds <color=green>32%</color> plunder to the fleet.\n\nYour armada's average plunder value lowers the amount of resources hidden by a defender's Container Port building.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+32%</color> plunder" } ],
+			"FlavorText": "\"They all pay up.\"\n--Max Rykov, ace pilot."
+		},
+		{
+			"CardId": 1025,
+			"TypeOfCard": "Fleet card",
+			"Name": "Mammoth VSC",
+			"EffectDescription": "Adds <color=green>40%</color> plunder to the fleet.\n\nYour armada's average plunder value lowers the amount of resources hidden by a defender's Container Port building.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+40%</color> plunder" } ],
+			"FlavorText": "\"Coo-ee!  The sight of just one of theese must surely turn pockets inside out!\"\n--Willy Gamish, pirate."
+		},
+		{
+			"CardId": 1026,
+			"TypeOfCard": "Fleet card",
+			"Name": "Basic Battery Pack",
+			"EffectDescription": "Lengthens the duration of scan probes by <color=green>24</color> hours.",
+			"Effects": [ { "VersionSmallDescription": "Scan duration:\n<color=green>+24</color> hours" } ]
+		},
+		{
+			"CardId": 1027,
+			"TypeOfCard": "Fleet card",
+			"Name": "MPL Probe Battery",
+			"EffectDescription": "Lengthens the duration of scan probes by <color=green>48</color> hours.",
+			"Effects": [ { "VersionSmallDescription": "Scan duration:\n<color=green>+48</color> hours" } ]
+		},
+		{
+			"CardId": 1028,
+			"TypeOfCard": "Fleet card",
+			"Name": "Probe Accumulator",
+			"EffectDescription": "Lengthens the duration of scan probes by <color=green>72</color> hours.",
+			"Effects": [ { "VersionSmallDescription": "Scan duration:\n<color=green>+72</color> hours" } ]
+		},
+		{
+			"CardId": 1029,
+			"TypeOfCard": "Fleet card",
+			"Name": "Deuterium Power Cells",
+			"EffectDescription": "Lengthens the duration of scan probes by <color=green>96</color> hours.",
+			"Effects": [ { "VersionSmallDescription": "Scan duration:\n<color=green>+96</color> hours" } ]
+		},
+		{
+			"CardId": 1030,
+			"TypeOfCard": "Fleet card",
+			"Name": "KAI Thrusters",
+			"EffectDescription": "Adds <color=green>5</color> speed to the fleet when scanning.",
+			"Effects": [ { "VersionSmallDescription": "Scan:\n<color=green>+5</color> speed" } ],
+			"FlavorText": "Sub-optimal performance, but gets you there in one piece."
+		},
+		{
+			"CardId": 1031,
+			"TypeOfCard": "Fleet card",
+			"Name": "E-Ghil Thrusters",
+			"EffectDescription": "Adds <color=green>10</color> speed to the fleet when scanning.",
+			"Effects": [ { "VersionSmallDescription": "Scan:\n<color=green>+10</color> speed" } ],
+			"FlavorText": "Although highly faulty, the manufacturer brags of a very low return rate, completely ignoring the fact that the primary fault is combustion."
+		},
+		{
+			"CardId": 1032,
+			"TypeOfCard": "Fleet card",
+			"Name": "Byarm Thrusters",
+			"EffectDescription": "Adds <color=green>15</color> speed to the fleet when scanning.",
+			"Effects": [ { "VersionSmallDescription": "Scan:\n<color=green>+15</color> speed" } ],
+			"FlavorText": "A favorite of many explorers, these babies don't purr, they sing!"
+		},
+		{
+			"CardId": 1033,
+			"TypeOfCard": "Fleet card",
+			"Name": "Khalle Thrusters",
+			"EffectDescription": "Adds <color=green>20</color> speed to the fleet when scanning.",
+			"Effects": [ { "VersionSmallDescription": "Scan:\n<color=green>+20</color> speed" } ],
+			"FlavorText": "Their only fault is their lengthy ignition timer.  It's like spurring a horse to no effect and be about to complain but cancel because you're already there."
+		},
+		{
+			"CardId": 1034,
+			"TypeOfCard": "Fleet card",
+			"Name": "Sensor Uplink",
+			"EffectDescription": "Increases the radius of this fleet's scan probes by <color=green>1</color>.",
+			"Effects": [ { "VersionSmallDescription": "Probes:\n<color=green>+1</color> scan radius" } ],
+			"FlavorText": "Scan probes are tied to overseers who are implanted with 3D printed organs that allow them to monitor probe transmissions remotely."
+		},
+		{
+			"CardId": 1035,
+			"TypeOfCard": "Fleet card",
+			"Name": "Sensor Integration",
+			"EffectDescription": "Increases the radius of this fleet's scan probes by <color=green>2</color>.",
+			"Effects": [ { "VersionSmallDescription": "Probes:\n<color=green>+2</color> scan radius" } ],
+			"FlavorText": "Probe results depend on a probe overseeer's talent as much as on the quality of her implants."
+		},
+		{
+			"CardId": 1036,
+			"TypeOfCard": "Fleet card",
+			"Name": "Sensor Melding",
+			"EffectDescription": "Increases the radius of this fleet's scan probes by <color=green>3</color>.",
+			"Effects": [ { "VersionSmallDescription": "Probes:\n<color=green>+3</color> scan radius" } ],
+			"FlavorText": "Probe overseers often sacrifice portion of their normal human senses to better their performance."
+		},
+		{
+			"CardId": 1037,
+			"TypeOfCard": "Fleet card",
+			"Name": "<size=-1>Sensor Amalgamation</size>",
+			"EffectDescription": "Increases the radius of this fleet's scan probes by <color=green>4</color>.",
+			"Effects": [ { "VersionSmallDescription": "Probes:\n<color=green>+4</color> scan radius" } ],
+			"FlavorText": "Some overseers are so entwined with their implants that they all but recede from human interactions."
+		},
+		{
+			"CardId": 1038,
+			"TypeOfCard": "Fleet card",
+			"Name": "Isolation Chamber",
+			"EffectDescription": "Adds <color=green>100</color> stealth to the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+100</color> stealth" } ]
+		},
+		{
+			"CardId": 1039,
+			"TypeOfCard": "Fleet card",
+			"Name": "Remote Hacking",
+			"EffectDescription": "Adds <color=green>200</color> stealth to the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+200</color> stealth" } ]
+		},
+		{
+			"CardId": 1040,
+			"TypeOfCard": "Fleet card",
+			"Name": "Interference Overload",
+			"EffectDescription": "Adds <color=green>300</color> stealth to the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+300</color> stealth" } ]
+		},
+		{
+			"CardId": 1041,
+			"TypeOfCard": "Fleet card",
+			"Name": "Stealth Systems",
+			"EffectDescription": "Adds <color=green>400</color> stealth to the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+400</color> stealth" } ]
+		},
+		{
+			"CardId": 1042,
+			"TypeOfCard": "Fleet card",
+			"Name": "Neutron Missile",
+			"EffectDescription": "Adds <color=green>20</color> station bombing to ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+20</color> bombing" } ],
+			"FlavorText": "\"Older technology but still packs a wallop!\" \n--Felix Morrell, Master Gunner."
+		},
+		{
+			"CardId": 1043,
+			"TypeOfCard": "Fleet card",
+			"Name": "Graviton Missile",
+			"EffectDescription": "Adds <color=green>40</color> station bombing to ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+40</color> bombing" } ],
+			"FlavorText": "\"One might assume that due to their names, graviton missiles and graviton torpedos are similar. They're not.\"\n--Felix Morrell, Master Gunner."
+		},
+		{
+			"CardId": 1044,
+			"TypeOfCard": "Fleet card",
+			"Name": "Positron Missile",
+			"EffectDescription": "Adds <color=green>60</color> station bombing to ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+60</color> bombing" } ],
+			"FlavorText": "\"When did they get a hold of this technology and why didn't I know about it!?\"\n--Anarch Anastasia."
+		},
+		{
+			"CardId": 1045,
+			"TypeOfCard": "Fleet card",
+			"Name": "Antimatter Missile",
+			"EffectDescription": "Adds <color=green>80</color> station bombing to ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+80</color> bombing" } ],
+			"FlavorText": "Nicknamed 'The Decider'."
+		},
+		{
+			"CardId": 1046,
+			"TypeOfCard": "Fleet card",
+			"Name": "Neutron Torpedo",
+			"EffectDescription": "Adds <color=green>10</color> station bombing to ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+10</color> bombing" } ],
+			"FlavorText": "Why invest in new tech, when old tech is lethal enough?"
+		},
+		{
+			"CardId": 1047,
+			"TypeOfCard": "Fleet card",
+			"Name": "Graviton Torpedo",
+			"EffectDescription": "Adds <color=green>20</color> station bombing to ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+20</color> bombing" } ],
+			"FlavorText": "\"Gravity is not to be taken lightly.\"\n--Felix Morrell's opening joke for his course on graviton weaponry."
+		},
+		{
+			"CardId": 1048,
+			"TypeOfCard": "Fleet card",
+			"Name": "Positron Torpedo",
+			"EffectDescription": "Adds <color=green>30</color> station bombing to ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+30</color> bombing" } ],
+			"FlavorText": "\"When the kill doesn't suffice, go for the overkill.\"\n--Felix Morrell, Master Gunner."
+		},
+		{
+			"CardId": 1049,
+			"TypeOfCard": "Fleet card",
+			"Name": "Antimatter Torpedo",
+			"EffectDescription": "Adds <color=green>40</color> station bombing to ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+40</color> bombing" } ],
+			"FlavorText": "Their cost is worth the fireworks."
+		},
+		{
+			"CardId": 1050,
+			"TypeOfCard": "Fleet card",
+			"Name": "Smuggler's Hold",
+			"EffectDescription": "Adds <color=green>10</color> cargo space to ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+10</color> cargo" } ],
+			"FlavorText": "Contraband is just another word for exotic."
+		},
+		{
+			"CardId": 1051,
+			"TypeOfCard": "Fleet card",
+			"Name": "Storage Block",
+			"EffectDescription": "Adds <color=green>20</color> cargo space to ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+20</color> cargo" } ]
+		},
+		{
+			"CardId": 1052,
+			"TypeOfCard": "Fleet card",
+			"Name": "Cargo Extender",
+			"EffectDescription": "Adds <color=green>30</color> cargo space to ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+30</color> cargo" } ],
+			"FlavorText": "Makes loading and unloading cargo much easier."
+		},
+		{
+			"CardId": 1053,
+			"TypeOfCard": "Fleet card",
+			"Name": "Cargo Trailer",
+			"EffectDescription": "Adds <color=green>40</color> cargo space to ships in the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+40</color> cargo" } ],
+			"FlavorText": "It's a good thing aerodynamics don't matter in space."
+		},
+		{
+			"CardId": 1054,
+			"TypeOfCard": "Fleet card",
+			"Name": "ZeroA Suit",
+			"EffectDescription": "Adds <color=green>6</color> speed to the fleet while on Outpost operations.",
+			"Effects": [ { "VersionSmallDescription": "Outpost Construction\n& Augmentation:\n<color=green>+6</color> speed" } ],
+			"FlavorText": "What space travel swapped overalls out for."
+		},
+		{
+			"CardId": 1055,
+			"TypeOfCard": "Fleet card",
+			"Name": "Hydraulic Arm",
+			"EffectDescription": "Adds <color=green>12</color> speed to the fleet while on Outpost operations",
+			"Effects": [ { "VersionSmallDescription": "Outpost Construction\n& Augmentation:\n<color=green>+12</color> speed" } ]
+		},
+		{
+			"CardId": 1056,
+			"TypeOfCard": "Fleet card",
+			"Name": "HDL System",
+			"EffectDescription": "Adds <color=green>20</color> speed to the fleet while on Outpost operations",
+			"Effects": [ { "VersionSmallDescription": "Outpost Construction\n& Augmentation:\n<color=green>+20</color> speed" } ],
+			"FlavorText": "The Human Drone Links system makes controlling builder drones in zero-g as complex as wielding a hammer on earth."
+		},
+		{
+			"CardId": 1057,
+			"TypeOfCard": "Fleet card",
+			"Name": "<size=-1>Construction Shuttle</size>",
+			"EffectDescription": "Adds <color=green>30</color> speed to the fleet while on Outpost operations",
+			"Effects": [ { "VersionSmallDescription": "Outpost Construction\n& Augmentation:\n<color=green>+30</color> speed" } ],
+			"FlavorText": "Designed and equipped to deftly manuevre large modules with precision in zero gravity."
+		},
+		{
+			"CardId": 1058,
+			"TypeOfCard": "Fleet card",
+			"Name": "Leilo Harvester",
+			"EffectDescription": "Increases the fleet's plasma cargo for harvesting from solar flares by <color=green>10%</color> of its normal cargo space.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+10%</color> plasma cargo" } ],
+			"FlavorText": "It was an incredible feat of engineering when man started harvesting the stars.  At first, they could only get close enough to harvest plasma from the farthest reaching flares and could only stay in proximity for but a short duration.  The plasma is then converted into resources in specialized chambers and the cmposition of the plasma dictated the type of resource it produced."
+		},
+		{
+			"CardId": 1059,
+			"TypeOfCard": "Fleet card",
+			"Name": "MPL Harvester",
+			"EffectDescription": "Increases the fleet's plasma cargo for harvesting from solar flares by <color=green>14%</color> of its normal cargo space.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+14%</color> plasma cargo" } ],
+			"FlavorText": "For highly volatile stars, the MPL has begun to employ bort crews instead of drones. This, of course, has nothing to do with drones costing more than a crew of borts."
+		},
+		{
+			"CardId": 1060,
+			"TypeOfCard": "Fleet card",
+			"Name": "Sanctum Harvester",
+			"EffectDescription": "Increases the fleet's plasma cargo for harvesting from solar flares by <color=green>20%</color> of its normal cargo space.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+20%</color> plasma cargo" } ],
+			"FlavorText": "\"You always keep multiple harvester crews on standby. Firstly because eruptions are unpredictable and typically have short durations and secondly, because of the trade's high fatality rating.\"\n--Samuel Darby, Lord of Serfs."
+		},
+		{
+			"CardId": 1061,
+			"TypeOfCard": "Fleet card",
+			"Name": "START Harvester",
+			"EffectDescription": "Increases the fleet's plasma cargo for harvesting from solar flares by <color=green>30%</color> of its normal cargo space.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+30%</color> plasma cargo" } ],
+			"FlavorText": "The START harvester shield technology was the precursor to permanent star harvesting structures that provided mankind access to limitless power. \n\nThis issued a new age for humans that they somehow still managed to use for political quarrels and wars."
+		},
+		{
+			"CardId": 1062,
+			"TypeOfCard": "Fleet card",
+			"Name": "Width Matrix",
+			"EffectDescription": "Increases the fleet's cargo space by <color=green>20%</color>.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+20%</color> cargo" } ]
+		},
+		{
+			"CardId": 1063,
+			"TypeOfCard": "Fleet card",
+			"Name": "Breadth Matrix",
+			"EffectDescription": "Increases the fleet's cargo space by <color=green>40%</color>.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+40%</color> cargo" } ]
+		},
+		{
+			"CardId": 1064,
+			"TypeOfCard": "Fleet card",
+			"Name": "Veteran Scout",
+			"EffectDescription": "Adds <color=green>200</color> scan strength to the fleet while scanning.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+200</color> probe scan strength" } ],
+			"FlavorText": "\"My Neural Sensors are tingling.\""
+		},
+		{
+			"CardId": 1065,
+			"TypeOfCard": "Fleet card",
+			"Name": "Borts",
+			"EffectDescription": "Adds <color=green>1</color> speed to the fleet while harvesting solar flares.\n\nIncreases the fleet's plasma cargo for harvesting from solar flares by <color=green>10%</color> of its normal cargo space.",
+			"Effects": [
+				{ "VersionSmallDescription": "<color=green>+10%</color> plasma cargo" },
+				{ "VersionSmallDescription": "<line-height=50%>\n</line-height>Plasma Harvest:\n<color=green>+1</color> speed" }
+			],
+			"FlavorText": "Because of their crystalline growths and the fact that few vocations beyond perilous plasma harvesting runs were available to them, space flu survivors became known as 'borts'."
+		},
+		{
+			"CardId": 1066,
+			"TypeOfCard": "Fleet card",
+			"Name": "Max Rykov",
+			"EffectDescription": "Adds <color=green>[ 25 | 125 ]</color> hit points and <color=green>[ 6 | 24 ]</color> cargo space to <color=green>[ light | heavy ]</color> ships in the fleet while raiding.\n\nAdds <color=green>1</color> speed to the fleet while raiding.",
+			"Effects": [ { "VersionSmallDescription": "Raid:\n<color=green>+25 | +125</color> hit points\n<color=green>+6 | +24</color> cargo\n<color=green>+1</color> speed" } ],
+			"FlavorText": "\"People only deserve what they can defend.\"\n--Max Rykov, ace pilot."
+		},
+		{
+			"CardId": 1067,
+			"TypeOfCard": "Fleet card",
+			"Name": "Koh Xi Kwok",
+			"EffectDescription": "Adds <color=green>[ 20 | 100 ]</color> firepower to <color=green>[ light | heavy ]</color> ships in the fleet while running missions.\n\nAdds <color=green>1</color> speed the fleet while running missions.",
+			"Effects": [ { "VersionSmallDescription": "Mission:\n<color=green>+20 | +100</color> firepower\n<color=green>+1</color> speed" } ],
+			"FlavorText": "\"Until Tianchao stands up to MPL barbarity we are no better than them.\"\n--Koh Xi Kwok, tactical team leader."
+		},
+		{
+			"CardId": 1068,
+			"TypeOfCard": "Fleet card",
+			"Name": "Sophie Solheim",
+			"EffectDescription": "Reduces the escort requirements by missions this fleet runs by <color=green>1</color>.\n\nAdds <color=green>1</color> speed to the fleet while running missions.\n\nAllows the fleet to perform raiding missions.",
+			"Effects": [ { "VersionSmallDescription": "Mission:\n<color=green>+1</color> escort\n<color=green>+1</color> speed" } ],
+			"FlavorText": "\"It seems that the Solheim family breeds singularly to one-up the previous generation's accomplishments.\"\n--Akka."
+		},
+		{
+			"CardId": 1069,
+			"TypeOfCard": "Fleet card",
+			"Name": "Emeryn Grace",
+			"EffectDescription": "Adds <color=green>[ 20 | 100 ]</color> firepower to <color=green>[ light | heavy ]</color> ships in the fleet while running missions.\n\nReduces the escort requirements by missions this fleet runs by <color=green>2</color>.\n\nAllows the fleet to perform raiding missions.\n\nAdds <color=green>1</color> speed to the fleet while running missions.",
+			"Effects": [ { "VersionSmallDescription": "Mission:\n<color=green>+20 | +100</color> firepower\n<color=green>+2</color> escorts\n<color=green>+1</color> speed" } ],
+			"FlavorText": "\"Make your crew fear you so, that no enemy fazes them.\""
+		},
+		{
+			"CardId": 1070,
+			"TypeOfCard": "Fleet card",
+			"Name": "Spatial Convex",
+			"EffectDescription": "Adds <color=green>1</color> speed to the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+1</color> speed" } ],
+			"FlavorText": "\"It seems to fold a tiny portion of space just ahead of the vessel.\"\n--Sophie Solheim, explorer."
+		},
+		{
+			"CardId": 1071,
+			"TypeOfCard": "Fleet card",
+			"Name": "Forced Serenity",
+			"EffectDescription": "Reduces the escort requirements by missions this fleet runs by <color=green>1</color>.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+1</color> escort" } ],
+			"FlavorText": "\"I don't know how to describe it.  It's like an upsetting tranquility or being high-strung while everything happens in slow motion.\"\n--Koh Xi Kwok, tactical team leader."
+		},
+		{
+			"CardId": 1072,
+			"TypeOfCard": "Fleet card",
+			"Name": "Rabble Squad",
+			"EffectDescription": "Adds <color=green>1</color> speed to the fleet while raiding.\n\nAdds <color=green>10%</color> plunder to the fleet.\n\nYour armada's average plunder value lowers the amount of resources hidden by a defender's Resource Vault building.",
+			"Effects": [ { "VersionSmallDescription": "Raid:\n<color=green>+1</color> speed\n<color=green>+10%</color> plunder" } ],
+			"FlavorText": "\"You hired them, you deal with them.\"\n--Gwayn Erebus, Child of Mars."
+		},
+		{
+			"CardId": 1073,
+			"TypeOfCard": "Fleet card",
+			"Name": "Harmonic Resonance",
+			"EffectDescription": "Reduces the escort requirements by missions this fleet runs by <color=green>2</color>.",
+			"Effects": [ { "VersionSmallDescription": "Mission:\n<color=green>+2</color> escort" } ],
+			"FlavorText": "\"It was absolutely beautiful to behold and more so to hear.\"\n--Sophie Solheim, explorer."
+		},
+		{
+			"CardId": 1074,
+			"TypeOfCard": "Fleet card",
+			"Name": "Vortex Rift",
+			"EffectDescription": "Adds <color=green>2</color> speed to the fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+2</color> speed" } ],
+			"FlavorText": "Lt. Gamish gave a wry smile, \"It can be pretty scary, the first time you go through one of these.  Every time after that, it's only slightly less so.\" He said, nudging the cadet gamefully.\n"
+		},
+		{
+			"CardId": 1075,
+			"TypeOfCard": "Fleet card",
+			"Name": "Flag of Convenience",
+			"EffectDescription": "Prevents this fleet from participating in defensive combat.",
+			"Effects": [ { "VersionSmallDescription": "Doesn't defend against attacks" } ],
+			"FlavorText": "The use of a neutral flag to deceive an approaching enemy is very, very illegal."
+		},
+		{
+			"CardId": 1076,
+			"TypeOfCard": "Fleet card",
+			"Name": "Viking Squadron",
+			"EffectDescription": "Adds 20 station capture to a troop carrier fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+20</color> station capture" } ]
+		},
+		{
+			"CardId": 1077,
+			"TypeOfCard": "Fleet card",
+			"Name": "XAOC Strike Team",
+			"EffectDescription": "Adds 40 station capture to a troop carrier fleet.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+40</color> station capture" } ],
+			"FlavorText": "You can't buy experience, but you can hire it."
+		},
+		{
+			"CardId": 1078,
+			"TypeOfCard": "Fleet card",
+			"Name": "AP Rounds",
+			"EffectDescription": "Adds <color=green>[ 5 | 25 ]</color> station bombing to <color=green>[ heavy | capital ]</color> ships.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+5 | +25</color> bombing" } ]
+		},
+		{
+			"CardId": 1079,
+			"TypeOfCard": "Fleet card",
+			"Name": "HVAP Rounds",
+			"EffectDescription": "Adds <color=green>[ 10 | 50 ]</color> station bombing to <color=green>[ heavy | capital ]</color> ships.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+10 | +50</color> bombing" } ]
+		},
+		{
+			"CardId": 1080,
+			"TypeOfCard": "Fleet card",
+			"Name": "Thorspear Thrusters",
+			"EffectDescription": "Adds 2 speed to Gunship and Troop Carrier fleets.",
+			"Effects": [
+				{ "VersionSmallDescription": "Gunships:\n<color=green>+2</color> speed" },
+				{ "VersionSmallDescription": "Troop Carriers:\n<color=green>+2</color> speed" }
+			]
+		},
+		{
+			"CardId": 1081,
+			"TypeOfCard": "Fleet card",
+			"Name": "Ki-Ran Thrusters",
+			"EffectDescription": "Adds <color=green>3</color> speed to Gunship and Troop Carrier fleets.",
+			"Effects": [
+				{ "VersionSmallDescription": "Gunships:\n<color=green>+3</color> speed" },
+				{ "VersionSmallDescription": "Troop Carriers:\n<color=green>+3</color> speed" }
+			]
+		},
+		{
+			"CardId": 1082,
+			"TypeOfCard": "Fleet card",
+			"Name": "Novice Scout",
+			"EffectDescription": "Adds <color=green>100</color> scan strength to this fleet while scanning.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+100</color> probe scan strength" } ],
+			"FlavorText": "\"It hurt like a bitch having these sensors installed.\""
+		},
+		{
+			"CardId": 1083,
+			"TypeOfCard": "Fleet card",
+			"Name": "Director of Colonization",
+			"EffectDescription": "Adds <color=green>50</color> speed to an industrial fleet while building stations or deploying.\n\nYou receive this card upon reaching level 10.",
+			"Effects": [
+				{ "VersionSmallDescription": "<color=green>+50</color> build station speed" },
+				{ "VersionSmallDescription": "<color=green>+50</color> deployment speed" }
+			],
+			"FlavorText": "\"You have readied your expansion plan?\"\n\"Yes sir!\"\n\"And you stand by it?\"\n\"Yes sir!\"\n\"Good, I'm sending you with.\"\n\"Sir?\""
+		},
+		{
+			"CardId": 1084,
+			"TypeOfCard": "Fleet card",
+			"Name": "Laser Cannon Prime",
+			"EffectDescription": "Adds <color=green>[ 50 | 250 | 1250 ]</color> firepower to <color=green>[ light | heavy | capital ]</color> ships in the fleet.\n\nPrime cards are earned by completing the Prime Conqueror task under the NPC task list.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+50 | +250 | +1250</color>\nfirepower" } ],
+			"FlavorText": "\"It's poetic how dark matter produces such bright flashes.\"\n--Anarch Anastasia."
+		},
+		{
+			"CardId": 1085,
+			"TypeOfCard": "Fleet card",
+			"Name": "Graphene Armor Prime",
+			"EffectDescription": "Adds <color=green>[ 125 | 625 | 3125 ]</color> hit points to <color=green>[ light | heavy | capital ]</color> ships in the fleet.\n\nPrime cards are earned by completing the Prime Conqueror task under the NPC task list.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+125 | +625 | +3125</color>\nhit points" } ],
+			"FlavorText": "It is said that Mumei Nakamura's swords can cut through graphene."
+		},
+		{
+			"CardId": 1086,
+			"TypeOfCard": "Fleet card",
+			"Name": "Target Computer Prime",
+			"EffectDescription": "Increases the firepower and hit points of the fleet by <color=green>20%</color>.\n\nPrime cards are earned by completing the Prime Conqueror task under the NPC task list.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+20%</color> firepower & hit points" } ],
+			"FlavorText": "\"Feels like we were fighting in the dark ages before this baby came along!\"\n\n--George 'Rocket' O'Doyle."
+		}
+	],
+	"StationCards": [
+		{
+			"CardId": 2001,
+			"TypeOfCard": "Station card",
+			"Name": "EM Launchpad",
+			"EffectDescription": "Your fleets departing on raid movements from this station gain <color=green>2</color> speed.\n\nUnique: You can only equip one of this card to a station, it is considered unique.",
+			"Effects": [ { "VersionSmallDescription": "Raids:\n<color=green>+2</color> speed" } ],
+			"FlavorText": "That's quite a push!"
+		},
+		{
+			"CardId": 2002,
+			"TypeOfCard": "Station card",
+			"Name": "Hologram System",
+			"EffectDescription": "Your fleets departing on assault movements from this station gain <color=green>2</color> speed.\n\nUnique: You can only equip one of this card to a station, it is considered unique.",
+			"Effects": [ { "VersionSmallDescription": "Assaults:\n<color=green>+2</color> speed" } ],
+			"FlavorText": "For three dimensional warfare you need three dimensional maps."
+		},
+		{
+			"CardId": 2003,
+			"TypeOfCard": "Station card",
+			"Name": "Route Control",
+			"EffectDescription": "Your fleets departing on deploy movements from this station gain <color=green>2</color> speed.\n\nUnique: You can only equip one of this card to a station, it is considered unique.",
+			"Effects": [ { "VersionSmallDescription": "Deployments:\n<color=green>+2</color> speed" } ],
+			"FlavorText": "Planning is a prerequisite to success."
+		},
+		{
+			"CardId": 2004,
+			"TypeOfCard": "Station card",
+			"Name": "Vector Scaling",
+			"EffectDescription": "Your fleets departing on mission movements from this station gain <color=green>2</color> speed.\n\nUnique: You can only equip one of this card to a station, it is considered unique.",
+			"Effects": [ { "VersionSmallDescription": "Missions:\n<color=green>+2</color> speed" } ],
+			"FlavorText": "Distress calls triangulated perfectly."
+		},
+		{
+			"CardId": 2005,
+			"TypeOfCard": "Station card",
+			"Name": "Control Suite",
+			"EffectDescription": "Your fleets departing on sabotage movements from this station gain <color=green>2</color> speed.\n\nUnique: You can only equip one of this card to a station, it is considered unique.",
+			"Effects": [ { "VersionSmallDescription": "Sabotages:\n<color=green>+2</color> speed" } ]
+		},
+		{
+			"CardId": 2006,
+			"TypeOfCard": "Station card",
+			"Name": "Mlat Scanners",
+			"EffectDescription": "Your fleets departing on scan movements from this station gain <color=green>5</color> speed.\n\nUnique: You can only equip one of this card to a station, it is considered unique.",
+			"Effects": [ { "VersionSmallDescription": "Scans:\n<color=green>+5</color> speed" } ]
+		},
+		{
+			"CardId": 2007,
+			"TypeOfCard": "Station card",
+			"Name": "Flare Monitors",
+			"EffectDescription": "Your fleets departing on solar flare movements from this station gain <color=green>2</color> speed.\n\nUnique: You can only equip one of this card to a station, it is considered unique.",
+			"Effects": [ { "VersionSmallDescription": "Plasma Harvests:\n<color=green>+2</color> speed" } ],
+			"FlavorText": "One of the universe's most destructive forces, monitored and harvested by corporations."
+		},
+		{
+			"CardId": 2008,
+			"TypeOfCard": "Station card",
+			"Name": "Recycling Plant",
+			"EffectDescription": "Your fleets departing on outpost movements from this station gain <color=green>5</color> speed.\n\nUnique: You can only equip one of this card to a station, it is considered unique.",
+			"Effects": [ { "VersionSmallDescription": "Outpost Construction\n& Augmentation:\n<color=green>+5</color> speed" } ],
+			"FlavorText": "Destruction fuels construction."
+		},
+		{
+			"CardId": 2009,
+			"TypeOfCard": "Station card",
+			"Name": "Berth Control",
+			"EffectDescription": "Freighters departing from this station gain <color=green>5</color> speed.\n\nUnique: You can only equip one of this card to a station, it is considered unique.",
+			"Effects": [ { "VersionSmallDescription": "Freighters:\n<color=green>+5</color> speed" } ]
+		},
+		{
+			"CardId": 2010,
+			"TypeOfCard": "Station card",
+			"Name": "Ionization Chamber",
+			"EffectDescription": "Provides an additional <color=green>50</color> metal   <sprite=\"ResIcons\" name=\"Metal\">, <color=green>20</color> gas   <sprite=\"ResIcons\" name=\"Gas\"> and <color=green>30</color> crystal   <sprite=\"ResIcons\" name=\"Crystal\"> to this station's base production per hour.\nMilitary buildings cost <color=green>10%</color> less resources to construct.",
+			"Effects": [
+				{ "VersionSmallDescription": "<color=green>+50</color> metal\n<color=green>+20</color> gas\n<color=green>+30</color> crystal" },
+				{ "VersionSmallDescription": "<line-height=50%>\n</line-height>Military Buildings:\n<color=green>-10%</color> resource cost" }
+			]
+		},
+		{
+			"CardId": 2011,
+			"TypeOfCard": "Station card",
+			"Name": "Solar Panels",
+			"EffectDescription": "Provides an additional <color=green>30</color> metal   <sprite=\"ResIcons\" name=\"Metal\">, <color=green>50</color> gas   <sprite=\"ResIcons\" name=\"Gas\"> and <color=green>20</color> crystal   <sprite=\"ResIcons\" name=\"Crystal\"> to this station's base production per hour.\nDomain buildings cost <color=green>10%</color> less resources to construct.",
+			"Effects": [
+				{ "VersionSmallDescription": "<color=green>+30</color> metal\n<color=green>+50</color> gas\n<color=green>+20</color> crystal" },
+				{ "VersionSmallDescription": "<line-height=50%>\n</line-height>Domain Buildings:\n<color=green>-10%</color> resource cost" }
+			]
+		},
+		{
+			"CardId": 2012,
+			"TypeOfCard": "Station card",
+			"Name": "Core Schematics",
+			"EffectDescription": "Provides an additional <color=green>20</color> metal   <sprite=\"ResIcons\" name=\"Metal\">, <color=green>30</color> gas   <sprite=\"ResIcons\" name=\"Gas\"> and <color=green>50</color> crystal   <sprite=\"ResIcons\" name=\"Crystal\"> to this station's base production per hour.\nIndustry buildings cost <color=green>10%</color> less resources to construct.",
+			"Effects": [
+				{ "VersionSmallDescription": "<color=green>+20</color> metal\n<color=green>+30</color> gas\n<color=green>+50</color> crystal" },
+				{ "VersionSmallDescription": "<line-height=50%>\n</line-height>Industrial Buildings:\n<color=green>-10%</color> resource cost" }
+			]
+		},
+		{
+			"CardId": 2016,
+			"TypeOfCard": "Station card",
+			"Name": "Blaze Exosuit",
+			"EffectDescription": "Military buildings take <color=green>10%</color> less time to construct. ",
+			"Effects": [ { "VersionSmallDescription": "Military Buildings:\n<color=green>-10%</color> time cost" } ],
+			"FlavorText": "Top o'the line!"
+		},
+		{
+			"CardId": 2017,
+			"TypeOfCard": "Station card",
+			"Name": "Truck Exosuit",
+			"EffectDescription": "Domain buildings take <color=green>10%</color> less time to construct. ",
+			"Effects": [ { "VersionSmallDescription": "Domain Buildings:\n<color=green>-10%</color> time cost" } ],
+			"FlavorText": "Watch where you step."
+		},
+		{
+			"CardId": 2018,
+			"TypeOfCard": "Station card",
+			"Name": "Dozer Exosuit",
+			"EffectDescription": "Industrial buildings take <color=green>10%</color> less time to construct. ",
+			"Effects": [ { "VersionSmallDescription": "Industrial Buildings:\n<color=green>-10%</color> time cost" } ],
+			"FlavorText": "Suit up!"
+		},
+		{
+			"CardId": 2020,
+			"TypeOfCard": "Station card",
+			"Name": "Surveillance Module",
+			"EffectDescription": "Increases the scan radius of this station by <color=green>2</color>.\n\nUnique: You can only equip one of this card to a station, it is considered unique.",
+			"Effects": [ { "VersionSmallDescription": "Station:\n<color=green>+2</color> scan radius" } ],
+			"FlavorText": "It's watching you."
+		},
+		{
+			"CardId": 2021,
+			"TypeOfCard": "Station card",
+			"Name": "Home Guard",
+			"EffectDescription": "Increases the station's claim strength by <color=green>1</color>.\n\nUnique: You can only equip one of this card to a station, it is considered unique.",
+			"Effects": [ { "VersionSmallDescription": "Station:\n<color=green>+1</color> claim strength" } ]
+		},
+		{
+			"CardId": 2022,
+			"TypeOfCard": "Station card",
+			"Name": "Detection Array",
+			"EffectDescription": "Increases the scan radius of this station by <color=green>5</color>.\n\nUnique: You can only equip one of this card to a station, it is considered unique.",
+			"Effects": [ { "VersionSmallDescription": "Station:\n<color=green>+5</color> scan radius" } ]
+		},
+		{
+			"CardId": 2023,
+			"TypeOfCard": "Station card",
+			"Name": "Empyrial Guards",
+			"EffectDescription": "Increases the station's claim strength by <color=green>2</color>.\n\nUnique: You can only equip one of this card to a station, it is considered unique.",
+			"Effects": [ { "VersionSmallDescription": "Station:\n<color=green>+2</color> claim strength" } ]
+		},
+		{
+			"CardId": 2024,
+			"TypeOfCard": "Station card",
+			"Name": "Insurance House",
+			"EffectDescription": "Outposts gain <color=green>20%</color> hit points.\nStation sabotage defense Increases by <color=green>20%</color>.\n\nUnique: You can only equip one of this card to a station, it is considered unique.",
+			"Effects": [
+				{ "VersionSmallDescription": "Station:\n<color=green>+20%</color> sabotage defense" },
+				{ "VersionSmallDescription": "<line-height=50%>\n</line-height>Outposts:\n<color=green>+20%</color> hit points" }
+			],
+			"FlavorText": "To qualify for insurance internal security measures need to be tip-top."
+		},
+		{
+			"CardId": 2025,
+			"TypeOfCard": "Station card",
+			"Name": "Metal Depot",
+			"EffectDescription": "Provides an additional <color=green>100</color> metal  <sprite=\"ResIcons\" name=\"Metal\"> to this station's base production per hour.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+100</color> metal" } ],
+			"FlavorText": "\"When you see fleet recruitment officers setting up their stall in the promenade, it usually means overtime for us.\"\n--Metal depot worker."
+		},
+		{
+			"CardId": 2026,
+			"TypeOfCard": "Station card",
+			"Name": "Gas Silo",
+			"EffectDescription": "Provides an additional <color=green>100</color> gas  <sprite=\"ResIcons\" name=\"Gas\"> to this station's base production gas per hour.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+100</color> gas" } ],
+			"FlavorText": "Being a gas collector sets up all sorts of jokes when careers are discussed."
+		},
+		{
+			"CardId": 2027,
+			"TypeOfCard": "Station card",
+			"Name": "Crystal Vault",
+			"EffectDescription": "Provides an additional <color=green>100</color> crystal   <sprite=\"ResIcons\" name=\"Crystal\"> to this station's base production per hour.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+100</color> crystal" } ],
+			"FlavorText": "Don't forget your protective goggles. People have gone blind in there."
+		},
+		{
+			"CardId": 2028,
+			"TypeOfCard": "Station card",
+			"Name": "TGE Franchise",
+			"EffectDescription": "Add <color=green>5</color> freighters to your empire's freighting pool.\n\nUnique: You can only equip one of this card to a station, it is considered unique.",
+			"Effects": [ { "VersionSmallDescription": "Empire:\n<color=green>+5</color> freighters" } ],
+			"FlavorText": "It is by overcoming resource scarcity that we build empires.\n--Frontier adage."
+		},
+		{
+			"CardId": 2029,
+			"TypeOfCard": "Station card",
+			"Name": "Mining Robots",
+			"EffectDescription": "Increases this stations' base harvest rate by an additional <color=green>17%</color>.\n\nUnique: You can only equip one of this card to a station, it is considered unique.",
+			"Effects": [ { "VersionSmallDescription": "Station:\n<color=green>+17%</color> harvest yield" } ]
+		},
+		{
+			"CardId": 2030,
+			"TypeOfCard": "Station card",
+			"Name": "Loading Bay",
+			"EffectDescription": "Freighters departing from this station gain <color=green>50%</color> cargo space. \nThis stations' warehouse capacity is increased by <color=green>100%</color>.\n\nUnique: You can only equip one of this card to a station, it is considered unique.",
+			"Effects": [ { "VersionSmallDescription": "Station:\n<color=green>+50%</color> freighter cargo\n<color=green>+100%</color> resource capacity" } ],
+			"FlavorText": "All in all it's just another crate in the wall."
+		},
+		{
+			"CardId": 2031,
+			"TypeOfCard": "Station card",
+			"Name": "Pyroprocessing",
+			"EffectDescription": "Increases this station's total output of metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\"> by an additional <color=green>15%</color> of its base per hour.\n\nUnique: You can only equip one of this card to a station, it is considered unique.",
+			"Effects": [ { "VersionSmallDescription": "Station:\n<color=green>+15%</color> resource yield" } ],
+			"FlavorText": "It's getting hot in here."
+		},
+		{
+			"CardId": 2032,
+			"TypeOfCard": "Station card",
+			"Name": "Minefield",
+			"EffectDescription": "Increases Missile Batteries' firepower by an additional <color=green>8000</color>.\n\nThis card is not unique, you can equip multiple copies of it to a station.",
+			"Effects": [ { "VersionSmallDescription": "Missile Battery:\n<color=green>+8000</color> firepower" } ],
+			"FlavorText": "Anyone here that's good at minesweeper?"
+		},
+		{
+			"CardId": 2033,
+			"TypeOfCard": "Station card",
+			"Name": "Medical Bay",
+			"EffectDescription": "Increases Fortress' claim radius by <color=green>1</color>. \n\nThis card is not unique, you can equip multiple copies of it to a station.",
+			"Effects": [ { "VersionSmallDescription": "Fortress:\n<color=green>+1</color> claim radius" } ],
+			"FlavorText": "It takes a lot of people to maintain vast borders and they tend to get hurt."
+		},
+		{
+			"CardId": 2034,
+			"TypeOfCard": "Station card",
+			"Name": "Repair Drones",
+			"EffectDescription": "Increases Mining Facilities' radius of influence by <color=green>1</color>.\n \nDecreases Mining Facilities' harvest rate by <color=red>25%</color>.\n\nThis card is not unique, you can equip multiple copies of it to a station.",
+			"Effects": [ { "VersionSmallDescription": "Mining Facility:\n<color=green>+1</color> influence radius\n<color=red>-25%</color> harvest yield" } ],
+			"FlavorText": "Maintaining equipment is key to productivity."
+		},
+		{
+			"CardId": 2036,
+			"TypeOfCard": "Station card",
+			"Name": "APEX Mining Laser",
+			"EffectDescription": "Increases Mining Colony's radius of influence by <color=green>1</color>.\n\nIncreases the Mining Colony's total output of metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\"> for planets and moons by <color=green>5%</color>\n\nThis card is not unique, you can equip multiple copies of it to a station.",
+			"Effects": [ { "VersionSmallDescription": "Mining Colony:\n<color=green>+1</color> influence radius\n<color=green>+5%</color> planet & moon harvest yield" } ],
+			"FlavorText": "\"Holy SMOKES!  Yeah baby!  THAT'S how you mine!\"\n--Willy Gamish, migrant excavator."
+		},
+		{
+			"CardId": 2037,
+			"TypeOfCard": "Station card",
+			"Name": "Surveillance Drones",
+			"EffectDescription": "Increases Scanner's radius of influence by <color=green>1</color>.\n\nThis card is not unique, you can equip multiple copies of it to a station.",
+			"Effects": [ { "VersionSmallDescription": "Scanner:\n<color=green>+1</color> influence radius" } ],
+			"FlavorText": "\"I hate them!  I hate them with a passion.  Inquisitive little buggers.\"\n--Honery Jak, mining cabal envoy."
+		},
+		{
+			"CardId": 2038,
+			"TypeOfCard": "Station card",
+			"Name": "Traffic Control",
+			"EffectDescription": "Increases Stargate's radius of influence by <color=green>1</color>.\n\nThis card is not unique, you can equip multiple copies of it to a station.",
+			"Effects": [ { "VersionSmallDescription": "Stargate:\n<color=green>+1</color> influence radius" } ],
+			"FlavorText": "\"Ma'am!  Come take a look at this!\""
+		},
+		{
+			"CardId": 2039,
+			"TypeOfCard": "Station card",
+			"Name": "Filtration Installation",
+			"EffectDescription": "Increases Habitation Dome's radius of influence by <color=green>1</color>.\n \nThis card is not unique, you can equip multiple copies of it to a station.",
+			"Effects": [ { "VersionSmallDescription": "Habitation Dome:\n<color=green>+1</color> radius" } ],
+			"FlavorText": "\"You could pour bort-piss in there and drink it an hour later!\"\n--MPL salesman."
+		},
+		{
+			"CardId": 2040,
+			"TypeOfCard": "Station card",
+			"Name": "Willy Gamish",
+			"EffectDescription": "Provides an additional <color=green>30</color>  metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\">  to this station's base production per hour.\nBuildings cost <color=green>10%</color> less resources.",
+			"Effects": [
+				{ "VersionSmallDescription": "<color=green>+30</color> metal, gas & crystal" },
+				{ "VersionSmallDescription": "<line-height=50%>\n</line-height>All buildings:\n<color=green>-10%</color> resource cost" }
+			],
+			"FlavorText": "\"You're doing it all wrong, you can't motivate these guys with loot. You have to think of motivation as part of the loot. Like a drink. It is both motivation and reward.\"\n--Willy Gamish, foreman."
+		},
+		{
+			"CardId": 2041,
+			"TypeOfCard": "Station card",
+			"Name": "Councilor Akka",
+			"EffectDescription": "Decreases the time cost for organizations by <color=green>15%</color>.\nDecreases the resource cost for organizations by <color=green>15%</color>.",
+			"Effects": [ { "VersionSmallDescription": "Organizations:\n<color=green>-15%</color> time cost\n<color=green>-15%</color> resource cost" } ],
+			"FlavorText": "\"It pays to watch the grass grow, my child.\"\n--Akka, politician."
+		},
+		{
+			"CardId": 2042,
+			"TypeOfCard": "Station card",
+			"Name": "Natasha Fer",
+			"EffectDescription": "Decreases the time cost for specialization buildings by <color=green>15%</color>.\nIncreases the resource cost for specialization buildings by <color=red>20%</color>.\n\nMilitary, Domain and Industrial buildings are considered Specialization buildings.",
+			"Effects": [ { "VersionSmallDescription": "Specialization buildings:\n<color=red>+20%</color> resource cost\n<color=green>-15%</color> time cost" } ],
+			"FlavorText": "\"Safety regulations are not scurrilous Sam Darby, they're the lynchpin of a modern state!\"\n--Natasha Fer, union representative."
+		},
+		{
+			"CardId": 2043,
+			"TypeOfCard": "Station card",
+			"Name": "Automaton Workers",
+			"EffectDescription": "Provides an additional <color=green>100</color> labor to this station.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+100</color> labor" } ],
+			"FlavorText": "Menial labor for menial jobs."
+		},
+		{
+			"CardId": 2044,
+			"TypeOfCard": "Station card",
+			"Name": "Robot Workers",
+			"EffectDescription": "Provides an additional <color=green>200</color> labor to this station.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+200</color> labor" } ],
+			"FlavorText": "Built to dominate, programmed to serve."
+		},
+		{
+			"CardId": 2045,
+			"TypeOfCard": "Station card",
+			"Name": "Cyborg Workers",
+			"EffectDescription": "Provides an additional <color=green>300</color> labor to this station.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+300</color> labor" } ],
+			"FlavorText": "\"I don't understand why they couldn't just wear exo suits.\"\n--Natasha Fer, union representative."
+		},
+		{
+			"CardId": 2046,
+			"TypeOfCard": "Station card",
+			"Name": "Mumei Nakamura",
+			"EffectDescription": "<color=green>[ Light | heavy | capital ]</color> ships operating from this station gain <color=green>[ 3 | 15 | 75 ]</color> firepower and <color=green>[ 7.5 | 37.5 | 187.5 ]</color> hit points.",
+			"Effects": [ { "VersionSmallDescription": "<line-height=50%>\n</line-height>Operating fleets:\n<color=green>+3 | +15 | +75</color> firepower\n<color=green>+7.5 | +37.5 | +187.5</color> HP\n" } ],
+			"FlavorText": "At first I fought to avenge my brethren. Now I fight for their memories.\n--Warlord Mumei Nakamura."
+		},
+		{
+			"CardId": 2047,
+			"TypeOfCard": "Station card",
+			"Name": "Samuel Darby",
+			"EffectDescription": "Provides an additional <color=green>300</color> metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\">   to this station's base production per hour.\n\nAdds <color=green>20</color> freighters to your empire freighter pool.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+300</color> metal, gas & crystal\n<color=green>+20</color> freighters" } ],
+			"FlavorText": "\"Even when measured in enemies, I deem greed a virtue.\"\n--Samuel Darby, Lord of Serfs."
+		},
+		{
+			"CardId": 2048,
+			"TypeOfCard": "Station card",
+			"Name": "Jade Lotus",
+			"EffectDescription": "Increases your empire's covert operative maximum by <color=green>2</color>.\n\nYour fleets operating from this station gain <color=green>4</color> speed.",
+			"Effects": [
+				{ "VersionSmallDescription": "Empire:\n<color=green>+2</color> spies" },
+				{ "VersionSmallDescription": "<line-height=50%>\n</line-height>Operating fleets:\n<color=green>+4</color> speed" }
+			],
+			"FlavorText": "\"Some say I'm a Pawn, but one day they will see me for the Queen I am.\"\n--Jade Lotus, cyborg fugitive."
+		},
+		{
+			"CardId": 2049,
+			"TypeOfCard": "Station card",
+			"Name": "Felix Morrell",
+			"EffectDescription": "[ Gunships | Dreadnoughts ] supplied by this station gain <color=green>[ 10 | 50 ]</color> station bombing.",
+			"Effects": [
+				{ "VersionSmallDescription": "Gunships:\n<color=green>+10</color> bombing" },
+				{ "VersionSmallDescription": "<line-height=50%>\n</line-height>Dreadnoughts:\n<color=green>+50</color> bombing" }
+			],
+			"FlavorText": "\"Fire you sunuvabitches!!\"\n--Felix Morrell, Master Gunner."
+		},
+		{
+			"CardId": 2050,
+			"TypeOfCard": "Station card",
+			"Name": "Zeno",
+			"EffectDescription": "Provides <color=green>400</color> labor to the station.\nIncreases the labor stream capacity of the station by <color=green>400</color>.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+400</color> labor\n<color=green>+400</color> labor stream" } ],
+			"FlavorText": "There have been seven AI-created humans. The most beloved of them is Zeno the Vigilant, champion of the people."
+		},
+		{
+			"CardId": 2051,
+			"TypeOfCard": "Station card",
+			"Name": "Wither Crux",
+			"EffectDescription": "Provides an additional <color=green>300</color>  metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\"> to this station's base production per hour.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+300</color> metal, gas & crystal" } ],
+			"FlavorText": "We felt ourselves grow smaller as the world grew bigger."
+		},
+		{
+			"CardId": 2052,
+			"TypeOfCard": "Station card",
+			"Name": "Purity Crux",
+			"EffectDescription": "Provides an additional <color=green>600</color>  metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\"> to this station's base production per hour.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+600</color> metal, gas & crystal" } ],
+			"FlavorText": "There can be value in the slag."
+		},
+		{
+			"CardId": 2053,
+			"TypeOfCard": "Station card",
+			"Name": "Crescent Crux",
+			"EffectDescription": "Provides an additional <color=green>1000</color>  metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\"> to this station's base production per hour.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+1000</color> metal, gas & crystal" } ],
+			"FlavorText": "I only remember bits and pieces from that day, it went by like a blur."
+		},
+		{
+			"CardId": 2054,
+			"TypeOfCard": "Station card",
+			"Name": "Spinal Crux",
+			"EffectDescription": "Adds an additional <color=green>100%</color> of this station's base production to it's output per hour.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+100%</color> metal, gas & crystal" } ],
+			"FlavorText": "\"Call it what you want, no overtime!\"\n--Samuel Darby, Lord of Serfs."
+		},
+		{
+			"CardId": 2055,
+			"TypeOfCard": "Station card",
+			"Name": "Scorch Pulse",
+			"EffectDescription": "Decreases the time to build corvettes by <color=green>10%</color>.",
+			"Effects": [ { "VersionSmallDescription": "Corvettes:\n<color=green>-10%</color> time cost" } ],
+			"FlavorText": "Channel your rage."
+		},
+		{
+			"CardId": 2056,
+			"TypeOfCard": "Station card",
+			"Name": "Binary Helix",
+			"EffectDescription": "Decreases the time to build patrol ships by <color=green>10%</color>.",
+			"Effects": [ { "VersionSmallDescription": "Patrol Ships:\n<color=green>-10%</color> time cost" } ],
+			"FlavorText": "Focus, concentrate, react."
+		},
+		{
+			"CardId": 2057,
+			"TypeOfCard": "Station card",
+			"Name": "Sonorous",
+			"EffectDescription": "Decreases the time to build scouts by <color=green>10%</color>.",
+			"Effects": [ { "VersionSmallDescription": "Scouts:\n<color=green>-10%</color> time cost" } ],
+			"FlavorText": "Know the path but travel beside it."
+		},
+		{
+			"CardId": 2058,
+			"TypeOfCard": "Station card",
+			"Name": "Arc veil",
+			"EffectDescription": "Decreases the time to build industrials by <color=green>20%</color>.",
+			"Effects": [ { "VersionSmallDescription": "Industrials:\n<color=green>-20%</color> time cost" } ],
+			"FlavorText": "Nations emerge by industry."
+		},
+		{
+			"CardId": 2059,
+			"TypeOfCard": "Station card",
+			"Name": "Rivet Potential",
+			"EffectDescription": "Decreases the resource cost to build heavy ships by <color=green>15%</color>.",
+			"Effects": [ { "VersionSmallDescription": "Heavy Ships:\n<color=green>-15%</color> resource cost" } ],
+			"FlavorText": "Experimentation is the key to progress."
+		},
+		{
+			"CardId": 2060,
+			"TypeOfCard": "Station card",
+			"Name": "Astral Confluence",
+			"EffectDescription": "Decreases the resource to build capital ships by <color=green>15%</color>.",
+			"Effects": [ { "VersionSmallDescription": "Capital Ships:\n<color=green>-15%</color> resource cost" } ],
+			"FlavorText": "The briefest glimpse of the universe before it began."
+		},
+		{
+			"CardId": 2061,
+			"TypeOfCard": "Station card",
+			"Name": "Empower",
+			"EffectDescription": "Increases this station's labor by an additional <color=green>25%</color>.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+25%</color> labor" } ],
+			"FlavorText": "\"We knew everything. We could do anything. We were gods.\"\n--Anarch Anastasia."
+		},
+		{
+			"CardId": 2062,
+			"TypeOfCard": "Station card",
+			"Name": "Minutiae",
+			"EffectDescription": "Increases this station's build queue length by an additional <color=green>8</color> hours.\nDecreases the resource cost for specialization buildings by <color=green>10%</color>.\nDecreases the build time for specialization buildings by <color=green>10%</color>.\n\nMilitary, Domain and Industrial buildings are considered Specialization buildings.",
+			"Effects": [
+				{ "VersionSmallDescription": "Construction Queue:\n<color=green>+8</color> hours" },
+				{ "VersionSmallDescription": "<line-height=50%>\n</line-height>Specialization buildings:\n<color=green>-10%</color> resource cost\n<color=green>-10%</color> time cost" }
+			],
+			"FlavorText": "\"Whoo-ee! A gods-damned MINUTIAE! I-I'm so filthy rich!!\"\n--Willy Gamish, prospector."
+		},
+		{
+			"CardId": 2063,
+			"TypeOfCard": "Station card",
+			"Name": "Viridian Laden Rune",
+			"EffectDescription": "Add <color=green>4</color> freighters to your empire freighter pool.",
+			"Effects": [ { "VersionSmallDescription": "Empire:\n<color=green>+4</color> freighters" } ]
+		},
+		{
+			"CardId": 2064,
+			"TypeOfCard": "Station card",
+			"Name": "Crimson Laden Rune",
+			"EffectDescription": "Add <color=green>8</color> freighters to your empire freighter pool.",
+			"Effects": [ { "VersionSmallDescription": "Empire:\n<color=green>+8</color> freighters" } ]
+		},
+		{
+			"CardId": 2065,
+			"TypeOfCard": "Station card",
+			"Name": "Cobalt Laden Rune",
+			"EffectDescription": "Add <color=green>12</color> freighters to your empire freighter pool.",
+			"Effects": [ { "VersionSmallDescription": "Empire:\n<color=green>+12</color> freighters" } ]
+		},
+		{
+			"CardId": 2066,
+			"TypeOfCard": "Station card",
+			"Name": "Chronomatic Trifle",
+			"EffectDescription": "Increases the station's building queue length by an additional <color=green>30</color> minutes.",
+			"Effects": [ { "VersionSmallDescription": "Construction Queue:\n<color=green>+30</color> minutes" } ],
+			"FlavorText": "Fast forward in real-life."
+		},
+		{
+			"CardId": 2067,
+			"TypeOfCard": "Station card",
+			"Name": "Sovereign Power",
+			"EffectDescription": "Increases the station's claim strength by <color=green>50</color>.",
+			"Effects": [ { "VersionSmallDescription": "Construction Queue:\n<color=green>+50</color> minutes" } ]
+		},
+		{
+			"CardId": 2068,
+			"TypeOfCard": "Station card",
+			"Name": "Armed Garrison",
+			"EffectDescription": "Increases Missile Batteries' radius of influence by <color=green>1</color>.  \n\nThis card is not unique, you can equip multiple copies of it to a station.",
+			"Effects": [ { "VersionSmallDescription": "Missile Battery:\n<color=green>+1</color> influence radius" } ],
+			"FlavorText": "\"A non-aggression pact is most useful to he who makes most instances of it.  It's a raw deal for the rest.\"\n--George 'Rocket' O'Doyle."
+		},
+		{
+			"CardId": 2069,
+			"TypeOfCard": "Station card",
+			"Name": "Ammunition Bay",
+			"EffectDescription": "Increases Fortress' claim radius by <color=green>1</color>.\n\nIncreases this stations' harvest rate by an additional <color=green>10%</color>.\n\nThis card is not unique, you can equip multiple copies of it to a station.",
+			"Effects": [ { "VersionSmallDescription": "Fortress:\n<color=green>+1</color> claim radius\n<color=green>+10%</color> station harvest" } ],
+			"FlavorText": "\"Such a waste of time, why not just use cyborgs?\"\n--Gwayn Erebus, Child of Mars.\n"
+		},
+		{
+			"CardId": 2070,
+			"TypeOfCard": "Station card",
+			"Name": "Surveillance Drone Bay",
+			"EffectDescription": "Increases Scanner's radius of influence by <color=green>2</color>.\n\nThis card is not unique, you can equip multiple copies of it to a station.",
+			"Effects": [ { "VersionSmallDescription": "Scanner:\n<color=green>+2</color> influence radius" } ],
+			"FlavorText": "\"I want complete suveillance of our borders!\"\n--Mal Estrade, Child of Mars."
+		},
+		{
+			"CardId": 2071,
+			"TypeOfCard": "Station card",
+			"Name": "Traffic Control Tower",
+			"EffectDescription": "Increases Stargate's radius of influence by <color=green>2</color>.\n\nThis card is not unique, you can equip multiple copies of it to a station.",
+			"Effects": [ { "VersionSmallDescription": "Stargate:\n<color=green>+2</color> influence radius" } ],
+			"FlavorText": "\"Echo-Niner, you are clear to take off, have a safe trip!\""
+		},
+		{
+			"CardId": 2072,
+			"TypeOfCard": "Station card",
+			"Name": "Mining Cabal",
+			"EffectDescription": "Mining Facilities' harvest yield increased by <color=green>75%</color>.\n\nThis card is not unique, you can equip multiple copies of it to a station.",
+			"Effects": [ { "VersionSmallDescription": "Mining Facilities:\n<color=green>+75%</color> harvest yield" } ],
+			"FlavorText": "Their re-education program makes sure that the most current best practices are always in use."
+		},
+		{
+			"CardId": 2076,
+			"TypeOfCard": "Station card",
+			"Name": "CarboCubicles",
+			"EffectDescription": "Increases the Habitation Dome's harvest rate by an additional <color=green>100%</color>.\n\nThis card is not unique, you can equip multiple copies of it to a station.",
+			"Effects": [ { "VersionSmallDescription": "Habitation Dome:\n<color=green>+100%</color> harvest yield" } ],
+			"FlavorText": "Productivity-per-square-meter is the latest fad in management."
+		},
+		{
+			"CardId": 2077,
+			"TypeOfCard": "Station card",
+			"Name": "Packaging Line",
+			"EffectDescription": "Increases the Trading Port's harvest rate by an additional <color=green>50%</color>. \n\nThis card is not unique, you can equip multiple copies of it to a station.",
+			"Effects": [ { "VersionSmallDescription": "Trading Port:\n<color=green>+50%</color> harvest." } ],
+			"FlavorText": "The entire department responsible for its installation was fired little after someone pointed out that freighting containers were hexagonal."
+		},
+		{
+			"CardId": 2078,
+			"TypeOfCard": "Station card",
+			"Name": "Magnetic Containers",
+			"EffectDescription": "Increases the Trading Port's harvest rate by an additional <color=green>75%</color>.\n\nThis card is not unique, you can equip multiple copies of it to a station.",
+			"Effects": [ { "VersionSmallDescription": "Trading Port:\n<color=green>+75%</color> harvest." } ],
+			"FlavorText": "\"Requires magnetic freighting containers to attach and as luck would have it, they're on sale!\"\n--MPL Salesman."
+		},
+		{
+			"CardId": 2079,
+			"TypeOfCard": "Station card",
+			"Name": "Resource Silos",
+			"EffectDescription": "Increases Mining Colony's radius of influence by <color=green>1</color>.\n\nDecreases the Mining Colony's total harvest rate for planets and moons by <color=red>-5%</color>.\n\nThis card is not unique, you can equip multiple copies of it to a station.",
+			"Effects": [ { "VersionSmallDescription": "Mining Colony:\n<color=green>+1</color> influence radius\n<color=red>-5%</color> planet & moon\nharvest yield" } ],
+			"FlavorText": "Approaching the colony, their gleaming tops are the first thing everyone notices."
+		},
+		{
+			"CardId": 2080,
+			"TypeOfCard": "Station card",
+			"Name": "Mal Estrade",
+			"EffectDescription": "Your industrials fleets harvesting solar flares from this station gain <color=green>20%</color> Plasma cargo.\n\nYour industrial fleets harvesting solar flares from this station gain <color=green>3</color> speed.",
+			"Effects": [ { "VersionSmallDescription": "Flare harvesting:\n<color=green>+20%</color> plasma cargo\n<color=green>+3</color> speed" } ],
+			"FlavorText": "\"We need more plasma.  Use the subjects or go yourself, the choice is yours.\"\n--Mal Estrade, Child of Mars."
+		},
+		{
+			"CardId": 2081,
+			"TypeOfCard": "Station card",
+			"Name": "Rocket O'Doyle",
+			"EffectDescription": "Your fleets raiding from this station gain <color=green>20%</color> Plunder.\n\nYour fleets raiding from this station gain <color=green>1</color> speed.\n\n[ Light | Heavy ] fleets raiding from this station gain <color=green>[ 5 | 25 ]</color> cargo.",
+			"Effects": [ { "VersionSmallDescription": "Raiding:\n<color=green>+20%</color> plunder\n<color=green>+1</color> speed\n<color=green>+5 | +25</color> cargo" } ],
+			"FlavorText": "\"Where the hell is Rykov!?  By the gods I shall have his hide!\"\nCommander George 'Rocket' O'Doyle."
+		},
+		{
+			"CardId": 2082,
+			"TypeOfCard": "Station card",
+			"Name": "Gwayn Erebus",
+			"EffectDescription": "Your fleets running missions from this station gain <color=green>2</color> speed.\n\nMission requirements for this station reduced by <color=green>15%</color>.\n\nMission escort requirement for this station reduced by <color=green>1</color>.",
+			"Effects": [ { "VersionSmallDescription": "Missions:\n<color=green>+2</color> speed\n<color=green>-15%</color> requirements\n<color=green>+1</color> escort" } ],
+			"FlavorText": "\"We are sovereign, this transgression demands blood and I shall have it.\"\n--Gwayn Erebus, Child of Mars."
+		},
+		{
+			"CardId": 2083,
+			"TypeOfCard": "Station card",
+			"Name": "Military Logistics",
+			"EffectDescription": "Add <color=green>20</color> freighters to your empire freighter pool.\n\nFreighters departing from this station gain <color=green>30%</color> cargo space.\n\nUnique: You can only equip one of this card to a station, it is considered unique.",
+			"Effects": [ { "VersionSmallDescription": "Empire:\n<color=green>+20</color> freighters\nStation:\n<color=green>+30%</color> freighter cargo" } ],
+			"FlavorText": "\"You are under military law Mr. Darby.  Deliver the requisited freighters and personnel or you will have far greater worries than profit!\"\n--Admiral Saul Tanee."
+		},
+		{
+			"CardId": 2084,
+			"TypeOfCard": "Station card",
+			"Name": "Galactic Bauble",
+			"EffectDescription": "Increases the resource capacity of the station by an additional <color=green>50000</color>.",
+			"Effects": [ { "VersionSmallDescription": "Station:\n<color=green>+50000</color> resource capacity" } ],
+			"FlavorText": "Stable enough for temporary storage use."
+		},
+		{
+			"CardId": 2085,
+			"TypeOfCard": "Station card",
+			"Name": "Cosmic Bauble",
+			"EffectDescription": "Increases the resource capacity of the station by an additional <color=green>150000</color>.",
+			"Effects": [ { "VersionSmallDescription": "Station:\n<color=green>+150000</color> resource capacity" } ],
+			"FlavorText": "Like the inside pocket of a galactic coat."
+		},
+		{
+			"CardId": 2086,
+			"TypeOfCard": "Station card",
+			"Name": "Craft Offices",
+			"EffectDescription": "Increases the radius of influence of Logistics Hubs by <color=green>1</color>.\n\nUnique: You can only equip one of this card to a station, it is considered unique.",
+			"Effects": [ { "VersionSmallDescription": "Logistics Hub:\n<color=green>+1</color> influence radius" } ]
+		},
+		{
+			"CardId": 2087,
+			"TypeOfCard": "Station card",
+			"Name": "Naval Offices",
+			"EffectDescription": "Increases the radius of influence of Logistics Hubs by <color=green>1</color>.\n\nIncreases the stealth of Logistics Hubs by <color=green>300</color>.\n\nUnique: You can only equip one of this card to a station, it is considered unique.",
+			"Effects": [ { "VersionSmallDescription": "Logistics Hub:\n<color=green>+1</color> influence radius\n<color=green>+300</color> stealth" } ]
+		},
+		{
+			"CardId": 2089,
+			"TypeOfCard": "Station card",
+			"Name": "Big Bill Chattle",
+			"EffectDescription": "Provides an additional <color=green>200</color> metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\"> for this station per hour.\nDecreases the resource cost of specialization buildings by <color=green>5%</color>.\nDecreases the resource cost of organizations by <color=green>5%</color>.",
+			"Effects": [
+				{ "VersionSmallDescription": "<color=green>+200</color> metal, gas & crystal" },
+				{ "VersionSmallDescription": "<line-height=50%>\n</line-height>Spec. buildings & orgs:\n<color=green>-5%</color> resource cost" }
+			],
+			"FlavorText": "The agents would never admit it, but the teenager made them more nervous than the missive they had brought Bill. Why was she even there? \nThe hulk in front of them finished their master's message and turned to his daughter.\n\"Rosemary, lock the doors dear, so we're not disturbed while I ... formulate a reply.\"\nRosemary smiled. Bill smiled.  The agents certainly did not."
+		},
+		{
+			"CardId": 2090,
+			"TypeOfCard": "Station card",
+			"Name": "Willard S. Gamish",
+			"EffectDescription": "Provides an additional <color=green>45</color> metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\"> for this station per hour.\nDecreases the buildings cost for all buildings by <color=green>10%</color>.\nGenerates 10 credits per hour.\n\nOnly attainable via the starter pack.",
+			"Effects": [
+				{ "VersionSmallDescription": "<color=green>+45</color> metal, gas & crystal" },
+				{ "VersionSmallDescription": "<line-height=50%>\n</line-height>All buildings:\n<color=green>-10%</color> resource cost" },
+				{ "VersionSmallDescription": "<line-height=50%>\n<color=green>10</color> credits/hour</line-height>" }
+			],
+			"FlavorText": "\"THAT's your middle name!?\" Natasha burst out laughing. \"Wait 'til the guys hear about this!\"\nShe found herself unexpectedly and quite intimately face to face with the old man. There was no humor in him.\n\"Before you wager your popularity on gossip Miss Fer, I urge you to pause and consider the possible ill-effects such blabberin' might have for your person.\"\nAnd she did."
+		},
+		{
+			"CardId": 2091,
+			"TypeOfCard": "Station card",
+			"Name": "William Chattle",
+			"EffectDescription": "Provides an additional <color=green>300</color> metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\"> for this station per hour.\nDecreases the resource cost of specialization buildings by <color=green>5%</color>.\nDecreases the resource cost of organizations by <color=green>5%</color>.\nGenerates 10 credits per hour.\n\nMilitary, Domain and Industrial buildings are considered Specialization buildings.\n\nOnly attainable via the starter pack.",
+			"Effects": [
+				{ "VersionSmallDescription": "<color=green>+300</color> metal, gas & crystal" },
+				{ "VersionSmallDescription": "<line-height=50%>\n</line-height>Spec. buildings & orgs:\n<color=green>-5%</color> resource cost" },
+				{ "VersionSmallDescription": "<line-height=50%>\n<color=green>10</color> credits/hour</line-height>" }
+			],
+			"FlavorText": "\"If I kill a hundred people on a far away planet, none here would care. But if I kill one on their doorstep it's suddenly very traumatic. Don't let people's hypocrisy limit you, my sweet. Rise above.\"\n--Bill Chattle to his daughter Rosemary when she was 10."
+		}
+	],
+	"OtherCards": [
+		{
+			"CardId": 9005,
+			"Name": "Resource Compartment",
+			"EffectDescription": "Increases the resource capacity of your station by <color=green>12000</color>.\n\nThis card is attached in the Station Building Planner (B).",
+			"FlavorText": "A bit of extra storage never hurts.",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+12000</color> resource capacity" } ]
+		},
+		{
+			"CardId": 9008,
+			"Name": "Build Queue Extension",
+			"EffectDescription": "Extends the building construction queue by <color=green>2</color> hours.\n\nThis card is attached in the Station Building Planner (B).",
+			"FlavorText": "\"An employee is eligible for overtime pay provided they have worked in excess of 2680 hours in the same year.\" - Article 29, ESA Labor Regulations",
+			"Effects": [ { "VersionSmallDescription": "Construction Queue:\n<color=green>+2</color> hours" } ]
+		},
+		{
+			"CardId": 9009,
+			"Name": "Ship Queue Extension",
+			"EffectDescription": "Extends the ship production queue of a station by <color=green>6</color> hours.\n\nThis card is attached in the Station Building Planner (B).",
+			"FlavorText": "Your order has been confirmed, and will be delivered within the next 5 years.",
+			"Effects": [ { "VersionSmallDescription": "Shipyard Queue:\n<color=green>+6</color> hours" } ]
+		},
+		{
+			"CardId": 9116,
+			"Name": "Sleep Containers",
+			"EffectDescription": "Provides <color=green>150</color> Labor.\n\nEarned when you completely wipe all defenders from any of the Marauder Settlement and Marauder Home NPC station for the first time using a raid movement.\n\nThis card is attached in the Station Building Planner (B).",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+150</color> labor" } ]
+		},
+		{
+			"CardId": 9010,
+			"Name": "Waste Processing",
+			"EffectDescription": "Provides <color=green>100</color> metal  <sprite=\"ResIcons\" name=\"Metal\">, gas  <sprite=\"ResIcons\" name=\"Gas\">and crystal   <sprite=\"ResIcons\" name=\"Crystal\"> per hour to the station.\n\nEarned when you completely wipe all defenders from any of the Marauder Camp and Marauder Settlement NPC station for the first time using a raid movement.\n\nThis card is attached in the Station Building Planner (B).",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+100</color> metal, gas & crystal" } ]
+		},
+		{
+			"CardId": 9011,
+			"Name": "Construction Plans",
+			"EffectDescription": "Reduces time cost of production and specialization buildings by <color=green>5%</color>.",
+			"Effects": [ { "VersionSmallDescription": "Buildings:\n<color=green>-5%</color> time cost" } ]
+		},
+		{
+			"CardId": 9012,
+			"Name": "Disarmed Garrison",
+			"EffectDescription": "Increases capture defense regeneration by <color=green>1</color>.\n\nThis card is attached in the Station Building Planner (B).",
+			"FlavorText": "\"Remember when we fired at ships before they landed? Those were the days.\"",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+1</color> capture defense regeneration" } ]
+		},
+		{
+			"CardId": 9013,
+			"Name": "Space Marines",
+			"EffectDescription": "Increases station capture defense by <color=green>40</color>.\n\nThis card is attached in the Station Building Planner (B).",
+			"FlavorText": "\"If I were to storm this place, I'd storm it from over there.\"",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+40</color> capture defense" } ]
+		},
+		{
+			"CardId": 9014,
+			"Name": "Trade Route",
+			"EffectDescription": "Increases the credit generation of your empire by <color=green>1</color> per hour.\n\nEarned when you completely wipe all defenders from any of the Legion Vanguard, Combine Production Plant, XAOC Slave Camp, MPL Mining Hub and XAOC Fireside NPC stations for the first time using a raid movement.\n\nThis card is attached in the Station Building Planner (B).",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+1</color> credit per hour" } ]
+		},
+		{
+			"CardId": 9015,
+			"Name": "Tianchao Stealth Generator",
+			"EffectDescription": "Fleets departing on scan movements from this station gain <color=green>400</color> stealth.\n\nEarned when you completely wipe all defenders from the Tianchao Hideout NPC station for the first time using a raid movement.\n\nThis card is attached in the Station Building Planner (B).",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+400</color> stealth while scanning" } ]
+		},
+		{
+			"CardId": 9016,
+			"Name": "Fame",
+			"EffectDescription": "Increases the commander's XP per hour by <color=green>5%</color>.\n\nEarned when you completely wipe all defenders from the Atlas Central NPC station for the first time using a raid movement.\n\nThis card is attached in the Station Building Planner (B).",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+5%</color> XP per hour" } ]
+		},
+		{
+			"CardId": 9017,
+			"Name": "Stolen MPL Tech",
+			"EffectDescription": "Increasese the metal  <sprite=\"ResIcons\" name=\"Metal\">, gas  <sprite=\"ResIcons\" name=\"Gas\">and crystal   <sprite=\"ResIcons\" name=\"Crystal\"> output of all your stations by <color=green>3%</color>.\n\nEarned when you completely wipe all defenders from the MPL Production Hub NPC station for the first time using a raid movement.\n\nThis card is attached in the Station Building Planner (B).",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+3%</color> metal, gas and crystal in all stations" } ]
+		},
+		{
+			"CardId": 9018,
+			"Name": "Fervor",
+			"EffectDescription": "Increasese the labor output of all your stations by <color=green>2%</color>.\n\nEarned when you completely wipe all defenders from the Legion Military Base NPC station for the first time using a raid movement.\n\nThis card is attached in the Station Building Planner (B).",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+2%</color> labor in all stations" } ]
+		},
+		{
+			"CardId": 9019,
+			"Name": "Stolen Atlas Tech",
+			"EffectDescription": "Increases the scan strength of the station by <color=green>200</color>.\n\nEarned when you completely wipe all defenders from the Atlas Complex NPC station for the first time using a raid movement.\n\nThis card is attached in the Station Building Planner (B).",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+200</color> station scan strength" } ]
+		},
+		{
+			"CardId": 9020,
+			"Name": "Interstellar Logistic Secrets",
+			"EffectDescription": "Adds <color=green>50</color> freighters to your empire.\n\nEarned when you completely wipe all defenders from the Ancient Combine Installation NPC station for the first time using a raid movement.\n\nThis card is attached in the Station Building Planner (B).",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+50</color> freighters" } ]
+		},
+		{
+			"CardId": 9021,
+			"Name": "Unification",
+			"EffectDescription": "Increasese the labor output of all your stations by <color=green>5%</color>.\n\nEarned when you completely wipe all defenders from the Tianchao Court NPC station for the first time using a raid movement.\n\nThis card is attached in the Station Building Planner (B).",
+			"Effects": [ { "VersionSmallDescription": "<color=green>+5%</color> labor in all stations" } ]
+		},
+		{
+			"CardId": 5001,
+			"Name": "Steel Slab",
+			"EffectDescription": "Commodities are required to build and level outposts.\n\nEach level of all outposts requires one Steel Slab to build.",
+			"FlavorText": "You've got to spend resources to make resources.",
+			"Effects": [ { "VersionSmallDescription": "Required to build and level outposts" } ]
+		},
+		{
+			"CardId": 5002,
+			"Name": "Carbon Plate",
+			"EffectDescription": "Commodities are required to build and level outposts.\n\nEach level of the Fortress, Stargate, Habitation Dome, Mining Colony, Heavy Ship Assembly and Capital Ship assembly requires one Carbon Plate.",
+			"FlavorText": "The root of all evil is the lack of resources.",
+			"Effects": [ { "VersionSmallDescription": "Required to build and level outposts" } ]
+		},
+		{
+			"CardId": 5003,
+			"Name": "Titanium Block",
+			"EffectDescription": "Commodities are required to build and level outposts.\n\nEach level of the Habitation Dome, Mining Colony, Heavy Ship Assembly and Capital Ship assembly requires one Titanium Block.",
+			"FlavorText": "Resources rotate the galaxy.",
+			"Effects": [ { "VersionSmallDescription": "Required to build and level outposts" } ]
+		},
+		{
+			"CardId": 5004,
+			"Name": "Diamond Nanorod",
+			"EffectDescription": "Commodities are required to build and level outposts.\n\nAll outposts require a Diamond Nanorod to build level 4 and  level 5.",
+			"FlavorText": "A fool and his resources are soon parted.",
+			"Effects": [ { "VersionSmallDescription": "Required to build and level outposts" } ]
+		},
+		{
+			"CardId": 7000,
+			"Name": "Local Broker",
+			"EffectDescription": "Brokers allow you to exchange an amount of resources (metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\">) at a <color=green>1:1</color> ratio.\nLocal Broker can exchange up to <color=green>1000</color> resources.",
+			"FlavorText": "You scratch my back, I scratch yours.",
+			"Effects": [ { "VersionSmallDescription": "Exchange up to <color=green>1000</color> resources at a 1:1 ratio" } ]
+		},
+		{
+			"CardId": 7001,
+			"Name": "Continental Broker",
+			"EffectDescription": "Brokers allow you to exchange an amount of resources (metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\">) at a <color=green>1:1</color> ratio.\nContinental Broker can exchange up to <color=green>5000</color> resources.",
+			"FlavorText": "I'm not supposed to be here, but I like to follow the money.",
+			"Effects": [ { "VersionSmallDescription": "Exchange up to <color=green>5000</color> resources at a 1:1 ratio" } ]
+		},
+		{
+			"CardId": 7002,
+			"Name": "Planetary Broker",
+			"EffectDescription": "Brokers allow you to exchange an amount of resources (metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\">) at a <color=green>1:1</color> ratio.\nPlanetary Broker can exchange up to <color=green>20000</color> resources.",
+			"FlavorText": "Make this quick, I've got places to go, people to meet.",
+			"Effects": [ { "VersionSmallDescription": "Exchange up to <color=green>20000</color> resources at a 1:1 ratio" } ]
+		},
+		{
+			"CardId": 7003,
+			"Name": "Stellar Broker",
+			"EffectDescription": "Brokers allow you to exchange an amount of resources (metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\">) at a <color=green>1:1</color> ratio.\nStellar Broker can exchange up to <color=green>50000</color> resources.",
+			"FlavorText": "The MPL Charter [hereafter 'Charter'] is between the Martian Prosper League [hereafter 'Exchangor'] and the station owner [hereafter 'Exchangee'].",
+			"Effects": [ { "VersionSmallDescription": "Exchange up to <color=green>50000</color> resources at a 1:1 ratio" } ]
+		},
+		{
+			"CardId": 7004,
+			"Name": "Galactic Broker",
+			"EffectDescription": "Brokers allow you to exchange an amount of resources (metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\">) at a <color=green>1:1</color> ratio.\nGalactic Broker can exchange up to <color=green>100000</color> resources.",
+			"FlavorText": "He only deals in the Big League.",
+			"Effects": [ { "VersionSmallDescription": "Exchange up to <color=green>100000</color> resources at a 1:1 ratio" } ]
+		},
+		{
+			"CardId": 8005,
+			"Name": "Build-R (5m)",
+			"EffectDescription": "Build-R cards are used to reduce the time cost of the building currently being constructed in a station.  \nClick the card icon on a building under construction to apply a Build-R card to it.\n\nBuild-R (5m) reduces time cost by <color=green>5</color> minutes.",
+			"FlavorText": "Basic input/output operations, but not much beyond that.",
+			"Effects": [ { "VersionSmallDescription": "Reduces building time cost by <color=green>5</color> minutes" } ]
+		},
+		{
+			"CardId": 8006,
+			"Name": "Build-R (15m)",
+			"EffectDescription": "Build-R cards are used to reduce the time cost of the building currently being constructed in a station.  \nClick the card icon on a building under construction to apply a Build-R card to it.\n\nBuild-R (15m) reduces time cost by <color=green>15</color> minutes.",
+			"Effects": [ { "VersionSmallDescription": "Reduces building time cost by <color=green>15</color> minutes" } ]
+		},
+		{
+			"CardId": 8000,
+			"Name": "Build-R (30m)",
+			"EffectDescription": "Build-R cards are used to reduce the time cost of the building currently being constructed in a station.  \nClick the card icon on a building under construction to apply a Build-R card to it.\n\nBuild-R (30m) reduces time cost by <color=green>30</color> minutes.",
+			"FlavorText": "A quick analysis to find a few shortcuts.",
+			"Effects": [ { "VersionSmallDescription": "Reduces building time cost by <color=green>30</color> minutes" } ]
+		},
+		{
+			"CardId": 8001,
+			"Name": "Build-R (60m)",
+			"EffectDescription": "Build-R cards are used to reduce the time cost of the building currently being constructed in a station.  \nClick the card icon on a building under construction to apply a Build-R card to it.\n\nBuild-R (60m) reduces time cost by <color=green>60</color> minutes.",
+			"FlavorText": "Deep analysis that leads to some low-hanging fruits.",
+			"Effects": [ { "VersionSmallDescription": "Reduces building time cost by <color=green>60</color> minutes" } ]
+		},
+		{
+			"CardId": 8002,
+			"Name": "Build-R (120m)",
+			"EffectDescription": "Build-R cards are used to reduce the time cost of the building currently being constructed in a station.  \nClick the card icon on a building under construction to apply a Build-R card to it.\n\nBuild-R (120m) reduces time cost by <color=green>120</color> minutes.",
+			"FlavorText": "Full system integration speeds up the process.",
+			"Effects": [ { "VersionSmallDescription": "Reduces building time cost by <color=green>120</color> minutes" } ]
+		},
+		{
+			"CardId": 8003,
+			"Name": "Build-R (240m)",
+			"EffectDescription": "Build-R cards are used to reduce the time cost of the building currently being constructed in a station.  \nClick the card icon on a building under construction to apply a Build-R card to it.\n\nBuild-R (240m) reduces time cost by <color=green>240</color> minutes.",
+			"FlavorText": "Cast a wide net to discover the tiniest imperfections, then do it again and again until the tiny combines into huge.",
+			"Effects": [ { "VersionSmallDescription": "Reduces building time cost by <color=green>240</color> minutes" } ]
+		},
+		{
+			"CardId": 8004,
+			"Name": "Build-R (480m)",
+			"EffectDescription": "Build-R cards are used to reduce the time cost of the building currently being constructed in a station.  \nClick the card icon on a building under construction to apply a Build-R card to it.\n\nBuild-R (480m) reduces time cost by <color=green>480</color> minutes.",
+			"FlavorText": "The computational power of billion minds can work wonders.",
+			"Effects": [ { "VersionSmallDescription": "Reduces building time cost by <color=green>480</color> minutes" } ]
+		},
+		{
+			"CardId": 8007,
+			"Name": "Build-R (1m)",
+			"EffectDescription": "Build-R cards are used to reduce the time cost of the building currently being constructed in a station.  \nClick the card icon on a building under construction to apply a Build-R card to it.\n\nBuild-R (1m) reduces time cost by <color=green>1</color> minute.",
+			"FlavorText": "Minutes saved today will save hours tomorrow.",
+			"Effects": [ { "VersionSmallDescription": "Reduces building time cost by <color=green>1</color> minutes" } ]
+		},
+		{
+			"CardId": 8008,
+			"Name": "Build-R (1440m)",
+			"EffectDescription": "Build-R cards are used to reduce the time cost of the building currently being constructed in a station.  \nClick the card icon on a building under construction to apply a Build-R card to it.\n\nBuild-R (1440m) reduces time cost by <color=green>1440</color> minutes.",
+			"Effects": [ { "VersionSmallDescription": "Reduces building time cost by <color=green>1440</color> minutes" } ]
+		},
+		{
+			"CardId": 8500,
+			"Name": "Command",
+			"EffectDescription": "Used to pay for various respec and refactoring functions, like refunding your policy points, recycling challenges and improving the credits earned when breaking down cards.",
+			"FlavorText": "Let's try something different.",
+			"Effects": [ { "VersionSmallDescription": "Command can be used for various respec and refactoring functions" } ]
+		},
+		{
+			"CardId": 8506,
+			"Name": "Salvage Team",
+			"EffectDescription": "Salvages an Outpost regardless of level and refunds all commodity cards used to build and upgrade it.",
+			"FlavorText": "Let nothing go to waste.",
+			"Effects": [ { "VersionSmallDescription": "Refunds commodity cards when recycling outpost" } ]
+		},
+		{
+			"CardId": 8600,
+			"Name": "Research Grant (1h)",
+			"EffectDescription": "Reduces the research time of a policy upgrade by <color=green>1</color> hours.",
+			"FlavorText": "Skip the fine print, nobody reads it anyways.",
+			"Effects": [ { "VersionSmallDescription": "Reduces policy research time by <color=green>1</color> hours" } ]
+		},
+		{
+			"CardId": 8601,
+			"Name": "Research Grant (3h)",
+			"EffectDescription": "Reduces the research time of a policy upgrade by <color=green>3</color> hours.",
+			"FlavorText": "Copy this paragraph from the previous deal.",
+			"Effects": [ { "VersionSmallDescription": "Reduces policy research time by <color=green>3</color> hours" } ]
+		},
+		{
+			"CardId": 8602,
+			"Name": "Research Grant (8h)",
+			"EffectDescription": "Reduces the research time of a policy upgrade by <color=green>8</color> hours.",
+			"FlavorText": "Oh look! It's a free New Frontier Policy Generator!",
+			"Effects": [ { "VersionSmallDescription": "Reduces policy research time by <color=green>8</color> hours" } ]
+		},
+		{
+			"CardId": 8603,
+			"Name": "Research Grant (24h)",
+			"EffectDescription": "Reduces the research time of a policy upgrade by <color=green>24</color> hours.",
+			"FlavorText": "I think I have his signature saved somewhere.",
+			"Effects": [ { "VersionSmallDescription": "Reduces policy research time by <color=green>24</color> hours" } ]
+		},
+		{
+			"CardId": 8604,
+			"Name": "Research Grant (72h)",
+			"EffectDescription": "Reduces the research time of a policy upgrade by <color=green>72</color> hours.",
+			"FlavorText": "It's like that now because of the way it is.",
+			"Effects": [ { "VersionSmallDescription": "Reduces policy research time by <color=green>72</color> hours" } ]
+		},
+		{
+			"CardId": 8510,
+			"Name": "Premium Permit (7d)",
+			"EffectDescription": "Activating Premium Time will allow you to claim daily Premium Rewards in the store. Events completed during Premium Time will yield an additional material card, and your Policy research speed is increased by +100%. In addition, your building queue time and shipyard queue time will be increased by 2 hours and 6 hours respectively in all stations.\n\nPremium Time is global, and you will enjoy its benefits on all servers you play on. If this card is in your local inventory at the end of the game, it will be moved to your account inventory and will become available for use in other servers.\n",
+			"FlavorText": "We are deligthed to inform you that your application has been approved.",
+			"Effects": [ { "VersionSmallDescription": "Adds <color=green>7</color> days Premium Time" } ]
+		},
+		{
+			"CardId": 8511,
+			"Name": "Premium Permit (14d)",
+			"EffectDescription": "Activating Premium Time will allow you to claim daily Premium Rewards in the store. Events completed during Premium Time will yield an additional material card, and your Policy research speed is increased by +100%. In addition, your building queue time and shipyard queue time will be increased by 2 hours and 6 hours respectively in all stations.\n\nPremium Time is global, and you will enjoy its benefits on all servers you play on. If this card is in your local inventory at the end of the game, it will be moved to your account inventory and will become available for use in other servers.\n",
+			"FlavorText": "We are deligthed to inform you that your application has been approved.",
+			"Effects": [ { "VersionSmallDescription": "Adds <color=green>14</color> days Premium Time" } ]
+		},
+		{
+			"CardId": 8512,
+			"Name": "Premium Permit (28d)",
+			"EffectDescription": "Activating Premium Time will allow you to claim daily Premium Rewards in the store. Events completed during Premium Time will yield an additional material card, and your Policy research speed is increased by +100%. In addition, your building queue time and shipyard queue time will be increased by 2 hours and 6 hours respectively in all stations.\n\nPremium Time is global, and you will enjoy its benefits on all servers you play on. If this card is in your local inventory at the end of the game, it will be moved to your account inventory and will become available for use in other servers.\n",
+			"FlavorText": "We are deligthed to inform you that your application has been approved.",
+			"Effects": [ { "VersionSmallDescription": "Adds <color=green>28</color> days Premium Time" } ]
+		},
+		{
+			"CardId": 8520,
+			"Name": "Clean Slate",
+			"EffectDescription": "A Clean Slate card can be used to change your current faction. The card will be consumed in the process.",
+			"FlavorText": "Times have changed.",
+			"Effects": [ { "VersionSmallDescription": "Enables Faction Change" } ]
+		},
+		{
+			"CardId": 8550,
+			"Name": "Basic Supply Contract (7d)",
+			"EffectDescription": "Unlocks Basic Supplies for 7 days and allows you to claim rewards daily. Daily Supplies are global, and can only be claimed once per day per account. Rewards from daily supplies are moved to the account inventory.",
+			"FlavorText": "Pleasure working with you.",
+			"Effects": [ { "VersionSmallDescription": "Unlocks Basic Supplies in the Store" } ]
+		},
+		{
+			"CardId": 8551,
+			"Name": "Advanced Supply Contract (28d)",
+			"EffectDescription": "Unlocks Advanced Supplies for 28 days and allows you to claim rewards daily. Daily Supplies are global, and can only be claimed once per day per account. Rewards from daily supplies are moved to the account inventory.",
+			"FlavorText": "Our partnership will go far.",
+			"Effects": [ { "VersionSmallDescription": "Unlocks Advanced Supplies in the Store" } ]
+		}
+	]
+}

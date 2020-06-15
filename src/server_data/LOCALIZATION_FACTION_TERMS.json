@@ -1,0 +1,65 @@
+﻿[
+  {
+    "Id":  0, 
+    "Name": "European Space Agency",
+    "NameShort": "ESA",
+			"ShipChassis": [
+				{
+					"Type": "LightAssault",
+					"ChassisName": "Nemo",
+					"ChassisDescription": ""
+				},
+				{
+					"Type": "LightDefense",
+					"ChassisName": "Faust",
+					"ChassisDescription": ""
+				},
+				{
+					"Type": "HeavyAssault",
+					"ChassisName": "Volta",
+					"ChassisDescription": ""
+				},
+				{
+					"Type": "HeavyDefense",
+					"ChassisName": "Austen",
+					"ChassisDescription": ""
+				},
+				{
+					"Type": "Carrier",
+					"ChassisName": "Cicero",
+					"ChassisDescription": ""
+				},
+				{
+					"Type": "Dreadnought",
+					"ChassisName": "Dante",
+					"ChassisDescription": ""
+				},
+				{
+					"Type": "Scout",
+					"ChassisName": "Hawking",
+					"ChassisDescription": ""
+				},
+				{
+					"Type": "HeavyScout",
+					"ChassisName": "Einstein",
+					"ChassisDescription": ""
+				},
+				{
+					"Type": "Industrial",
+					"ChassisName": "Essex",
+					"ChassisDescription": ""
+				},
+				{
+					"Type": "Bomber",
+					"ChassisName": "Banshee",
+					"ChassisDescription": ""
+				},
+				{
+					"Type": "TroopCarrier",
+					"ChassisName": "Troop Carrier",
+					"ChassisDescription": ""
+				}
+
+			]
+  }
+]

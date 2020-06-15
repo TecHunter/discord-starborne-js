@@ -1,0 +1,7626 @@
+{
+	"FleetCards": [
+		{
+			"ID": 1001,
+			"Name": "Fleet Cadet",
+			"ImageID": 13,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "FleetCharacter" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Common",
+			"Duration": "Timed",
+			"DurationTime": 2880,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 2
+			},
+			"MineralCost": 24,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 2
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 10
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 50
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_CARGO",
+					"Type": "Modifier",
+					"Modifier": 2
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_CARGO",
+					"Type": "Modifier",
+					"Modifier": 10
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 5
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 25
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 125
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Type": "Modifier",
+					"Modifier": 1
+				}
+			]
+		},
+		{
+			"ID": 1002,
+			"Name": "Gas Laser",
+			"ImageID": 103,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 10
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 50
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 250
+				}
+			]
+		},
+		{
+			"ID": 1003,
+			"Name": "Fiber Laser",
+			"ImageID": 14,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Rare",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 60
+			},
+			"MineralCost": 180,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 20
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 100
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 500
+				}
+			]
+		},
+		{
+			"ID": 1004,
+			"Name": "Pulse Laser",
+			"ImageID": 82,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 30
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 150
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 750
+				}
+			]
+		},
+		{
+			"ID": 1005,
+			"Name": "Laser Cannon",
+			"ImageID": 83,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 40
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 200
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 1000
+				}
+			]
+		},
+		{
+			"ID": 1006,
+			"Name": "Hydrogen Maser",
+			"ImageID": 506,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 5
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 25
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 125
+				}
+			]
+		},
+		{
+			"ID": 1007,
+			"Name": "Higgs Maser",
+			"ImageID": 53,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Rare",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 60
+			},
+			"MineralCost": 180,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 10
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 50
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 250
+				}
+			]
+		},
+		{
+			"ID": 1008,
+			"Name": "Atomic Maser",
+			"ImageID": 505,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 15
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 75
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 375
+				}
+			]
+		},
+		{
+			"ID": 1009,
+			"Name": "Maser Cannon",
+			"ImageID": 84,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 20
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 100
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 500
+				}
+			]
+		},
+		{
+			"ID": 1010,
+			"Name": "Reactive Armor",
+			"ImageID": 143,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "Bomber", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 25
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 125
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 625
+				}
+			]
+		},
+		{
+			"ID": 1011,
+			"Name": "Ablative Armor",
+			"ImageID": 88,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Rare",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 60
+			},
+			"MineralCost": 180,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "Bomber", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 50
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 250
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 1250
+				}
+			]
+		},
+		{
+			"ID": 1012,
+			"Name": "Silksteel Armor",
+			"ImageID": 1012,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "Bomber", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 75
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 375
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 1875
+				}
+			]
+		},
+		{
+			"ID": 1013,
+			"Name": "Graphene Armor",
+			"ImageID": 234,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "Bomber", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 100
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 500
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 2500
+				}
+			]
+		},
+		{
+			"ID": 1014,
+			"Name": "Atomized Coating",
+			"ImageID": 116,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "Bomber", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 20
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 100
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 500
+				}
+			]
+		},
+		{
+			"ID": 1015,
+			"Name": "Nanofiber Coating",
+			"ImageID": 36,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Rare",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 60
+			},
+			"MineralCost": 180,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "Bomber", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 30
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 150
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 750
+				}
+			]
+		},
+		{
+			"ID": 1016,
+			"Name": "Nanotube Coating",
+			"ImageID": 110,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "Bomber", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 40
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 200
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 1000
+				}
+			]
+		},
+		{
+			"ID": 1017,
+			"Name": "Rhodium Coating",
+			"ImageID": 47,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "Bomber", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 50
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 250
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 1250
+				}
+			]
+		},
+		{
+			"ID": 1018,
+			"Name": "SimuLink",
+			"ImageID": 102,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "Bomber", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Multiplier",
+					"Modifier": 0.04
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Multiplier",
+					"Modifier": 0.04
+				}
+			]
+		},
+		{
+			"ID": 1019,
+			"Name": "Fleet Synchronizer",
+			"ImageID": 19,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Rare",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 60
+			},
+			"MineralCost": 180,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "Bomber", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Multiplier",
+					"Modifier": 0.08
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Multiplier",
+					"Modifier": 0.08
+				}
+			]
+		},
+		{
+			"ID": 1020,
+			"Name": "Auto-Aim System",
+			"ImageID": 20,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "Bomber", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Multiplier",
+					"Modifier": 0.12
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Multiplier",
+					"Modifier": 0.12
+				}
+			]
+		},
+		{
+			"ID": 1021,
+			"Name": "Target Computer",
+			"ImageID": 151,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "Bomber", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Multiplier",
+					"Modifier": 0.16
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Multiplier",
+					"Modifier": 0.16
+				}
+			]
+		},
+		{
+			"ID": 1022,
+			"Name": "Mini VSC",
+			"ImageID": 16,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "LightDefense", "HeavyDefense", "Dreadnought" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_PLUNDER",
+					"Type": "Modifier",
+					"Modifier": 0.16
+				}
+			]
+		},
+		{
+			"ID": 1023,
+			"Name": "Medi VSC",
+			"ImageID": 700,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Rare",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 60
+			},
+			"MineralCost": 180,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "LightDefense", "HeavyDefense", "Dreadnought" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_PLUNDER",
+					"Type": "Modifier",
+					"Modifier": 0.24
+				}
+			]
+		},
+		{
+			"ID": 1024,
+			"Name": "Maxi VSC",
+			"ImageID": 15,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "LightDefense", "HeavyDefense", "Dreadnought" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_PLUNDER",
+					"Type": "Modifier",
+					"Modifier": 0.32
+				}
+			]
+		},
+		{
+			"ID": 1025,
+			"Name": "Mammoth VSC",
+			"ImageID": 50,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "LightDefense", "HeavyDefense", "Dreadnought" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_PLUNDER",
+					"Type": "Modifier",
+					"Modifier": 0.4
+				}
+			]
+		},
+		{
+			"ID": 1026,
+			"Name": "Basic Battery Pack",
+			"ImageID": 1026,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_PROBE_LIFETIME",
+					"Type": "Modifier",
+					"Modifier": 1440
+				}
+			]
+		},
+		{
+			"ID": 1027,
+			"Name": "MPL Probe Battery",
+			"ImageID": 1027,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Rare",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 60
+			},
+			"MineralCost": 180,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_PROBE_LIFETIME",
+					"Type": "Modifier",
+					"Modifier": 2880
+				}
+			]
+		},
+		{
+			"ID": 1028,
+			"Name": "Probe Accumulator",
+			"ImageID": 1028,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_PROBE_LIFETIME",
+					"Type": "Modifier",
+					"Modifier": 4320
+				}
+			]
+		},
+		{
+			"ID": 1029,
+			"Name": "Deuterium Power Cells",
+			"ImageID": 1029,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_PROBE_LIFETIME",
+					"Type": "Modifier",
+					"Modifier": 5760
+				}
+			]
+		},
+		{
+			"ID": 1030,
+			"Name": "KAI Thrusters",
+			"ImageID": 76,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Scan" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 5
+				}
+			]
+		},
+		{
+			"ID": 1031,
+			"Name": "E-Ghil Thrusters",
+			"ImageID": 77,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Rare",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 60
+			},
+			"MineralCost": 180,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Scan" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 10
+				}
+			]
+		},
+		{
+			"ID": 1032,
+			"Name": "Byarm Thrusters",
+			"ImageID": 18,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Scan" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 15
+				}
+			]
+		},
+		{
+			"ID": 1033,
+			"Name": "Khalle Thrusters",
+			"ImageID": 510,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Scan" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 20
+				}
+			]
+		},
+		{
+			"ID": 1034,
+			"Name": "Sensor Uplink",
+			"ImageID": 54,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SCAN_RADIUS",
+					"Type": "Modifier",
+					"Modifier": 1
+				}
+			]
+		},
+		{
+			"ID": 1035,
+			"Name": "Sensor Integration",
+			"ImageID": 29,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Rare",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 60
+			},
+			"MineralCost": 180,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SCAN_RADIUS",
+					"Type": "Modifier",
+					"Modifier": 2
+				}
+			]
+		},
+		{
+			"ID": 1036,
+			"Name": "Sensor Melding",
+			"ImageID": 600,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SCAN_RADIUS",
+					"Type": "Modifier",
+					"Modifier": 3
+				}
+			]
+		},
+		{
+			"ID": 1037,
+			"Name": "Sensor Amalgamation",
+			"ImageID": 24,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SCAN_RADIUS",
+					"Type": "Modifier",
+					"Modifier": 4
+				}
+			]
+		},
+		{
+			"ID": 1038,
+			"Name": "Isolation Chamber",
+			"ImageID": 27,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SIGINT",
+					"Type": "Modifier",
+					"Modifier": 100
+				}
+			]
+		},
+		{
+			"ID": 1039,
+			"Name": "Remote Hacking",
+			"ImageID": 132,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Rare",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 60
+			},
+			"MineralCost": 180,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SIGINT",
+					"Type": "Modifier",
+					"Modifier": 200
+				}
+			]
+		},
+		{
+			"ID": 1040,
+			"Name": "Interference Overload",
+			"ImageID": 220,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SIGINT",
+					"Type": "Modifier",
+					"Modifier": 300
+				}
+			]
+		},
+		{
+			"ID": 1041,
+			"Name": "Stealth Systems",
+			"ImageID": 221,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SIGINT",
+					"Type": "Modifier",
+					"Modifier": 400
+				}
+			]
+		},
+		{
+			"ID": 1042,
+			"Name": "Neutron Missile",
+			"ImageID": 69,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Bomber" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_BOMB",
+					"Type": "Modifier",
+					"Modifier": 20
+				}
+			]
+		},
+		{
+			"ID": 1043,
+			"Name": "Graviton Missile",
+			"ImageID": 122,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Rare",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 60
+			},
+			"MineralCost": 180,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Bomber" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_BOMB",
+					"Type": "Modifier",
+					"Modifier": 40
+				}
+			]
+		},
+		{
+			"ID": 1044,
+			"Name": "Positron Missile",
+			"ImageID": 370,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Bomber" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_BOMB",
+					"Type": "Modifier",
+					"Modifier": 60
+				}
+			]
+		},
+		{
+			"ID": 1045,
+			"Name": "Antimatter Missile",
+			"ImageID": 95,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Bomber" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_BOMB",
+					"Type": "Modifier",
+					"Modifier": 80
+				}
+			]
+		},
+		{
+			"ID": 1046,
+			"Name": "Neutron Torpedo",
+			"ImageID": 68,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Bomber" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_BOMB",
+					"Type": "Modifier",
+					"Modifier": 10
+				}
+			]
+		},
+		{
+			"ID": 1047,
+			"Name": "Graviton Torpedo",
+			"ImageID": 70,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Rare",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 60
+			},
+			"MineralCost": 180,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Bomber" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_BOMB",
+					"Type": "Modifier",
+					"Modifier": 20
+				}
+			]
+		},
+		{
+			"ID": 1048,
+			"Name": "Positron Torpedo",
+			"ImageID": 71,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Bomber" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_BOMB",
+					"Type": "Modifier",
+					"Modifier": 30
+				}
+			]
+		},
+		{
+			"ID": 1049,
+			"Name": "Antimatter Torpedo",
+			"ImageID": 51,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Bomber" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_BOMB",
+					"Type": "Modifier",
+					"Modifier": 40
+				}
+			]
+		},
+		{
+			"ID": 1050,
+			"Name": "Smuggler's Hold",
+			"ImageID": 62,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull", "Hardpoint", "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Industrial" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_CARGO",
+					"Type": "Modifier",
+					"Modifier": 10
+				}
+			]
+		},
+		{
+			"ID": 1051,
+			"Name": "Storage Block",
+			"ImageID": 119,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull", "Hardpoint", "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Rare",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 60
+			},
+			"MineralCost": 180,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Industrial" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_CARGO",
+					"Type": "Modifier",
+					"Modifier": 20
+				}
+			]
+		},
+		{
+			"ID": 1052,
+			"Name": "Cargo Extender",
+			"ImageID": 74,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull", "Hardpoint", "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Industrial" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_CARGO",
+					"Type": "Modifier",
+					"Modifier": 30
+				}
+			]
+		},
+		{
+			"ID": 1053,
+			"Name": "Cargo Trailer",
+			"ImageID": 75,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull", "Hardpoint", "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Industrial" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_CARGO",
+					"Type": "Modifier",
+					"Modifier": 40
+				}
+			]
+		},
+		{
+			"ID": 1054,
+			"Name": "ZeroA Suit",
+			"ImageID": 63,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Industrial" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "BuildOutpost", "UpgradeOutpost", "BoostOutpost" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 6
+				}
+			]
+		},
+		{
+			"ID": 1055,
+			"Name": "Hydraulic Arm",
+			"ImageID": 48,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Rare",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 60
+			},
+			"MineralCost": 180,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Industrial" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "BuildOutpost", "UpgradeOutpost", "BoostOutpost" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 12
+				}
+			]
+		},
+		{
+			"ID": 1056,
+			"Name": "HDL System",
+			"ImageID": 32,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Industrial" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "BuildOutpost", "UpgradeOutpost", "BoostOutpost" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 20
+				}
+			]
+		},
+		{
+			"ID": 1057,
+			"Name": "Construction Shuttle",
+			"ImageID": 35,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Industrial" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "BuildOutpost", "UpgradeOutpost", "BoostOutpost" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 30
+				}
+			]
+		},
+		{
+			"ID": 1058,
+			"Name": "Leilo Harvester",
+			"ImageID": 79,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Industrial" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_PLASMA_HARVESTING",
+					"Type": "Modifier",
+					"Modifier": 0.1
+				}
+			]
+		},
+		{
+			"ID": 1059,
+			"Name": "MPL Harvester",
+			"ImageID": 1059,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Rare",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 60
+			},
+			"MineralCost": 180,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Industrial" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_PLASMA_HARVESTING",
+					"Type": "Modifier",
+					"Modifier": 0.14
+				}
+			]
+		},
+		{
+			"ID": 1060,
+			"Name": "Sanctum Harvester",
+			"ImageID": 1060,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Industrial" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_PLASMA_HARVESTING",
+					"Type": "Modifier",
+					"Modifier": 0.2
+				}
+			]
+		},
+		{
+			"ID": 1061,
+			"Name": "START Harvester",
+			"ImageID": 128,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Industrial" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_PLASMA_HARVESTING",
+					"Type": "Modifier",
+					"Modifier": 0.3
+				}
+			]
+		},
+		{
+			"ID": 1062,
+			"Name": "Width Matrix",
+			"ImageID": 59,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "FleetRune" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Common",
+			"Duration": "Timed",
+			"DurationTime": 1440,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 2
+			},
+			"MineralCost": 24,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "Bomber", "LightDefense", "HeavyDefense", "Dreadnought", "Industrial" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_CARGO",
+					"Type": "Multiplier",
+					"Modifier": 0.2
+				}
+			]
+		},
+		{
+			"ID": 1063,
+			"Name": "Breadth Matrix",
+			"ImageID": 109,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "FleetRune" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Rare",
+			"Duration": "Timed",
+			"DurationTime": 1440,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 4
+			},
+			"MineralCost": 72,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "Bomber", "LightDefense", "HeavyDefense", "Dreadnought", "Industrial" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_CARGO",
+					"Type": "Multiplier",
+					"Modifier": 0.4
+				}
+			]
+		},
+		{
+			"ID": 1064,
+			"Name": "Veteran Scout",
+			"ImageID": 9,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "FleetCharacter" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Rare",
+			"Duration": "Timed",
+			"DurationTime": 2160,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 4
+			},
+			"MineralCost": 72,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_BONUS_SCANSTR",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Scan" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 200
+				}
+			]
+		},
+		{
+			"ID": 1065,
+			"Name": "Borts",
+			"ImageID": 602,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "FleetCharacter" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Common",
+			"Duration": "Timed",
+			"DurationTime": 1440,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 2
+			},
+			"MineralCost": 24,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Industrial" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_PLASMA_HARVESTING",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "CompleteStarMission" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 0.1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "CompleteStarMission" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 1
+				}
+			]
+		},
+		{
+			"ID": 1066,
+			"Name": "Max Rykov",
+			"ImageID": 10,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "FleetCharacter" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Rare",
+			"Duration": "Timed",
+			"DurationTime": 2880,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 4
+			},
+			"MineralCost": 72,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_HP",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Raid" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 25
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_HP",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Raid" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 125
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_CARGO",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Raid" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 6
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_CARGO",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Raid" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 24
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Raid" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 1
+				}
+			]
+		},
+		{
+			"ID": 1067,
+			"Name": "Koh Xi Kwok",
+			"ImageID": 4,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "FleetCharacter" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Common",
+			"Duration": "Timed",
+			"DurationTime": 1440,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 2
+			},
+			"MineralCost": 24,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "LightDefense", "HeavyDefense", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "CompleteMission" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 20
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "CompleteMission" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 100
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "CompleteMission" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 1
+				}
+			]
+		},
+		{
+			"ID": 1068,
+			"Name": "Sophie Solheim",
+			"ImageID": 81,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "FleetCharacter" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Rare",
+			"Duration": "Timed",
+			"DurationTime": 2880,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 4
+			},
+			"MineralCost": 72,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightDefense", "HeavyDefense" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_ESCORT_COUNT",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "CompleteMission" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "CompleteMission" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_MIMIC_ROLE_OFFENSE",
+					"Type": "Modifier",
+					"Modifier": 1
+				}
+			]
+		},
+		{
+			"ID": 1069,
+			"Name": "Emeryn Grace",
+			"ImageID": 49,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "FleetCharacter" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Epic",
+			"Duration": "Timed",
+			"DurationTime": 5760,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 6
+			},
+			"MineralCost": 288,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightDefense", "HeavyDefense", "Dreadnought" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_MIMIC_ROLE_OFFENSE",
+					"Type": "Modifier",
+					"Modifier": 1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "CompleteMission" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "CompleteMission" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 20
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "CompleteMission" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 100
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_ESCORT_COUNT",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "CompleteMission" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 2
+				}
+			]
+		},
+		{
+			"ID": 1070,
+			"Name": "Spatial Convex",
+			"ImageID": 85,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "FleetRune" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Common",
+			"Duration": "Timed",
+			"DurationTime": 1440,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 2
+			},
+			"MineralCost": 24,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "Bomber", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout", "Industrial" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Type": "Modifier",
+					"Modifier": 1
+				}
+			]
+		},
+		{
+			"ID": 1071,
+			"Name": "Forced Serenity",
+			"ImageID": 40,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "FleetRune" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Common",
+			"Duration": "Timed",
+			"DurationTime": 1440,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 2
+			},
+			"MineralCost": 24,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "LightDefense", "HeavyDefense", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_ESCORT_COUNT",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "CompleteMission" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 1
+				}
+			]
+		},
+		{
+			"ID": 1072,
+			"Name": "Rabble Squad",
+			"ImageID": 125,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "FleetCharacter" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Rare",
+			"Duration": "Timed",
+			"DurationTime": 2880,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 4
+			},
+			"MineralCost": 72,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Industrial" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Raid" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_PLUNDER",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Raid" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 0.1
+				}
+			]
+		},
+		{
+			"ID": 1073,
+			"Name": "Harmonic Resonance",
+			"ImageID": 108,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "FleetRune" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Epic",
+			"Duration": "Timed",
+			"DurationTime": 2880,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 6
+			},
+			"MineralCost": 288,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "LightDefense", "HeavyDefense", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_ESCORT_COUNT",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "CompleteMission" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 2
+				}
+			]
+		},
+		{
+			"ID": 1074,
+			"Name": "Vortex Rift",
+			"ImageID": 46,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "FleetRune" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Epic",
+			"Duration": "Timed",
+			"DurationTime": 2880,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 6
+			},
+			"MineralCost": 288,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "Bomber", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout", "Industrial" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Type": "Modifier",
+					"Modifier": 2
+				}
+			]
+		},
+		{
+			"ID": 1075,
+			"Name": "Flag of Convenience",
+			"ImageID": 1075,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Industrial" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_IN_RAID",
+					"Modifier": -1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_IN_ASSAULT",
+					"Modifier": -1
+				}
+			]
+		},
+		{
+			"ID": 1076,
+			"Name": "Viking Squadron",
+			"ImageID": 136,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "FleetCharacter" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Epic",
+			"Duration": "Timed",
+			"DurationTime": 1440,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 6
+			},
+			"MineralCost": 288,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "TroopCarrier" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_STATION_CAPTURE",
+					"Type": "Modifier",
+					"Modifier": 20
+				}
+			]
+		},
+		{
+			"ID": 1077,
+			"Name": "XAOC Strike Team",
+			"ImageID": 137,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "FleetCharacter" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Timed",
+			"DurationTime": 1440,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 10
+			},
+			"MineralCost": 576,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "TroopCarrier" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_STATION_CAPTURE",
+					"Type": "Modifier",
+					"Modifier": 40
+				}
+			]
+		},
+		{
+			"ID": 1078,
+			"Name": "AP Rounds",
+			"ImageID": 21,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint", "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "HeavyAssault", "Carrier", "Bomber", "HeavyDefense", "Dreadnought" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_BOMB",
+					"Type": "Modifier",
+					"Modifier": 5
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_BOMB",
+					"Type": "Modifier",
+					"Modifier": 25
+				}
+			]
+		},
+		{
+			"ID": 1079,
+			"Name": "HVAP Rounds",
+			"ImageID": 26,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint", "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "HeavyAssault", "Carrier", "Bomber", "HeavyDefense", "Dreadnought" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_BOMB",
+					"Type": "Modifier",
+					"Modifier": 10
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_BOMB",
+					"Type": "Modifier",
+					"Modifier": 50
+				}
+			]
+		},
+		{
+			"ID": 1080,
+			"Name": "Thorspear Thrusters",
+			"ImageID": 104,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Bomber", "TroopCarrier" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Type": "Modifier",
+					"Modifier": 2
+				}
+			]
+		},
+		{
+			"ID": 1081,
+			"Name": "Ki-Ran Thrusters",
+			"ImageID": 1081,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Bomber", "TroopCarrier" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Type": "Modifier",
+					"Modifier": 3
+				}
+			]
+		},
+		{
+			"ID": 1082,
+			"Name": "Novice Scout",
+			"ImageID": 1082,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "FleetCharacter" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Common",
+			"Duration": "Timed",
+			"DurationTime": 1440,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 2
+			},
+			"MineralCost": 24,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_BONUS_SCANSTR",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Scan" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 100
+				}
+			]
+		},
+		{
+			"ID": 1083,
+			"Name": "Director of Colonization",
+			"ImageID": 6,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "FleetCharacter" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Timed",
+			"DurationTime": 4320,
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "Industrial" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Industrial",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "BuildStation" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 50
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Industrial",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Deployment" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 50
+				}
+			]
+		},
+		{
+			"ID": 1084,
+			"Name": "Laser Cannon Prime",
+			"ImageID": 83,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hardpoint" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 50
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 250
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 1250
+				}
+			]
+		},
+		{
+			"ID": 1085,
+			"Name": "Graphene Armor Prime",
+			"ImageID": 234,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Hull" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "Bomber", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 125
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 625
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 3125
+				}
+			]
+		},
+		{
+			"ID": 1086,
+			"Name": "Target Computer Prime",
+			"ImageID": 151,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Utility" ],
+			"AttachmentGroup": "Fleet",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Restrictions": [
+				{
+					"$type": "AllowedShipTypes",
+					"Types": [ "LightAssault", "HeavyAssault", "Carrier", "Bomber", "LightDefense", "HeavyDefense", "Dreadnought", "Scout", "HeavyScout" ]
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Multiplier",
+					"Modifier": 0.2
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Multiplier",
+					"Modifier": 0.2
+				}
+			]
+		}
+	],
+	"StationCards": [
+		{
+			"ID": 2001,
+			"Name": "EM Launchpad",
+			"ImageID": 78,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Raid" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 2,
+					"Radius": 0,
+					"Coverage": "Owner"
+				}
+			]
+		},
+		{
+			"ID": 2002,
+			"Name": "Hologram System",
+			"ImageID": 22,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Assault" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 2,
+					"Radius": 0,
+					"Coverage": "Owner"
+				}
+			]
+		},
+		{
+			"ID": 2003,
+			"Name": "Route Control",
+			"ImageID": 72,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Deployment" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 2,
+					"Radius": 0,
+					"Coverage": "Owner"
+				}
+			]
+		},
+		{
+			"ID": 2004,
+			"Name": "Vector Scaling",
+			"ImageID": 25,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "CompleteMission" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 2,
+					"Radius": 0,
+					"Coverage": "Owner"
+				}
+			]
+		},
+		{
+			"ID": 2005,
+			"Name": "Control Suite",
+			"ImageID": 350,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Sabotage", "SabotageStation" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 2,
+					"Radius": 0,
+					"Coverage": "Owner"
+				}
+			]
+		},
+		{
+			"ID": 2006,
+			"Name": "Mlat Scanners",
+			"ImageID": 351,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Scan" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 5,
+					"Radius": 0,
+					"Coverage": "Owner"
+				}
+			]
+		},
+		{
+			"ID": 2007,
+			"Name": "Flare Monitors",
+			"ImageID": 57,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "CompleteStarMission" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 2,
+					"Radius": 0,
+					"Coverage": "Owner"
+				}
+			]
+		},
+		{
+			"ID": 2008,
+			"Name": "Recycling Plant",
+			"ImageID": 105,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "BuildOutpost", "UpgradeOutpost", "BoostOutpost" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 5,
+					"Radius": 0,
+					"Coverage": "Owner"
+				}
+			]
+		},
+		{
+			"ID": 2009,
+			"Name": "Berth Control",
+			"ImageID": 61,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_FREIGHTER_SPD",
+					"Type": "Modifier",
+					"Modifier": 5
+				}
+			]
+		},
+		{
+			"ID": 2010,
+			"Name": "Ionization Chamber",
+			"ImageID": 233,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_MTL",
+					"Type": "Modifier",
+					"Modifier": 50
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_GAS",
+					"Type": "Modifier",
+					"Modifier": 20
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_CRS",
+					"Type": "Modifier",
+					"Modifier": 30
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "MilitaryBuildings",
+					"TargetAttribute": "COST_MTL",
+					"Type": "PercentageModifier",
+					"Modifier": -0.1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "MilitaryBuildings",
+					"TargetAttribute": "COST_GAS",
+					"Type": "PercentageModifier",
+					"Modifier": -0.1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "MilitaryBuildings",
+					"TargetAttribute": "COST_CRS",
+					"Type": "PercentageModifier",
+					"Modifier": -0.1
+				}
+			]
+		},
+		{
+			"ID": 2011,
+			"Name": "Solar Panels",
+			"ImageID": 361,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_MTL",
+					"Type": "Modifier",
+					"Modifier": 30
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_GAS",
+					"Type": "Modifier",
+					"Modifier": 50
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_CRS",
+					"Type": "Modifier",
+					"Modifier": 20
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "DomainBuildings",
+					"TargetAttribute": "COST_MTL",
+					"Type": "PercentageModifier",
+					"Modifier": -0.1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "DomainBuildings",
+					"TargetAttribute": "COST_GAS",
+					"Type": "PercentageModifier",
+					"Modifier": -0.1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "DomainBuildings",
+					"TargetAttribute": "COST_CRS",
+					"Type": "PercentageModifier",
+					"Modifier": -0.1
+				}
+			]
+		},
+		{
+			"ID": 2012,
+			"Name": "Core Schematics",
+			"ImageID": 65,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_MTL",
+					"Type": "Modifier",
+					"Modifier": 20
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_GAS",
+					"Type": "Modifier",
+					"Modifier": 30
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_CRS",
+					"Type": "Modifier",
+					"Modifier": 50
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "IndustrialBuildings",
+					"TargetAttribute": "COST_MTL",
+					"Type": "PercentageModifier",
+					"Modifier": -0.1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "IndustrialBuildings",
+					"TargetAttribute": "COST_GAS",
+					"Type": "PercentageModifier",
+					"Modifier": -0.1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "IndustrialBuildings",
+					"TargetAttribute": "COST_CRS",
+					"Type": "PercentageModifier",
+					"Modifier": -0.1
+				}
+			]
+		},
+		{
+			"ID": 2016,
+			"Name": "Blaze Exosuit",
+			"ImageID": 211,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "System" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "MilitaryBuildings",
+					"TargetAttribute": "COST_TIME",
+					"Type": "Multiplier",
+					"Modifier": -0.1
+				}
+			]
+		},
+		{
+			"ID": 2017,
+			"Name": "Truck Exosuit",
+			"ImageID": 210,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "System" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "DomainBuildings",
+					"TargetAttribute": "COST_TIME",
+					"Type": "Multiplier",
+					"Modifier": -0.1
+				}
+			]
+		},
+		{
+			"ID": 2018,
+			"Name": "Dozer Exosuit",
+			"ImageID": 34,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "System" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "IndustrialBuildings",
+					"TargetAttribute": "COST_TIME",
+					"Type": "Multiplier",
+					"Modifier": -0.1
+				}
+			]
+		},
+		{
+			"ID": 2020,
+			"Name": "Surveillance Module",
+			"ImageID": 260,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Rare",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 60
+			},
+			"MineralCost": 180,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_SCAN_RADIUS",
+					"Type": "Modifier",
+					"Modifier": 2
+				}
+			]
+		},
+		{
+			"ID": 2021,
+			"Name": "Home Guard",
+			"ImageID": 131,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 1
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "S_CLAIMSTR",
+					"Type": "Modifier",
+					"Modifier": 1
+				}
+			]
+		},
+		{
+			"ID": 2022,
+			"Name": "Detection Array",
+			"ImageID": 2022,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_SCAN_RADIUS",
+					"Type": "Modifier",
+					"Modifier": 5
+				}
+			]
+		},
+		{
+			"ID": 2023,
+			"Name": "Empyrial Guards",
+			"ImageID": 137,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 2
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "S_CLAIMSTR",
+					"Type": "Modifier",
+					"Modifier": 2
+				}
+			]
+		},
+		{
+			"ID": 2024,
+			"Name": "Insurance House",
+			"ImageID": 2024,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 2
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "Outpost",
+					"TargetAttribute": "OP_HITPOINTS",
+					"Type": "PercentageModifier",
+					"Modifier": 0.2
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_SABOTAGE_PROTECTION",
+					"Type": "PercentageModifier",
+					"Modifier": 0.2
+				}
+			]
+		},
+		{
+			"ID": 2025,
+			"Name": "Metal Depot",
+			"ImageID": 101,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_MTL",
+					"Type": "Modifier",
+					"Modifier": 100
+				}
+			]
+		},
+		{
+			"ID": 2026,
+			"Name": "Gas Silo",
+			"ImageID": 114,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_GAS",
+					"Type": "Modifier",
+					"Modifier": 100
+				}
+			]
+		},
+		{
+			"ID": 2027,
+			"Name": "Crystal Vault",
+			"ImageID": 64,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 20
+			},
+			"MineralCost": 60,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_CRS",
+					"Type": "Modifier",
+					"Modifier": 100
+				}
+			]
+		},
+		{
+			"ID": 2028,
+			"Name": "TGE Franchise",
+			"ImageID": 2028,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Rare",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 60
+			},
+			"MineralCost": 180,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 1
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_FREIGHTCOUNT",
+					"Type": "Modifier",
+					"Modifier": 5
+				}
+			]
+		},
+		{
+			"ID": 2029,
+			"Name": "Mining Robots",
+			"ImageID": 148,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Rare",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 60
+			},
+			"MineralCost": 180,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 2
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_LOCAL_HARVEST_MODIFIER",
+					"Type": "Modifier",
+					"Modifier": 0.17
+				}
+			]
+		},
+		{
+			"ID": 2030,
+			"Name": "Loading Bay",
+			"ImageID": 135,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 2
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_FREIGHTER_CARGO",
+					"Type": "PercentageModifier",
+					"Modifier": 0.5
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_CAP",
+					"Type": "Multiplier",
+					"Modifier": 1
+				}
+			]
+		},
+		{
+			"ID": 2031,
+			"Name": "Pyroprocessing",
+			"ImageID": 31,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 3
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "PROD_MTL",
+					"Type": "Multiplier",
+					"Modifier": 0.15
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "PROD_GAS",
+					"Type": "Multiplier",
+					"Modifier": 0.15
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "PROD_CRS",
+					"Type": "Multiplier",
+					"Modifier": 0.15
+				}
+			]
+		},
+		{
+			"ID": 2032,
+			"Name": "Minefield",
+			"ImageID": 235,
+			"Unique": "false",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Rare",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 60
+			},
+			"MineralCost": 180,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 1
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "MissileBattery",
+					"TargetAttribute": "OP_MBAT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 8000
+				}
+			]
+		},
+		{
+			"ID": 2033,
+			"Name": "Medical Bay",
+			"ImageID": 281,
+			"Unique": "false",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 2
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "Fortress",
+					"TargetAttribute": "OP_CLAIM_RADIUS",
+					"Type": "Modifier",
+					"Modifier": 1
+				}
+			]
+		},
+		{
+			"ID": 2034,
+			"Name": "Repair Drones",
+			"ImageID": 212,
+			"Unique": "false",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 1
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "MiningFacility",
+					"TargetAttribute": "OP_RADIUS",
+					"Type": "Modifier",
+					"Modifier": 1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "MiningFacility",
+					"TargetAttribute": "OP_MOP_YIELD",
+					"Type": "Modifier",
+					"Modifier": -0.25
+				}
+			]
+		},
+		{
+			"ID": 2036,
+			"Name": "APEX Mining Laser",
+			"ImageID": 147,
+			"Unique": "false",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 3
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "MiningColony",
+					"TargetAttribute": "OP_RADIUS",
+					"Type": "Modifier",
+					"Modifier": 1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "MiningColony",
+					"TargetAttribute": "OP_MC_YIELD",
+					"Type": "Multiplier",
+					"Modifier": 0.05
+				}
+			]
+		},
+		{
+			"ID": 2037,
+			"Name": "Surveillance Drones",
+			"ImageID": 206,
+			"Unique": "false",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Rare",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 60
+			},
+			"MineralCost": 180,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 1
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "Scanner",
+					"TargetAttribute": "OP_RADIUS",
+					"Type": "Modifier",
+					"Modifier": 1
+				}
+			]
+		},
+		{
+			"ID": 2038,
+			"Name": "Traffic Control",
+			"ImageID": 230,
+			"Unique": "false",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 2
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "Stargate",
+					"TargetAttribute": "OP_RADIUS",
+					"Type": "Modifier",
+					"Modifier": 1
+				}
+			]
+		},
+		{
+			"ID": 2039,
+			"Name": "Filtration Installation",
+			"ImageID": 99,
+			"Unique": "false",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 3
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "HabitationDome",
+					"TargetAttribute": "OP_RADIUS",
+					"Type": "Modifier",
+					"Modifier": 1
+				}
+			]
+		},
+		{
+			"ID": 2040,
+			"Name": "Willy Gamish",
+			"ImageID": 7,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationCharacter" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Timed",
+			"DurationTime": 1440,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 2
+			},
+			"MineralCost": 24,
+			"Restrictions": [
+				{
+					"$type": "MaximumLevel",
+					"Level": 0
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_MTL",
+					"Type": "Modifier",
+					"Modifier": 30
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_GAS",
+					"Type": "Modifier",
+					"Modifier": 30
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_CRS",
+					"Type": "Modifier",
+					"Modifier": 30
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Buildings",
+					"TargetAttribute": "COST_MTL",
+					"Type": "Multiplier",
+					"Modifier": -0.1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Buildings",
+					"TargetAttribute": "COST_GAS",
+					"Type": "Multiplier",
+					"Modifier": -0.1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Buildings",
+					"TargetAttribute": "COST_CRS",
+					"Type": "Multiplier",
+					"Modifier": -0.1
+				}
+			]
+		},
+		{
+			"ID": 2041,
+			"Name": "Councilor Akka",
+			"ImageID": 202,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationCharacter" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Epic",
+			"Duration": "Timed",
+			"DurationTime": 1440,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 6
+			},
+			"MineralCost": 288,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 1
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Organizations",
+					"TargetAttribute": "COST_TIME",
+					"Type": "Multiplier",
+					"Modifier": -0.15
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Organizations",
+					"TargetAttribute": "COST_MTL",
+					"Type": "Multiplier",
+					"Modifier": -0.15
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Organizations",
+					"TargetAttribute": "COST_GAS",
+					"Type": "Multiplier",
+					"Modifier": -0.15
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Organizations",
+					"TargetAttribute": "COST_CRS",
+					"Type": "Multiplier",
+					"Modifier": -0.15
+				}
+			]
+		},
+		{
+			"ID": 2042,
+			"Name": "Natasha Fer",
+			"ImageID": 5,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationCharacter" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Epic",
+			"Duration": "Timed",
+			"DurationTime": 2880,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 6
+			},
+			"MineralCost": 288,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "SpecializationBuildings",
+					"TargetAttribute": "COST_MTL",
+					"Type": "Multiplier",
+					"Modifier": 0.2
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "SpecializationBuildings",
+					"TargetAttribute": "COST_GAS",
+					"Type": "Multiplier",
+					"Modifier": 0.2
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "SpecializationBuildings",
+					"TargetAttribute": "COST_CRS",
+					"Type": "Multiplier",
+					"Modifier": 0.2
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "SpecializationBuildings",
+					"TargetAttribute": "COST_TIME",
+					"Type": "Multiplier",
+					"Modifier": -0.15
+				}
+			]
+		},
+		{
+			"ID": 2043,
+			"Name": "Automaton Workers",
+			"ImageID": 111,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationCharacter" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Timed",
+			"DurationTime": 1440,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 2
+			},
+			"MineralCost": 24,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "PROD_ENERGY",
+					"Type": "Modifier",
+					"Modifier": 100
+				}
+			]
+		},
+		{
+			"ID": 2044,
+			"Name": "Robot Workers",
+			"ImageID": 118,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationCharacter" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Rare",
+			"Duration": "Timed",
+			"DurationTime": 2880,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 4
+			},
+			"MineralCost": 72,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 1
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "PROD_ENERGY",
+					"Type": "Modifier",
+					"Modifier": 200
+				}
+			]
+		},
+		{
+			"ID": 2045,
+			"Name": "Cyborg Workers",
+			"ImageID": 80,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationCharacter" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Epic",
+			"Duration": "Timed",
+			"DurationTime": 4320,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 6
+			},
+			"MineralCost": 288,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 2
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "PROD_ENERGY",
+					"Type": "Modifier",
+					"Modifier": 300
+				}
+			]
+		},
+		{
+			"ID": 2046,
+			"Name": "Mumei Nakamura",
+			"ImageID": 2,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationCharacter" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Timed",
+			"DurationTime": 4320,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 10
+			},
+			"MineralCost": 576,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 3
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 3,
+					"Radius": 0,
+					"Coverage": "Allies"
+				},
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 15,
+					"Radius": 0,
+					"Coverage": "Allies"
+				},
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_FIREPOWER",
+					"Type": "Modifier",
+					"Modifier": 75,
+					"Radius": 0,
+					"Coverage": "Allies"
+				},
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 7.5,
+					"Radius": 0,
+					"Coverage": "Allies"
+				},
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 37.5,
+					"Radius": 0,
+					"Coverage": "Allies"
+				},
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "CapitalShips",
+					"TargetAttribute": "UNIT_HP",
+					"Type": "Modifier",
+					"Modifier": 187.5,
+					"Radius": 0,
+					"Coverage": "Allies"
+				}
+			]
+		},
+		{
+			"ID": 2047,
+			"Name": "Samuel Darby",
+			"ImageID": 3,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationCharacter" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Epic",
+			"Duration": "Timed",
+			"DurationTime": 2880,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 6
+			},
+			"MineralCost": 288,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 2
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_MTL",
+					"Type": "Modifier",
+					"Modifier": 300
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_GAS",
+					"Type": "Modifier",
+					"Modifier": 300
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_CRS",
+					"Type": "Modifier",
+					"Modifier": 300
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_FREIGHTCOUNT",
+					"Type": "Modifier",
+					"Modifier": 20
+				}
+			]
+		},
+		{
+			"ID": 2048,
+			"Name": "Jade Lotus",
+			"ImageID": 1,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationCharacter" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Timed",
+			"DurationTime": 4320,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 10
+			},
+			"MineralCost": 576,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 2
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Empire",
+					"Target": "Commander",
+					"TargetAttribute": "OPERATIVES_COUNT",
+					"Type": "Modifier",
+					"Modifier": 2
+				},
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Type": "Modifier",
+					"Modifier": 4,
+					"Radius": 0,
+					"Coverage": "Owner"
+				}
+			]
+		},
+		{
+			"ID": 2049,
+			"Name": "Felix Morrell",
+			"ImageID": 201,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationCharacter" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Timed",
+			"DurationTime": 4320,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 10
+			},
+			"MineralCost": 576,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 2
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Bomber",
+					"TargetAttribute": "UNIT_BOMB",
+					"Type": "Modifier",
+					"Modifier": 10
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Fleets",
+					"Target": "Dreadnought",
+					"TargetAttribute": "UNIT_BOMB",
+					"Type": "Modifier",
+					"Modifier": 50
+				}
+			]
+		},
+		{
+			"ID": 2050,
+			"Name": "Zeno",
+			"ImageID": 8,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationCharacter" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Timed",
+			"DurationTime": 4320,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 10
+			},
+			"MineralCost": 576,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 3
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "PROD_ENERGY",
+					"Type": "Modifier",
+					"Modifier": 400
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STREAM_ICE",
+					"Type": "Modifier",
+					"Modifier": 400
+				}
+			]
+		},
+		{
+			"ID": 2051,
+			"Name": "Wither Crux",
+			"ImageID": 152,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationRune" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Timed",
+			"DurationTime": 60,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 2
+			},
+			"MineralCost": 24,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_MTL",
+					"Type": "Modifier",
+					"Modifier": 300
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_GAS",
+					"Type": "Modifier",
+					"Modifier": 300
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_CRS",
+					"Type": "Modifier",
+					"Modifier": 300
+				}
+			]
+		},
+		{
+			"ID": 2052,
+			"Name": "Purity Crux",
+			"ImageID": 44,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationRune" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Rare",
+			"Duration": "Timed",
+			"DurationTime": 60,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 4
+			},
+			"MineralCost": 72,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_MTL",
+					"Type": "Modifier",
+					"Modifier": 600
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_GAS",
+					"Type": "Modifier",
+					"Modifier": 600
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_CRS",
+					"Type": "Modifier",
+					"Modifier": 600
+				}
+			]
+		},
+		{
+			"ID": 2053,
+			"Name": "Crescent Crux",
+			"ImageID": 117,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationRune" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Epic",
+			"Duration": "Timed",
+			"DurationTime": 60,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 6
+			},
+			"MineralCost": 288,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_MTL",
+					"Type": "Modifier",
+					"Modifier": 1000
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_GAS",
+					"Type": "Modifier",
+					"Modifier": 1000
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_CRS",
+					"Type": "Modifier",
+					"Modifier": 1000
+				}
+			]
+		},
+		{
+			"ID": 2054,
+			"Name": "Spinal Crux",
+			"ImageID": 93,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationRune" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Timed",
+			"DurationTime": 60,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 10
+			},
+			"MineralCost": 576,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "PROD_MTL",
+					"Type": "Multiplier",
+					"Modifier": 1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "PROD_GAS",
+					"Type": "Multiplier",
+					"Modifier": 1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "PROD_CRS",
+					"Type": "Multiplier",
+					"Modifier": 1
+				}
+			]
+		},
+		{
+			"ID": 2055,
+			"Name": "Scorch Pulse",
+			"ImageID": 149,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationRune" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Timed",
+			"DurationTime": 60,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 2
+			},
+			"MineralCost": 24,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "LightAssault",
+					"TargetAttribute": "COST_TIME",
+					"Type": "Multiplier",
+					"Modifier": -0.1
+				}
+			]
+		},
+		{
+			"ID": 2056,
+			"Name": "Binary Helix",
+			"ImageID": 145,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationRune" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Timed",
+			"DurationTime": 60,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 2
+			},
+			"MineralCost": 24,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "LightDefense",
+					"TargetAttribute": "COST_TIME",
+					"Type": "Multiplier",
+					"Modifier": -0.1
+				}
+			]
+		},
+		{
+			"ID": 2057,
+			"Name": "Sonorous",
+			"ImageID": 150,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationRune" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Timed",
+			"DurationTime": 60,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 2
+			},
+			"MineralCost": 24,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Scout",
+					"TargetAttribute": "COST_TIME",
+					"Type": "Multiplier",
+					"Modifier": -0.1
+				}
+			]
+		},
+		{
+			"ID": 2058,
+			"Name": "Arc veil",
+			"ImageID": 144,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationRune" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Rare",
+			"Duration": "Timed",
+			"DurationTime": 60,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 4
+			},
+			"MineralCost": 72,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Industrial",
+					"TargetAttribute": "COST_TIME",
+					"Type": "Multiplier",
+					"Modifier": -0.2
+				}
+			]
+		},
+		{
+			"ID": 2059,
+			"Name": "Rivet Potential",
+			"ImageID": 90,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationRune" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Epic",
+			"Duration": "Timed",
+			"DurationTime": 60,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 6
+			},
+			"MineralCost": 288,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 3
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "LargeShips",
+					"TargetAttribute": "COST_MTL",
+					"Type": "Multiplier",
+					"Modifier": -0.15
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "LargeShips",
+					"TargetAttribute": "COST_GAS",
+					"Type": "Multiplier",
+					"Modifier": -0.15
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "LargeShips",
+					"TargetAttribute": "COST_CRS",
+					"Type": "Multiplier",
+					"Modifier": -0.15
+				}
+			]
+		},
+		{
+			"ID": 2060,
+			"Name": "Astral Confluence",
+			"ImageID": 400,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationRune" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Timed",
+			"DurationTime": 60,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 10
+			},
+			"MineralCost": 576,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 3
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "CapitalShips",
+					"TargetAttribute": "COST_MTL",
+					"Type": "Multiplier",
+					"Modifier": -0.15
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "CapitalShips",
+					"TargetAttribute": "COST_GAS",
+					"Type": "Multiplier",
+					"Modifier": -0.15
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "CapitalShips",
+					"TargetAttribute": "COST_CRS",
+					"Type": "Multiplier",
+					"Modifier": -0.15
+				}
+			]
+		},
+		{
+			"ID": 2061,
+			"Name": "Empower",
+			"ImageID": 113,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationRune" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Epic",
+			"Duration": "Timed",
+			"DurationTime": 1440,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 6
+			},
+			"MineralCost": 288,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "PROD_ENERGY",
+					"Type": "Multiplier",
+					"Modifier": 0.25
+				}
+			]
+		},
+		{
+			"ID": 2062,
+			"Name": "Minutiae",
+			"ImageID": 42,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationRune" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Timed",
+			"DurationTime": 60,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 10
+			},
+			"MineralCost": 576,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_CONSTRQ",
+					"Type": "Modifier",
+					"Modifier": 480
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "SpecializationBuildings",
+					"TargetAttribute": "COST_TIME",
+					"Type": "Multiplier",
+					"Modifier": -0.1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "SpecializationBuildings",
+					"TargetAttribute": "COST_MTL",
+					"Type": "Multiplier",
+					"Modifier": -0.1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "SpecializationBuildings",
+					"TargetAttribute": "COST_GAS",
+					"Type": "Multiplier",
+					"Modifier": -0.1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "SpecializationBuildings",
+					"TargetAttribute": "COST_CRS",
+					"Type": "Multiplier",
+					"Modifier": -0.1
+				}
+			]
+		},
+		{
+			"ID": 2063,
+			"Name": "Viridian Laden Rune",
+			"ImageID": 112,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationRune" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Timed",
+			"DurationTime": 720,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 2
+			},
+			"MineralCost": 24,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_FREIGHTCOUNT",
+					"Type": "Modifier",
+					"Modifier": 4
+				}
+			]
+		},
+		{
+			"ID": 2064,
+			"Name": "Crimson Laden Rune",
+			"ImageID": 120,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationRune" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Rare",
+			"Duration": "Timed",
+			"DurationTime": 1440,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 4
+			},
+			"MineralCost": 72,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 1
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_FREIGHTCOUNT",
+					"Type": "Modifier",
+					"Modifier": 8
+				}
+			]
+		},
+		{
+			"ID": 2065,
+			"Name": "Cobalt Laden Rune",
+			"ImageID": 121,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationRune" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Epic",
+			"Duration": "Timed",
+			"DurationTime": 2880,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 6
+			},
+			"MineralCost": 288,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 2
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_FREIGHTCOUNT",
+					"Type": "Modifier",
+					"Modifier": 12
+				}
+			]
+		},
+		{
+			"ID": 2066,
+			"Name": "Chronomatic Trifle",
+			"ImageID": 41,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationRune" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Common",
+			"Duration": "Timed",
+			"DurationTime": 60,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 2
+			},
+			"MineralCost": 24,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_CONSTRQ",
+					"Type": "Modifier",
+					"Modifier": 30
+				}
+			]
+		},
+		{
+			"ID": 2067,
+			"Name": "Sovereign Power",
+			"ImageID": 2067,
+			"Unique": "true",
+			"Type": "Attachment",
+			"IsInaccessible": true,
+			"AssignmentTypes": [ "System" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": { "$type": "PrestigeGiver" },
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "S_CLAIMSTR",
+					"Type": "Modifier",
+					"Modifier": 50
+				}
+			]
+		},
+		{
+			"ID": 2068,
+			"Name": "Armed Garrison",
+			"ImageID": 126,
+			"Unique": "false",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 1
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "MissileBattery",
+					"TargetAttribute": "OP_RADIUS",
+					"Type": "Modifier",
+					"Modifier": 1
+				}
+			]
+		},
+		{
+			"ID": 2069,
+			"Name": "Ammunition Bay",
+			"ImageID": 17,
+			"Unique": "false",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 2
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "Fortress",
+					"TargetAttribute": "OP_CLAIM_RADIUS",
+					"Type": "Modifier",
+					"Modifier": 1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_LOCAL_HARVEST_MODIFIER",
+					"Type": "Modifier",
+					"Modifier": 0.1
+				}
+			]
+		},
+		{
+			"ID": 2070,
+			"Name": "Surveillance Drone Bay",
+			"ImageID": 363,
+			"Unique": "false",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 1
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "Scanner",
+					"TargetAttribute": "OP_RADIUS",
+					"Type": "Modifier",
+					"Modifier": 2
+				}
+			]
+		},
+		{
+			"ID": 2071,
+			"Name": "Traffic Control Tower",
+			"ImageID": 2071,
+			"Unique": "false",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 2
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "Stargate",
+					"TargetAttribute": "OP_RADIUS",
+					"Type": "Modifier",
+					"Modifier": 2
+				}
+			]
+		},
+		{
+			"ID": 2072,
+			"Name": "Mining Cabal",
+			"ImageID": 208,
+			"Unique": "false",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 1
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "MiningFacility",
+					"TargetAttribute": "OP_MOP_YIELD",
+					"Type": "Modifier",
+					"Modifier": 0.75
+				}
+			]
+		},
+		{
+			"ID": 2076,
+			"Name": "CarboCubicles",
+			"ImageID": 23,
+			"Unique": "false",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 3
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "HabitationDome",
+					"TargetAttribute": "OP_HD_HARVEST_YIELD",
+					"Type": "Modifier",
+					"Modifier": 1
+				}
+			]
+		},
+		{
+			"ID": 2077,
+			"Name": "Packaging Line",
+			"ImageID": 66,
+			"Unique": "false",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 2
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "TradingPort",
+					"TargetAttribute": "OP_TRDP_HARVEST_MULTIPLIER",
+					"Type": "Modifier",
+					"Modifier": 0.5
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "TradingPort",
+					"TargetAttribute": "OP_TRDP_STREAMING_MULTIPLIER",
+					"Type": "Modifier",
+					"Modifier": 0.5
+				}
+			]
+		},
+		{
+			"ID": 2078,
+			"Name": "Magnetic Containers",
+			"ImageID": 205,
+			"Unique": "false",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 2
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "TradingPort",
+					"TargetAttribute": "OP_TRDP_HARVEST_MULTIPLIER",
+					"Type": "Modifier",
+					"Modifier": 0.75
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "TradingPort",
+					"TargetAttribute": "OP_TRDP_STREAMING_MULTIPLIER",
+					"Type": "Modifier",
+					"Modifier": 0.75
+				}
+			]
+		},
+		{
+			"ID": 2079,
+			"Name": "Resource Silos",
+			"ImageID": 107,
+			"Unique": "false",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 3
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "MiningColony",
+					"TargetAttribute": "OP_RADIUS",
+					"Type": "Modifier",
+					"Modifier": 1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "MiningColony",
+					"TargetAttribute": "OP_MC_YIELD",
+					"Type": "Multiplier",
+					"Modifier": -0.05
+				}
+			]
+		},
+		{
+			"ID": 2080,
+			"Name": "Mal Estrade",
+			"ImageID": 703,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationCharacter" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Timed",
+			"DurationTime": 4320,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 10
+			},
+			"MineralCost": 576,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 3
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "Industrial",
+					"TargetAttribute": "UNIT_PLASMA_HARVESTING",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "CompleteStarMission" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 0.2,
+					"Radius": 0,
+					"Coverage": "Owner"
+				},
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "Industrial",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "CompleteStarMission" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 3,
+					"Radius": 0,
+					"Coverage": "Owner"
+				}
+			]
+		},
+		{
+			"ID": 2081,
+			"Name": "Rocket O'Doyle",
+			"ImageID": 701,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationCharacter" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Timed",
+			"DurationTime": 4320,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 10
+			},
+			"MineralCost": 576,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 3
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_PLUNDER",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Raid" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 0.2,
+					"Radius": 0,
+					"Coverage": "Owner"
+				},
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "SmallShips",
+					"TargetAttribute": "UNIT_CARGO",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Raid" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 5,
+					"Radius": 0,
+					"Coverage": "Owner"
+				},
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "LargeShips",
+					"TargetAttribute": "UNIT_CARGO",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Raid" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 25,
+					"Radius": 0,
+					"Coverage": "Owner"
+				},
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Raid" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 1,
+					"Radius": 0,
+					"Coverage": "Owner"
+				}
+			]
+		},
+		{
+			"ID": 2082,
+			"Name": "Gwayn Erebus",
+			"ImageID": 702,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationCharacter" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Timed",
+			"DurationTime": 4320,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 10
+			},
+			"MineralCost": 576,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 3
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SPD",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "CompleteMission" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 2,
+					"Radius": 0,
+					"Coverage": "Owner"
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "GE_MISSION_RECOMMENDED_TOTAL_MODIFIER",
+					"Type": "Modifier",
+					"Modifier": -0.15
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "GE_REQUIRED_ESCORT_MODIFIER",
+					"Type": "Modifier",
+					"Modifier": -1
+				}
+			]
+		},
+		{
+			"ID": 2083,
+			"Name": "Military Logistics",
+			"ImageID": 2083,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "Structure", "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 3
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_FREIGHTER_CARGO",
+					"Type": "Multiplier",
+					"Modifier": 0.3
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_FREIGHTCOUNT",
+					"Type": "Modifier",
+					"Modifier": 20
+				}
+			]
+		},
+		{
+			"ID": 2084,
+			"Name": "Galactic Bauble",
+			"ImageID": 2084,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationRune" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Rare",
+			"Duration": "Timed",
+			"DurationTime": 1440,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 4
+			},
+			"MineralCost": 72,
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_CAP",
+					"Type": "Modifier",
+					"Modifier": 50000
+				}
+			]
+		},
+		{
+			"ID": 2085,
+			"Name": "Cosmic Bauble",
+			"ImageID": 2085,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationRune" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Epic",
+			"Duration": "Timed",
+			"DurationTime": 2880,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 6
+			},
+			"MineralCost": 288,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 1
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_CAP",
+					"Type": "Modifier",
+					"Modifier": 150000
+				}
+			]
+		},
+		{
+			"ID": 2086,
+			"Name": "Craft Offices",
+			"ImageID": 369,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Epic",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 240
+			},
+			"MineralCost": 720,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 2
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "LogisticsHub",
+					"TargetAttribute": "OP_RADIUS",
+					"Type": "Modifier",
+					"Modifier": 1
+				}
+			]
+		},
+		{
+			"ID": 2087,
+			"Name": "Naval Offices",
+			"ImageID": 207,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "System", "Engineering" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 480
+			},
+			"MineralCost": 1440,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 2
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "LogisticsHub",
+					"TargetAttribute": "OP_RADIUS",
+					"Type": "Modifier",
+					"Modifier": 1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Outpost",
+					"Target": "LogisticsHub",
+					"TargetAttribute": "OP_SIGINT",
+					"Type": "Modifier",
+					"Modifier": 300
+				}
+			]
+		},
+		{
+			"ID": 2089,
+			"Name": "Big Bill Chattle",
+			"ImageID": 2089,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationCharacter" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Rare",
+			"Duration": "Timed",
+			"DurationTime": 480,
+			"Breakdown": {
+				"$type": "PrestigeGiver",
+				"Prestige": 4
+			},
+			"MineralCost": 72,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 1
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "PROD_MTL",
+					"Type": "Modifier",
+					"Modifier": 200
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "PROD_GAS",
+					"Type": "Modifier",
+					"Modifier": 200
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "PROD_CRS",
+					"Type": "Modifier",
+					"Modifier": 200
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "SpecializationBuildings",
+					"TargetAttribute": "COST_MTL",
+					"Type": "Multiplier",
+					"Modifier": -0.05
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "SpecializationBuildings",
+					"TargetAttribute": "COST_GAS",
+					"Type": "Multiplier",
+					"Modifier": -0.05
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "SpecializationBuildings",
+					"TargetAttribute": "COST_CRS",
+					"Type": "Multiplier",
+					"Modifier": -0.05
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Organizations",
+					"TargetAttribute": "COST_MTL",
+					"Type": "Multiplier",
+					"Modifier": -0.05
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Organizations",
+					"TargetAttribute": "COST_GAS",
+					"Type": "Multiplier",
+					"Modifier": -0.05
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Organizations",
+					"TargetAttribute": "COST_CRS",
+					"Type": "Multiplier",
+					"Modifier": -0.05
+				}
+			]
+		},
+		{
+			"ID": 2090,
+			"Name": "Willard S. Gamish",
+			"ImageID": 2090,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationCharacter" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Timed",
+			"DurationTime": 1440,
+			"Restrictions": [
+				{
+					"$type": "MaximumLevel",
+					"Level": 1
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_MTL",
+					"Type": "Modifier",
+					"Modifier": 45
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_GAS",
+					"Type": "Modifier",
+					"Modifier": 45
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_CRS",
+					"Type": "Modifier",
+					"Modifier": 45
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Buildings",
+					"TargetAttribute": "COST_MTL",
+					"Type": "Multiplier",
+					"Modifier": -0.1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Buildings",
+					"TargetAttribute": "COST_GAS",
+					"Type": "Multiplier",
+					"Modifier": -0.1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Buildings",
+					"TargetAttribute": "COST_CRS",
+					"Type": "Multiplier",
+					"Modifier": -0.1
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Empire",
+					"Target": "Commander",
+					"TargetAttribute": "OP_TP_PRESTIGE_YIELD",
+					"Type": "Modifier",
+					"Modifier": 10
+				}
+			]
+		},
+		{
+			"ID": 2091,
+			"Name": "William Chattle",
+			"ImageID": 2091,
+			"Unique": "true",
+			"Type": "Attachment",
+			"AssignmentTypes": [ "StationCharacter" ],
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Timed",
+			"DurationTime": 1440,
+			"Restrictions": [
+				{
+					"$type": "MinimumLevel",
+					"Level": 1
+				}
+			],
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "PROD_MTL",
+					"Type": "Modifier",
+					"Modifier": 300
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "PROD_GAS",
+					"Type": "Modifier",
+					"Modifier": 300
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "PROD_CRS",
+					"Type": "Modifier",
+					"Modifier": 300
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "SpecializationBuildings",
+					"TargetAttribute": "COST_MTL",
+					"Type": "Multiplier",
+					"Modifier": -0.05
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "SpecializationBuildings",
+					"TargetAttribute": "COST_GAS",
+					"Type": "Multiplier",
+					"Modifier": -0.05
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "SpecializationBuildings",
+					"TargetAttribute": "COST_CRS",
+					"Type": "Multiplier",
+					"Modifier": -0.05
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Organizations",
+					"TargetAttribute": "COST_MTL",
+					"Type": "Multiplier",
+					"Modifier": -0.05
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Organizations",
+					"TargetAttribute": "COST_GAS",
+					"Type": "Multiplier",
+					"Modifier": -0.05
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Organizations",
+					"TargetAttribute": "COST_CRS",
+					"Type": "Multiplier",
+					"Modifier": -0.05
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Empire",
+					"Target": "Commander",
+					"TargetAttribute": "OP_TP_PRESTIGE_YIELD",
+					"Type": "Modifier",
+					"Modifier": 10
+				}
+			]
+		}
+	],
+	"OtherCards": [
+		{
+			"ID": 9005,
+			"Name": "Resource Compartment",
+			"ImageID": 9005,
+			"Unique": "false",
+			"Type": "Module",
+			"Category": "Annex",
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_CAP",
+					"Type": "Modifier",
+					"Modifier": 12000
+				}
+			]
+		},
+		{
+			"ID": 9008,
+			"Name": "Build Queue Extension",
+			"ImageID": 9008,
+			"Unique": "false",
+			"Type": "Module",
+			"Category": "Annex",
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_CONSTRQ",
+					"Type": "Modifier",
+					"Modifier": 120
+				}
+			]
+		},
+		{
+			"ID": 9009,
+			"Name": "Ship Queue Extension",
+			"ImageID": 9009,
+			"Unique": "false",
+			"Type": "Module",
+			"Category": "Annex",
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PRODQ",
+					"Type": "Modifier",
+					"Modifier": 360
+				}
+			]
+		},
+		{
+			"ID": 9116,
+			"Name": "Sleep Containers",
+			"ImageID": 106,
+			"Unique": "false",
+			"Type": "Module",
+			"Category": "Annex",
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_ENERGY",
+					"Type": "Modifier",
+					"Modifier": 150
+				}
+			]
+		},
+		{
+			"ID": 9010,
+			"Name": "Waste Processing",
+			"ImageID": 9010,
+			"Unique": "false",
+			"Type": "Module",
+			"Category": "Annex",
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_MTL",
+					"Type": "Modifier",
+					"Modifier": 100
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_GAS",
+					"Type": "Modifier",
+					"Modifier": 100
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_PROD_CRS",
+					"Type": "Modifier",
+					"Modifier": 100
+				}
+			]
+		},
+		{
+			"ID": 9011,
+			"Name": "Construction Plans",
+			"ImageID": 9011,
+			"Unique": "false",
+			"Type": "Module",
+			"Category": "Annex",
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "RefineryBuildings",
+					"TargetAttribute": "COST_TIME",
+					"Type": "Multiplier",
+					"Modifier": -0.05
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "MilitaryBuildings",
+					"TargetAttribute": "COST_TIME",
+					"Type": "Modifier",
+					"Modifier": -0.05
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "DomainBuildings",
+					"TargetAttribute": "COST_TIME",
+					"Type": "Modifier",
+					"Modifier": -0.05
+				},
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "IndustrialBuildings",
+					"TargetAttribute": "COST_TIME",
+					"Type": "Modifier",
+					"Modifier": -0.05
+				}
+			]
+		},
+		{
+			"ID": 9012,
+			"Name": "Disarmed Garrison",
+			"ImageID": 9012,
+			"Unique": "false",
+			"Type": "Module",
+			"Category": "Annex",
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_CAPTURE_DEFENSE_REGENERATION",
+					"Type": "Modifier",
+					"Modifier": 1
+				}
+			]
+		},
+		{
+			"ID": 9013,
+			"Name": "Space Marines",
+			"ImageID": 131,
+			"Unique": "false",
+			"Type": "Module",
+			"Category": "Annex",
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_CAPTURE_DEFENSE",
+					"Type": "Modifier",
+					"Modifier": 40
+				}
+			]
+		},
+		{
+			"ID": 9014,
+			"Name": "Trade Route",
+			"ImageID": 704,
+			"Unique": "false",
+			"Type": "Module",
+			"Category": "Annex",
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Empire",
+					"Target": "Commander",
+					"TargetAttribute": "OP_TP_PRESTIGE_YIELD",
+					"Type": "Modifier",
+					"Modifier": 1
+				}
+			]
+		},
+		{
+			"ID": 9015,
+			"Name": "Tianchao Stealth Generator",
+			"ImageID": 33,
+			"Unique": "false",
+			"Type": "Module",
+			"Category": "Annex",
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "FleetsInRange",
+					"Target": "Fleet",
+					"TargetAttribute": "UNIT_SIGINT",
+					"Conditions": [
+						{
+							"$type": "OperationCondition",
+							"AcceptedTypes": [ "Scan" ]
+						}
+					],
+					"Type": "Modifier",
+					"Modifier": 400,
+					"Radius": 0,
+					"Coverage": "Owner"
+				}
+			]
+		},
+		{
+			"ID": 9016,
+			"Name": "Fame",
+			"ImageID": 9016,
+			"Unique": "false",
+			"Type": "Module",
+			"Category": "Annex",
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Empire",
+					"Target": "Commander",
+					"TargetAttribute": "EMPIRE_XP_YIELD",
+					"Type": "Multiplier",
+					"Modifier": 0.05
+				}
+			]
+		},
+		{
+			"ID": 9017,
+			"Name": "Stolen MPL Tech",
+			"ImageID": 100,
+			"Unique": "false",
+			"Type": "Module",
+			"Category": "Annex",
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "EmpireStations",
+					"Target": "Station",
+					"TargetAttribute": "STAT_RESOURCE_YIELD_BONUS",
+					"Type": "Multiplier",
+					"Modifier": 0.03
+				}
+			]
+		},
+		{
+			"ID": 9018,
+			"Name": "Fervor",
+			"ImageID": 9018,
+			"Unique": "false",
+			"Type": "Module",
+			"Category": "Annex",
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "EmpireStations",
+					"Target": "Station",
+					"TargetAttribute": "PROD_ENERGY",
+					"Type": "Multiplier",
+					"Modifier": 0.02
+				}
+			]
+		},
+		{
+			"ID": 9019,
+			"Name": "Stolen Atlas Tech",
+			"ImageID": 280,
+			"Unique": "false",
+			"Type": "Module",
+			"Category": "Annex",
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_SCANSTR",
+					"Type": "Modifier",
+					"Modifier": 200
+				}
+			]
+		},
+		{
+			"ID": 9020,
+			"Name": "Interstellar Logistic Secrets",
+			"ImageID": 9020,
+			"Unique": "false",
+			"Type": "Module",
+			"Category": "Annex",
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "Station",
+					"Target": "Station",
+					"TargetAttribute": "STAT_FREIGHTCOUNT",
+					"Type": "Modifier",
+					"Modifier": 50
+				}
+			]
+		},
+		{
+			"ID": 9021,
+			"Name": "Unification",
+			"ImageID": 136,
+			"Unique": "false",
+			"Type": "Module",
+			"Category": "Annex",
+			"AttachmentGroup": "Station",
+			"Rarity": "Legendary",
+			"Duration": "Permanent",
+			"Effects": [
+				{
+					"Origin": "Card",
+					"Destination": "EmpireStations",
+					"Target": "Station",
+					"TargetAttribute": "PROD_ENERGY",
+					"Type": "Multiplier",
+					"Modifier": 0.05
+				}
+			]
+		},
+		{
+			"ID": 5001,
+			"Name": "Steel Slab",
+			"ImageID": 96,
+			"Unique": "false",
+			"Type": "Commodity",
+			"Category": "Material",
+			"Rarity": "Common",
+			"Value": 3
+		},
+		{
+			"ID": 5002,
+			"Name": "Carbon Plate",
+			"ImageID": 89,
+			"Unique": "false",
+			"Type": "Commodity",
+			"Category": "Material",
+			"Rarity": "Rare",
+			"Value": 3
+		},
+		{
+			"ID": 5003,
+			"Name": "Titanium Block",
+			"ImageID": 98,
+			"Unique": "false",
+			"Type": "Commodity",
+			"Category": "Material",
+			"Rarity": "Epic",
+			"Value": 3
+		},
+		{
+			"ID": 5004,
+			"Name": "Diamond Nanorod",
+			"ImageID": 92,
+			"Unique": "false",
+			"Type": "Commodity",
+			"Category": "Material",
+			"Rarity": "Legendary",
+			"Value": 3
+		},
+		{
+			"ID": 7000,
+			"Name": "Local Broker",
+			"ImageID": 134,
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Broker",
+			"Rarity": "Common",
+			"Duration": "Consumed",
+			"Value": 3,
+			"Effects": [
+				{
+					"TargetAttribute": "TRADER_EXCHANGE_RESOURCE_UNIT_MAXIMUM",
+					"Type": "Modifier",
+					"Modifier": 1000
+				}
+			]
+		},
+		{
+			"ID": 7001,
+			"Name": "Continental Broker",
+			"ImageID": 133,
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Broker",
+			"Rarity": "Common",
+			"Duration": "Consumed",
+			"Value": 3,
+			"Effects": [
+				{
+					"TargetAttribute": "TRADER_EXCHANGE_RESOURCE_UNIT_MAXIMUM",
+					"Type": "Modifier",
+					"Modifier": 5000
+				}
+			]
+		},
+		{
+			"ID": 7002,
+			"Name": "Planetary Broker",
+			"ImageID": 127,
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Broker",
+			"Rarity": "Rare",
+			"Duration": "Consumed",
+			"Value": 3,
+			"Effects": [
+				{
+					"TargetAttribute": "TRADER_EXCHANGE_RESOURCE_UNIT_MAXIMUM",
+					"Type": "Modifier",
+					"Modifier": 20000
+				}
+			]
+		},
+		{
+			"ID": 7003,
+			"Name": "Stellar Broker",
+			"ImageID": 129,
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Broker",
+			"Rarity": "Epic",
+			"Duration": "Consumed",
+			"Value": 3,
+			"Effects": [
+				{
+					"TargetAttribute": "TRADER_EXCHANGE_RESOURCE_UNIT_MAXIMUM",
+					"Type": "Modifier",
+					"Modifier": 50000
+				}
+			]
+		},
+		{
+			"ID": 7004,
+			"Name": "Galactic Broker",
+			"ImageID": 130,
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Broker",
+			"Rarity": "Legendary",
+			"Duration": "Consumed",
+			"Value": 3,
+			"Effects": [
+				{
+					"TargetAttribute": "TRADER_EXCHANGE_RESOURCE_UNIT_MAXIMUM",
+					"Type": "Modifier",
+					"Modifier": 100000
+				}
+			]
+		},
+		{
+			"ID": 8005,
+			"Name": "Build-R (5m)",
+			"ImageID": 706,
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Accelerant",
+			"Rarity": "Common",
+			"Duration": "Consumed",
+			"Value": 3,
+			"Effects": [
+				{
+					"Target": "None",
+					"TargetAttribute": "BUILDER_CONSTRUCTION_TIME_REDUCTION",
+					"Type": "Modifier",
+					"Modifier": -5
+				}
+			]
+		},
+		{
+			"ID": 8006,
+			"Name": "Build-R (15m)",
+			"ImageID": 705,
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Accelerant",
+			"Rarity": "Rare",
+			"Duration": "Consumed",
+			"Value": 3,
+			"Effects": [
+				{
+					"Target": "None",
+					"TargetAttribute": "BUILDER_CONSTRUCTION_TIME_REDUCTION",
+					"Type": "Modifier",
+					"Modifier": -15
+				}
+			]
+		},
+		{
+			"ID": 8000,
+			"Name": "Build-R (30m)",
+			"ImageID": 138,
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Accelerant",
+			"Rarity": "Rare",
+			"Duration": "Consumed",
+			"Value": 3,
+			"Effects": [
+				{
+					"Target": "None",
+					"TargetAttribute": "BUILDER_CONSTRUCTION_TIME_REDUCTION",
+					"Type": "Modifier",
+					"Modifier": -30
+				}
+			]
+		},
+		{
+			"ID": 8001,
+			"Name": "Build-R (60m)",
+			"ImageID": 142,
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Accelerant",
+			"Rarity": "Epic",
+			"Duration": "Consumed",
+			"Value": 3,
+			"Effects": [
+				{
+					"Target": "None",
+					"TargetAttribute": "BUILDER_CONSTRUCTION_TIME_REDUCTION",
+					"Type": "Modifier",
+					"Modifier": -60
+				}
+			]
+		},
+		{
+			"ID": 8002,
+			"Name": "Build-R (120m)",
+			"ImageID": 139,
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Accelerant",
+			"Rarity": "Epic",
+			"Duration": "Consumed",
+			"Value": 3,
+			"Effects": [
+				{
+					"Target": "None",
+					"TargetAttribute": "BUILDER_CONSTRUCTION_TIME_REDUCTION",
+					"Type": "Modifier",
+					"Modifier": -120
+				}
+			]
+		},
+		{
+			"ID": 8003,
+			"Name": "Build-R (240m)",
+			"ImageID": 140,
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Accelerant",
+			"Rarity": "Legendary",
+			"Duration": "Consumed",
+			"Value": 3,
+			"Effects": [
+				{
+					"Target": "None",
+					"TargetAttribute": "BUILDER_CONSTRUCTION_TIME_REDUCTION",
+					"Type": "Modifier",
+					"Modifier": -240
+				}
+			]
+		},
+		{
+			"ID": 8004,
+			"Name": "Build-R (480m)",
+			"ImageID": 141,
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Accelerant",
+			"Rarity": "Legendary",
+			"Duration": "Consumed",
+			"Value": 3,
+			"Effects": [
+				{
+					"Target": "None",
+					"TargetAttribute": "BUILDER_CONSTRUCTION_TIME_REDUCTION",
+					"Type": "Modifier",
+					"Modifier": -480
+				}
+			]
+		},
+		{
+			"ID": 8007,
+			"Name": "Build-R (1m)",
+			"ImageID": 706,
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Accelerant",
+			"Rarity": "Common",
+			"Duration": "Consumed",
+			"Value": 3,
+			"Effects": [
+				{
+					"Target": "None",
+					"TargetAttribute": "BUILDER_CONSTRUCTION_TIME_REDUCTION",
+					"Type": "Modifier",
+					"Modifier": -1
+				}
+			]
+		},
+		{
+			"ID": 8008,
+			"Name": "Build-R (1440m)",
+			"ImageID": 8008,
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Accelerant",
+			"Rarity": "Legendary",
+			"Duration": "Consumed",
+			"Value": 3,
+			"Effects": [
+				{
+					"Target": "None",
+					"TargetAttribute": "BUILDER_CONSTRUCTION_TIME_REDUCTION",
+					"Type": "Modifier",
+					"Modifier": -1440
+				}
+			]
+		},
+		{
+			"ID": 8500,
+			"Name": "Command",
+			"ImageID": 402,
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Commander",
+			"Rarity": "Legendary",
+			"Duration": "Consumed"
+		},
+		{
+			"ID": 8506,
+			"Name": "Salvage Team",
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Commander",
+			"Rarity": "Legendary",
+			"Duration": "Consumed"
+		},
+		{
+			"ID": 8600,
+			"Name": "Research Grant (1h)",
+			"ImageID": 903,
+			"ResearchHours": "1",
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Commander",
+			"Rarity": "Common",
+			"Duration": "Consumed"
+		},
+		{
+			"ID": 8601,
+			"Name": "Research Grant (3h)",
+			"ImageID": 903,
+			"ResearchHours": "3",
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Commander",
+			"Rarity": "Common",
+			"Duration": "Consumed"
+		},
+		{
+			"ID": 8602,
+			"Name": "Research Grant (8h)",
+			"ImageID": 903,
+			"ResearchHours": "8",
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Commander",
+			"Rarity": "Rare",
+			"Duration": "Consumed"
+		},
+		{
+			"ID": 8603,
+			"Name": "Research Grant (24h)",
+			"ImageID": 903,
+			"ResearchHours": "24",
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Commander",
+			"Rarity": "Epic",
+			"Duration": "Consumed"
+		},
+		{
+			"ID": 8604,
+			"Name": "Research Grant (72h)",
+			"ImageID": 903,
+			"ResearchHours": "72",
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Commander",
+			"Rarity": "Legendary",
+			"Duration": "Consumed"
+		},
+		{
+			"ID": 8510,
+			"Name": "Premium Permit (7d)",
+			"ImageID": 902,
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Commander",
+			"Rarity": "Legendary",
+			"Duration": "Consumed",
+			"Breakdown": {
+				"$type": "PremiumSubscriptionGiver",
+				"DaysOfSubscription": 7
+			}
+		},
+		{
+			"ID": 8511,
+			"Name": "Premium Permit (14d)",
+			"ImageID": 902,
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Commander",
+			"Rarity": "Legendary",
+			"Duration": "Consumed",
+			"Breakdown": {
+				"$type": "PremiumSubscriptionGiver",
+				"DaysOfSubscription": 14
+			}
+		},
+		{
+			"ID": 8512,
+			"Name": "Premium Permit (28d)",
+			"ImageID": 902,
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Commander",
+			"Rarity": "Legendary",
+			"Duration": "Consumed",
+			"Breakdown": {
+				"$type": "PremiumSubscriptionGiver",
+				"DaysOfSubscription": 28
+			}
+		},
+		{
+			"ID": 8520,
+			"Name": "Clean Slate",
+			"ImageID": 401,
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Commander",
+			"Rarity": "Legendary",
+			"Duration": "Consumed"
+		},
+		{
+			"ID": 8550,
+			"Name": "Basic Supply Contract (7d)",
+			"ImageID": 900,
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Commander",
+			"Rarity": "Legendary",
+			"Duration": "Consumed"
+		},
+		{
+			"ID": 8551,
+			"Name": "Advanced Supply Contract (28d)",
+			"ImageID": 901,
+			"Unique": "false",
+			"Type": "Consumable",
+			"Category": "Commander",
+			"Rarity": "Legendary",
+			"Duration": "Consumed"
+		}
+	]
+}

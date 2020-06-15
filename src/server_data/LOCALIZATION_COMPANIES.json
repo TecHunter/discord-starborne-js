@@ -1,0 +1,86 @@
+﻿[
+  {
+    "Name": "Prospect Inc.",
+    "ID": 0,
+    "Branch": "Industry",
+    "Description": "\nUnlocked by having the Civilian Militia building at level 10 and the Mining Colony outpost built.\n\nYour Mining Colony now additionally harvests resource fields at 20% per level.\n\nResource exchange rate lowered by 1.",
+    "Effects": [
+      {
+        "VersionSmallDescription": "Mining Colony harvests resource fields at <color=green>20%</color> per level"
+      },
+      {
+        "VersionSmallDescription": "Resource exchange rate lowered by <color=green>1</color>."
+      }
+    ]
+  },
+  {
+    "Name": "Civic Intelligence",
+    "ID": 1,
+    "Branch": "Dominion",
+    "Description": "\nUnlocked by having the Civilian Militia building at level 10 and a the Habitation Dome outpost built.\n\nAdds 5 spies to your empire.\n\nLowers the mission requirements for fleets running missions from this station by -20% and the mission escort requirement by 1.\n\nStargate grants an additional 1 speed.\"",
+    "Effects": [
+      {
+        "VersionSmallDescription": "<color=green>+5</color> Operatives"
+      },
+      {
+        "VersionSmallDescription": "<color=green>-20%</color> mission requirements"
+      },
+      {
+        "VersionSmallDescription": "<color=green>-1</color> mission escort requirement"
+      },
+      {
+        "VersionSmallDescription": "<color=green>+1</color> Stargate speed"
+      }
+    ]
+  },
+  {
+    "Name": "Gubernatorial Colonial",
+    "ID": 2,
+    "Branch": "Military",
+    "Description": "\nUnlocked by having the Merchant House building at level 10 and the Heavy Ship Assembly outpost built.\n\nFortress claim radius increased by 1.",
+    "Effects": [
+      {
+        "VersionSmallDescription": "<color=green>+1</color> fortress claim radius"
+      }
+    ]
+  },
+  {
+    "Name": "Trans-Galactic Exports",
+    "ID": 3,
+    "Branch": "Industry",
+    "Description": "\nUnlocked by having the Communication Array building at level 10 and the Mining Colony outpost built.\n\nAdds 25 freighters to your empire freighter pool and freighters departing from this station have 50% more cargo.",
+    "Effects": [
+      {
+        "VersionSmallDescription": "<color=green>+25</color> freighters"
+      },
+      {
+        "VersionSmallDescription": "<color=green>+50%</color> freighter cargo when departing from this station"
+      }
+    ]
+  },
+  {
+    "Name": "WALL Industrial Security",
+    "ID": 4,
+    "Branch": "Dominion",
+    "Description": "\nUnlocked by having the Merchant House building at level 10 and the Habitation Dome outpost built.\n\nStation claim radius increased by 1.",
+    "Effects": [
+      {
+        "VersionSmallDescription": "<color=green>+1</color> station claim radius"
+      }
+    ]
+  },
+  {
+    "Name": "Bellicose Industries",
+    "ID": 5,
+    "Branch": "Military",
+    "Description": "Unlocked by having the Communications Array building at level 10 and the Heavy Ship Assembly outpost built.\n\nMissile Batteries now harvest resource fields within their radius of influence at 40% yield.\n\nFleets raiding from this station gain 20% cargo, 1 speed and 10% plunder.",
+    "Effects": [
+      {
+        "VersionSmallDescription": "<color=green>+40%</color> missile battery harvest yield."
+      },
+			{
+				"VersionSmallDescription": "<color=green>20%</color> cargo, <color=green>10%</color> plunder and <color=green>1</color> speed whie raiding."
+			}
+    ]
+  }
+]

@@ -1,0 +1,17 @@
+{
+	"MinimumToSucceedMission": 0.50,
+	"MissionDifficultyTable": [
+		[ 2000, 24000, 200000, 600000, 1200000 ],
+		[ 2000, 24000, 200000, 600000, 1200000 ],
+		[ 2000, 24000, 200000, 600000, 1200000 ],
+		[ 18, 112, 450, 1800, 3600 ]
+	],
+	"MissionInterferenceTable": [ 200, 500, 600, 700, 800 ],
+	"MissionHintInterferenceTable": [ 100, 300, 400, 500, 600 ],
+
+	// Star missions
+	"MinimumToSucceedStarMission": 0.01,
+	"StarMissionDifficultyTable": [ 20, 50, 100, 200, 300 ],
+	"StarMissionSpawnChance": 0.2,
+	"StarMissionRefreshInterval": 2
+}

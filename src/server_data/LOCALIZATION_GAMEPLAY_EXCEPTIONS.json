@@ -1,0 +1,22 @@
+﻿[
+    {
+        "Id": "AllianceFull",
+        "Message": "Volle Ally, Alter!"
+    },
+    {
+        "Id": "StationNoCurrentConstruction",
+        "Message": "Can't rush construction; Station has no current construction."
+    },
+    {
+        "Id": "StationConstructionCantBeRushedYet",
+        "Message": "Can't rush construction; Construction can not be rushed yet."
+    },
+    {
+        "Id": "CardSlotInvalid",
+        "Message": "Can't add card; Slot is invalid for this card."
+    },
+    {
+        "Id": "CardSlotOccupied",
+        "Message": "Can't add card; slot is occupied."
+    }
+]

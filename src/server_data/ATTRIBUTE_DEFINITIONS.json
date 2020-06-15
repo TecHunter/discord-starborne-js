@@ -1,0 +1,1644 @@
+﻿[
+	// UNIT_FIREPOWER
+	{
+		"AttributeId": 0,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": true,
+		"IsSupplyDependent": true
+	},
+	// UNIT_SUPPRESSION_FIREPOWER
+	{
+		"AttributeId": 2,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": true
+	},
+	// UNIT_BOMB
+	{
+		"AttributeId": 8,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": true
+	},
+	// UNIT_STATION_CAPTURE
+	{
+		"AttributeId": 9,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": true
+	},
+	// UNIT_HP
+	{
+		"AttributeId": 10,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": true,
+		"IsSupplyDependent": true
+	},
+	// UNIT_SPD
+	{
+		"AttributeId": 11,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 1,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": false,
+		"Behavior": 2, // Min,
+		"IsSupplyDependent": false
+	},
+	// UNIT_FSIZE
+	{
+		"AttributeId": 12,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": false
+	},
+	// UNIT_CARGO
+	{
+		"AttributeId": 13,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": true
+	},
+	// UNIT_SCANSTR
+	{
+		"AttributeId": 14,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": true
+	},
+	// UNIT_SIGINT
+	{
+		"AttributeId": 18,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": false,
+		"Behavior": 2 // Min
+	},
+	// UNIT_FUEL
+	{
+		"AttributeId": 19,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": false
+	},
+	// UNIT_XPVAL
+	{
+		"AttributeId": 20,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": true
+	},
+	// UNIT_XP
+	{
+		"AttributeId": 21,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": false
+	},
+	// UNIT_SUPPRESSION_IMMUNITY
+	{
+		"AttributeId": 23,
+		"Type": 3,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": true,
+		"MaxValue": 1,
+		"AffectedByCount": false
+	},
+	// UNIT_CARD_SPACE
+	{
+		"AttributeId": 24,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 1,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": false
+	},
+	// UNIT_PROBE_LIFETIME
+	{
+		"AttributeId": 25,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": false,
+		"Default": 0
+	},
+	// UNIT_XP_GAIN
+	{
+		"AttributeId": 26,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": false,
+		"Default": 1
+	},
+	// UNIT_SPD_RETURN
+	{
+		"AttributeId": 27,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": false
+	},
+	// UNIT_ESCORT_COUNT
+	{
+		"AttributeId": 29,
+		"Type": 4,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": false
+	},
+	// UNIT_PLASMA_HARVESTING
+	{
+		"AttributeId": 30,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": false
+	},
+	// UNIT_BONUSXP_ASSAULT
+	{
+		"AttributeId": 31,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": false
+	},
+	// UNIT_BONUSXP_RAID
+	{
+		"AttributeId": 32,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": false
+	},
+	// UNIT_BONUSXP_SCAN
+	{
+		"AttributeId": 33,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": false
+	},
+	// UNIT_BONUSXP_SPY
+	{
+		"AttributeId": 34,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": false
+	},
+	// UNIT_BONUSXP_HARVESTING
+	{
+		"AttributeId": 35,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": false
+	},
+	// UNIT_BONUSXP_BUILDANDUPGRADE
+	{
+		"AttributeId": 36,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": false
+	},
+	// UNIT_SHIELD
+	{
+		"AttributeId": 37,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": false
+	},
+	// UNIT_MIMIC_ROLE_OFFENSE
+	{
+		"AttributeId": 50,
+		"Type": 3,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": true,
+		"MaxValue": 1,
+		"AffectedByCount": false
+	},
+	// UNIT_MIMIC_ROLE_DEFENSE
+	{
+		"AttributeId": 51,
+		"Type": 3,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": true,
+		"MaxValue": 1,
+		"AffectedByCount": false
+	},
+	// UNIT_MIMIC_ROLE_INDUSTRIAL
+	{
+		"AttributeId": 52,
+		"Type": 3,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": true,
+		"MaxValue": 1,
+		"AffectedByCount": false
+	},
+	// UNIT_MIMIC_ROLE_RECON
+	{
+		"AttributeId": 53,
+		"Type": 3,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": true,
+		"MaxValue": 1,
+		"AffectedByCount": false
+	},
+	// UNIT_SCAN_RADIUS
+	{
+		"AttributeId": 57,
+		"Type": 4,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"AffectedByCount": false,
+		"Behavior": "Max"
+	},
+	// UNIT_TACTIC_EFFICIENCY
+	{
+		"AttributeId": "UNIT_TACTIC_EFFICIENCY",
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"AffectedByCount": false
+	},
+	// UNIT_IN_RAID
+	{
+		"AttributeId": "UNIT_IN_RAID",
+		"Type": 3,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": true,
+		"MaxValue": 1,
+		"AffectedByCount": false,
+		"Default": 1
+	},
+	// UNIT_IN_ASSAULT
+	{
+		"AttributeId": "UNIT_IN_ASSAULT",
+		"Type": 3,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": true,
+		"MaxValue": 1,
+		"AffectedByCount": false,
+		"Default": 1
+	},
+	// UNIT_TACTIC_BOOST
+	{
+		"AttributeId": "UNIT_TACTIC_BOOST",
+		"Type": "Percentage",
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": true,
+		"MaxValue": 1,
+		"AffectedByCount": false,
+		"Default": 0
+	},
+	// UNIT_PLUNDER
+	{
+		"AttributeId": "UNIT_PLUNDER",
+		"Type": "Percentage",
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": true,
+		"MaxValue": 1,
+		"AffectedByCount": false,
+		"Default": 0
+	},
+	// STAT =============================================================================================
+	// STAT_CAPTURE_DEFENSE
+	{
+		"AttributeId": "STAT_CAPTURE_DEFENSE",
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 0
+	},
+	{
+		"AttributeId": "STAT_CAPTURE_DEFENSE_REGENERATION",
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 1,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 1
+	},
+	// STAT_BUILDING_CONSTRUCTION_TIME
+	{
+		"AttributeId": 100,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 1
+	},
+	// STAT_SHIP_PRODUCTION_TIME
+	{
+		"AttributeId": 101,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 1
+	},
+	// STAT_SHIP_PRODUCTION_TIME_SMALL
+	{
+		"AttributeId": 102,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 1
+	},
+	// STAT_SHIP_PRODUCTION_TIME_LARGE
+	{
+		"AttributeId": 103,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 1
+	},
+	// STAT_SIGINT
+	{
+		"AttributeId": 104,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_SCANSTR
+	{
+		"AttributeId": 105,
+		"Type": 4,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_PRODQ
+	{
+		"AttributeId": 106,
+		"Type": 4,
+		"HasMinValue": true,
+		"MinValue": 1,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_CONSTRQ
+	{
+		"AttributeId": 107,
+		"Type": 4,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_FLEETLIM
+	{
+		"AttributeId": 108,
+		"Type": 4,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_SUPPLEFF
+	{
+		"AttributeId": 109,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false
+	},
+	// STAT_OCT overcrowding threshold
+	{
+		"AttributeId": 110,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_SSPACE
+	{
+		"AttributeId": 111,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_GARRLIM
+	{
+		"AttributeId": 112,
+		"Type": 4,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_RECONRESIST
+	{
+		"AttributeId": 113,
+		"Type": 4,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_INVRESIST
+	{
+		"AttributeId": 114,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_FREIGHTCOUNT
+	{
+		"AttributeId": 115,
+		"Type": 4,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_OP_BUILDCOST
+	{
+		"AttributeId": 116,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 1
+	},
+	// STAT_OP_UPGRCOST
+	{
+		"AttributeId": 117,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 1
+	},
+	// STAT_OP_REPAIRCOST
+	{
+		"AttributeId": 118,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 1
+	},
+	// STAT_RESHIDDEN
+	{
+		"AttributeId": 119,
+		"Type": 4,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_B_HP
+	{
+		"AttributeId": 120,
+		"Type": 4,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 1
+	},
+	// STAT_INFLTHRESH
+	{
+		"AttributeId": 121,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 1
+	},
+	// S_CLAIMSTR
+	{
+		"AttributeId": 122,
+		"Type": 4,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 1
+	},
+	// S_DEFBOOST
+	{
+		"AttributeId": 123,
+		"Type": 1,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// S_ENERGYCONVERT
+	{
+		"AttributeId": 124,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// S_EXPBONUS
+	{
+		"AttributeId": 125,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// S_FDRS fleet doctrine research speed
+	{
+		"AttributeId": 126,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_FLEET_BASEXP
+	{
+		"AttributeId": 127,
+		"Type": 4,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_INFLRADIUS
+	{
+		"AttributeId": 128,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_FLEET_RAID_SPD
+	{
+		"AttributeId": 129,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"Default": 1
+	},
+	// STAT_FLEET_RAID_CARGO
+	{
+		"AttributeId": 130,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 1
+	},
+	// STAT_FLEET_MISSION_SPD
+	{
+		"AttributeId": 131,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"Default": 1
+	},
+	// STAT_FLEET_MISSION_CARGO
+	{
+		"AttributeId": 132,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 1
+	},
+
+	// STAT_FLEET_EVENT_INTERVAL
+	{
+		"AttributeId": 133,
+		"Type": 0,
+		"HasMinValue": false,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 1
+	},
+	// STAT_DEFBOOST
+	{
+		"AttributeId": 134,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_CARDSPACE
+	{
+		"AttributeId": 135,
+		"Type": 4,
+		"HasMinValue": true,
+		"MinValue": 1,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 1
+	},
+	// STAT_COMMODITY_BREAKDOWN_BONUS
+	{
+		"AttributeId": 138,
+		"HasMinValue": false,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_RESOURCE_YIELD_BONUS
+	{
+		"AttributeId": 139,
+		"HasMinValue": false,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 1
+	},
+	// STAT_FLEET_STARMISSION_SPD
+	{
+		"AttributeId": 140,
+		"Type": 2,
+		"HasMinValue": false,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_FLEET_STARMISSION_CARGO
+	{
+		"AttributeId": 141,
+		"Type": 2,
+		"HasMinValue": false,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_LOCAL_HARVEST_MODIFIER
+	{
+		"AttributeId": 146,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_LOCAL_HARVEST_METAL_MODIFIER
+	{
+		"AttributeId": 156,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_LOCAL_HARVEST_GAS_MODIFIER
+	{
+		"AttributeId": 157,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_LOCAL_HARVEST_CRYSTAL_MODIFIER
+	{
+		"AttributeId": 158,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_LOCAL_HARVEST_ICE_MODIFIER
+	{
+		"AttributeId": 159,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_RESOURCE_EXCHANGE_RATE
+	{
+		"AttributeId": 149,
+		"Type": 4,
+		"HasMinValue": true,
+		"MinValue": 1,
+		"Default": 4
+	},
+	// STAT_NEIGHBOURHOODWATCH_RADIUS
+	{
+		"AttributeId": 154,
+		"Type": 4,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"Default": 10
+	},
+	// STAT_HANGAR_HIDDEN_SHIPS_PER_UNIT
+	{
+		"AttributeId": "STAT_HANGAR_HIDDEN_SHIPS_PER_UNIT",
+		"Type": "Integer",
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"Default": 0
+	},
+	// STAT_FLEET_STARTING_RANK
+	{
+		"AttributeId": "STAT_FLEET_STARTING_RANK",
+		"Type": "Integer",
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": true,
+		"MaxValue": 3,
+		"Default": 0
+	},
+	// STAT_TACTIC_BOOST_CAP
+	{
+		"AttributeId": "STAT_TACTIC_BOOST_CAP",
+		"Type": 3,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": true,
+		"MaxValue": 1,
+		"AffectedByCount": false,
+		"Default": 0
+	},
+	// OP =====================================================================================================
+	// OP_STACKPENALTY
+	{
+		"AttributeId": 200,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_SG_MOVESPDBOOST
+	{
+		"AttributeId": 201,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_SG_SPGPERCELL
+	{
+		"AttributeId": 202,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_FORT_DEFBOOST
+	{
+		"AttributeId": 203,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_FORT_INTCEPTCHANCE
+	{
+		"AttributeId": 204,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_NAVY_DEFMOD
+	{
+		"AttributeId": 205,
+		"Type": 1,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_NAVY_DEF
+	{
+		"AttributeId": 206,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_MINING_OUTPOST_MAX_COUNT
+	{
+		"AttributeId": 207,
+		"Type": 4,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_MOP_YIELD
+	{
+		"AttributeId": 208,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_TRDP_MISINTERVAL
+	{
+		"AttributeId": 209,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_MC_DISCRATE
+	{
+		"AttributeId": 210,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_MC_YIELD
+	{
+		"AttributeId": 226,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_INTSPH_TIMEOFFSET
+	{
+		"AttributeId": 211,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_OPERATIONAL
+	{
+		"AttributeId": 212,
+		"Type": 3,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": true,
+		"MaxValue": 1
+	},
+	// OP_SCAN_SCANSTR
+	{
+		"AttributeId": 213,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_SCAN_RECONSTR
+	{
+		"AttributeId": 214,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_HITPOINTS
+	{
+		"AttributeId": 215,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_HABIT_OUTPOST_MAX_COUNT
+	{
+		"AttributeId": 216,
+		"Type": 4,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_SUPPLY_DEPOT_MAX_COUNT
+	{
+		"AttributeId": 217,
+		"Type": 4,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_SUPPLY_DEPOT_STORAGE
+	{
+		"AttributeId": 218,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_MBAT_LETHAL_RATIO
+	{
+		"AttributeId": 219,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_MBAT_SDEF
+	{
+		"AttributeId": 220,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_CLAIM_STR
+	{
+		"AttributeId": 221,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_RADIUS
+	{
+		"AttributeId": 222,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_STATION_LABOR
+	{
+		"AttributeId": 223,
+		"Type": 4,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_SCANNER_STRENGTH
+	{
+		"AttributeId": 224,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_SIGINT
+	{
+		"AttributeId": 225,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_FORT_COMBAT_HPBONUS
+	{
+		"AttributeId": 228,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": true,
+		"MaxValue": 1
+	},
+
+	// COST ===================================================================================
+
+	// COST_TIME
+	{
+		"AttributeId": 300,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": true
+	},
+	// COST_UPKEEP
+	{
+		"AttributeId": 301,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": true
+	},
+	// COST_MAT
+	{
+		"AttributeId": 302,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": true
+	},
+	// COST_MTL
+	{
+		"AttributeId": 303,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": true
+	},
+	// COST_GAS
+	{
+		"AttributeId": 304,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": true
+	},
+	// COST_CRS
+	{
+		"AttributeId": 305,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": true
+	},
+	// COST_SP
+	{
+		"AttributeId": 306,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": true
+	},
+	// COST_UPKEEP
+	{
+		"AttributeId": "COST_UPKEEP_FLAT",
+		"Type": 0,
+		"HasMinValue": false,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"AffectedByCount": false
+	},
+	// PRODUCTION ===================================================================
+	// PROD_ENERGY
+	{
+		"AttributeId": 400,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// PROD_MTL
+	{
+		"AttributeId": 401,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// PROD_GAS
+	{
+		"AttributeId": 402,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// PROD_CRS
+	{
+		"AttributeId": 403,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// PROD_RPG
+	{
+		"AttributeId": 404,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// PROD_SPG
+	{
+		"AttributeId": 405,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// PROD_CAP
+	{
+		"AttributeId": 406,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// PROD_EFFMOD
+	{
+		"AttributeId": 407,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_PROD_ENERGY
+	{
+		"AttributeId": 408,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_PROD_MTL
+	{
+		"AttributeId": 409,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_PROD_GAS
+	{
+		"AttributeId": 410,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_PROD_CRS
+	{
+		"AttributeId": 411,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_PROD_RPG
+	{
+		"AttributeId": 412,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_PROD_SPG
+	{
+		"AttributeId": 413,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_PROD_CAP
+	{
+		"AttributeId": 414,
+		"Type": 4,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// STAT_PROD_EFFMOD
+	{
+		"AttributeId": 415,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+
+	// OP_PROD_ENERGY
+	{
+		"AttributeId": 416,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_PROD_MTL
+	{
+		"AttributeId": 417,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_PROD_GAS
+	{
+		"AttributeId": 418,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_PROD_CRS
+	{
+		"AttributeId": 419,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_PROD_RPG
+	{
+		"AttributeId": 420,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_PROD_SPG
+	{
+		"AttributeId": 421,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_PROD_CAP
+	{
+		"AttributeId": 422,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// OP_PROD_EFFMOD
+	{
+		"AttributeId": 423,
+		"Type": 2,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+
+	// GAME EVENTS ==================================================================
+	// GE_REQUIRED_ESCORT_MODIFIER
+	{
+		"AttributeId": 500,
+		"Type": 2,
+		"HasMinValue": false,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// GE__MISSION_RECOMMENDED_TOTAL_MODIFIER
+	{
+		"AttributeId": 501,
+		"Type": 2,
+		"HasMinValue": false,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// GE_FLEETEVENT_RECOMMENDED_TOTAL_MODIFIER
+	{
+		"AttributeId": 502,
+		"HasMinValue": false,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// GE_STRATEGICPOINTS_MULTIPLIER
+	{
+		"AttributeId": 503,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+
+	//OPERATIVES ===================================================================
+	// OPERATIVES_COUNT
+	{
+		"AttributeId": 600,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 0
+	},
+	// OPERATIVES_STRENGTH
+	{
+		"AttributeId": 601,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 0
+	},
+	// BOOST OUTPOSTS ===================================================================
+	//
+	{
+		"AttributeId": 650,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 0
+	},
+
+	//SPECIAL CARDS ===================================================================
+
+	// FLEETEVENT_PENDING_TIME_REDUCTION
+	{
+		"AttributeId": 700,
+		"Type": 0,
+		"HasMinValue": false,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 0
+	},
+
+	// MERCENARY_FLEETEVENT_LEVEL_COMPLETION
+
+	{
+		"AttributeId": 701,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 0
+	},
+
+	// BUILDER_CONSTRUCTION_TIME_REDUCTION
+
+	{
+		"AttributeId": 702,
+		"Type": 0,
+		"HasMinValue": false,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 0
+	},
+
+	// EMPIRE ATTRIBUTES ===========================
+
+	{
+		"AttributeId": 810,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 0
+	},
+	{
+		"AttributeId": 811,
+		"Type": "Boolean",
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": true,
+		"MaxValue": 1,
+		"Default": 0
+	},
+	// Building Production Queue Length
+	{
+		"AttributeId": 812,
+		"Type": "4",
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 0
+	},
+	//ALLIANCE STATION
+	{
+		"AttributeId": "ALLIANCE_MAX_OPERATIONS_PER_TYPE",
+		"Type": "Integer",
+		"HasMinValue": true,
+		"MinValue": 1,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 1
+	},
+	{
+		"AttributeId": "ALLIANCE_MAX_PARTICIPANTS_PER_ASSAULT",
+		"Type": "Integer",
+		"HasMinValue": true,
+		"MinValue": 1,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 0
+	},
+	{
+		"AttributeId": "ALLIANCE_MAX_PARTICIPANTS_PER_BUILD",
+		"Type": "Integer",
+		"HasMinValue": true,
+		"MinValue": 1,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 20
+	},
+	{
+		"AttributeId": "ALLIANCE_MAX_PARTICIPANTS_PER_MISSION",
+		"Type": "Integer",
+		"HasMinValue": true,
+		"MinValue": 1,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 5
+	},
+	{
+		"AttributeId": "ALLIANCE_MAX_FLEETS_PER_OPERATION",
+		"Type": "Integer",
+		"HasMinValue": true,
+		"MinValue": 1,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 25
+	},
+	{
+		"AttributeId": "ALLIANCE_OPERATION_SPEED_BOOST",
+		"Type": "Percentage",
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": true,
+		"MaxValue": 1,
+		"Default": 0
+	},
+	{
+		"AttributeId": "ALLIANCE_EXTRA_MAX_OPERATIONS_ASSAULT",
+		"Type": "Integer",
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0,
+		"Default": 0
+	},
+	{
+		"AttributeId": "OFFLINE_PROD_MODIFIER",
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": true,
+		"MaxValue": 1,
+		"Default": 0
+	},
+	// VARIOUS THINGS ===========================
+
+	// B_MAX_LEVEL
+	{
+		"AttributeId": 93,
+		"Type": 0,
+		"HasMinValue": true,
+		"MinValue": 0,
+		"HasMaxValue": false,
+		"MaxValue": 0
+	},
+	// PLACEHOLDER_ATTRIBUTE
+	{
+		"AttributeId": 999
+	}
+]

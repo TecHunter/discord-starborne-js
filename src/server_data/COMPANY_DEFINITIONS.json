@@ -1,0 +1,250 @@
+﻿[
+  {
+    "Name": "Prospect Inc.",
+    "Id": 0,
+    "StringId": "military_industry",
+    "RequiredBuildings": [
+      {
+        "Id": 230,
+        "Level": 10
+      }
+    ],
+    "RequiredOutposts": [
+      9
+    ],
+    "Effects": [
+      {
+        "Origin": "Company",
+        "Destination": "Outpost",
+        "Target": "Outpost",
+        "Type": "Modifier",
+        "TargetAttribute": "OP_MC_HARVEST_EVERYTHING",
+        "Modifier": 1
+      },
+      {
+        "Origin": "Company",
+        "Destination": "Station",
+        "Target": "Station",
+        "Type": "Modifier",
+        "TargetAttribute": "STAT_RESOURCE_EXCHANGE_RATE",
+        "Modifier": -1,
+        "CalculationMethod": 6
+      }
+    ]
+  },
+  {
+    "Name": "Civic Intelligence",
+    "Id": 1,
+    "StringId": "military_domain",
+    "RequiredBuildings": [
+      {
+        "Id": 230,
+        "Level": 10
+      }
+    ],
+    "RequiredOutposts": [
+      12
+    ],
+    "Effects": [
+      {
+        "Origin": "Company",
+        "Destination": "Station",
+        "Target": "Station",
+        "Type": "Modifier",
+        "TargetAttribute": "GE_REQUIRED_ESCORT_MODIFIER",
+        "Modifier": -1
+      },
+      {
+        "Origin": "Company",
+        "Destination": "Station",
+        "Target": "Station",
+        "Type": "PercentageModifier",
+        "TargetAttribute": "GE_MISSION_RECOMMENDED_TOTAL_MODIFIER",
+        "Modifier": -0.2
+      },
+      {
+        "Origin": "Company",
+        "Destination": "Empire",
+        "Target": "Commander",
+        "Type": "Modifier",
+        "TargetAttribute": "OPERATIVES_COUNT",
+        "Modifier": 5
+      },
+      {
+        "Origin": "Company",
+        "Destination": "Outpost",
+        "Target": "Stargate",
+        "Type": "Modifier",
+        "TargetAttribute": "OP_SG_MOVESPDBOOST",
+        "Modifier": 1,
+        "CalculationMethod": 6
+      }
+    ]
+  },
+  {
+    "Name": "Gubernatorial Colonial",
+    "Id": 2,
+    "StringId": "industry_military",
+    "RequiredBuildings": [
+      {
+        "Id": 430,
+        "Level": 10
+      }
+    ],
+    "RequiredOutposts": [
+      10
+    ],
+    "Effects": [
+      {
+        "Origin": "Company",
+        "Destination": "Outpost",
+        "Target": "Fortress",
+        "Type": "Modifier",
+        "TargetAttribute": "OP_CLAIM_RADIUS",
+        "Modifier": 1
+      }
+    ]
+  },
+  {
+    "Name": "Trans-Galactic Exports",
+    "Id": 3,
+    "StringId": "domain_industry",
+    "RequiredBuildings": [
+      {
+        "Id": 330,
+        "Level": 10
+      }
+    ],
+    "RequiredOutposts": [
+      9
+    ],
+    "Effects": [
+      {
+        "Origin": "Company",
+        "Destination": "Station",
+        "Target": "Station",
+        "Type": "Modifier",
+        "TargetAttribute": "STAT_FREIGHTCOUNT",
+        "Modifier": 25
+      },
+      {
+        "Origin": "Company",
+        "Destination": "Station",
+        "Target": "Station",
+        "Type": "PercentageModifier",
+        "TargetAttribute": "STAT_FREIGHTER_CARGO",
+        "Modifier": 0.5
+      }
+    ]
+  },
+  {
+    "Name": "WALL Industrial Security",
+    "Id": 4,
+    "StringId": "industry_domain",
+    "RequiredBuildings": [
+      {
+        "Id": 430,
+        "Level": 10
+      }
+    ],
+    "RequiredOutposts": [
+      12
+    ],
+    "Effects": [
+      {
+        "Origin": "Company",
+        "Destination": "Station",
+        "Target": "Station",
+        "Type": "Modifier",
+        "TargetAttribute": "STAT_CLAIMRADIUS",
+        "Modifier": 1
+      }
+    ]
+  },
+  {
+    "Name": "Bellicose Industries",
+    "Id": 5,
+    "StringId": "domain_military",
+    "RequiredBuildings": [
+      {
+        "Id": 330,
+        "Level": 10
+      }
+    ],
+    "RequiredOutposts": [
+      10
+    ],
+    "Effects": [
+      {
+        "Origin": "Company",
+        "Destination": "Outpost",
+        "Target": "Outpost",
+        "Type": "Modifier",
+        "TargetAttribute": "OP_MBAT_HARVEST_ENABLED",
+        "Modifier": 1
+      },
+      {
+        "Origin": "Company",
+        "Destination": "Outpost",
+        "Target": "Outpost",
+        "Type": "Modifier",
+        "TargetAttribute": "OP_MBAT_HARVEST_YIELD",
+        "Modifier": 0.4
+      },
+      {
+        "Origin": "Company",
+        "Destination": "FleetsInRange",
+        "Target": "Fleet",
+        "Type": "PercentageModifier",
+        "TargetAttribute": "UNIT_CARGO",
+        "Modifier": 0.2,
+        "Conditions": [
+          {
+            "$type": "OperationCondition",
+            "AcceptedTypes": [
+              "Raid"
+            ]
+          }
+        ],
+        "Radius": 0,
+        "Coverage": "Owner"
+      },
+      {
+        "Origin": "Company",
+        "Destination": "FleetsInRange",
+        "Target": "Fleet",
+        "Type": "Modifier",
+        "TargetAttribute": "UNIT_SPD",
+        "Modifier": 1,
+        "Conditions": [
+          {
+            "$type": "OperationCondition",
+            "AcceptedTypes": [
+              "Raid"
+            ]
+          }
+        ],
+        "Radius": 0,
+        "Coverage": "Owner"
+      },
+      {
+        "Origin": "Company",
+        "Destination": "FleetsInRange",
+        "Target": "Fleet",
+        "Type": "Modifier",
+        "TargetAttribute": "UNIT_PLUNDER",
+        "Modifier": 0.1,
+				"Conditions": [
+					{
+						"$type": "OperationCondition",
+						"AcceptedTypes": [
+							"Raid"
+						]
+					}
+				],
+        "Radius": 0,
+        "Coverage": "Owner"
+      }
+    ]
+  }
+]

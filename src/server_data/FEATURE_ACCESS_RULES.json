@@ -1,0 +1,192 @@
+﻿{
+	"Features": [
+		{
+			"FeatureId": "BuildingQueueInSpyReport",
+			"RequiredPolicy": [],
+			"RequiredFaction": [ 200 ]
+		},
+		{
+			"FeatureId": "FreightResourcesToAllies",
+			"RequiredPolicy": [99999],
+			"RequiredFaction": [99999]
+		},
+		{
+			"FeatureId": "RevealAggressorsDataOnFailedSpyAttempt",
+			"RequiredPolicy": [],
+			"RequiredFaction": [200]
+		},
+		{
+			"FeatureId": "HarvestConflictedHexes",
+			"RequiredPolicy": [140],
+			"RequiredFaction": []
+		},
+		{
+			"FeatureId": "ShowHiddenHangarUnitsAndSuppliedFleetNumber",
+			"RequiredPolicy": [],
+			"RequiredFaction": [ 200 ]
+		},
+		{
+			"FeatureId": "BoostAllyOutpostHigh",
+			"RequiredPolicy": [99999],
+			"RequiredFaction": [99999]
+		},
+		{
+			"FeatureId": "BoostAllyOutpostLow",
+			"RequiredPolicy": [150],
+			"RequiredFaction": [100]
+		},
+		{
+			"FeatureId": "AllowExtraLevelsForProductionBuildings",
+			"RequiredPolicy": [99999],
+			"RequiredFaction": [99999]
+		},
+		{
+			"FeatureId": "HpAugmentation",
+			"RequiredPolicy": [99999],
+			"RequiredFaction": [99999]
+		},
+		{
+			"FeatureId": "TransferUnitsOnAlliedStations",
+			"RequiredPolicy": [99999],
+			"RequiredFaction": [99999]
+		},
+		{
+			"FeatureId": "FleetDeceptionAbility",
+			"RequiredPolicy": [99999],
+			"RequiredFaction": [99999]
+		},
+		{
+			"FeatureId": "ShowCardsInSpyReports",
+			"RequiredPolicy": [],
+			"RequiredFaction": [ 200 ]
+		},
+		{
+			"FeatureId": "SabotageStationRemovesRuneCard",
+			"RequiredPolicy": [],
+			"RequiredFaction": [ 200 ]
+		},
+		{
+			"FeatureId": "SabotageStationRemovesCharacterCard",
+			"RequiredPolicy": [],
+			"RequiredFaction": [ 200 ]
+		},
+		{
+			"FeatureId": "SabotageStationPreventsAllMovements",
+			"RequiredPolicy": [],
+			"RequiredFaction": [ 200 ]
+		},
+		{
+			"FeatureId": "ShowVisitingFleetNamesInReports",
+			"RequiredPolicy": [],
+			"RequiredFaction": [200]
+		},
+		{
+			"FeatureId": "SabotageStationReducesBuildingHitpoints",
+			"RequiredPolicy": [],
+			"RequiredFaction": [ 200 ]
+		},
+		{
+			"FeatureId": "ShowAllyBoostInSpyReport",
+			"RequiredPolicy": [],
+			"RequiredFaction": [ 200 ]
+		},
+		{
+			"FeatureId": "SabotageNpcStationAppliesUnitHitPointPenalty",
+			"RequiredPolicy": [139],
+			"RequiredFaction": [200]
+		},
+		{
+			"FeatureId": "SabotageStationDurationReduced",
+			"RequiredPolicy": [99999],
+			"RequiredFaction": [99999]
+		},
+		{
+			"FeatureId": "NavyCommandOffensiveUpgrade",
+			"RequiredPolicy": [99999],
+			"RequiredFaction": [99999]
+		},
+		{
+			"FeatureId": "SabotageStationDurationIncreased",
+			"RequiredPolicy": [],
+			"RequiredFaction": [ 200 ]
+		},
+
+		{
+			"FeatureId": "FleetDocksOffensiveUpgrade",
+			"RequiredPolicy": [99999],
+			"RequiredFaction": [99999]
+		},
+		{
+			"FeatureId": "ForcefieldProjectorOffensiveUpgrade",
+			"RequiredPolicy": [99999],
+			"RequiredFaction": [99999]
+		},
+		{
+			"FeatureId": "AssaultAlwaysTargetsScouts",
+			"RequiredPolicy": [99999],
+			"RequiredFaction": [99999]
+		},
+		{
+			"FeatureId": "AssaultLootsResources",
+			"RequiredPolicy": [99999],
+			"RequiredFaction": [99999]
+		},
+		{
+			"FeatureId": "RepellSpyAttemptChance",
+			"RequiredPolicy": [],
+			"RequiredFaction": [200]
+		},
+		{
+			"FeatureId": "CanBuildOutpostsOnContestedHexes",
+			"RequiredPolicy": [140],
+			"RequiredFaction": []
+		},
+		{
+			"FeatureId": "NoViceVersaPenaltyForAttackingNpcs",
+			"RequiredPolicy": [99999],
+			"RequiredFaction": [99999]
+		},
+		{
+			"FeatureId": "PlunderRevealsHiddenHangarUnits",
+			"RequiredPolicy": [142],
+			"RequiredFaction": []
+		},
+		{
+			"FeatureId": "ShowHiddenResourcesInSpyReport",
+			"RequiredPolicy": [ 119 ],
+			"RequiredFaction": [ 200 ]
+		}
+	],
+	"Operations": [
+		{
+			"MovementType": "Sabotage",
+			"RequiredAbilities": [],
+			"RequiredBuildings": []
+		},
+		{
+			"MovementType": "SabotageStation",
+			"RequiredAbilities": [],
+			"RequiredBuildings": []
+		},
+		{
+			"MovementType": "Assault",
+			"RequiredAbilities": [],
+			"RequiredBuildings": []
+		},
+		{
+			"MovementType": "Raid",
+			"RequiredAbilities": [],
+			"RequiredBuildings": []
+		},
+		{
+			"MovementType": "CompleteMission",
+			"RequiredAbilities": [],
+			"RequiredBuildings": []
+		},
+		{
+			"MovementType": "CompleteStarMission",
+			"RequiredAbilities": [],
+			"RequiredBuildings": []
+		}
+	]
+}

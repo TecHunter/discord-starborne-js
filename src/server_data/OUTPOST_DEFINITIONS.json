@@ -1,0 +1,2319 @@
+{
+  "MaxOutpostLevel": 5,
+  "ResourceReclamationScale": 0.5,
+  "ExpansionPointCost": 0,
+  "SalvageCardId": 8506,
+  "Slots": [
+    {
+      "Id": 0,
+      "Tier": 0,
+      "SlotType": "Outpost",
+      "StationType": "Normal",
+      "TypeAffinity": [
+        "Military",
+        "Domain",
+        "Industry",
+        "General"
+      ]
+    },
+    {
+      "Id": 1,
+      "Tier": 0,
+      "SlotType": "Outpost",
+      "StationType": "Normal",
+      "TypeAffinity": [
+        "Military",
+        "Domain",
+        "Industry",
+        "General"
+      ],
+      "Required": {
+        "Condition": "Any",
+        "Requirements": [
+          {
+            "$type": "BuildingRequirement",
+            "Id": 50,
+            "Level": 1
+          }
+        ]
+      }
+    },
+    {
+      "Id": 2,
+      "Tier": 1,
+      "SlotType": "Outpost",
+      "StationType": "Normal",
+      "TypeAffinity": [
+        "Military",
+        "Domain",
+        "Industry",
+        "General"
+      ]
+    },
+    {
+      "Id": 3,
+      "Tier": 1,
+      "SlotType": "Outpost",
+      "StationType": "Normal",
+      "TypeAffinity": [
+        "Military",
+        "Domain",
+        "Industry",
+        "General"
+      ],
+      "Required": {
+        "Condition": "Any",
+        "Requirements": [
+          {
+            "$type": "BuildingRequirement",
+            "Id": 51,
+            "Level": 1
+          }
+        ]
+      }
+    },
+    {
+      "Id": 4,
+      "Tier": 2,
+      "SlotType": "Outpost",
+      "StationType": "Normal",
+      "TypeAffinity": [
+        "Military",
+        "Domain",
+        "Industry",
+        "General"
+      ]
+    },
+    {
+      "Id": 5,
+      "Tier": 2,
+      "SlotType": "Outpost",
+      "StationType": "Normal",
+      "TypeAffinity": [
+        "Military",
+        "Domain",
+        "Industry",
+        "General"
+      ],
+      "Required": {
+        "Condition": "Any",
+        "Requirements": [
+          {
+            "$type": "BuildingRequirement",
+            "Id": 52,
+            "Level": 1
+          }
+        ]
+      }
+    },
+    {
+      "Id": 6,
+      "Tier": 3,
+      "SlotType": "Outpost",
+      "StationType": "Normal",
+      "TypeAffinity": [
+        "Military",
+        "Domain",
+        "Industry",
+        "General"
+      ]
+    },
+    {
+      "Id": 7,
+      "Tier": 0,
+      "SlotType": "Empire",
+      "StationType": "Normal",
+      "TypeAffinity": [
+        "EmpireUnique"
+      ]
+    }
+  ],
+  "Definitions": [
+    {
+      "Type": "MiningFacility",
+      "Name": "Mining Facility",
+      "Description": "Mining Facilities harvest resource fields (metal, gas, crystal) and ice fields within their radius of influence.\n\nHarvested resources increase the hourly resource production of the owning station. Harvested ice increases the owning station's total labor pool.\n\nHarvest rate: 50% per level per hour.\nRadius of influence: 1 hex.\nAugment effect: Harvest rate increased to 60% per level per hour.\n\n",
+      "FlavourText": 1,
+      "ImageID": 1,
+      "Role": "General",
+      "Multiplicity": "Unrestricted",
+      "SlotAffinity": "Outpost",
+      "TierAffinity": 0,
+      "MaxRadius": 3,
+      "MainAttributes": [
+        "OP_MOP_YIELD"
+      ],
+      "Stats": [
+        {
+          "TargetAttribute": "COST_MTL",
+          "UseArray": true,
+          "ModifierArray": [
+            1000,
+            1000,
+            1000,
+            1000,
+            1000
+          ]
+        },
+        {
+          "TargetAttribute": "COST_GAS",
+          "UseArray": true,
+          "ModifierArray": [
+            1000,
+            1000,
+            1000,
+            1000,
+            1000
+          ]
+        },
+        {
+          "TargetAttribute": "COST_CRS",
+          "UseArray": true,
+          "ModifierArray": [
+            1000,
+            1000,
+            1000,
+            1000,
+            1000
+          ]
+        },
+        {
+          "TargetAttribute": "OP_HITPOINTS",
+          "UseArray": true,
+          "ModifierArray": [
+            "22,000",
+            "44,000",
+            "66,000",
+            "88,000",
+            "118,800"
+          ]
+        },
+        {
+          "TargetAttribute": "OP_RADIUS",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "OP_SIGINT",
+          "UseArray": true,
+          "ModifierArray": [
+            100,
+            100,
+            100,
+            100,
+            100
+          ]
+        },
+        {
+          "TargetAttribute": "OP_PROD_SPG",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "TargetAttribute": "OP_MOP_YIELD",
+          "UseArray": true,
+          "ModifierArray": [
+            0.5,
+            1,
+            1.5,
+            2,
+            2.5
+          ]
+        },
+        {
+          "TargetAttribute": "FIELD_ICE",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "FIELD_METAL",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "FIELD_GAS",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "FIELD_CRYSTAL",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "InternalEffects": [
+        {
+          "Target": "Outpost",
+          "Origin": "Outpost",
+          "Destination": "Outpost",
+          "TargetAttribute": "OP_MOP_YIELD",
+          "Type": "Modifier",
+          "UseArray": true,
+          "ModifierArray": [
+            0.1,
+            0.2,
+            0.3,
+            0.4,
+            0.5
+          ],
+          "Conditions": [
+            {
+              "$type": "OutpostAugmentationCondition",
+              "Augmentation": "Low"
+            }
+          ]
+        }
+      ],
+      "Recipes": {
+        "5001": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5002": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "5003": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "5004": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "Type": "MissileBattery",
+      "Name": "Missile Battery",
+      "Description": "Missile Batteries defend stations you own within its radius of influence against assaults and raids by firing on attacking armadas each combat round with 8000 firepower per level.\n\nRadius of influence: 2 hexes.\nAugment effect: Firepower increased to 8800 per level.",
+      "FlavourText": 1,
+      "ImageID": 1,
+      "Role": "Military",
+      "Multiplicity": "Unrestricted",
+      "SlotAffinity": "Outpost",
+      "TierAffinity": 1,
+      "PathDependency": {
+        "Path": "Military",
+        "Required": 2
+      },
+      "MaxRadius": 5,
+      "MainAttributes": [
+        "OP_MBAT_FIREPOWER"
+      ],
+      "Stats": [
+        {
+          "TargetAttribute": "COST_MTL",
+          "UseArray": true,
+          "ModifierArray": [
+            4500,
+            4500,
+            4500,
+            4500,
+            4500
+          ]
+        },
+        {
+          "TargetAttribute": "COST_GAS",
+          "UseArray": true,
+          "ModifierArray": [
+            1800,
+            1800,
+            1800,
+            1800,
+            1800
+          ]
+        },
+        {
+          "TargetAttribute": "COST_CRS",
+          "UseArray": true,
+          "ModifierArray": [
+            2700,
+            2700,
+            2700,
+            2700,
+            2700
+          ]
+        },
+        {
+          "TargetAttribute": "OP_HITPOINTS",
+          "UseArray": true,
+          "ModifierArray": [
+            "30,800",
+            "44,000",
+            "88,000",
+            "176,000",
+            "242,000"
+          ]
+        },
+        {
+          "TargetAttribute": "OP_RADIUS",
+          "UseArray": true,
+          "ModifierArray": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "TargetAttribute": "OP_SIGINT",
+          "UseArray": true,
+          "ModifierArray": [
+            200,
+            200,
+            200,
+            200,
+            200
+          ]
+        },
+        {
+          "TargetAttribute": "OP_PROD_SPG",
+          "UseArray": true,
+          "ModifierArray": [
+            2,
+            4,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "TargetAttribute": "OP_MBAT_FIREPOWER",
+          "UseArray": true,
+          "ModifierArray": [
+            8000,
+            16000,
+            24000,
+            32000,
+            40000
+          ]
+        },
+        {
+          "TargetAttribute": "OP_MBAT_HARVEST_YIELD",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "FIELD_METAL",
+          "UseArray": true,
+          "ModifierArray": [
+            0.2,
+            0.4,
+            0.6,
+            0.8,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "FIELD_GAS",
+          "UseArray": true,
+          "ModifierArray": [
+            0.2,
+            0.4,
+            0.6,
+            0.8,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "FIELD_CRYSTAL",
+          "UseArray": true,
+          "ModifierArray": [
+            0.2,
+            0.4,
+            0.6,
+            0.8,
+            1
+          ]
+        }
+      ],
+      "InternalEffects": [
+        {
+          "Target": "Outpost",
+          "Origin": "Outpost",
+          "Destination": "Outpost",
+          "TargetAttribute": "OP_MBAT_FIREPOWER",
+          "Type": "Multiplier",
+          "UseArray": true,
+          "ModifierArray": [
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1
+          ],
+          "Conditions": [
+            {
+              "$type": "OutpostAugmentationCondition",
+              "Augmentation": "Low"
+            }
+          ]
+        }
+      ],
+      "Recipes": {
+        "5001": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5002": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5003": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "5004": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "Type": "LogisticsHub",
+      "Name": "Logistics Hub",
+      "Description": "Stations within the radius of influence of a Logistic Hub are considered covered by the Logistics Hub. It can only cover stations you own.\n\nFleets docked at a station that owns a Logistics Hub defend covered stations against raids and assaults.  This includes allied fleets docked at the owning station.\n\nScout and recon fleets docked at a station that owns a Logistics Hub defend covered stations against station sabotage as well as their outposts against outpost sabotage.  This includes allied fleets docked at the owning station.\n\nOnly one Logistics Hub can participate in an assault, raid or sabotage combat.\nShould more than one Logistic Hub cover a station, the hub with the highest number of fleets will be chosen to defend.  Should hubs be tied for most fleets, one will be selected at random.\n\nRadius of influence: 1 hex per level.\nAugment effect: Increases the radius of influence by 1 hex.",
+      "FlavourText": 1,
+      "ImageID": 1,
+      "Role": "Military",
+      "Multiplicity": "Unrestricted",
+      "SlotAffinity": "Outpost",
+      "TierAffinity": 2,
+      "PathDependency": {
+        "Path": "Military",
+        "Required": 4
+      },
+      "MaxRadius": 9,
+      "MainAttributes": [
+        "OP_RADIUS"
+      ],
+      "Stats": [
+        {
+          "TargetAttribute": "COST_MTL",
+          "UseArray": true,
+          "ModifierArray": [
+            9000,
+            9000,
+            9000,
+            9000,
+            9000
+          ]
+        },
+        {
+          "TargetAttribute": "COST_GAS",
+          "UseArray": true,
+          "ModifierArray": [
+            3600,
+            3600,
+            3600,
+            3600,
+            3600
+          ]
+        },
+        {
+          "TargetAttribute": "COST_CRS",
+          "UseArray": true,
+          "ModifierArray": [
+            5400,
+            5400,
+            5400,
+            5400,
+            5400
+          ]
+        },
+        {
+          "TargetAttribute": "OP_HITPOINTS",
+          "UseArray": true,
+          "ModifierArray": [
+            "176,000",
+            "264,000",
+            "352,000",
+            "440,000",
+            "598,400"
+          ]
+        },
+        {
+          "TargetAttribute": "OP_RADIUS",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "TargetAttribute": "OP_SIGINT",
+          "UseArray": true,
+          "ModifierArray": [
+            400,
+            400,
+            400,
+            400,
+            400
+          ]
+        },
+        {
+          "TargetAttribute": "OP_PROD_SPG",
+          "UseArray": true,
+          "ModifierArray": [
+            3,
+            6,
+            9,
+            12,
+            15
+          ]
+        }
+      ],
+      "InternalEffects": [
+        {
+          "Target": "Outpost",
+          "Origin": "Outpost",
+          "Destination": "Outpost",
+          "TargetAttribute": "OP_RADIUS",
+          "Type": "Modifier",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "Conditions": [
+            {
+              "$type": "OutpostAugmentationCondition",
+              "Augmentation": "Low"
+            }
+          ]
+        }
+      ],
+      "Recipes": {
+        "5001": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5002": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5003": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5004": [
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "Type": "HeavyShipAssembly",
+      "Name": "Heavy Ship Assembly",
+      "Description": "Heavy Ship Assemblies enable the construction of heavy ships in their owning station.\n\nEffect: Time cost for heavy ships reduced by 6% per level.\nRadius of influence: 1 hex.\nAugment effect: Outpost stealth increased to 600.\n\nMoons within the radius of influence additionally reduce heavy ship time cost by:\nSmall moons: 1% per level.\nMedium moons: 2% per level.\nLarge moons: 3% per level.",
+      "FlavourText": 1,
+      "ImageID": 1,
+      "Role": "Military",
+      "Multiplicity": "StationUnique",
+      "SlotAffinity": "Outpost",
+      "TierAffinity": 3,
+      "PathDependency": {
+        "Path": "Military",
+        "Required": 7
+      },
+      "MaxRadius": 1,
+      "Stats": [
+        {
+          "TargetAttribute": "COST_MTL",
+          "UseArray": true,
+          "ModifierArray": [
+            13500,
+            13500,
+            13500,
+            13500,
+            13500
+          ]
+        },
+        {
+          "TargetAttribute": "COST_GAS",
+          "UseArray": true,
+          "ModifierArray": [
+            5400,
+            5400,
+            5400,
+            5400,
+            5400
+          ]
+        },
+        {
+          "TargetAttribute": "COST_CRS",
+          "UseArray": true,
+          "ModifierArray": [
+            8100,
+            8100,
+            8100,
+            8100,
+            8100
+          ]
+        },
+        {
+          "TargetAttribute": "OP_HITPOINTS",
+          "UseArray": true,
+          "ModifierArray": [
+            "352,000",
+            "440,000",
+            "528,000",
+            "616,000",
+            "792,000"
+          ]
+        },
+        {
+          "TargetAttribute": "OP_RADIUS",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "OP_SIGINT",
+          "UseArray": true,
+          "ModifierArray": [
+            600,
+            600,
+            600,
+            600,
+            600
+          ]
+        },
+        {
+          "TargetAttribute": "OP_PROD_SPG",
+          "UseArray": true,
+          "ModifierArray": [
+            4,
+            8,
+            12,
+            16,
+            20
+          ]
+        },
+        {
+          "TargetAttribute": "OP_HEAVY_MOON_HARVEST_DIVISOR",
+          "UseArray": true,
+          "ModifierArray": [
+            48,
+            48,
+            48,
+            48,
+            48
+          ]
+        },
+        {
+          "TargetAttribute": "MOON_ICE",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "MOON_METAL",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "MOON_GAS",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "MOON_CRYSTAL",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "Effects": [
+        {
+          "Origin": "Outpost",
+          "Destination": "Station",
+          "Target": "LargeShips",
+          "TargetAttribute": "COST_TIME",
+          "Type": "Multiplier",
+          "UseArray": true,
+          "ModifierArray": [
+            -0.06,
+            -0.12,
+            -0.18,
+            -0.24,
+            -0.3
+          ]
+        }
+      ],
+      "InternalEffects": [
+        {
+          "Target": "Outpost",
+          "Origin": "Outpost",
+          "Destination": "Outpost",
+          "TargetAttribute": "OP_SIGINT",
+          "Type": "Modifier",
+          "UseArray": true,
+          "ModifierArray": [
+            200,
+            200,
+            200,
+            200,
+            200
+          ],
+          "Conditions": [
+            {
+              "$type": "OutpostAugmentationCondition",
+              "Augmentation": "Low"
+            }
+          ]
+        }
+      ],
+      "Recipes": {
+        "5001": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5002": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5003": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5004": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "Type": "Scanner",
+      "Name": "Scanner",
+      "Description": "Scanners increases the scan strength of any stations you own within their radius of influence.\n\nEffect: +100 Scan Strength for stations per level.\nRadius of influence: 4 hexes.\nAugment effect: Increases the radius of influence by 1 hex.\n\nNote: Stations affected by multiple scanners use the bonus from the highest level scanner.\n",
+      "FlavourText": 1,
+      "ImageID": 1,
+      "Role": "Domain",
+      "Multiplicity": "Unrestricted",
+      "SlotAffinity": "Outpost",
+      "TierAffinity": 1,
+      "PathDependency": {
+        "Path": "Domain",
+        "Required": 2
+      },
+      "MaxRadius": 10,
+      "MainAttributes": [
+        "OP_SCANNER_STRENGTH"
+      ],
+      "Stats": [
+        {
+          "TargetAttribute": "COST_MTL",
+          "UseArray": true,
+          "ModifierArray": [
+            2700,
+            2700,
+            2700,
+            2700,
+            2700
+          ]
+        },
+        {
+          "TargetAttribute": "COST_GAS",
+          "UseArray": true,
+          "ModifierArray": [
+            4500,
+            4500,
+            4500,
+            4500,
+            4500
+          ]
+        },
+        {
+          "TargetAttribute": "COST_CRS",
+          "UseArray": true,
+          "ModifierArray": [
+            1800,
+            1800,
+            1800,
+            1800,
+            1800
+          ]
+        },
+        {
+          "TargetAttribute": "OP_HITPOINTS",
+          "UseArray": true,
+          "ModifierArray": [
+            "30,800",
+            "44,000",
+            "88,000",
+            "176,000",
+            "242,000"
+          ]
+        },
+        {
+          "TargetAttribute": "OP_RADIUS",
+          "UseArray": true,
+          "ModifierArray": [
+            4,
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "TargetAttribute": "OP_SIGINT",
+          "UseArray": true,
+          "ModifierArray": [
+            200,
+            200,
+            200,
+            200,
+            200
+          ]
+        },
+        {
+          "TargetAttribute": "OP_PROD_SPG",
+          "UseArray": true,
+          "ModifierArray": [
+            2,
+            4,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "TargetAttribute": "OP_SCANNER_STRENGTH",
+          "UseArray": true,
+          "ModifierArray": [
+            100,
+            200,
+            300,
+            400,
+            500
+          ]
+        },
+        {
+          "TargetAttribute": "OP_SCANNER_STAT_SIGINT",
+          "UseArray": true,
+          "ModifierArray": [
+            3,
+            6,
+            9,
+            12,
+            15
+          ]
+        }
+      ],
+      "InternalEffects": [
+        {
+          "Target": "Outpost",
+          "Origin": "Outpost",
+          "Destination": "Outpost",
+          "TargetAttribute": "OP_RADIUS",
+          "Type": "Modifier",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "Conditions": [
+            {
+              "$type": "OutpostAugmentationCondition",
+              "Augmentation": "Low"
+            }
+          ]
+        }
+      ],
+      "Recipes": {
+        "5001": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5002": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5003": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "5004": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "Type": "Stargate",
+      "Name": "Stargate",
+      "Description": "Stargates increase the speed of your own and allied movements arriving and departing within their radius of influence.\n\nEffect: 1 bonus speed per level.\nRadius of influence: 2 hexes.\nAugment effect: Increases the radius of influence by 1.\n\nNote: A fleet can gain the speed bonus twice; once for the hex it leaves from and once for the hex it travels to.\n\nNote: If more than one stargate affect the same hex, the highest level stargate is used.",
+      "FlavourText": 1,
+      "ImageID": 1,
+      "Role": "Domain",
+      "Multiplicity": "Unrestricted",
+      "SlotAffinity": "Outpost",
+      "TierAffinity": 2,
+      "PathDependency": {
+        "Path": "Domain",
+        "Required": 4
+      },
+      "MaxRadius": 7,
+      "MainAttributes": [
+        "OP_SG_MOVESPDBOOST"
+      ],
+      "Stats": [
+        {
+          "TargetAttribute": "COST_MTL",
+          "UseArray": true,
+          "ModifierArray": [
+            5400,
+            5400,
+            5400,
+            5400,
+            5400
+          ]
+        },
+        {
+          "TargetAttribute": "COST_GAS",
+          "UseArray": true,
+          "ModifierArray": [
+            9000,
+            9000,
+            9000,
+            9000,
+            9000
+          ]
+        },
+        {
+          "TargetAttribute": "COST_CRS",
+          "UseArray": true,
+          "ModifierArray": [
+            3600,
+            3600,
+            3600,
+            3600,
+            3600
+          ]
+        },
+        {
+          "TargetAttribute": "OP_HITPOINTS",
+          "UseArray": true,
+          "ModifierArray": [
+            "176,000",
+            "264,000",
+            "352,000",
+            "440,000",
+            "598,400"
+          ]
+        },
+        {
+          "TargetAttribute": "OP_RADIUS",
+          "UseArray": true,
+          "ModifierArray": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "TargetAttribute": "OP_SIGINT",
+          "UseArray": true,
+          "ModifierArray": [
+            400,
+            400,
+            400,
+            400,
+            400
+          ]
+        },
+        {
+          "TargetAttribute": "OP_PROD_SPG",
+          "UseArray": true,
+          "ModifierArray": [
+            3,
+            6,
+            9,
+            12,
+            15
+          ]
+        },
+        {
+          "TargetAttribute": "OP_SG_MOVESPDBOOST",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "InternalEffects": [
+        {
+          "Target": "Outpost",
+          "Origin": "Outpost",
+          "Destination": "Outpost",
+          "TargetAttribute": "OP_RADIUS",
+          "Type": "Modifier",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "Conditions": [
+            {
+              "$type": "OutpostAugmentationCondition",
+              "Augmentation": "Low"
+            }
+          ]
+        }
+      ],
+      "Recipes": {
+        "5001": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5002": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5003": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5004": [
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "Type": "HabitationDome",
+      "Name": "Habitation Dome",
+      "Description": "Habitation Domes harvest the ice yield of planets, moons and fields within their radius of influence per level, turning it into labor.\n\nHarvest rate: 90% per level.\nRadius of influence:  2 hexes.\nAugment effect: Outpost stealth increased to 600.\n",
+      "FlavourText": 1,
+      "ImageID": 1,
+      "Role": "Domain",
+      "Multiplicity": "StationUnique",
+      "SlotAffinity": "Outpost",
+      "TierAffinity": 3,
+      "PathDependency": {
+        "Path": "Domain",
+        "Required": 7
+      },
+      "MaxRadius": 3,
+      "MainAttributes": [
+        "OP_HD_HARVEST_YIELD"
+      ],
+      "Stats": [
+        {
+          "TargetAttribute": "COST_MTL",
+          "UseArray": true,
+          "ModifierArray": [
+            8100,
+            8100,
+            8100,
+            8100,
+            8100
+          ]
+        },
+        {
+          "TargetAttribute": "COST_GAS",
+          "UseArray": true,
+          "ModifierArray": [
+            13500,
+            13500,
+            13500,
+            13500,
+            13500
+          ]
+        },
+        {
+          "TargetAttribute": "COST_CRS",
+          "UseArray": true,
+          "ModifierArray": [
+            5400,
+            5400,
+            5400,
+            5400,
+            5400
+          ]
+        },
+        {
+          "TargetAttribute": "OP_HITPOINTS",
+          "UseArray": true,
+          "ModifierArray": [
+            "352,000",
+            "440,000",
+            "528,000",
+            "616,000",
+            "792,000"
+          ]
+        },
+        {
+          "TargetAttribute": "OP_RADIUS",
+          "UseArray": true,
+          "ModifierArray": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "TargetAttribute": "OP_SIGINT",
+          "UseArray": true,
+          "ModifierArray": [
+            600,
+            600,
+            600,
+            600,
+            600
+          ]
+        },
+        {
+          "TargetAttribute": "OP_PROD_SPG",
+          "UseArray": true,
+          "ModifierArray": [
+            4,
+            8,
+            12,
+            16,
+            20
+          ]
+        },
+        {
+          "TargetAttribute": "OP_HD_HARVEST_YIELD",
+          "UseArray": true,
+          "ModifierArray": [
+            0.9,
+            1.8,
+            2.7,
+            3.6,
+            4.5
+          ]
+        },
+        {
+          "TargetAttribute": "FIELD_ICE",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "MOON_ICE",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "PLANET_ICE",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "OP_HD_STREAMING_ENABLED",
+          "UseArray": true,
+          "ModifierArray": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "InternalEffects": [
+        {
+          "Target": "Outpost",
+          "Origin": "Outpost",
+          "Destination": "Outpost",
+          "TargetAttribute": "OP_SIGINT",
+          "Type": "Modifier",
+          "UseArray": true,
+          "ModifierArray": [
+            300,
+            300,
+            300,
+            300,
+            300
+          ],
+          "Conditions": [
+            {
+              "$type": "OutpostAugmentationCondition",
+              "Augmentation": "Low"
+            }
+          ]
+        }
+      ],
+      "Recipes": {
+        "5001": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5002": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5003": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5004": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "Type": "TradingPort",
+      "Name": "Trading Port",
+      "Description": "Trading Ports harvest resource fields (metal, gas and crystal) within their radius of influence per level.\n\nAdditionally, Trading Port allow the owning station to stream as many resources as the Trading Port harvests.\n\nHarvest rate: 75% per level per hour.\nStreaming capacity: 75% per level per hour.\nRadius of influence: 1 hex.\nAugment effect: Increases the stream capacity by 33%.",
+      "FlavourText": 1,
+      "ImageID": 1,
+      "Role": "Industry",
+      "Multiplicity": "Unrestricted",
+      "SlotAffinity": "Outpost",
+      "TierAffinity": 1,
+      "PathDependency": {
+        "Path": "Industry",
+        "Required": 2
+      },
+      "MaxRadius": 2,
+      "MainAttributes": [
+        "OP_TRDP_HARVEST_MULTIPLIER",
+        "OP_TRDP_STREAMING_MULTIPLIER"
+      ],
+      "Stats": [
+        {
+          "TargetAttribute": "COST_MTL",
+          "UseArray": true,
+          "ModifierArray": [
+            1800,
+            1800,
+            1800,
+            1800,
+            1800
+          ]
+        },
+        {
+          "TargetAttribute": "COST_GAS",
+          "UseArray": true,
+          "ModifierArray": [
+            2700,
+            2700,
+            2700,
+            2700,
+            2700
+          ]
+        },
+        {
+          "TargetAttribute": "COST_CRS",
+          "UseArray": true,
+          "ModifierArray": [
+            4500,
+            4500,
+            4500,
+            4500,
+            4500
+          ]
+        },
+        {
+          "TargetAttribute": "OP_HITPOINTS",
+          "UseArray": true,
+          "ModifierArray": [
+            "30,800",
+            "44,000",
+            "88,000",
+            "176,000",
+            "242,000"
+          ]
+        },
+        {
+          "TargetAttribute": "OP_RADIUS",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "OP_SIGINT",
+          "UseArray": true,
+          "ModifierArray": [
+            200,
+            200,
+            200,
+            200,
+            200
+          ]
+        },
+        {
+          "TargetAttribute": "OP_PROD_SPG",
+          "UseArray": true,
+          "ModifierArray": [
+            2,
+            4,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "TargetAttribute": "OP_TRDP_HARVEST_MULTIPLIER",
+          "UseArray": true,
+          "ModifierArray": [
+            0.75,
+            1.5,
+            2.25,
+            3,
+            3.75
+          ]
+        },
+        {
+          "TargetAttribute": "FIELD_ICE",
+          "UseArray": true,
+          "ModifierArray": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "TargetAttribute": "FIELD_METAL",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "FIELD_GAS",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "FIELD_CRYSTAL",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "OP_TRDP_STREAMING_MULTIPLIER",
+          "UseArray": true,
+          "ModifierArray": [
+            0.75,
+            1.5,
+            2.25,
+            3,
+            3.75
+          ]
+        }
+      ],
+      "InternalEffects": [
+        {
+          "Target": "Outpost",
+          "Origin": "Outpost",
+          "Destination": "Outpost",
+          "TargetAttribute": "OP_TRDP_STREAMING_MULTIPLIER",
+          "Type": "Modifier",
+          "UseArray": true,
+          "ModifierArray": [
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25
+          ],
+          "Conditions": [
+            {
+              "$type": "OutpostAugmentationCondition",
+              "Augmentation": "Low"
+            }
+          ]
+        }
+      ],
+      "Recipes": {
+        "5001": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5002": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5003": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "5004": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "Type": "Fortress",
+      "Name": "Fortress",
+      "Description": "Fortresses extend claim onto hexes within their radius of influence for their owning station.\n\nEffect: Claim strength increased by 1 per level.\nRadius of influence: 1.\nAugment effect: Claim strength increased by an additionial 1.",
+      "FlavourText": 1,
+      "ImageID": 1,
+      "Role": "Industry",
+      "Multiplicity": "Unrestricted",
+      "SlotAffinity": "Outpost",
+      "TierAffinity": 2,
+      "PathDependency": {
+        "Path": "Industry",
+        "Required": 4
+      },
+      "MaxRadius": 0,
+      "MainAttributes": [
+        "OP_CLAIM_STR"
+      ],
+      "Stats": [
+        {
+          "TargetAttribute": "COST_MTL",
+          "UseArray": true,
+          "ModifierArray": [
+            3600,
+            3600,
+            3600,
+            3600,
+            3600
+          ]
+        },
+        {
+          "TargetAttribute": "COST_GAS",
+          "UseArray": true,
+          "ModifierArray": [
+            5400,
+            5400,
+            5400,
+            5400,
+            5400
+          ]
+        },
+        {
+          "TargetAttribute": "COST_CRS",
+          "UseArray": true,
+          "ModifierArray": [
+            9000,
+            9000,
+            9000,
+            9000,
+            9000
+          ]
+        },
+        {
+          "TargetAttribute": "OP_HITPOINTS",
+          "UseArray": true,
+          "ModifierArray": [
+            "176,000",
+            "264,000",
+            "352,000",
+            "440,000",
+            "598,400"
+          ]
+        },
+        {
+          "TargetAttribute": "OP_RADIUS",
+          "UseArray": true,
+          "ModifierArray": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "TargetAttribute": "OP_SIGINT",
+          "UseArray": true,
+          "ModifierArray": [
+            400,
+            400,
+            400,
+            400,
+            400
+          ]
+        },
+        {
+          "TargetAttribute": "OP_PROD_SPG",
+          "UseArray": true,
+          "ModifierArray": [
+            3,
+            6,
+            9,
+            12,
+            15
+          ]
+        },
+        {
+          "TargetAttribute": "OP_CLAIM_RADIUS",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "OP_CLAIM_STR",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "InternalEffects": [
+        {
+          "Target": "Outpost",
+          "Origin": "Outpost",
+          "Destination": "Outpost",
+          "TargetAttribute": "OP_CLAIM_STR",
+          "Type": "Modifier",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "Conditions": [
+            {
+              "$type": "OutpostAugmentationCondition",
+              "Augmentation": "Low"
+            }
+          ]
+        }
+      ],
+      "Recipes": {
+        "5001": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5002": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5003": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5004": [
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "Type": "MiningColony",
+      "Name": "Mining Colony",
+      "Description": "Mining Colonies harvest resources (metal, gas and crystal) from planets and moons within their radius of influence per level.\n\nHarvest rate: 80% per level per hour.\nRadius of influence: 1 hex.\nAugment effect: Harvest rate of planets and moons increased to 88% per level per hour.",
+      "FlavourText": 1,
+      "ImageID": 1,
+      "Role": "Industry",
+      "Multiplicity": "StationUnique",
+      "SlotAffinity": "Outpost",
+      "TierAffinity": 3,
+      "PathDependency": {
+        "Path": "Industry",
+        "Required": 7
+      },
+      "MaxRadius": 3,
+      "Stats": [
+        {
+          "TargetAttribute": "COST_MTL",
+          "UseArray": true,
+          "ModifierArray": [
+            5400,
+            5400,
+            5400,
+            5400,
+            5400
+          ]
+        },
+        {
+          "TargetAttribute": "COST_GAS",
+          "UseArray": true,
+          "ModifierArray": [
+            8100,
+            8100,
+            8100,
+            8100,
+            8100
+          ]
+        },
+        {
+          "TargetAttribute": "COST_CRS",
+          "UseArray": true,
+          "ModifierArray": [
+            13500,
+            13500,
+            13500,
+            13500,
+            13500
+          ]
+        },
+        {
+          "TargetAttribute": "OP_HITPOINTS",
+          "UseArray": true,
+          "ModifierArray": [
+            "352,000",
+            "440,000",
+            "528,000",
+            "616,000",
+            "792,000"
+          ]
+        },
+        {
+          "TargetAttribute": "OP_RADIUS",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "OP_SIGINT",
+          "UseArray": true,
+          "ModifierArray": [
+            600,
+            600,
+            600,
+            600,
+            600
+          ]
+        },
+        {
+          "TargetAttribute": "OP_PROD_SPG",
+          "UseArray": true,
+          "ModifierArray": [
+            4,
+            8,
+            12,
+            16,
+            20
+          ]
+        },
+        {
+          "TargetAttribute": "OP_MC_YIELD",
+          "UseArray": true,
+          "ModifierArray": [
+            0.8,
+            1.6,
+            2.4,
+            3.2,
+            4
+          ]
+        },
+        {
+          "TargetAttribute": "MOON_METAL",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "MOON_GAS",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "MOON_CRYSTAL",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "PLANET_METAL",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "PLANET_GAS",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "PLANET_CRYSTAL",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "FIELD_METAL",
+          "UseArray": true,
+          "ModifierArray": [
+            0.5,
+            1,
+            1.5,
+            2,
+            2.5
+          ]
+        },
+        {
+          "TargetAttribute": "FIELD_GAS",
+          "UseArray": true,
+          "ModifierArray": [
+            0.5,
+            1,
+            1.5,
+            2,
+            2.5
+          ]
+        },
+        {
+          "TargetAttribute": "FIELD_CRYSTAL",
+          "UseArray": true,
+          "ModifierArray": [
+            0.5,
+            1,
+            1.5,
+            2,
+            2.5
+          ]
+        }
+      ],
+      "InternalEffects": [
+        {
+          "Target": "Outpost",
+          "Origin": "Outpost",
+          "Destination": "Outpost",
+          "TargetAttribute": "OP_MC_YIELD",
+          "Type": "Modifier",
+          "UseArray": true,
+          "ModifierArray": [
+            0.08,
+            0.16,
+            0.24,
+            0.32,
+            0.4
+          ],
+          "Conditions": [
+            {
+              "$type": "OutpostAugmentationCondition",
+              "Augmentation": "Low"
+            }
+          ]
+        }
+      ],
+      "Recipes": {
+        "5001": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5002": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5003": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "5004": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "Type": "CapitalShipAssembly",
+      "Name": "Capital Ship Assembly",
+      "Description": "The unique outpost: Capital Ship Assembly enables the construction of capital ships for its owning station.\n\nEffect: Time cost for capital ships reduced by 6% per level.\nRadius of influence: 1 hex.\n\nMoons within the radius of influence additionally reduce heavy ship time cost by:\nSmall moons: 1% per level.\nMedium moons: 2% per level.\nLarge moons: 3% per level.",
+      "FlavourText": 1,
+      "ImageID": 1,
+      "Role": "EmpireUnique",
+      "Multiplicity": "EmpireUnique",
+      "SlotAffinity": "Outpost",
+      "TierAffinity": 0,
+      "CommanderLevelRequired": 50,
+      "MaxRadius": 1,
+      "Stats": [
+        {
+          "TargetAttribute": "COST_MTL",
+          "UseArray": true,
+          "ModifierArray": [
+            12000,
+            12000,
+            12000,
+            12000,
+            12000
+          ]
+        },
+        {
+          "TargetAttribute": "COST_GAS",
+          "UseArray": true,
+          "ModifierArray": [
+            12000,
+            12000,
+            12000,
+            12000,
+            12000
+          ]
+        },
+        {
+          "TargetAttribute": "COST_CRS",
+          "UseArray": true,
+          "ModifierArray": [
+            12000,
+            12000,
+            12000,
+            12000,
+            12000
+          ]
+        },
+        {
+          "TargetAttribute": "OP_HITPOINTS",
+          "UseArray": true,
+          "ModifierArray": [
+            "528,000",
+            "616,000",
+            "704,000",
+            "792,000",
+            "1,056,000"
+          ]
+        },
+        {
+          "TargetAttribute": "OP_RADIUS",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "OP_SIGINT",
+          "UseArray": true,
+          "ModifierArray": [
+            700,
+            700,
+            700,
+            700,
+            700
+          ]
+        },
+        {
+          "TargetAttribute": "OP_PROD_SPG",
+          "UseArray": true,
+          "ModifierArray": [
+            5,
+            10,
+            15,
+            20,
+            25
+          ]
+        },
+        {
+          "TargetAttribute": "OP_CAPITAL_MOON_HARVEST_DIVISOR",
+          "UseArray": true,
+          "ModifierArray": [
+            48,
+            48,
+            48,
+            48,
+            48
+          ]
+        },
+        {
+          "TargetAttribute": "MOON_ICE",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "MOON_METAL",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "MOON_GAS",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "TargetAttribute": "MOON_CRYSTAL",
+          "UseArray": true,
+          "ModifierArray": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "Effects": [
+        {
+          "Origin": "Outpost",
+          "Destination": "Station",
+          "Target": "CapitalShips",
+          "TargetAttribute": "COST_TIME",
+          "Type": "Multiplier",
+          "UseArray": true,
+          "ModifierArray": [
+            -0.06,
+            -0.12,
+            -0.18,
+            -0.24,
+            -0.3
+          ]
+        }
+      ],
+      "InternalEffects": [
+        {
+          "Target": "Outpost",
+          "Origin": "Outpost",
+          "Destination": "Outpost",
+          "TargetAttribute": "OP_SIGINT",
+          "Type": "Modifier",
+          "UseArray": true,
+          "ModifierArray": [
+            200,
+            200,
+            200,
+            200,
+            200
+          ],
+          "Conditions": [
+            {
+              "$type": "OutpostAugmentationCondition",
+              "Augmentation": "Low"
+            }
+          ]
+        }
+      ],
+      "Recipes": {
+        "5001": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "5002": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "5003": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "5004": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      }
+    }
+  ]
+}

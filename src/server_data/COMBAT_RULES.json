@@ -1,0 +1,70 @@
+﻿{
+	// General
+	"ProductionBuildingBiasWeight": 3,
+	"ViceVersaModifier": 0.5,
+	"PlayerRaidLethality": 1,
+	"NPCRaidLethality": 0.5,
+
+	// Station Capture
+	"IsPlayerStationCaptureAllowed": true,
+	"IsNpcStationCaptureAllowed": true,
+	"IsAllianceStationCaptureAllowed": false,
+	"IsSuperStructureCaptureAllowed": false,
+
+	// Sabotage
+	"SabotagedNpcHitPointEffect": {
+		"Origin": "Sabotage",
+		"Destination": "Fleets",
+		"Target": "Fleet",
+		"TargetAttribute": "UNIT_FIREPOWER",
+		"Type": "PercentageModifier",
+		"Modifier": -0.2
+	},
+
+	// Tactics
+	"HoursForFullTacticProficiency": 8,
+	"TacticInstantTrainCost": 2,
+	"TacticDefinitions": {
+		"Pincer": {
+			"SuperiorTo": "Turtling"
+		},
+		"Turtling": {
+			"SuperiorTo": "Flanking"
+		},
+		"Flanking": {
+			"SuperiorTo": "Pincer"
+		}
+	},
+
+	// Phases
+	"AssaultPhaseDefinitions": {
+		"LongRange": {
+			"Modifier": 1
+		},
+		"MediumRange": {
+			"Modifier": 0.5
+		},
+		"CloseRange": {
+			"Modifier": 0.25
+		}
+	},
+	// Phases
+	"RaidPhaseDefinitions": {
+		"LongRange": {
+			"Modifier": 1
+		},
+		"MediumRange": {
+			"Modifier": 0.5
+		},
+		"CloseRange": {
+			"Modifier": 0.25
+		}
+	},
+	// Phases
+	"SabotagePhaseDefinitions": {
+		"MediumRange": {
+			"Modifier": 1
+		}
+	}
+
+}

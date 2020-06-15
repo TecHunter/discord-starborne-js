@@ -1,0 +1,12 @@
+﻿{
+	"ChargeDefinitions": {
+		"MissionSpeedBoost": {
+			"ResetType": "Daily",
+			"MaxCharges": 5 // Though these depend on empire stats atm, this can be used as a fallback.
+		},
+		"DailyChallengeFreeReroll": {
+			"ResetType": "Daily",
+			"MaxCharges":  1
+		}
+	}
+}

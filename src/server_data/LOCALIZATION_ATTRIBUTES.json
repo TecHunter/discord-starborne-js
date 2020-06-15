@@ -1,0 +1,865 @@
+// You can style words by using the following tags:
+// <b>This will make things bold</b>
+// <i>This will make things italic</b>
+// You can also combine tags, so say if we wanted something to be both bold and italic:
+// <b><i>This will be bold and italic</b></i>
+// Additional tags can be added if requested:
+// - Colors, font sizes, etc
+// - Styles that could combine complicated tag combinations
+//
+// Attribute format example:
+// "UNIT_OFFENSE_FIREPOWER": {
+//		"Name": "Offense Firepower",
+//		"Description": "Offense Firepower is the total damage that your fleet inflicts in the main round of\ncombat. It makes things go boom."
+// }
+[
+	{
+		"ID": "UNIT_FIREPOWER",
+		"Name": "Firepower",
+		"Description": "Firepower is the total damage that a fleet inflicts in combat."
+	},
+	{
+		"ID": "UNIT_SUPPRESSION_FIREPOWER",
+		"Name": "Suppression Firepower",
+		"Description": "Suppression Firepower is the amount of suppression that a fleet inflicts in the suppression phase. Suppression takes place before damage is calculated. Suppressed ships do not apply damage while suppressed."
+	},
+	{
+		"ID": "UNIT_BOMB",
+		"Name": "Station Bombing",
+		"Description": "Bombing Damage is the total damage that a fleet inflicts on buildings in an enemy station when assaulting. This happens in the bombardment combat phase. Bombardment combat takes place after normal combat. Only surviving ships with Bombing Damage will fire."
+	},
+	{
+		"ID": "UNIT_STATION_CAPTURE",
+		"Name": "Station Capture",
+		"Description": "The Station Capture value will be subtracted from the defending station's Station Defense value. If the station's Station Defense value is set to 0 or lower by an attack, the ownership of the station will be transferred to the attacker."
+	},
+	{
+		"ID": "UNIT_HP",
+		"Name": "Ship Hit Points",
+		"Description": "Ship Hit Points determine the total amount of damage that a ship or fleet can endure before it is destroyed."
+	},
+	{
+		"ID": "UNIT_SPD",
+		"Name": "Speed",
+		"Description": "Speed determines how fast a fleet moves when deploying and during operations."
+	},
+	{
+		"ID": "UNIT_FSIZE",
+		"Name": "Fleet Size",
+		"Description": "Fleet Size is the maximum number of ships that a fleet can have."
+	},
+	{
+		"ID": "UNIT_CARGO",
+		"Name": "Cargo Space",
+		"Description": "Cargo Space determines how many resources a ship can carry when on operations or freighting."
+	},
+	{
+		"ID": "UNIT_SCANSTR",
+		"Name": "Scan Strength",
+		"Description": "Scan Strength is used to detect Missions, Outposts and Movements."
+	},
+	{
+		"ID": "UNIT_SIGINT",
+		"Name": "Ship Signal Interference",
+		"Description": "Ship Signal Interference increases a fleet's signal interference. Fleets with high signal interference are harder to detect on the map."
+	},
+	{
+		"ID": "UNIT_FUEL",
+		"Name": "Fuel Range",
+		"Description": "Fuel Range increases a fleet's fuel range. Fleets with increased fuel range do not automatically return when completing operations until number of operations equals fuel range."
+	},
+	{
+		"ID": "UNIT_XPVAL",
+		"Name": "Experience Point Value",
+		"Description": "Experience Point Value determines the amount of experience an enemy fleet gets when it destroys this ship."
+	},
+	{
+		"ID": "UNIT_XP",
+		"Name": "Fleet Experience",
+		"Description": "Fleet Experience determines the experient point value that a fleet has earned."
+	},
+	{
+		"ID": "UNIT_SUPPRESSED_DURATION",
+		"Name": "Suppressed Duration",
+		"Description": "Suppressed Duration determines how long a fleet stays suppressed after getting suppressed."
+	},
+	{
+		"ID": "UNIT_SUPPRESSION_IMMUNITY",
+		"Name": "Suppression Immunity",
+		"Description": "Suppression Immunity determines whether a fleet can become suppressed or not."
+	},
+	{
+		"ID": "UNIT_CARD_SPACE",
+		"Name": "Ship Card Slots",
+		"Description": "Ship Card Slots determines how many cards a fleet can hold."
+	},
+	{
+		"ID": "UNIT_PROBE_LIFETIME",
+		"Name": "Probe Lifetime",
+		"Description": "Probe Lifetime determines how long a scan probe stays active after it's deployed."
+	},
+	{
+		"ID": "UNIT_XP_GAIN",
+		"Name": "Experience Gain Modifier",
+		"Description": "Experience Gain Modifier affects how fast a fleet gains experience."
+	},
+	{
+		"ID": "UNIT_SPD_RETURN",
+		"Name": "Return Speed",
+		"Description": "Return Speed determines how fast a fleet returns to its operating station after an operation."
+	},
+	{
+		"ID": "UNIT_ENEMY_SUPPRESSED_DURATION",
+		"Name": "Enemy Suppressed Duration",
+		"Description": "Enemy Suppressed Duration determines how long an enemy fleet stays suppressed after getting suppressed."
+	},
+	{
+		"ID": "UNIT_ESCORT_COUNT",
+		"Name": "Escort Number",
+		"Description": "Escort Number determines how many escorts a fleet counts as when part of completing a mission or event."
+	},
+	{
+		"ID": "UNIT_PLASMA_HARVESTING",
+		"Name": "Plasma Cargo",
+		"Description": "Plasma Cargo is a percentage of the fleet's actual cargo that can be used for resources harvested from solar flares."
+	},
+	{
+		"ID": "UNIT_BONUSXP_ASSAULT",
+		"Name": "Assault XP Bonus",
+		"Description": "Experience Point bonus applied when performing the Assault operation."
+	},
+
+	{
+		"ID": "UNIT_BONUSXP_RAID",
+		"Name": "Raid XP Bonus",
+		"Description": "Experience Point bonus applied when performing the Raid operation."
+	},
+
+	{
+		"ID": "UNIT_BONUSXP_SCAN",
+		"Name": "Scan XP Bonus",
+		"Description": "Experience Point bonus applied when performing the Scan operation."
+	},
+
+	{
+		"ID": "UNIT_BONUSXP_SPY",
+		"Name": "Spy XP Bonus",
+		"Description": "Experience Point bonus applied when performing the Spy operation."
+	},
+
+	{
+		"ID": "UNIT_BONUSXP_HARVESTING",
+		"Name": "Star Mission XP Bonus",
+		"Description": "Experience Point bonus applied when harvesting Stars."
+	},
+	{
+		"ID": "UNIT_BONUSXP_BUILDANDUPGRADE",
+		"Name": "Build/Upgrade XP Bonus",
+		"Description": "Experience Point bonus applied when performing the Build or Upgrade operations."
+	},
+	{
+		"ID": "UNIT_SHIELDS",
+		"Name": "Shields",
+		"Description": "Generates a forcefield around the ship, reducing effectiveness of incoming small ammo."
+	},
+	{
+		"ID": "UNIT_TACTIC_BOOST",
+		"Name": "Combat Firepower Boost",
+		"Description": "The Combat Firepower Boost is added ontop of the boost provided by a station that a fleet is operating from. It only applies if you are using a superior or the same tactic as the opponent."
+	},
+	{
+		"ID": "STAT_SABOTAGE_PROTECTION",
+		"Name": "Sabotage Protection",
+		"Description": "NULL"
+	},
+	{
+		"ID": "STAT_CAPTURE_DEFENSE",
+		"Name": "Capture Defense",
+		"Description": "Capture Defense protects a station against capture attempts by an attacker. If the station's Station Defense value is set to 0 or lower by an attacker's Station Capture value, the ownership of the station will be transferred to the attacker. By default, Capture Defense regenerates by 1 point per hour until it is back to its maximum value."
+	},
+	{
+		"ID": "STAT_CAPTURE_DEFENSE_REGENERATION",
+		"Name": "Capture Defense Regeneration",
+		"Description": "The rate at which Capture Defense is regenerated per hour."
+	},
+	{
+		"ID": "STAT_BUILDING_CONSTRUCTION_TIME",
+		"Name": "Building Construction Time",
+		"Description": "Building Construction Time determines how long it takes to construct new buildings and upgrade the level of an existing building."
+	},
+	{
+		"ID": "STAT_SHIP_PRODUCTION_TIME",
+		"Name": "Ship Production Time",
+		"Description": "Ship Production Time determines how long it takes to produce new ships."
+	},
+	{
+		"ID": "STAT_SHIP_PRODUCTION_TIME_SMALL",
+		"Name": "Small Ship Production Time",
+		"Description": "Small Ship Production Time determines how long it takes to produce new small ships. Small ships are Corvettes, Patrol Ships, Industrials and Scouts."
+	},
+	{
+		"ID": "STAT_SHIP_PRODUCTION_TIME_LARGE",
+		"Name": "Large Ship Production Time",
+		"Description": "Large Ship Production Time determines how long it takes to produce new large ships. Large ships are Destroyers, Frigates, Gunships, Carriers and Dreadnoughts."
+	},
+	{
+		"ID": "STAT_SIGINT",
+		"Name": "Station Spy Defense",
+		"Description": "Station Spy Defense, which reduces the chances of enemy spies and scouts getting information on the station."
+	},
+	{
+		"ID": "STAT_SCANSTR",
+		"Name": "Station Scan Strength",
+		"Description": "Station Scan Strength determines the scan strength of a station. A station can detect incoming fleets or enemy outposts in range by comparing its scan strength to the signal interference of fleets and outposts."
+	},
+	{
+		"ID": "STAT_SCAN_RADIUS",
+		"Name": "Station Scan Radius",
+		"Description": "Station Scan Radius determines the scan radius of a station. A station can detect incoming fleets or enemy outposts on hexes within its radius"
+	},
+	{
+		"ID": "STAT_PRODQ",
+		"Name": "Ship Production Queue Length",
+		"Description": "Ship Production Queue Length determines how many ship production operations can be placed in the production queue."
+	},
+	{
+		"ID": "STAT_CONSTRQ",
+		"Name": "Building Construction Queue",
+		"Description": "Building Construction Queue Length determines how long the construction queue can be in minutes."
+	},
+	{
+		"ID": "STAT_FLEETLIM",
+		"Name": "Fleet Pool",
+		"Description": "Fleet Pool determines how many fleets your empire can support."
+	},
+	{
+		"ID": "STAT_SUPPLEFF",
+		"Name": "Supply Range",
+		"Description": "Supply Range modifies the upkeep cost of fleets operating away from their supplier station. Supply Range reduces distance penalty to labor upkeep of fleets."
+	},
+	{
+		"ID": "STAT_OCT",
+		"Name": "Operating limit",
+		"Description": "For each fleet above the operating limit docked at a station, add +5% to labor upkeep of all docked fleets."
+	},
+	{
+		"ID": "STAT_SSPACE",
+		"Name": "Storage Space",
+		"Description": "NULL" //Outdated? Effects seem to use STAT_PROD_CAP instead
+	},
+	{
+		"ID": "STAT_GARRLIM",
+		"Name": "Garrison Limit",
+		"Description": "NULL" //Not being used?
+	},
+	{
+		"ID": "STAT_RECONRESIST",
+		"Name": "Resistance Against Spying",
+		"Description": "Resistance Against Spying increases a station's spy defense, which reduces the chances of enemy spies and scouts getting information on the station." //Same text as STAT_SIGINT, both cards seem to have the same effect. STAT_SIGINT is tied to Koh Xi Kwok card, while STAT_RECONRESIST is tied to Defence Grid building
+	},
+	{
+		"ID": "STAT_FREIGHTCOUNT",
+		"Name": "Freighter Count",
+		"Description": "Freighter Count increases the number of freighters the empire has. Freighters are used for transferring resources between stations."
+	},
+	{
+		"ID": "STAT_FREIGHTER_SPD",
+		"Name": "Freighter Speed",
+		"Description": "Freighter Speed increases the speed at which freighters travel. Freighters are used for transferring resources between stations."
+	},
+	{
+		"ID": "STAT_OP_BUILDCOST",
+		"Name": "Outpost Building Cost",
+		"Description": "Outpost Building Cost determines the material cost of building new outposts."
+	},
+	{
+		"ID": "STAT_OP_UPGRCOST",
+		"Name": "Outpost Upgrade Cost",
+		"Description": "Outpost Upgrade Cost determines the material cost of upgrading existing outposts."
+	},
+	{
+		"ID": "STAT_OP_REPAIRCOST",
+		"Name": "Outpost Repair Cost",
+		"Description": "Outpost Repair Cost determines the material cost of repairing outposts after they have taken damage."
+	},
+	{
+		"ID": "STAT_RESHIDDEN",
+		"Name": "Resources Hidden",
+		"Description": "Resources Hidden determine how many resources are hidden from opponents when they raid a player's station."
+	},
+	{
+		"ID": "STAT_HANGAR_INVULNERABLE_SHIPS_PERCENTAGE",
+		"Name": "Hangar Units Hidden",
+		"Description": "Determines how many ships are hidden for each unit in the hangar."
+	},
+	{
+		"ID": "STAT_B_HP",
+		"Name": "Building Hit Points",
+		"Description": "Building Hit Points determine the total amount of damage that a building can endure before it is destroyed. Buildings are damaged by Bombing Damage."
+	},
+	{
+		"ID": "STAT_INFLTHRESH",
+		"Name": "Influence Threshold",
+		"Description": "Influence Threshold determines how much influence is needed to upgrade a station."
+	},
+	{
+		"ID": "S_CLAIMSTR",
+		"Name": "Claim Strength",
+		"Description": "Claim Strength determines how much claim a station has on hexes in its radius."
+	},
+	{
+		"ID": "STAT_FLEET_BASEXP",
+		"Name": "Starting Fleet Experience",
+		"Description": "Starting Fleet Experience determines the starting experience of a new fleet."
+	},
+	{
+		"ID": "STAT_INFLRADIUS",
+		"Name": "Station Influence Radius",
+		"Description": "Station Influence Radius determines the radius of hexes that a station can lay claim to."
+	},
+	{
+		"ID": "STAT_FLEET_RAID_SPD",
+		"Name": "Raiding Speed Bonus",
+		"Description": "Raiding Speed Bonus is a bonus to a fleet's speed that only applies when the fleet is sent on a raid."
+	},
+	{
+		"ID": "STAT_FLEET_RAID_CARGO",
+		"Name": "Raiding Cargo Space Bonus",
+		"Description": "Raiding Cargo Space Bonus is a bonus to a fleet's cargo space that only applies when the fleet is sent on a raid."
+	},
+	{
+		"ID": "STAT_FLEET_MISSION_SPD",
+		"Name": "Mission Speed Bonus",
+		"Description": "Mission Speed Bonus is a bonus to a fleet's speed that only applies when the fleet is sent on a mission or event."
+	},
+	{
+		"ID": "STAT_FLEET_MISSION_CARGO",
+		"Name": "Mission Cargo Space Bonus",
+		"Description": "Mission Cargo Space Bonus is a bonus to a fleet's cargo space that only applies when the fleet is sent on a mission or event."
+	},
+	{
+		"ID": "STAT_FLEET_EVENT_INTERVAL",
+		"Name": "Event Pending Time Modifier",
+		"Description": "Event Pending Time Modifier affects how long an Event stays in the Pending state."
+	},
+	{
+		"ID": "STAT_DEFBOOST",
+		"Name": "Station Defense",
+		"Description": "Station Defense gives a bonus to the defensive firepower of fleets defending a station."
+	},
+	{
+		"ID": "STAT_CARDSPACE",
+		"Name": "Station Card Slots",
+		"Description": "Station Card Slots is the number of cards that a station can hold."
+	},
+	{
+		"ID": "STAT_LABOR_CONVERSION_RATIO",
+		"Name": "Labor Conversion Ratio",
+		"Description": "Labor Conversion Ratio determines the conversion ratio between labor and resources."
+	},
+	{
+		"ID": "STAT_MAX_LABOR_CONVERSION_RATE",
+		"Name": "Labor Conversion Rate Limit",
+		"Description": "Labor Conversion Rate Limit is the maximum conversion ratio between labor and resources."
+	},
+	{
+		"ID": "STAT_COMMODITY_BREAKDOWN_MODIFIER",
+		"Name": "Commodity Breakdown Bonus",
+		"Description": "Gives bonus to resources received when breaking down a Commodity card."
+	},
+	{
+		"ID": "STAT_RESOURCE_YIELD_BONUS",
+		"Name": "Home Resource Yield Bonus",
+		"Description": "Increases the yield of resources on the same hex as the station."
+	},
+	{
+		"ID": "STAT_FLEET_STARMISSION_SPD",
+		"Name": "Star Harvesting Speed",
+		"Description": "Increases the Speed of Industrial fleets harvesting stars."
+	},
+	{
+		"ID": "STAT_FLEET_STARMISSION_CARGO",
+		"Name": "Star Harvesting Cargo Space",
+		"Description": "Increases the Cargo Space of Industrial fleets harvesting stars."
+	},
+	{
+		"ID": "STAT_DEFENSE_DAMAGE_SOAK",
+		"Name": "Station Forcefield Projector",
+		"Description": "A forceshield that can be projected to protect fleets and structures from attacks."
+	},
+	{
+		"ID": "STAT_FLEET_STARTING_RANK",
+		"Name": "Initial rank",
+		"Description": "The initial rank of a new fleet"
+	},
+	{
+		"ID": "STAT_ALLIED_DEPLOYMENT_BOOST",
+		"Name": "Speed for incoming allied deployments",
+		"Description": "Speed for incoming allied deployments"
+	},
+	{
+		"ID": "OP_STACKPENALTY",
+		"Name": "Stacking Penalty",
+		"Description": "NULL" //Not quite sure how it works. Hversu margir flotar geta verið á stöðinni?
+	},
+	{
+		"ID": "OP_SG_MOVESPDBOOST",
+		"Name": "Non-Combat Operation Speed Bonus",
+		"Description": "Non-Combat Operation Speed Bonus determines the speed bonus from a Stargate to fleets on a non-combat operation."
+	},
+	{
+		"ID": "OP_SG_SPGPERCELL",
+		"Name": "Influence Generation Bonus",
+		"Description": "Influence Generation Bonus determines the influence generated from a Stargate."
+	},
+	{
+		"ID": "OP_FORT_DEFBOOST",
+		"Name": "Fortress Defense Bonus",
+		"Description": "Fortress Defense Bonus increases the defensive firepower of fleets within the range of a fortress."
+	},
+	{
+		"ID": "OP_FORT_INTCEPTCHANGE",
+		"Name": "Fortress Interception Chance",
+		"Description": "Fortress Interception Chance determines the probability of fleets that are docked at a fortress intercepting combat within range."
+	},
+	{
+		"ID": "OP_NAVY_DEFMOD",
+		"Name": "Navy Base Gunship Defense",
+		"Description": "Navy Base Gunship Defense determines the extra damage the Navy Base inflicts on Gunships in the Bombardment phase."
+	},
+	{
+		"ID": "OP_NAVY_DEF",
+		"Name": "Navy Base Defense Strength",
+		"Description": "Navy Base Defense Strength increases the defense firepower provided by the navy base outpost."
+	},
+	{
+		"ID": "OP_MINING_OUTPOST_MAX_COUNT",
+		"Name": "Mining Facility Limit",
+		"Description": "Mining Facility Limit determines how many Mining Facilities a player can build."
+	},
+	{
+		"ID": "OP_MOP_YIELD",
+		"Name": "Mining Outpost Yield",
+		"Description": "Mining Outpost Yield determines how many resources are generated from a Mining Outpost per hour."
+	},
+	{
+		"ID": "OP_TRDP_MISINTERVAL",
+		"Name": "Trade Mission Time Interval",
+		"Description": "Trade Mission Time Interval determines how much time passes between trade mission."
+	},
+	{
+		"ID": "OP_MC_DISCRATE",
+		"Name": "Rich Vein Discovery Rate",
+		"Description": "Rich Vein Discovery Rate determines the interval in which a Mining Colony discovers new rich veins."
+	},
+	{
+		"ID": "OP_MC_YIELD",
+		"Name": "Mining Colony Yield",
+		"Description": "Mining Colony Yield determines how many resources are generated from a Mining Colony per hour."
+	},
+	{
+		"ID": "OP_INTSPH_TIMEOFFSET",
+		"Name": "Arrival Time Offset",
+		"Description": "NULL" //Not being used?
+	},
+	{
+		"ID": "OP_OPERATIONAL",
+		"Name": "Operational Status",
+		"Description": "Operational Status is used to determined whether an outpost is operational. Outposts that are damaged or belong to stations that are out of supply are not operational."
+	},
+	{
+		"ID": "OP_SCAN_SCANSTR",
+		"Name": "Scanner Exploration Scan Strength",
+		"Description": "Scanner Exploration Scan Strength determines the exploration scan strength of the scanner outpost. Exploration scan strength is used to detect Missions."
+	},
+	{
+		"ID": "OP_SCAN_RECONSTR",
+		"Name": "Scanner Recon Scan Strength",
+		"Description": "Scanner Recon Scan Strength determines the recon scan strength of the scanner outpost. Recon scan strength is used to detect outposts and spy on stations."
+	},
+	{
+		"ID": "OP_HITPOINTS",
+		"Name": "Outpost Hit Points",
+		"Description": "Outpost Hit Points determine the total amount of damage that an outpost can sustain before it becomes inoperational."
+	},
+	{
+		"ID": "OP_HABIT_OUTPOST_MAX_COUNT",
+		"Name": "Habitation Dome Limit",
+		"Description": "Habitation Dome Limit determines how many Habitation Domes can be built by a player."
+	},
+	{
+		"ID": "OP_SUPPLY_DEPOT_MAX_COUNT",
+		"Name": "Supply Depot Limit",
+		"Description": "Supply Depot Limit determines how many Supply Depots can be built by a player."
+	},
+	{
+		"ID": "OP_SUPPLY_DEPOT_STORAGE",
+		"Name": "Supply Depot Storage Space",
+		"Description": "NULL" //Not being used?
+	},
+	{
+		"ID": "OP_MBAT_LETHAL_RATIO",
+		"Name": "Missile Battery Lethal Ratio",
+		"Description": "Missile Battery Lethal Ratio determines how much of a Missile Battery's suppression firepower is lethal."
+	},
+	{
+		"ID": "OP_MBAT_SDEF",
+		"Name": "Missile Battery Suppression Strength",
+		"Description": "Missile Battery Suppression Strength determines the value of a Missile Battery's suppression firepower when defending."
+	},
+	{
+		"ID": "OP_MBAT_FIREPOWER",
+		"Name": "Missile Battery Firepower",
+		"Description": "Missile Battery Firepower when defending."
+	},
+	{
+		"ID": "OP_CLAIM_STR",
+		"Name": "Fortress Claim Strength",
+		"Description": "Fortress Claim Strength determines the claim strenght bonus added to hexes within the fortress radius."
+	},
+	{
+		"ID": "OP_RADIUS",
+		"Name": "Outpost Radius",
+		"Description": "Outpost Radius determines the radius of an outpost's effect."
+	},
+	{
+		"ID": "OP_STATION_LABOR",
+		"Name": "Labor Bonus",
+		"Description": "Labor Bonus increases labor output."
+	},
+	{
+		"ID": "OP_SCANNER_STRENGTH",
+		"Name": "Scanner Strength",
+		"Description": "Scanner Strength determines the recon scan strength of the scanner outpost."
+	},
+	{
+		"ID": "OP_SIGINT",
+		"Name": "Outpost Signal Interference",
+		"Description": "Outpost Signal Interference increases an outpost's signal interference. Outposts with high signal interference are harder to detect on the map."
+	},
+	{
+		"ID": "COST_TIME",
+		"Name": "Construction Time",
+		"Description": "Construction Time determines how long it takes to build buildings or produce ships."
+	},
+	{
+		"ID": "COST_UPKEEP",
+		"Name": "Upkeep Modifier",
+		"Description": "Upkeep Modifier determines how much labor is required for building upkeep."
+	},
+	{
+		"ID": "COST_UPKEEP_FLAT",
+		"Name": "labor upkeep per fleet",
+		"Description": "Upkeep Modifier determines how much labor is required for building upkeep."
+	},
+	{
+		"ID": "COST_MAT",
+		"Name": "Material Construction Cost Modifier",
+		"Description": "Material Construction Cost Modifier determines how many resources it takes to construct or produce something."
+	},
+	{
+		"ID": "COST_MTL",
+		"Name": "Metal Construction Cost Modifier",
+		"Description": "Metal Construction Cost Modifier determines how much metal it costs to construct or produce something."
+	},
+	{
+		"ID": "COST_GAS",
+		"Name": "Gas Construction Cost Modifier",
+		"Description": "Gas Construction Cost Modifier determines how much gas it costs to construct or produce something."
+	},
+	{
+		"ID": "COST_CRS",
+		"Name": "Crystal Construction Cost Modifier",
+		"Description": "Crystal Construction Cost Modifier determines how many crystals it costs to construct or produce something."
+	},
+	{
+		"ID": "COST_SP",
+		"Name": "Expansion Point Construction Cost Modifier",
+		"Description": "Expansion Point Construction Cost Modifier determines how many expansion points it costs to construct or produce something."
+	},
+	{
+		"ID": "PROD_ENERGY",
+		"Name": "Labor Available",
+		"Description": "Labor Available determines how much base labor is available in a station."
+	},
+	{
+		"ID": "PROD_MTL",
+		"Name": "Metal Production",
+		"Description": "Metal Production determines the base amount of metal produced per hour."
+	},
+	{
+		"ID": "PROD_GAS",
+		"Name": "Gas Production",
+		"Description": "Gas Production determines the base amount of gas produced per hour."
+	},
+	{
+		"ID": "PROD_CRS",
+		"Name": "Crystal Production",
+		"Description": "Crystal Production determines the base amount of crystals produced per hour."
+	},
+	{
+		"ID": "PROD_RPG",
+		"Name": "Research Point Generation",
+		"Description": "Research Point Generation determines the base amount of research points generated per hour."
+	},
+	{
+		"ID": "PROD_SPG",
+		"Name": "Influence Generation",
+		"Description": "Influence Generation determines the base amount of influence generated per hour."
+	},
+	{
+		"ID": "PROD_CAP",
+		"Name": "Resource Capacity",
+		"Description": "Resource Capacity determines the base amount of resources that a player can store."
+	},
+	{
+		"ID": "PROD_EFFMOD",
+		"Name": "Production Modifier",
+		"Description": "Production Modifier affects how many resources are generated per hour."
+	},
+	{
+		"ID": "STAT_PROD_ENERGY",
+		"Name": "Station Labor",
+		"Description": "Station Labor determines how much labor is available to a player based on a station."
+	},
+	{
+		"ID": "STAT_PROD_MTL",
+		"Name": "Station Metal Production",
+		"Description": "Station Metal Production is the amount of metal produced by a station per hour."
+	},
+	{
+		"ID": "STAT_PROD_GAS",
+		"Name": "Station Gas Production",
+		"Description": "Station Gas Production is the amount of gas produced by a station per hour."
+	},
+	{
+		"ID": "STAT_PROD_CRS",
+		"Name": "Station Crystal Production",
+		"Description": "Station Crystal Production is the amount of crystals produced by a station per hour."
+	},
+	{
+		"ID": "STAT_PROD_RPG",
+		"Name": "Station Research Point Generation",
+		"Description": "Station Research Point Generation is the amount of research points generated by a station per hour."
+	},
+	{
+		"ID": "STAT_PROD_SPG",
+		"Name": "Station Influence Generation",
+		"Description": "Station Influence Generation is the amount of influence generated by a station per hour."
+	},
+	{
+		"ID": "STAT_PROD_CAP",
+		"Name": "Station Resource Capcacity",
+		"Description": "Station Resource Capacity determines how many resources a player can store based on a station."
+	},
+	{
+		"ID": "STAT_PROD_EFFMOD",
+		"Name": "Station Production Modifier",
+		"Description": "Station Production Modifier modifies the amount of resources generated by the production buildings on the station."
+	},
+	{
+		"ID": "STAT_LOCAL_HARVEST_MODIFIER",
+		"Name": "Station Harvest Modifier",
+		"Description": "Station Harvest Modifier modifies the amount of resources harvested from the hexes within the stations' Harvest radius."
+	},
+	{
+		"ID": "STAT_RESOURCE_EXCHANGE_RATE",
+		"Name": "Resource Exchange Rate",
+		"Description": "The rate at which resources are exchanged."
+	},
+	{
+		"ID": "STAT_TACTIC_BOOST_CAP",
+		"Name": "Maximum Combat Firepower Boost",
+		"Description": "The maximum Combat Firepower Boost a station provides fleets that are operating from it, if they use a superior or the same tactic as the opponent."
+	},
+	{
+		"ID": "OP_PROD_ENERGY",
+		"Name": "Outpost Labor",
+		"Description": "Outpost Labor determines how much labor is available to a player based on an outpost."
+	},
+	{
+		"ID": "OP_PROD_MTL",
+		"Name": "Outpost Metal Production",
+		"Description": "Outpost Metal Production is the amount of metal produced by an outpost per hour."
+	},
+	{
+		"ID": "OP_PROD_GAS",
+		"Name": "Outpost Gas Production",
+		"Description": "Outpost Gas Production is the amount of gas produced by an outpost per hour."
+	},
+	{
+		"ID": "OP_PROD_CRS",
+		"Name": "Outpost Crystal Production",
+		"Description": "Outpost Crystal Production is the amount of crystals produced by an outpost per hour."
+	},
+	{
+		"ID": "OP_PROD_RPG",
+		"Name": "Outpost Research Point Generation",
+		"Description": "Outpost Research Point Generation is the amount of research points generated by an outpost per hour."
+	},
+	{
+		"ID": "OP_PROD_SPG",
+		"Name": "Outpost Influence Generation",
+		"Description": "Outpost Influence Generation is the amount of influence generated by an outpost per hour."
+	},
+	{
+		"ID": "OP_PROD_CAP",
+		"Name": "Outpost Resource Capacity",
+		"Description": "Outpost Resource Capacity determines how many resources a player can store based on an outpost."
+	},
+	{
+		"ID": "OP_PROD_EFFMOD",
+		"Name": "Outpost Production Modifier",
+		"Description": "Outpost Production Modifier determines how many resources are generated by an outpost per hour."
+	},
+	{
+		"ID": "GE_REQUIRED_ESCORT_MODIFIER",
+		"Name": "Escort Modifier",
+		"Description": "Escort Modifier modifies the required number of fleet escorts for a mission or event operating from station."
+	},
+	{
+		"ID": "GE_MISSION_RECOMMENDED_TOTAL_MODIFIER",
+		"Name": "Mission Required Total Modifier",
+		"Description": "Mission Required Total Modifier modifies recommended strength of missions of fleets operating from station."
+	},
+	{
+		"ID": "GE_FLEETEVENT_RECOMMENDED_TOTAL_MODIFIER",
+		"Name": "Fleet Event Required Total Modifier",
+		"Description": "Fleet Event Required Total Modifier modifies recommended strength of events of fleets operating from station."
+	},
+	{
+		"ID": "OPERATIVES_COUNT",
+		"Name": "Number of Operatives",
+		"Description": "Number of Operatives determines the number of Covert Operatives in a player's Covert Ops pool."
+	},
+	{
+		"ID": "OPERATIVES_STRENGTH",
+		"Name": "Operative Strength",
+		"Description": "Operative Strength determines the recon scan strength of Covert Operatives when performing Spy operations."
+	},
+	{
+		"ID": "B_MAX_LEVEL",
+		"Name": "Building Max Level",
+		"Description": "Building Max Level determines the maximum level that a building can have."
+	},
+	{
+		"ID": "CAN_PRODUCE",
+		"Name": "Can Produce Ships",
+		"Description": "NULL" //Might not be used?
+	},
+	{
+		"ID": "STAT_FLEET_RETAINED_XP_MULTIPLIER",
+		"Name": "Experience Saved Modifier",
+		"Description": "Experience Saved Modifier adjusts the amount of Experience Points lost when a Fleet belonging to station loses all ships in combat."
+	},
+	{
+		"ID": "PLACEHOLDER_ATTRIBUTE",
+		"Name": "Functionality Missing",
+		"Description": "Placeholder attribute for functionality that hasn't been implemented yet."
+	},
+	{
+		"ID": "FLEETEVENT_PENDING_TIME_REDUCTION",
+		"Name": "Event Pending Time Modifer",
+		"Description": "Event Pending Time Modifier adjusts the pending time of a Fleet Event, by minutes."
+	},
+	{
+		"ID": "MERCENARY_FLEETEVENT_LEVEL_COMPLETION",
+		"Name": "Mercenary Event Completion",
+		"Description": "Mercenary Event Completion dictates what level of Fleet Events a Mercenary can complete."
+	},
+	{
+		"ID": "BUILDER_CONSTRUCTION_TIME_REDUCTION",
+		"Name": "Construction Time Modifier",
+		"Description": "Construction Time Modifier adjusts the construction time of active building in queue, by minutes."
+	},
+	{
+		"ID": "UNIT_TACTIC_EFFICIENCY",
+		"Name": "Tactical Efficiency",
+		"Description": "Tactical Efficiency."
+	},
+	{
+		"ID": "UNIT_PLUNDER",
+		"Name": "Plunder",
+		"Description": "Plunder."
+	},
+	{
+		"ID": "COALITION_SIZE",
+		"Name": "Coalition Size",
+		"Description": "Determines the maximum size of a coalition."
+	},
+	{
+		"ID": "FOB_JUMP_PREP_TIME",
+		"Name": "Jump Time",
+		"Description": "The time it takes for an FOB to prime its jump drive."
+	},
+	{
+		"ID": "FOB_LOCAL_JUMP_RANGE",
+		"Name": "Jump Range",
+		"Description": "Maximum distance an FOB can cover in one jump."
+	},
+	{
+		"ID": "FOB_GT_JUMP_RANGE",
+		"Name": "GT Jump Radius",
+		"Description": "Maximum distance from a GT claimed by the alliance when jumping outside Jump Range."
+	},
+	{
+		"ID": "FOB_MAX_COUNT",
+		"Name": "FOB max count",
+		"Description": "Maximum number of Forward Operating Bases that the alliance can own."
+	},
+	{
+		"ID": "OP_MC_RESOURCE_FIELD_YIELD",
+		"Name": "Resource Field Yield",
+		"Description": "Resource Field Yield determines how many resources are harvested from surrounding resource fields per hour."
+	},
+	{
+		"ID": "OP_TP_PRESTIGE_YIELD",
+		"Name": "Prestige Yield",
+		"Description": "Prestige Yield represents the amount of prestige generated by the Trade Post per hour."
+	},
+	{
+		"ID": "OP_MOVE_TIMECAP",
+		"Name": "Movement Time Cap",
+		"Description": "Movement Time Cap determines the maximum travel time for any movement that starts within range of the Navy Base."
+	},
+	{
+		"ID": "OP_STREAMING_FREIGHTERS",
+		"Name": "Streaming Freighters",
+		"Description": "Streaming Freighters represents the number of freighters available streaming resources between stations."
+	},
+	{
+		"ID": "STAT_CONSTRUCT_SMALL_SHIPS",
+		"Name": "Light Ship Production",
+		"Description": "Enables Light Ship Production"
+	},
+	{
+		"ID": "STAT_CONSTRUCT_HEAVY_SHIPS",
+		"Name": "Heavy Ship Production",
+		"Description": "Enables Heavy Ship Production"
+	},
+	{
+		"ID": "STAT_CONSTRUCT_CAPITAL_SHIPS",
+		"Name": "Capital Ship Production",
+		"Description": "Enables Capital Ship Production"
+	},
+	{
+		"ID": "ALLIANCE_MAX_OPERATIONS_PER_TYPE",
+		"Name": "Max Active Alliance Operations Per Type",
+		"Description": "Maximum allowed number of active alliance operations of the same type"
+	},
+	{
+		"ID": "ALLIANCE_MAX_FLEETS_PER_OPERATION",
+		"Name": "Max Fleets In Alliance Operation",
+		"Description": "Maximum number of fleets allowed in an alliance operation"
+	},
+	{
+		"ID": "ALLIANCE_EXTRA_MAX_OPERATIONS_ASSAULT",
+		"Name": "Additional Max Active Alliance Assaults",
+		"Description": "Additional maximum allowed number of active alliance assaults"
+	},
+	{
+		"ID": "STAT_FREIGHTER_CARGO",
+		"Name": "Freighter cargo capacity",
+		"Description": "Cargo capacity of freighters departing from the station"
+	}
+]

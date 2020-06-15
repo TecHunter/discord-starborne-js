@@ -1,0 +1,497 @@
+[
+	{
+		"FactionId": 10,
+		"Name": "Frontier Legion",
+		"FirstEffectDescription": "Territorial | The Frontier Legion has emphatically embraced a life of permanent settlement.\n\n- Station harvest rate increased by an additional 50%.\n- Claim strength increased by 1.",
+		"SecondEffectDescription": "Private Army | By necessity, the Frontier Legion has long since optimized the manufacturing of pilots and vessels.\n\n- Corvettes cost 5% less time to produce.\n- Patrol Ships cost 5% less time to produce.\n- Fleet experience gain is increased by 30%.",
+		"VanityShip": {
+			"UnitType": "LightDefense",
+			"Variation": "1"
+		},
+		"Description": "From what was once the largest private military on the frontier a nation of militaristic values has risen.\nAfter centuries as nomadic mercenaries, Legionaires have embraced permanent settlement.  They now fiercely guard and devoutedly nurture their territory.",
+		"Slots": [ 1, 1, 2, 4, 8 ],
+		"VisualizeTheseShipAttributes": [ "UNIT_FIREPOWER" ],
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "S_CLAIMSTR",
+				"Type": "Modifier",
+				"Modifier": 1
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Fleet",
+				"TargetAttribute": "UNIT_XP_GAIN",
+				"Type": "Modifier",
+				"Modifier": "0.3"
+			},
+			{
+				"Origin": "Policies",
+				"Identifier": "UniqueShip",
+				"Destination": "EmpireFleets",
+				"Target": "LightDefense",
+				"TargetAttribute": "UNIT_FIREPOWER",
+				"Type": "Modifier",
+				"Modifier": "20"
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "STAT_LOCAL_HARVEST_MODIFIER",
+				"Type": "Modifier",
+				"Modifier": "0.5"
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "LightAssault",
+				"TargetAttribute": "COST_TIME",
+				"Type": "Multiplier",
+				"Modifier": "-0.05"
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "LightDefense",
+				"TargetAttribute": "COST_TIME",
+				"Type": "Multiplier",
+				"Modifier": "-0.05"
+			}
+		]
+	},
+	{
+		"FactionId": 50,
+		"Name": "Atlas Syndicate",
+		"FirstEffectDescription": "Law & Order | The pillars of society are strong enforcement agencies.\n\n- Mission requirements are lowered by 15%.\n- Scan probes last 24 hours longer.\n- Scan probes get +1 radius.",
+		"SecondEffectDescription": "Optimized Bureaucracy | Proficient accountancy increases the revenue of any venture.\n\n- Resource cost for organizations reduced by 35%.\n- Time cost for organizations reduced by 35%.",
+		"VanityShip": {
+			"UnitType": "Scout",
+			"Variation": 1
+		},
+		"Description": "A financial conglomerate with extensive political ties to almost every other faction, Atlas' neutral political stance and favourable tax environment attracts every organizations which in return has made Atlas incredibly wealthy.\nWhether in business or conflict, Atlas doesn't leave things to chance and keeps a sharp eye on their surroundings (and their targets' surroundings) and  will dominantly suppress any chaotic behaviour that threatens their regulated way of living.",
+		"Slots": [ 1, 2, 2, 4, 8 ],
+		"VisualizeTheseShipAttributes": [ "UNIT_SCANSTR" ],
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Identifier": "UniqueShip",
+				"Destination": "EmpireFleets",
+				"Target": "Scout",
+				"TargetAttribute": "UNIT_SCANSTR",
+				"Type": "Modifier",
+				"Modifier": 0.25
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Scout",
+				"TargetAttribute": "UNIT_PROBE_LIFETIME",
+				"Type": "Modifier",
+				"Modifier": 1440
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "HeavyScout",
+				"TargetAttribute": "UNIT_PROBE_LIFETIME",
+				"Type": "Modifier",
+				"Modifier": 1440
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "GE_MISSION_RECOMMENDED_TOTAL_MODIFIER",
+				"Type": "Modifier",
+				"Modifier": -0.15
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Organizations",
+				"TargetAttribute": "COST_TIME",
+				"Type": "Multiplier",
+				"Modifier": -0.35
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Organizations",
+				"TargetAttribute": "COST_MTL",
+				"Type": "Multiplier",
+				"Modifier": -0.35
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Organizations",
+				"TargetAttribute": "COST_GAS",
+				"Type": "Multiplier",
+				"Modifier": -0.35
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Organizations",
+				"TargetAttribute": "COST_CRS",
+				"Type": "Multiplier",
+				"Modifier": -0.35
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Scout",
+				"TargetAttribute": "UNIT_SCAN_RADIUS",
+				"Type": "Modifier",
+				"Modifier": 1
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "HeavyScout",
+				"TargetAttribute": "UNIT_SCAN_RADIUS",
+				"Type": "Modifier",
+				"Modifier": 1
+			}
+		]
+	},
+	{
+		"FactionId": 100,
+		"Name": "Terran Combine",
+		"FirstEffectDescription": "Ancient Trade Secret | A wealth of experience in the field of space-construction lets Terran Combine augment their own and their allies' outposts.\n\nGeneral outpost augmentations:\n- Mining Facility: +10% harvest rate per its level.\n\nMilitary outpost augmentations:\n- Missile Battery: 10% firepower per its level.\n- Logistics Hub: +1 radius of influence.\n- Heavy Ship Assembly: +200 stealth.\n\nDomain outpost augmentations:\n- Scanner: +1 radius of influence.\n- Stargate: +1 radius of influence.\n- Habitation Dome:  +300 stealth\n\nIndustry outpost augmentations:\n- Trading Port: streaming increased by 25% per its level.\n- Fortress: +1 claim strength.\n- Mining Colony: +8% harvest rate per its level.\n\nUnique outpost augmentations:\n- Capital Ship Assembly: +200 stealth.",
+		"SecondEffectDescription": "Perfected Methodology | A long established production methodology focused on reducing waste, both material and physical.\n\n- Resource cost of outposts reduced by 50%.\n- Speed while harvesting solar flares increased by 5.",
+		"VanityShip": {
+			"UnitType": "Industrial",
+			"Variation": 0
+		},
+		"Description": "Terran Combine began as an Earth agency tasked with mapping the frontier for colonization.\nOut of contact with Earth for decades at a time the combine became secluded and from seclusion was born the decision of independance.\nTo this day, all that prevents Earth from initiating hostilites is the combine's secretive method of augmenting outposts.",
+		"Slots": [ 1, 2, 4, 4, 8 ],
+		"VisualizeTheseShipAttributes": [ "UNIT_CARGO" ],
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Identifier": "UniqueShip",
+				"Destination": "EmpireFleets",
+				"Target": "Industrial",
+				"TargetAttribute": "UNIT_CARGO",
+				"Type": "Modifier",
+				"Modifier": 20
+			},
+			{
+				"Origin": "Policies",
+				"Identifier": "UniqueShip",
+				"Destination": "EmpireFleets",
+				"Target": "Industrial",
+				"TargetAttribute": "UNIT_SPD",
+				"Conditions": [
+					{
+						"$type": "OperationCondition",
+						"AcceptedTypes": [ "CompleteStarMission" ]
+					}
+				],
+				"Type": "Modifier",
+				"Modifier": 5
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "Empire",
+				"Target": "Commander",
+				"TargetAttribute": "BOOST_OUTPOST_POINTS_COUNT",
+				"Type": "Modifier",
+				"Modifier": 3
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "STAT_OP_BUILDCOST",
+				"Type": "Multiplier",
+				"Modifier": -0.5
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireOutposts",
+				"Target": "Outpost",
+				"TargetAttribute": "STAT_OP_UPGRCOST",
+				"Type": "Multiplier",
+				"Modifier": -0.5
+			}
+		]
+	},
+	{
+		"FactionId": 150,
+		"Name": "XAOC",
+		"FirstEffectDescription": "Organized Chaos | XAOC lives up to its name by spreading chaos and terror for its own benefit.\n\n- Plunder increased by 20% while raiding.\n- Firepower and Hitpoints increased by 10% while raiding.",
+		"SecondEffectDescription": "Single Mindedness | Focus comes easy to XAOC, as long as it's battle related.\n\n- Resource Cost for military buildings reduced by 10%.\n- Time cost for military buildings reduced by 10%.\n- Corvettes gain 2 speed and 5 cargo while raiding.",
+		"VanityShip": {
+			"UnitType": "LightAssault",
+			"Variation": 1
+		},
+		"Description": "An extremely aggressive paramilitary faction, XAOC has no remorse for the weak.",
+		"Slots": [ 1, 1, 1, 2, 8 ],
+		"VisualizeTheseShipAttributes": [ ],
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Fleet",
+				"TargetAttribute": "UNIT_PLUNDER",
+				"Conditions": [
+					{
+						"$type": "OperationCondition",
+						"AcceptedTypes": [ "Raid" ]
+					}
+				],
+				"Type": "Modifier",
+				"Modifier": 0.2
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Fleet",
+				"TargetAttribute": "UNIT_HP",
+				"Conditions": [
+					{
+						"$type": "OperationCondition",
+						"AcceptedTypes": [ "Raid" ]
+					}
+				],
+				"Type": "Multiplier",
+				"Modifier": 0.1
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireFleets",
+				"Target": "Fleet",
+				"TargetAttribute": "UNIT_FIREPOWER",
+				"Conditions": [
+					{
+						"$type": "OperationCondition",
+						"AcceptedTypes": [ "Raid" ]
+					}
+				],
+				"Type": "Multiplier",
+				"Modifier": 0.1
+			},
+			{
+				"Origin": "Policies",
+				"Identifier": "UniqueShip",
+				"Destination": "EmpireFleets",
+				"Target": "LightAssault",
+				"TargetAttribute": "UNIT_SPD",
+				"Conditions": [
+					{
+						"$type": "OperationCondition",
+						"AcceptedTypes": [ "Raid" ]
+					}
+				],
+				"Type": "Modifier",
+				"Modifier": 2
+			},
+			{
+				"Origin": "Policies",
+				"Identifier": "UniqueShip",
+				"Destination": "EmpireFleets",
+				"Target": "LightAssault",
+				"TargetAttribute": "UNIT_CARGO",
+				"Conditions": [
+					{
+						"$type": "OperationCondition",
+						"AcceptedTypes": [ "Raid" ]
+					}
+				],
+				"Type": "Modifier",
+				"Modifier": 5
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "MilitaryBuildings",
+				"TargetAttribute": "COST_TIME",
+				"Type": "Multiplier",
+				"Modifier": -0.1
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "MilitaryBuildings",
+				"TargetAttribute": "COST_MTL",
+				"Type": "Multiplier",
+				"Modifier": -0.1
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "MilitaryBuildings",
+				"TargetAttribute": "COST_GAS",
+				"Type": "Multiplier",
+				"Modifier": -0.1
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "MilitaryBuildings",
+				"TargetAttribute": "COST_CRS",
+				"Type": "Multiplier",
+				"Modifier": -0.1
+			}
+		]
+	},
+	{
+		"FactionId": 200,
+		"Name": "Tianchao",
+		"FirstEffectDescription": "Above All: Information | Exceptionally adept at infiltration and espionage, Tianchao spies are coveted by all.\n\nHave 2 extra spies.\n\nFull spy reports now display:\n- Building & Shipyard queues. \n- Outpost augmentations.\n- Station & fleet cards.\n- Number of fleets supplied by the station.\n- Units hidden by Military Hangars.\n- Resources hidden by Container Port.\n- Visiting fleets.\n\nCounter-espionage:\n- Spy attempts against you automatically fail on rolls of 1-5 instead of 1.\n- You receive up to 5 copies of the most recent spy reports from players who fail at spying you.",
+		"SecondEffectDescription": "Clandestine Affairs | No faction rivals Tianchao when it comes to covert operations.\n\n- Your station sabotage effect lasts 50% longer.\n- Station sabotage pins all units instead of only industrials.\n- Station sabotage has a 50% chance to destroy station character cards.\n- Station sabotage has a 50% chance to destroy station rune cards.\n- Station sabotage reduces building hitpoints by 20%.\n- Firepower for units on NPC stations while affected by your station sabotage reduced by 20% (does not stack with the Justified Hostilities policy).",
+		"VanityShip": {
+			"UnitType": "HeavyScout",
+			"Variation": 0
+		},
+		"Description": "The Tianchao clan is a powerful information broker dealing in espionage and blackmail. They can gather more intelligence than anyone else and excel at subterfuge and sabotage.",
+		"Slots": [ 2, 2, 2, 1, 8 ],
+		"VisualizeTheseShipAttributes": [ "UNIT_SIGINT" ],
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Identifier": "UniqueShip",
+				"Destination": "EmpireFleets",
+				"Target": "HeavyScout",
+				"TargetAttribute": "UNIT_SIGINT",
+				"Type": "Modifier",
+				"Modifier": 100
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "Empire",
+				"Target": "Commander",
+				"TargetAttribute": "EMPIRE_STATION_SABOTAGE_DURATION_RIVAL",
+				"Type": "Multiplier",
+				"Modifier": 0.5
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "Empire",
+				"Target": "Commander",
+				"TargetAttribute": "OPERATIVES_COUNT",
+				"Type": "Modifier",
+				"Modifier": 2
+			}
+		]
+	},
+	{
+		"FactionId": 250,
+		"Name": "Mars Prosper League",
+		"FirstEffectDescription": "Produce, Export, Profit | The MPL formula for success is pretty straight forward; produce everything, sell it to everyone.\n\n- Metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\"> production in each station is increased by 25% of its base hourly value.\n- Freighters have 50% more cargo space.\n- Trading Ports gain 1 radius of influence but their harvest rate per level is reduced to 50%.",
+		"SecondEffectDescription": "Stalwart Defenders | Incredibly defensive of their holdings, Martians excel at protection.\n\n- Frigates gain 80 FP while defending.\n- Frigates gain 200 HP while defending.",
+		"VanityShip": {
+			"UnitType": "HeavyDefense",
+			"Variation": 1
+		},
+		"Description": "The Mars Prosper League is a ruthless mining conglomerate seeking profits at any cost. Able to generate more resources than anyone, they possess an impressive merchant fleet and fiercely guard their interests.",
+		"Slots": [ 4, 4, 4, 2, 8 ],
+		"VisualizeTheseShipAttributes": [ "UNIT_SPD" ],
+		"Effect1Type": "Unknown",
+		"Effect2Type": "Unknown",
+		"Effects": [
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "STAT_FREIGHTER_CARGO",
+				"Type": "Multiplier",
+				"Modifier": 0.5
+			},
+			{
+				"Origin": "Policies",
+				"Identifier": "UniqueShip",
+				"Destination": "EmpireFleets",
+				"Target": "HeavyDefense",
+				"TargetAttribute": "UNIT_FIREPOWER",
+				"Conditions": [ { "$type": "DefenderCondition" } ],
+				"Type": "Modifier",
+				"Modifier": 80
+			},
+			{
+				"Origin": "Policies",
+				"Identifier": "UniqueShip",
+				"Destination": "EmpireFleets",
+				"Target": "HeavyDefense",
+				"TargetAttribute": "UNIT_HP",
+				"Conditions": [ { "$type": "DefenderCondition" } ],
+				"Type": "Modifier",
+				"Modifier": 200
+			},
+			{
+				"Origin": "Policies",
+				"Identifier": "UniqueShip",
+				"Destination": "EmpireFleets",
+				"Target": "HeavyDefense",
+				"TargetAttribute": "UNIT_SPD",
+				"Type": "Modifier",
+				"Modifier": 2
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireOutposts",
+				"Target": "TradingPort",
+				"TargetAttribute": "OP_RADIUS",
+				"Type": "Modifier",
+				"Modifier": 1
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "PROD_MTL",
+				"Type": "Multiplier",
+				"UseArray": "false",
+				"Modifier": 0.25
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "PROD_GAS",
+				"Type": "Multiplier",
+				"UseArray": "false",
+				"Modifier": 0.25
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireStations",
+				"Target": "Station",
+				"TargetAttribute": "PROD_CRS",
+				"Type": "Multiplier",
+				"UseArray": "false",
+				"Modifier": 0.25
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireOutposts",
+				"Target": "TradingPort",
+				"TargetAttribute": "OP_TRDP_STREAMING_MULTIPLIER",
+				"Type": "Multiplier",
+				"Modifier": -0.333
+			},
+			{
+				"Origin": "Policies",
+				"Destination": "EmpireOutposts",
+				"Target": "TradingPort",
+				"TargetAttribute": "OP_TRDP_HARVEST_MULTIPLIER",
+				"Type": "Multiplier",
+				"Modifier": -0.333
+			}
+		]
+	}
+]

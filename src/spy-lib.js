@@ -1,8 +1,8 @@
 import _ from 'lodash';
 import numeral from 'numeral';
-import Discord from "discord.js";
 
-import {levenshteinDistance, Ship, Fleet, baseShipStats, modifiers, BUILDING_STATS} from './lib'
+
+import Definitions, {levenshteinDistance, Station, Ship, Fleet, baseShipStats, modifiers, BUILDING_STATS} from './lib'
 
 const MARKER_HEADER = 'HEADER';
 const MARKER_CAPTURE = 'Capture Defense';
@@ -16,22 +16,6 @@ const MARKER_STATION_HIDDEN_RES = 'Station Hidden Resources';
 const MARKER_OUTPOSTS = 'Outposts';
 const MARKER_FLEETS = 'Fleets';
 const MARKER_HANGAR = 'Hangar';
-
-function Report() {
-    this[MARKER_HEADER] = {};
-    this[MARKER_CAPTURE] = {};
-    this[MARKER_STATION_RES] = {};
-    this[MARKER_STATION_CARDS] = [];
-    this[MARKER_STATION_LABOR] = null;
-    this[MARKER_BUILDINGS] = {};
-    this[MARKER_QUEUE_BUILDINGS] = [];
-    this[MARKER_QUEUE_FLEETS] = [];
-    this[MARKER_STATION_HIDDEN_RES] = {};
-    this[MARKER_OUTPOSTS] = {};
-    this[MARKER_FLEETS] = [];
-    this[MARKER_HANGAR] = [];
-    this.failedReport = false;
-}
 
 export const MARKERS = {
     MARKER_HEADER,
@@ -47,17 +31,8 @@ export const MARKERS = {
     MARKER_FLEETS,
     MARKER_HANGAR
 };
-const shipTypes = [
-    'Heavy Scout',
-    'Patrol Ship',
-    'Corvette',
-    'Scout', 'Industrial',
-    'Destroyer', 'Frigate',
-    'Recon', 'Gunship',
-    'Troop Carrier',
-    'Carrier', 'Dreadnought'
-]
-const SHIP_TYPES_LEN = shipTypes.length;
+
+const {SHIP_TYPES_LEN, SHIP_TYPES, BUILDING_INDEX, UNIT_INDEX, OUTPOST_INDEX} = Definitions;
 
 function normalizeShipType(type) {
     let dist = 1000;
@@ -65,9 +40,9 @@ function normalizeShipType(type) {
     let i = 0;
     let selected = null;
     while (dist > 2 && i < SHIP_TYPES_LEN) {
-        dist = levenshteinDistance(type, shipTypes[i]);
+        dist = levenshteinDistance(type, SHIP_TYPES[i]);
         if (dist < closest) {
-            selected = shipTypes[i];
+            selected = SHIP_TYPES[i];
             closest = dist;
         } else if (dist < 2 && closest === dist) {
             console.error("ambiguous " + type);
@@ -89,15 +64,31 @@ const REGEX_FLEET = /^(?<qty>\d+)\s(?<type>[a-z\s]+\w)(?<noCards> - No cards\.)?
 const REGEX_HANGAR = /^[a-z\s]*\((?<type>[a-z\s]+)\)\s(?<qty>\d+)/i;
 const REGEX_CARD = /cardTooltip\((\d+)\)\s([\w\s\-']+)/i;
 
+/*
+station: {name, x, y},
+captureDefense: {current, total},
+resources: {metal, gas, crystal},
+hiddenResources: {metal: hiddenMetal, gas: hiddenGas, crystal: hiddenCrystal},
+cards: stationCards,
+ labor: labor,
+    buildings: buildings,
+    buildingQueue: buildingQueue,
+    fleetQueue: fleetQueue,
+    outposts: outposts,
+    fleets: {fleets, supplied},
+hangar: hangar,*/
 function parseCards(line) {
-    return _.chain(line.split(',')).map((card) => {
-        try {
-            const [, cardId, name] = card.match(REGEX_CARD);
-            return {cardId, name, modifiers};
-        } catch {
-            return null;
-        }
-    }).filter(_.isNotNull)
+    return _.chain(line.split(','))
+        .map((card) => {
+            try {
+                const [, cardId, name] = card.match(REGEX_CARD);
+                // return {cardId, name, modifiers};
+                return parseInt(cardId, 10);
+            } catch {
+                return null;
+            }
+        })
+        .filter(_.isNotNull)
         .value();
 }
 
@@ -105,77 +96,86 @@ const PARSERS = {
     [MARKER_HEADER]: lines => {
         const header = lines[0].substring(18).split(' completed')[0].match(REGEX_HEADER).groups;
         return {
-            name: header.name,
-            x: parseInt(header.x, 10),
-            y: parseInt(header.y, 10)
+            station: {
+                name: header.name,
+                x: parseInt(header.x, 10),
+                y: parseInt(header.y, 10)
+            }
         };
     },
     [MARKER_CAPTURE]: line => {
         const cap = _.map(line.split(':')[1].trim().split('/'), s => parseInt(s, 10));
-        return {current: cap[0], total: cap[1]};
+        return {captureDefense: {current: cap[0], total: cap[1]}};
     },
     [MARKER_STATION_RES]: lines => {
         const regex = lines[0].matchAll(REGEX_STATION_RES);
         const r = {};
-        if (!regex) return null;
+        if (!regex) return {resources: null};
         for (let result of regex) {
-            r[result.groups.res] = parseInt(result.groups.val, 10);
+            r[result.groups.res.toLowerCase()] = parseInt(result.groups.val, 10);
         }
-        return r;
+        return {resources: r};
     },
     [MARKER_STATION_CARDS]: ([line]) => {
-        return parseCards(line.substring(0, line.length - 1));
+        return {cards: parseCards(line.substring(0, line.length - 1))};
     },
     [MARKER_STATION_LABOR]: lines => {
         try {
             if (!lines || lines.length < 1 || lines [0].trim() === 'None') {
                 return false;
             }
-            return parseInt(lines[0].match(REGEX_LABOR)[1], 10);
+            return {labor: parseInt(lines[0].match(REGEX_LABOR)[1], 10)};
         } catch (e) {
             return false;
         }
     },
     [MARKER_BUILDINGS]: lines => {
-        return lines.length === 0 || lines[0].startsWith('None') ? null : _
-            .chain(lines)
-            .filter(_.isNotNull)
-            .map(l => l.split(' - '))
-            .filter(_.isNotNull)
-            .map(o => {
-                // console.log(o);
-                const levelString = o[1].substring(6).trim();
-                const building = modifiers.buildings[o[0].trim()] || {tier: 1, type: 'building'};
-                let level;
-                if(levelString.startsWith('unknown')){
-                   level = false;
-                    // console.log('found building', building);
-                    return ({
-                        name: o[0],
-                        tier: building.tier,
-                        level,
-                        hp: BUILDING_STATS[building.type || 'building'][building.tier - 1][0].hp
-                    });
-                }else {
-                    level = parseInt(levelString, 10);
-
-
-                    // console.log('found building', building);
-                    return ({
-                        name: o[0],
-                        tier: building.tier,
-                        level,
-                        hp: BUILDING_STATS[building.type || 'building'][building.tier - 1][level - 1].hp
-                    });
-                }
-            })
-            .value();
+        return lines.length === 0 || lines[0].startsWith('None')
+            ? {buildings: null}
+            : {
+                buildings: _
+                    .chain(lines)
+                    .filter(_.isNotNull)
+                    .map(l => l.split(' - '))
+                    .filter(_.isNotNull)
+                    .map(o => {
+                        // console.log(o);
+                        const levelString = o[1].substring(6).trim();
+                        return {
+                            id: BUILDING_INDEX[o[0]],
+                            level: !levelString.startsWith('unknown') && parseInt(levelString, 10)
+                        }
+                            ;
+                    })
+                    .value()
+            };
     },
     [MARKER_QUEUE_BUILDINGS]: lines => {
-        return lines;
+        /*if(lines && lines.length>1){
+            let progress;
+            if(lines[0].startsWith('Upgrading')){
+                progress = lines[0].match(/\s(\d+)/)[1]
+            }
+            _
+                .chain(lines)
+                .filter(_.isNotNull)
+                .map(l => l.split(' - '))
+                .filter(_.isNotNull)
+                .map(o => {
+                    // console.log(o);
+                    const levelString = o[1].substring(6).trim();
+                    return {
+                        name: BUILDING_INDEX[o[0]],
+                        level: !levelString.startsWith('unknown') && parseInt(levelString, 10)
+                    }
+                        ;
+                })
+                .value()
+        }*/
+        return {buildingQueue: lines};
     },
     [MARKER_QUEUE_FLEETS]: lines => {
-        return lines;
+        return {shipQueue: lines && lines.length === 1 && lines[0] === 'Empty' ? null : lines};
     },
     // [MARKER_STATION_HIDDEN_RES]: lines => {
     //
@@ -189,7 +189,7 @@ const PARSERS = {
             i++;
         } else if (firstLine.startsWith('None')) {
             return {
-                fleets: []
+                fleets: {}
             };
         }
 
@@ -209,7 +209,6 @@ const PARSERS = {
                         // console.log(grps);
                         const qty = parseInt(grps.qty, 10);
                         const type = normalizeShipType(grps.type);
-                        const ship = baseShipStats[type];
                         let fromPlayer = null;
                         let cards = null;
                         try {
@@ -241,7 +240,7 @@ const PARSERS = {
                             console.error(lines[i], e);
                         }
                         // console.log(`adding fleet of ${qty} ${type}`);
-                        fleets.push(new Fleet(ship, qty, cards, 0, fromPlayer));
+                        fleets.push({type, qty, cards, fromPlayer});
                     }
                 }
             } catch (eregex) {
@@ -250,74 +249,80 @@ const PARSERS = {
         }
 
         return {
-            supplied,
-            fleets
+            fleets: {
+                supplied,
+                fleets
+            }
         }
     }
     ,
     [MARKER_HANGAR]:
         lines =>
-            _.chain(lines)
-                .map(l => {
-                    return l.startsWith('None') ? null : l.match(REGEX_HANGAR).groups
-                })
-                .filter(_.isNotNull)
-                .map(({qty, type}) => ({qty: parseInt(qty, 10), type: normalizeShipType(type)}))
-                .value(),
+            ({
+                hangar: _.chain(lines)
+                    .map(l => {
+                        return l.startsWith('None') ? null : l.match(REGEX_HANGAR).groups
+                    })
+                    .filter(_.isNotNull)
+                    .map(({qty, type}) => ({qty: parseInt(qty, 10), type: normalizeShipType(type)}))
+                    .value()
+            }),
     [MARKER_OUTPOSTS]: lines => {
-        return lines.length === 0 || lines[0].startsWith('None') ? null : _
-            .chain(lines)
-            .filter(_.isNotNull)
-            .map(l => l.split(' - '))
-            .filter(_.isNotNull)
-            .map(o => {
-                // console.log(o);
-                const building = modifiers.outposts[o[0].trim()];
-                const levelString = o[1].substring(6).trim();
+        return {
+            outposts: lines.length === 0 || lines[0].startsWith('None') ? null
+                : _.chain(lines)
+                    .filter(_.isNotNull)
+                    .map(l => l.split(' - '))
+                    .filter(_.isNotNull)
+                    .map(o => {
+                        // console.log(o);
+                        const levelString = o[1].substring(6).trim();
 
-                if(levelString.startsWith('??')){
-                    // console.log('found building', building);
-                    return ({
-                        name: o[0],
-                        tier: building.tier,
-                        level: false,
-                        hp: BUILDING_STATS[building.type || 'building'][building.tier - 1][0].hp
-                    });
-                }
+                        if (levelString.startsWith('??')) {
+                            // console.log('found building', building);
+                            return ({
+                                name: o[0],
+                                level: false
+                            });
+                        }
 
-                const level = parseInt(levelString, 10);
-                const hp = BUILDING_STATS[building.type || 'outpost'][building.tier - 1][level - 1].hp;
-                if (o.length > 2) {
-                    const op = o[2];
+                        const level = parseInt(levelString, 10);
+                        if (o.length > 2) {
+                            const op = o[2];
 
-                    return {
-                        name: o[0],
-                        tier: building.tier,
-                        hp: BUILDING_STATS.outpost[building.tier - 1][level - 1].hp,
-                        level,
-                        operational: op.startsWith('Operational'),
-                        boosted: op.substring(11).trim().length > 0
-                    }
-                }
-                return ({
-                    name: o[0],
-                    tier: building.tier,
-                    level,
-                    hp
-                });
-            })
-            .value();
+                            return {
+                                name: o[0],
+                                level,
+                                operational: op.startsWith('Operational'),
+                                boosted: op.substring(11).trim().length > 0
+                            }
+                        }
+                        return ({
+                            id: o[0],
+                            level
+                        });
+                    })
+                    .value()
+        };
+    },
+    [MARKER_STATION_HIDDEN_RES]: lines => {
+        const regex = lines[0].matchAll(REGEX_STATION_RES);
+        const r = {};
+        if (!regex) return {resources: null};
+        for (let result of regex) {
+            r[result.groups.res.toLowerCase()] = parseInt(result.groups.val, 10);
+        }
+        return {hiddenResources: r};
     }
 }
-// same parsers
-PARSERS[MARKER_STATION_HIDDEN_RES] = PARSERS[MARKER_STATION_RES];
 
 // privates
 
 function parseSpyReport(raw) {
     const lines = raw.split('\n');
     let marker = MARKER_HEADER;
-    const byMarkers = {[MARKER_HEADER]: []};
+    let linesToProcess = [];
+    let result = {};
     try {
         for (let i = 0; i < lines.length; i++) {
             const line = lines[i].trim();
@@ -325,7 +330,7 @@ function parseSpyReport(raw) {
                 // new marker, process last marker
                 if (marker != null) {
                     // console.debug('processing ' + marker, byMarkers[marker]);
-                    byMarkers[marker] = PARSERS[marker](byMarkers[marker]);
+                    result = _.merge(result, PARSERS[marker](linesToProcess));
                 }
                 if (line === 'Construction Queues:') {
                     //skip
@@ -333,33 +338,97 @@ function parseSpyReport(raw) {
                 } else {
                     marker = line.substring(0, line.length - 1);
                     // console.debug('New marker ' + marker);
-                    byMarkers[marker] = [];
+                    linesToProcess = [];
                 }
             } else if (line.startsWith(MARKER_CAPTURE)) {
-                byMarkers[MARKER_CAPTURE] = PARSERS[MARKER_CAPTURE](line);
+                result = _.merge(result, PARSERS[MARKER_CAPTURE](line));
             } else {
-                if(i> lines.length-3 && line.startsWith('Could not get')){
-                    byMarkers.failedReport = true;
-                }else {
+                if (i > lines.length - 3 && line.startsWith('Could not get')) {
+                    result.failedReport = true;
+                } else {
                     if (line !== '')
-                        byMarkers[marker].push(line.trim());
+                        linesToProcess.push(line.trim());
                 }
             }
         }
         if (marker != null) {
             // console.debug('processing ' + marker, byMarkers[marker]);
-            byMarkers[marker] = PARSERS[marker](byMarkers[marker]);
+            result = _.merge(result, PARSERS[marker](linesToProcess));
         }
     } catch (e) {
         console.error(`Marker ${marker} failed to process`, e)
     }
 
-    return {
-        ...new Report(),
-        ..._.chain(byMarkers)
-            .mapValues()
-            .value()
-    };
+    return result;
+}
+
+/*
+
+{
+  HEADER: { name: 'Sol', x: 39, y: 134 },
+  'Capture Defense': { current: 160, total: 160 },
+  'Station Resources': { Metal: 49086, Gas: 33384, Crystal: 211866 },
+  Cards: [ '2027', '9010', '9008', '9009', '2029', '2007' ],
+  'Station Labor': 872,
+  Buildings: [
+    { name: 1, level: 10 },
+    { name: 2, level: 6 },
+    { name: 3, level: 10 },
+    { name: 4, level: 10 },
+    { name: '301', level: 1 },
+    { name: '310', level: 1 },
+    { name: 2002, level: 1 },
+    { name: 3000, level: 1 },
+    { name: 3001, level: 10 },
+    { name: 3002, level: 10 },
+    { name: 2102, level: 9 },
+    { name: 3100, level: 1 },
+    { name: 3101, level: 8 },
+    { name: 3201, level: 1 },
+    { name: 2200, level: 1 },
+    { name: 2201, level: 1 },
+    { name: 3301, level: 1 },
+    { name: 3300, level: 5 },
+    { name: 3, level: 10 }
+  ],
+  'Building Construction Queue': [
+    'Upgrading 91 %',
+    'RG Consortium - Level: 1',
+    'Station Hall - Level: 10'
+  ],
+  'Fleet Construction Queue': [ 'Empty' ],
+  'Station Hidden Resources': { Metal: 2560, Gas: 2560, Crystal: 2560 },
+  Outposts: [
+    {
+      name: 'Mining Facility',
+      level: 5,
+      operational: true,
+      boosted: true
+    },
+    {
+      name: 'Trading Port',
+      level: 5,
+      operational: true,
+      boosted: true
+    },
+    { name: 'Stargate', level: 5, operational: true, boosted: true },
+    {
+      name: 'Mining Colony',
+      level: 4,
+      operational: true,
+      boosted: false
+    }
+  ],
+  Fleets: { supplied: 2, fleets: [ [Object] ] },
+  Hangar: [ { qty: 100, type: 1 }, { qty: 250, type: 2 } ],
+  failedReport: false
+}
+
+
+* */
+
+function computeStationModifiers({cards}) {
+    _.chain([]).concat(report.cards)
 }
 
 function getFirepower(modifier, level) {
@@ -380,21 +449,26 @@ function formatFirepowerNumber(n) {
 
 const TEMPLATE_FLEETS_H1 = `__Fleets:__\`` + String().padStart(22, ' ') + '`';
 
-function getFormattedReport({
-                                [MARKER_HEADER]: {name, x, y},
-                                [MARKER_CAPTURE]: {current, total},
-                                [MARKER_STATION_RES]: {Metal: metal, Gas: gas, Crystal: crystal},
-                                [MARKER_STATION_HIDDEN_RES]: {Metal: hiddenMetal, Gas: hiddenGas, Crystal: hiddenCrystal},
-                                [MARKER_STATION_CARDS]: stationCards,
-                                [MARKER_STATION_LABOR]: labor,
-                                [MARKER_BUILDINGS]: buildings,
-                                [MARKER_QUEUE_BUILDINGS]: buildingQueue,
-                                [MARKER_QUEUE_FLEETS]: fleetQueue,
-                                [MARKER_OUTPOSTS]: outposts,
-                                [MARKER_FLEETS]: {fleets, supplied},
-                                [MARKER_HANGAR]: hangar,
-                                failedReport
-                            }) {
+function getFormattedReport(report) {
+    const station = new Station(report);
+    const {
+        owner: name,
+        coords: {x, y},
+        captureDefense: {current, total},
+        resources: {metal, gas, crystal},
+        hiddenResources: {metal: hiddenMetal, gas: hiddenGas, crystal: hiddenCrystal},
+        cards: stationCards,
+        labor: labor,
+        buildings: buildings,
+        queues: {
+            buildings: buildingQueue,
+            ships: fleetQueue
+        },
+        outposts: outposts,
+        fleets: {fleets, supplied},
+        hangar: hangar,
+        failedReport
+    } = station;
     const fleetsDesc = _.invokeMap(fleets, 'get');
     // console.log(fleetsDesc);
     const totalBuildingHp = _.reduce(buildings,
@@ -438,11 +512,11 @@ ${TEMPLATE_FLEETS_H1} \`${formatFirepowerNumber(totalFirepower)} \`:boom: | \`${
         + (_.map(hangar, ({qty, type}) => `${qty} x ${type}`
         ).join('\n') || '*empty*')
 
-        + (buildingQueue && buildingQueue.length>0 ? `\n\n__Building Construction Queue:__\n${buildingQueue.join('\n')}` : '')
-        + (fleetQueue && fleetQueue.length>0? `\n\n__Fleet Construction Queue:__\n${fleetQueue.join('\n')}` : '')
+        + (buildingQueue && buildingQueue.length > 0 ? `\n\n__Building Construction Queue:__\n${buildingQueue.join('\n')}` : '')
+        + (fleetQueue && fleetQueue.length > 0 ? `\n\n__Fleet Construction Queue:__\n${fleetQueue.join('\n')}` : '')
         + (failedReport ? `\`\`\`diff
 - Spy report not reliable, your spy strength is lower than target spy defense.
-\`\`\``: '');
+\`\`\`` : '');
 }
 
 

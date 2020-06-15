@@ -1,0 +1,62 @@
+﻿[
+	{
+		"PowerUpType": "Type1",
+		"Name": "External Service Flotilla",
+		"Description": "Increases the stacking limit of the Dyson Sphere by 20",
+		"EffectDescriptions": [
+					{
+						"EffectTarget": "Station",
+						"Attrib": "STAT_OCT",
+						"Description": "Stacking limit is increased by 20"
+					}
+		]
+	},
+	{
+		"PowerUpType": "Type2",
+		"Name": "External Service Flotilla",
+		"Description": "Increases the stacking limit of the Dyson Sphere by 20",
+		"EffectDescriptions": [
+					{
+						"EffectTarget": "Station",
+						"Attrib": "STAT_OCT",
+						"Description": "Stacking limit is increased by 20"
+					}
+		]
+	},
+	{
+		"PowerUpType": "Type3",
+		"Name": "External Service Flotilla",
+		"Description": "Increases the stacking limit of the Dyson Sphere by 20",
+		"EffectDescriptions": [
+					{
+						"EffectTarget": "Station",
+						"Attrib": "STAT_OCT",
+						"Description": "Stacking limit is increased by 20"
+					}
+		]
+	},
+	{
+		"PowerUpType": "Type4",
+		"Name": "External Service Flotilla",
+		"Description": "Increases the stacking limit of the Dyson Sphere by 20",
+		"EffectDescriptions": [
+					{
+						"EffectTarget": "Station",
+						"Attrib": "STAT_OCT",
+						"Description": "Stacking limit is increased by 20"
+					}
+		]
+	},
+	{
+		"PowerUpType": "Type5",
+		"Name": "External Service Flotilla",
+		"Description": "Increases the stacking limit of the Dyson Sphere by 20",
+		"EffectDescriptions": [
+					{
+						"EffectTarget": "Station",
+						"Attrib": "STAT_OCT",
+						"Description": "Stacking limit is increased by 20"
+					}
+		]
+	}
+]

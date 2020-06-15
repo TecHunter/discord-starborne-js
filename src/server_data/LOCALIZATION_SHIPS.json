@@ -1,0 +1,103 @@
+﻿{
+	"ShipRoles": [
+		{
+			"Type": "None",
+			"RoleName": "None"
+		},
+		{
+			"Type": "RaiderFleets",
+			"RoleName": "Raider"
+		},
+		{
+			"Type": "AssaultFleets",
+			"RoleName": "Assault"
+		},
+		{
+			"Type": "IndustrialFleets",
+			"RoleName": "Industrial"
+		},
+		{
+			"Type": "ReconFleets",
+			"RoleName": "Scout"
+		}
+	],
+	"ShipClasses": [
+		{
+			"Type": "LightAssault",
+			"ClassName": "Corvette",
+			"ClassDescription": "-Good raiders.\n-Inefficient labor utilization.\n\nCorvettes gain 2 cargo and 6 firepower when they gain a level.",
+			"ClassType": "Raider",
+			"ClassSize": "Light"
+		},
+		{
+			"Type": "LightDefense",
+			"ClassName": "Patrol Ship",
+			"ClassDescription": "-Good mission runners.\n-Inefficient labor utilization.\n\nPatrol Ships gain 10 hit points and 4 firepower when they gain a level.",
+			"ClassType": "Assault",
+			"ClassSize": "Light"
+		},
+		{
+			"Type": "HeavyAssault",
+			"ClassName": "Destroyer",
+			"ClassDescription": "-Excellent raiders.\n-Efficient labor utilization.\n\nBuild the Heavy Ship Assembly outpost to unlock this unit.\n\nDestroyers gain 8 cargo and 30 firepower when they gain a level.",
+			"ClassType": "Raider",
+			"ClassSize": "Heavy"
+		},
+		{
+			"Type": "HeavyDefense",
+			"ClassName": "Frigate",
+			"ClassDescription": "-Excellent mission runners.\n-Efficient labor utilization.\n\nBuild the Heavy Ship Assembly outpost to unlock this unit.\n\nFrigates gain 50 hit points and 20 firepower when they gain a level.",
+			"ClassType": "Assault",
+			"ClassSize": "Heavy"
+		},
+		{
+			"Type": "Dreadnought",
+			"ClassName": "Dreadnought",
+			"ClassDescription": "-Best labor utilization.\n-Can bomb stations.\n\nBuild the Capital Ship Assembly outpost to unlock this unit.\nYou can only build the Capital Ship Assembly outpost in a single station.\n\nDreadnoughts gain 180 firepower and 10 station bombing when they gain a level.",
+			"ClassType": "Assault",
+			"ClassSize": "Capital"
+		},
+		{
+			"Type": "Carrier",
+			"ClassName": "Carrier",
+			"ClassDescription": "-Highly efficient labor utilization.\n\nBuild the Capital Ship Assembly outpost to unlock this unit.\nYou can only build the Capital Ship Assembly outpost in a single station.\n\nCarriers gain 250 hit points and 100 firepower when they gain a level.",
+			"ClassType": "Assault",
+			"ClassSize": "Capital"
+		},
+		{
+			"Type": "Bomber",
+			"ClassName": "Gunship",
+			"ClassDescription": "-Specialized station bombing unit.\n-Inefficient labor utilization.\n\nStation bombing damage is only applied during assault movements.\nDestroying every building in a station will destroy the station.\n\nYou need to build the Heavy Ship Assembly outpost and the Orbital Synfonica organization in a station to unlock this unit.\n\nGunships gain 50 hit points, 20 firepower and 8 station bombing when they gain a level.",
+			"ClassType": "Assault",
+			"ClassSize": "Heavy"
+		},
+		{
+			"Type": "Industrial",
+			"ClassName": "Industrial",
+			"ClassDescription": "-Expensive utility unit.\n-Builds new stations.\n-Builds, upgrades, repairs and augments outposts.\n-Harvests resources from stars.\n-Tremendous cargo space.\n\nIndustrials do not defend against raid movements.\n\nIndustrials gain 1 speed when they gain a level.",
+			"ClassType": "Utility",
+			"ClassSize": "Light"
+		},
+		{
+			"Type": "Scout",
+			"ClassName": "Scout",
+			"ClassDescription": "-Expensive utility unit.\n-Inefficient labor utilization.\n-Deliver scan probes that reveal missions, outposts and movements.\n-Saboteur: can sabotage and defend against sabotage.\n\nSabotaging an outpost suspends all of its effects and destroys any augmentations applied to it.\n\nStation sabotage prevents industrial movements for 5 minutes.\n\nScouts gain 8.75 hit points and 3.5 firepower when they gain a level.",
+			"ClassType": "Utility",
+			"ClassSize": "Light"
+		},
+		{
+			"Type": "HeavyScout",
+			"ClassName": "Recon",
+			"ClassDescription": "-Expensive utility unit.\n-Efficient labor utilization.\n-Deliver scan probes that reveal missions, outposts and movements.\n-Saboteur: can sabotage and defend against sabotage.\n\nSabotaging an outpost suspends all of its effects and destroys any augmentations applied to it.\n\nStation sabotage prevents industrial movements for 5 minutes.\n\nBuild the Heavy Ship Assembly outpost to unlock this unit.\n\nRecons gain 43.75 hit points and 17.5 firepower when they gain a level.",
+			"ClassType": "Utility",
+			"ClassSize": "Heavy"
+		},
+		{
+			"Type": "TroopCarrier",
+			"ClassName": "Troop Carrier",
+			"ClassDescription": "-Can capture stations.\n\nBuild the Heavy Ship Assembly outpost to unlock this unit.\n\nTroop Carriers gain gain 1 speed when they gain a level.",
+			"ClassType": "Assault",
+			"ClassSize": "Heavy"
+		}
+	]
+}

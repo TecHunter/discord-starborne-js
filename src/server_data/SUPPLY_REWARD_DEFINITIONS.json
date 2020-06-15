@@ -1,0 +1,46 @@
+[
+	{
+		"Id": 1,
+		"Name": "Basic Supplies",
+		"DurationInDays": 7,
+		"MaxPerGame": 8,
+		"Type": "SupplyContractBasicUnlocker",
+		"SupplyType": "Basic",
+		"InitialReward": {
+			"Assets": {
+				"Plat": 120
+			},
+			"Prestige": 300
+		},
+		"PerDayReward": {
+			"Assets": {
+				"Plat": 80
+			},
+			"CacheIds": [
+				4
+			]
+		}
+	},
+	{
+		"Id": 2,
+		"Name": "Advanced Supplies",
+		"DurationInDays": 28,
+		"MaxPerGame": 2,
+		"Type": "SupplyContractAdvancedUnlocker",
+		"SupplyType": "Advanced",
+		"InitialReward": {
+			"Assets": {
+				"Plat": 480
+			},
+			"Prestige": 1200
+		},
+		"PerDayReward": {
+			"Assets": {
+				"Plat": 80
+			},
+			"CacheIds": [
+				14
+			]
+		}
+	}
+]

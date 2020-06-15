@@ -1,0 +1,79 @@
+[
+	{
+		"ID": "MiningFacility",
+		"Name": "Mining Facility",
+		"Description": "Mining Facilities harvest resource fields (metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\">) and ice fields within their radius of influence.\n\nHarvested resources increase the hourly resource production of the owning station. Harvested ice increases the owning station's total labor pool.\n\nHarvest rate: 50% per level per hour.\nRadius of influence: 1 hex.\nAugment effect: Harvest rate increased to 60% per level per hour.\n\n",
+		"ShortDescription": "Harvests metal, gas, crystal and ice from field hexes within its radius.",
+		"UpgradeDescription": "Harvests an additional 50% from fields."
+	},
+	{
+		"ID": "MissileBattery",
+		"Name": "Missile Battery",
+		"Description": "Missile Batteries defend stations you own within its radius of influence against assaults and raids by firing on attacking armadas each combat round with 8000 firepower per level.\n\nRadius of influence: 2 hexes.\nAugment effect: Firepower increased to 8800 per level.",
+		"ShortDescription": "Fires on fleets attacking your stations.",
+		"UpgradeDescription": "Firepower increased by 8000."
+	},
+	{
+		"ID": "LogisticsHub",
+		"Name": "Logistics Hub",
+		"Description": "Stations within the radius of influence of a Logistic Hub are considered covered by the Logistics Hub. It can only cover stations you own.\n\nFleets docked at a station that owns a Logistics Hub defend covered stations against raids and assaults.  This includes allied fleets docked at the owning station.\n\nScout and recon fleets docked at a station that owns a Logistics Hub defend covered stations against station sabotage as well as their outposts against outpost sabotage.  This includes allied fleets docked at the owning station.\n\nOnly one Logistics Hub can participate in an assault, raid or sabotage combat.\nShould more than one Logistic Hub cover a station, the hub with the highest number of fleets will be chosen to defend.  Should hubs be tied for most fleets, one will be selected at random.\n\nRadius of influence: 1 hex per level.\nAugment effect: Increases the radius of influence by 1 hex.",
+		"ShortDescription": "Allows all fleets at one station to defend your other stations within its radius.",
+		"UpgradeDescription": "Radius of influence increased by 1."
+	},
+	{
+		"ID": "HeavyShipAssembly",
+		"Name": "Heavy Ship Assembly",
+		"Description": "Heavy Ship Assemblies enable the construction of heavy ships in their owning station.\n\nEffect: Time cost for heavy ships reduced by 6% per level.\nRadius of influence: 1 hex.\nAugment effect: Outpost stealth increased to 600.\n\nMoons within the radius of influence additionally reduce heavy ship time cost by:\nSmall moons: 1% per level.\nMedium moons: 2% per level.\nLarge moons: 3% per level.",
+		"ShortDescription": "Unlocks building heavy ships in the station.",
+		"UpgradeDescription": "Time reduction bonus from moons increased."
+	},
+	{
+		"ID": "Scanner",
+		"Name": "Scanner",
+		"Description": "Scanners increases the scan strength of any stations you own within their radius of influence.\n\nEffect: +100 Scan Strength for stations per level.\nRadius of influence: 4 hexes.\nAugment effect: Increases the radius of influence by 1 hex.\n\nNote: Stations affected by multiple scanners use the bonus from the highest level scanner.\n",
+		"ShortDescription": "Increases the scan strength of your stations within its radius.",
+		"UpgradeDescription": "Scan strenth ouput increased by 100."
+	},
+	{
+		"ID": "Stargate",
+		"Name": "Stargate",
+		"Description": "Stargates increase the speed of your own and allied movements arriving and departing within their radius of influence.\n\nEffect: 1 bonus speed per level.\nRadius of influence: 2 hexes.\nAugment effect: Increases the radius of influence by 1.\n\nNote: A fleet can gain the speed bonus twice; once for the hex it leaves from and once for the hex it travels to.\n\nNote: If more than one stargate affect the same hex, the highest level stargate is used.",
+		"ShortDescription": "Provides a speed bonus to you and your allies that start or end movements within its radius.",
+		"UpgradeDescription": "Speed bonus increased by 1."
+	},
+	{
+		"ID": "HabitationDome",
+		"Name": "Habitation Dome",
+		"Description": "Habitation Domes harvests ice from planets, moons and fields within their radius of influence per level, turning it into labor.\n\nHarvest rate: 90% per level.\nRadius of influence:  2 hexes.\nAugment effect: Outpost stealth increased to 600.\n",
+		"ShortDescription": "Harvests labor from ice fields within its radius.",
+		"UpgradeDescription": "Harvests an additional 50% from ice fields."
+	},
+	{
+		"ID": "TradingPort",
+		"Name": "Trading Port",
+		"Description": "Trading Ports harvest resource fields (metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\">) within their radius of influence per level.\n\nAdditionally, Trading Port allow the owning station to stream as many resources as the Trading Port harvests.\n\nHarvest rate: 75% per level per hour.\nStreaming capacity: 75% per level per hour.\nRadius of influence: 1 hex.\nAugment effect: Increases the stream capacity by 33%.",
+		"ShortDescription": "Harvest metal, gas and crystal from fields within its radius.\nIncreases the stations capacity to stream metal, gas and crystal based on its harvest.",
+		"UpgradeDescription": "Harvest rate increased by 75%."
+	},
+	{
+		"ID": "Fortress",
+		"Name": "Fortress",
+		"Description": "Fortresses extend claim onto hexes within their radius of influence for their owning station.\n\nEffect: Claim strength increased by 1 per level.\nRadius of influence: 1.\nAugment effect: Claim strength increased by an additionial 1.",
+		"ShortDescription": "Claims hexes in a 1 hex radius.",
+		"UpgradeDescription": "Claim strength increased by 1."
+	},
+	{
+		"ID": "MiningColony",
+		"Name": "Mining Colony",
+		"Description": "Mining Colonies harvest resources (metal   <sprite=\"ResIcons\" name=\"Metal\">, gas   <sprite=\"ResIcons\" name=\"Gas\"> and crystal   <sprite=\"ResIcons\" name=\"Crystal\">) from planets and moons within their radius of influence per level.\n\nHarvest rate: 80% per level per hour.\nRadius of influence: 1 hex.\nAugment effect: Harvest rate of planets and moons increased to 88% per level per hour.",
+		"ShortDescription": "Harvest metal, gas and crystal from planets and moons within its radius.",
+		"UpgradeDescription": "Harvest yield increased by 80%."
+	},
+	{
+		"ID": "CapitalShipAssembly",
+		"Name": "Capital Ship Assembly",
+		"Description": "The unique outpost: Capital Ship Assembly enables the construction of capital ships for its owning station.\n\nEffect: Time cost for capital ships reduced by 6% per level.\nRadius of influence: 1 hex.\n\nMoons within the radius of influence additionally reduce heavy ship time cost by:\nSmall moons: 1% per level.\nMedium moons: 2% per level.\nLarge moons: 3% per level.",
+		"ShortDescription": "Unlocks building capitals ships in the station.",
+		"UpgradeDescription": "Time reduction bonus from moons increased."
+	}
+]

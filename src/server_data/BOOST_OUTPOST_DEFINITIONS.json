@@ -1,0 +1,178 @@
+﻿[
+  {
+    "OutpostType": "MiningFacility",
+    "OutpostAugmentation": "Low",
+    "AttributeRequirements": [
+      {
+        "Attribute": "UNIT_CARGO",
+        "Amount": 5000
+      }
+    ],
+    "UnitTypeRequirements": [
+      {
+        "Type": "Industrial",
+        "Amount": 1
+      }
+    ]
+  },
+  {
+    "OutpostType": "MissileBattery",
+    "OutpostAugmentation": "Low",
+    "AttributeRequirements": [
+      {
+        "Attribute": "UNIT_CARGO",
+        "Amount": 15000
+      }
+    ],
+    "UnitTypeRequirements": [
+      {
+        "Type": "Industrial",
+        "Amount": 1
+      }
+    ]
+  },
+  {
+    "OutpostType": "Fortress",
+    "OutpostAugmentation": "Low",
+    "AttributeRequirements": [
+      {
+        "Attribute": "UNIT_CARGO",
+        "Amount": 30000
+      }
+    ],
+    "UnitTypeRequirements": [
+      {
+        "Type": "Industrial",
+        "Amount": 1
+      }
+    ]
+  },
+  {
+    "OutpostType": "HeavyShipAssembly",
+    "OutpostAugmentation": "Low",
+    "AttributeRequirements": [
+      {
+        "Attribute": "UNIT_CARGO",
+        "Amount": 45000
+      }
+    ],
+    "UnitTypeRequirements": [
+      {
+        "Type": "Industrial",
+        "Amount": 1
+      }
+    ]
+  },
+  {
+    "OutpostType": "Scanner",
+    "OutpostAugmentation": "Low",
+    "AttributeRequirements": [
+      {
+        "Attribute": "UNIT_CARGO",
+        "Amount": 15000
+      }
+    ],
+    "UnitTypeRequirements": [
+      {
+        "Type": "Industrial",
+        "Amount": 1
+      }
+    ]
+  },
+  {
+    "OutpostType": "Stargate",
+    "OutpostAugmentation": "Low",
+    "AttributeRequirements": [
+      {
+        "Attribute": "UNIT_CARGO",
+        "Amount": 30000
+      }
+    ],
+    "UnitTypeRequirements": [
+      {
+        "Type": "Industrial",
+        "Amount": 1
+      }
+    ]
+  },
+  {
+    "OutpostType": "HabitationDome",
+    "OutpostAugmentation": "Low",
+    "AttributeRequirements": [
+      {
+        "Attribute": "UNIT_CARGO",
+        "Amount": 45000
+      }
+    ],
+    "UnitTypeRequirements": [
+      {
+        "Type": "Industrial",
+        "Amount": 1
+      }
+    ]
+  },
+  {
+    "OutpostType": "TradingPort",
+    "OutpostAugmentation": "Low",
+    "AttributeRequirements": [
+      {
+        "Attribute": "UNIT_CARGO",
+        "Amount": 15000
+      }
+    ],
+    "UnitTypeRequirements": [
+      {
+        "Type": "Industrial",
+        "Amount": 1
+      }
+    ]
+  },
+  {
+    "OutpostType": "LogisticsHub",
+    "OutpostAugmentation": "Low",
+    "AttributeRequirements": [
+      {
+        "Attribute": "UNIT_CARGO",
+        "Amount": 30000
+      }
+    ],
+    "UnitTypeRequirements": [
+      {
+        "Type": "Industrial",
+        "Amount": 1
+      }
+    ]
+  },
+  {
+    "OutpostType": "MiningColony",
+    "OutpostAugmentation": "Low",
+    "AttributeRequirements": [
+      {
+        "Attribute": "UNIT_CARGO",
+        "Amount": 45000
+      }
+    ],
+    "UnitTypeRequirements": [
+      {
+        "Type": "Industrial",
+        "Amount": 1
+      }
+    ]
+  },
+  {
+    "OutpostType": "CapitalShipAssembly",
+    "OutpostAugmentation": "Low",
+    "AttributeRequirements": [
+      {
+        "Attribute": "UNIT_CARGO",
+        "Amount": 60000
+      }
+    ],
+    "UnitTypeRequirements": [
+      {
+        "Type": "Industrial",
+        "Amount": 1
+      }
+    ]
+  }
+]

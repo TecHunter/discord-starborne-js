@@ -8,7 +8,9 @@
     "test": "mocha --require @babel/polyfill --require @babel/register",
     "start": "pm2 start",
     "dev": "babel-node src/bot.js",
+    "devShard": "babel-node src/manager.js",
     "run": "babel ./dist/bot.js",
+    "runShard": "babel ./dist/manager.js",
     "build": "babel src -d dist"
   },
   "dependencies": {
@@ -18,6 +20,7 @@
     "lodash": "^4.17.15",
     "moment": "^2.25.3",
     "numeral": "^2.0.6",
+    "redis": "^3.0.2",
     "winston": "^3.2.1"
   },
   "devDependencies": {

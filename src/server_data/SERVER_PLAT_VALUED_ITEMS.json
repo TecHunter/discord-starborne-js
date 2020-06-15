@@ -1,0 +1,284 @@
+[
+	{
+		"$type": "ServerCardOffer",
+		"Id": 101,
+		"CardId": "8005",
+		"Amount": 10,
+		"PlatCost": 0,
+		"Limitation": {
+			"ResetType": "Daily",
+			"StockAmountPerPlayer": 1
+		}
+	},
+	{
+		"$type": "ServerCardOffer",
+		"Id": 102,
+		"CardId": "8000",
+		"Amount": 1,
+		"PlatCost": 10,
+		"Limitation": {
+			"ResetType": "Daily",
+			"StockAmountPerPlayer": 10
+		}
+	},
+	{
+		"$type": "ServerCardOffer",
+		"Id": 103,
+		"CardId": "8001",
+		"Amount": 1,
+		"PlatCost": 20,
+		"Limitation": {
+			"ResetType": "Daily",
+			"StockAmountPerPlayer": 10
+		}
+	},
+	{
+		"$type": "ServerCardOffer",
+		"Id": 104,
+		"CardId": "8003",
+		"Amount": 1,
+		"PlatCost": 60,
+		"Limitation": {
+			"ResetType": "Weekly",
+			"StockAmountPerPlayer": 14
+		}
+	},
+	{
+		"$type": "ServerCardOffer",
+		"Id": 105,
+		"CardId": "8004",
+		"Amount": 1,
+		"PlatCost": 100,
+		"Limitation": {
+			"ResetType": "Weekly",
+			"StockAmountPerPlayer": 21
+		}
+	},
+	{
+		"$type": "ServerCardOffer",
+		"Id": 201,
+		"CardId": "7000",
+		"Amount": 3,
+		"PlatCost": 0,
+		"Limitation": {
+			"ResetType": "Daily",
+			"StockAmountPerPlayer": 1
+		}
+	},
+	{
+		"$type": "ServerCardOffer",
+		"Id": 202,
+		"CardId": "7001",
+		"Amount": 1,
+		"PlatCost": 10,
+		"Limitation": {
+			"ResetType": "Daily",
+			"StockAmountPerPlayer": 10
+		}
+	},
+	{
+		"$type": "ServerCardOffer",
+		"Id": 203,
+		"CardId": "7002",
+		"Amount": 1,
+		"PlatCost": 30,
+		"Limitation": {
+			"ResetType": "Daily",
+			"StockAmountPerPlayer": 5
+		}
+	},
+	{
+		"$type": "ServerCardOffer",
+		"Id": 204,
+		"CardId": "7003",
+		"Amount": 1,
+		"PlatCost": 60,
+		"Limitation": {
+			"ResetType": "Daily",
+			"StockAmountPerPlayer": 2
+		}
+	},
+	{
+		"$type": "ServerCardOffer",
+		"Id": 205,
+		"CardId": "7004",
+		"Amount": 1,
+		"PlatCost": 100,
+		"Limitation": {
+			"ResetType": "Weekly",
+			"StockAmountPerPlayer": 5
+		}
+	},
+	{
+		"$type": "ServerCardOffer",
+		"Id": 301,
+		"CardId": "9008",
+		"Amount": 1,
+		"PlatCost": 40
+	},
+	{
+		"$type": "ServerCardOffer",
+		"Id": 302,
+		"CardId": "9009",
+		"Amount": 1,
+		"PlatCost": 40
+	},
+	{
+		"$type": "ServerCardOffer",
+		"Id": 303,
+		"CardId": "9005",
+		"Amount": 1,
+		"CreditsCost": 200,
+		"Limitation": {
+			"ResetType": "PerGame",
+			"StockAmountPerPlayer": 1
+		}
+	},
+	{
+		"$type": "ServerCardOffer",
+		"Id": 305,
+		"CardId": "9011",
+		"Amount": 1,
+		"CreditsCost": 200,
+		"Limitation": {
+			"ResetType": "PerGame",
+			"StockAmountPerPlayer": 1
+		}
+	},
+	{
+		"$type": "ServerCardOffer",
+		"Id": 902,
+		"CardId": "8520",
+		"Amount": 1,
+		"PlatCost": 280,
+		"Limitation": {
+			"ResetType": "PerGame",
+			"StockAmountPerPlayer": 2
+		}
+	},
+	{
+		"$type": "ServerCardOffer",
+		"Id": 903,
+		"CardId": "8500",
+		"Amount": 10,
+		"PlatCost": 80,
+		"Limitation": {
+			"ResetType": "Daily",
+			"StockAmountPerPlayer": 10
+		}
+	},
+	// Bundle Offers
+	{
+		"$type": "ServerBundleOffer",
+		"Name": "Build-R Pack",
+		"Id": 1001,
+		"ImageId": "store_weekly_build_r",
+		"Amount": 1,
+		"PlatCost": 400,
+		"PreDiscountValue": 500,
+		"DiscountValue": 20,
+		"Limitation": {
+			"ResetType": "Weekly",
+			"StockAmountPerPlayer": 1
+		},
+		"Reward": {
+			"Cards": [
+				8006,
+				8006,
+				8006,
+				8006,
+				8006,
+				8006,
+				8006,
+				8006,
+				8006,
+				8006,
+				8006,
+				8006,
+				8006,
+				8006,
+				8006,
+				8006,
+				8006,
+				8006,
+				8006,
+				8006,
+				8000,
+				8000,
+				8000,
+				8000,
+				8000,
+				8000,
+				8000,
+				8000,
+				8000,
+				8000,
+				8001,
+				8001,
+				8001,
+				8001,
+				8001,
+				8002,
+				8002,
+				8002,
+				8003
+			]
+		}
+	},
+	{
+		"$type": "ServerBundleOffer",
+		"Name": "Trader Pack",
+		"Id": 1002,
+		"ImageId": "store_weekly_trader",
+		"Amount": 1,
+		"PlatCost": 750,
+		"PreDiscountValue": 940,
+		"DiscountValue": 20,
+		"Limitation": {
+			"ResetType": "Weekly",
+			"StockAmountPerPlayer": 1
+		},
+		"Reward": {
+			"Cards": [
+				7000,
+				7000,
+				7000,
+				7000,
+				7000,
+				7000,
+				7000,
+				7000,
+				7000,
+				7000,
+				7000,
+				7000,
+				7000,
+				7000,
+				7000,
+				7000,
+				7000,
+				7000,
+				7000,
+				7000,
+				7001,
+				7001,
+				7001,
+				7001,
+				7001,
+				7001,
+				7001,
+				7001,
+				7001,
+				7001,
+				7002,
+				7002,
+				7002,
+				7002,
+				7002,
+				7003,
+				7003,
+				7003
+			]
+		}
+	}
+]

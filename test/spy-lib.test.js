@@ -1,6 +1,7 @@
-import Spy, {MARKERS} from '../src/spy-lib';
+import Spy from '../src/spy-lib';
 import {describe, it} from "mocha";
 import {expect} from 'chai';
+import Definitions, {Station, Ship, Fleet, Outpost, Building} from "../src/lib";
 
 const testSimpleReport = `Spy Report on hex (14,131) Some-Dude completed 1 hours and 11 minutes ago.
 Spies had a total scan strength of 30(base) + 17(roll) = 47, against a spy defense rating of 40.
@@ -10,6 +11,9 @@ Capture Defense: 159/160
 
 Station Resources:
 Metal 34530     Gas 3450     Crystal 670
+
+Cards: 
+cardTooltip(2010) Ionization Chamber, cardTooltip(2007) Flare Monitors, cardTooltip(2006) Mlat Scanners.
 
 Station Labor:
 Labor 930
@@ -33,7 +37,7 @@ Industrial Complex - Level: 2
 Governor's Mansion - Level: 4
 
 Station Hidden Resources:
-Metal 8516     Gas 6104     Crystal 12699
+Metal 82     Gas 624     Crystal 1229
 Outposts:
 Mining Facility - Level 5 - Operational
 Mining Colony - Level 3 - Operational
@@ -45,6 +49,10 @@ Fleets:
 160 Industrials
 1 Scout
 33 Scouts
+65 Corvettes
+Cards: cardTooltip(1019) Fleet Synchronizer, cardTooltip(1007) Higgs Maser, cardTooltip(1002) Gas Laser.
+
+1 Scout - No cards.
 
 Hangar:
 Faust (Patrol Ship) 34
@@ -167,52 +175,8 @@ Hangar:
 Faust (Patrol Ship) 34
 `;
 
-const testSimpleReportParsed = {
-    HEADER: {name: 'Some-Dude', x: 14, y: 131},
-    'Capture Defense': {current: 159, total: 160},
-    'Station Resources': {Metal: 34530, Gas: 3450, Crystal: 670},
-    'Station Labor': 930,
-    Buildings: {
-        'Living Quarters': {level: 10},
-        'Metal Refinery': {level: 9},
-        'Gas Refinery': {level: 10},
-        'Crystal Refinery': {level: 10},
-        'Military Barracks': {level: 10},
-        'Fleet Docks': {level: 10},
-        'Container Port': {level: 10},
-        'Department of Acquisitions': {level: 10},
-        'Frachead Assembly': {level: 6},
-        'Military Hangars': {level: 6},
-        'Cadet School': {level: 6},
-        'Distribution Hub': {level: 2},
-        'Outpost Management Services': {level: 2},
-        'Drone Launch Facility': {level: 2},
-        'Colonial Relay': {level: 4},
-        'Industrial Complex': {level: 2},
-        "Governor's Mansion": {level: 4}
-    },
-    'Station Hidden Resources': {Metal: 8516, Gas: 6104, Crystal: 12699},
-    Outposts: {
-        'Mining Facility': {level: 5, operational: true},
-        'Mining Colony': {level: 3, operational: true},
-        'Trading Port': {level: 2, operational: true}
-    },
-    Fleets: {
-        hp: undefined,
-        firepower: undefined,
-        fleets: [
-            {qty: 87, type: 'Corvette'},
-            {qty: 1, type: 'Patrol Ship'},
-            {qty: 160, type: 'Industrial'},
-            {qty: 1, type: 'Scout'},
-            {qty: 33, type: 'Scout'}
-        ]
-    },
-    Hangar: [{qty: 34, type: 'Patrol Ship'}]
-};
-
 const parsed = Spy.parseSpyReport(testSimpleReport);
-console.debug(parsed);
+// console.debug(parsed);
 
 describe('SpyParser', function () {
     describe('#normalizeShipType()', function () {
@@ -226,96 +190,132 @@ describe('SpyParser', function () {
             expect(parsed).to.be.an('object');
         });
         it('should return correct position and name', function () {
-            expect(parsed).to.have.any.keys(MARKERS.MARKER_HEADER);
-            expect(parsed[MARKERS.MARKER_HEADER]).to.deep.equal({
+            expect(parsed.station).to.deep.equal({
                 x: 14, y: 131, name: 'Some-Dude'
             });
         });
         it('should return correct capture def', function () {
-            expect(parsed).to.have.any.keys(MARKERS.MARKER_CAPTURE);
-            expect(parsed[MARKERS.MARKER_CAPTURE]).to.deep.equal({current: 159, total: 160});
+            expect(parsed.captureDefense).to.deep.equal({current: 159, total: 160});
         });
         it('should return correct resources', function () {
-            expect(parsed).to.have.any.keys(MARKERS.MARKER_STATION_RES);
-            expect(parsed[MARKERS.MARKER_STATION_RES]).to.have.keys('Metal', 'Gas', 'Crystal');
-            expect(parsed[MARKERS.MARKER_STATION_RES]).to.deep.equal({
-                Metal: 34530,
-                Gas: 3450,
-                Crystal: 670
+            expect(parsed.resources).to.have.keys('metal', 'gas', 'crystal');
+            expect(parsed.resources).to.deep.equal({
+                metal: 34530, gas: 3450, crystal: 670
             });
         });
-        it('should return correct Label', function () {
-            expect(parsed).to.have.any.keys(MARKERS.MARKER_STATION_LABOR);
-            expect(parsed[MARKERS.MARKER_STATION_LABOR]).to.equal(930);
+        it('should return correct label', function () {
+            expect(parsed.labor).to.equal(930);
         });
         it('should return correct buildings', function () {
-            expect(parsed).to.have.any.keys(MARKERS.MARKER_BUILDINGS);
-            // expect(Object.keys(parsed[MARKERS.MARKER_BUILDINGS])).to.have.lengthOf(17);
-            expect(parsed[MARKERS.MARKER_BUILDINGS]).to.deep.include({
-                'Living Quarters': {level: 10},
-                'Metal Refinery': {level: 9},
-                'Gas Refinery': {level: 10},
-                'Crystal Refinery': {level: 10},
-                'Military Barracks': {level: 10},
-                'Fleet Docks': {level: 10},
-                'Container Port': {level: 10},
-                'Department of Acquisitions': {level: 10},
-                'Frachead Assembly': {level: 6},
-                'Military Hangars': {level: 6},
-                'Cadet School': {level: 6},
-                'Distribution Hub': {level: 2},
-                'Outpost Management Services': {level: 2},
-                'Drone Launch Facility': {level: 2},
-                'Colonial Relay': {level: 4},
-                'Industrial Complex': {level: 2},
-                'Governor\'s Mansion': {level: 4},
-            });
+            expect(parsed.buildings).to.have.deep.members([
+                {id: 1, level: 10},
+                {id: 2, level: 9},
+                {id: 3, level: 10},
+                {id: 4, level: 10},
+                {id: 1000, level: 10},
+                {id: 1001, level: 10},
+                {id: 3000, level: 10},
+                {id: 1002, level: 10},
+                {id: 3100, level: 6},
+                {id: 1101, level: 6},
+                {id: 1102, level: 6},
+                {id: 3201, level: 2},
+                {id: 3202, level: 2},
+                {id: 3200, level: 2},
+                {id: 3302, level: 4},
+                {id: 3301, level: 2},
+                {id: 2300, level: 4}
+            ]);
         });
         it('should return correct hidden resources', function () {
-            expect(parsed).to.have.any.keys(MARKERS.MARKER_STATION_HIDDEN_RES);
-            expect(parsed[MARKERS.MARKER_STATION_HIDDEN_RES]).to.have.keys('Metal', 'Gas', 'Crystal');
-            expect(parsed[MARKERS.MARKER_STATION_HIDDEN_RES]).to.deep.include({
-                Metal: 8516,
-                Gas: 6104,
-                Crystal: 12699
+            expect(parsed.hiddenResources).to.not.be.null;
+            expect(parsed.hiddenResources).to.deep.equal({
+                metal: 82,
+                gas: 624,
+                crystal: 1229
             });
         });
         it('should return correct outposts', function () {
-            expect(parsed).to.have.any.keys(MARKERS.MARKER_OUTPOSTS);
-            expect(parsed[MARKERS.MARKER_OUTPOSTS]).to.deep.include({
-                'Mining Facility': {level: 5, operational: true},
-                'Mining Colony': {level: 3, operational: true},
-                'Trading Port': {level: 2, operational: true}
-            });
-        });
-
-        it('should return correct fleets', function () {
-            expect(parsed).to.have.any.keys(MARKERS.MARKER_FLEETS);
-            expect(parsed[MARKERS.MARKER_FLEETS]).to.be.an('object');
-            expect(parsed[MARKERS.MARKER_FLEETS].fleets).to.have.deep.members([
-                [
-                    {qty: 87, ship: {type: 'Corvette'}},
-                    {qty: 1, ship: {type: 'Patrol Ship'}},
-                    {qty: 160, ship: {type: 'Industrial'}},
-                    {qty: 1, ship: {type: 'Scout'}},
-                    {qty: 33, ship: {type: 'Scout'}}
-                ]
+            expect(parsed.outposts).to.have.deep.members([
+                {
+                    name: 'Mining Facility',
+                    level: 5,
+                    operational: true,
+                    boosted: false
+                },
+                {
+                    name: 'Mining Colony',
+                    level: 3,
+                    operational: true,
+                    boosted: false
+                },
+                {
+                    name: 'Trading Port',
+                    level: 2,
+                    operational: true,
+                    boosted: false
+                }
             ]);
         });
 
+        it('should return correct fleets', function () {
+            expect(parsed.fleets).to.be.an('object');
+            expect(parsed.fleets.fleets).to.have.lengthOf(7);
+            // expect(parsed.fleets.fleets).to.include.subset([
+            //     [
+            //         {qty: 87, type: 'Corvette'},
+            //         {qty: 1, type: 'Patrol Ship'},
+            //         {qty: 160, type: 'Industrial'},
+            //         {qty: 1, type: 'Scout'},
+            //         {qty: 1, type: 'Scout', cards: [1026, 1038]},
+            //         {qty: 1, type: 'Scout'},
+            //         {qty: 33, type: 'Scout'}
+            //     ]
+            // ]);
+        });
+
         it('should return correct hangar', function () {
-            expect(parsed).to.have.any.keys(MARKERS.MARKER_HANGAR);
-            expect(parsed[MARKERS.MARKER_HANGAR]).to.have.deep.members([
+            expect(parsed.hangar).to.have.deep.members([
                 {type: 'Patrol Ship', qty: 34}
             ]);
         });
 
     });
-    describe('#getEmbed()', function () {
-        const embed = Spy.getEmbed(parsed);
-        it('should return an embed object', function () {
-            expect(embed).to.be.an('object');
-
+    describe('Ship and Fleet classes', function () {
+        const corvetteShip = Definitions.UNIT_INDEX.Corvette;
+        //1001 is fleet cadet
+        const fleet = new Fleet({ship: corvetteShip, qty: 50, cards: [1001]});
+        it('should have the correct stats', function () {
+            expect(fleet.ship.UNIT_FIREPOWER).to.be.equal(60);
+            expect(fleet.ship.UNIT_HP).to.be.equal(150);
+            expect(fleet.ship.UNIT_SPD).to.be.equal(8);
+            expect(fleet.ship.UNIT_CARGO).to.be.equal(10);
         });
-    })
+        it('should give proper cards mods', function () {
+            const fleetWithMods = fleet.get({cards: []/*station cards*/});
+            expect(fleetWithMods.modifiers.firepower).to.be.equal((60 + 2) * 50);
+            expect(fleetWithMods.modifiers.hp).to.be.equal((150 + 5) * 50);
+            expect(fleetWithMods.modifiers.bombing).to.be.equal(0);
+        });
+    });
+    describe('Station class', function () {
+        const station = new Station(parsed);
+
+        it('should properly fill buildings info', function () {
+            expect(station.buildings).to.have.lengthOf(17);
+            expect(station.buildings[0].building.perLevelHp).to.have.lengthOf(10);
+            expect(station.buildings[0].id).to.be.equal(1);
+        });
+
+        it('should properly fill buildings info', function () {
+            const fleets = station.getFleets();
+            expect(fleets).to.have.lengthOf(station.fleets.length);
+        });
+    });
+
+    describe('Formatted Report', function () {
+        const output = Spy.getFormattedReport(parsed);
+    console.log(output);
+
+    });
 });

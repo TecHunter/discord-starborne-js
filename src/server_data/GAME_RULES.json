@@ -1,0 +1,233 @@
+{
+	/*DEBUG*/
+	"AllowOverdraft": false,
+	"StructureCostModifier": 1,
+	"UltraFastMode": false,
+
+	/*ALLIANCES*/
+	"MaxAllianceSize": 15,
+
+	/*COALITIONS*/
+	"DefaultCoalitionSize": 2,
+
+	/*COSTS*/
+	"BuildingCostModifier": 1,
+	"UnitCostModifier": 1,
+
+	/*PRODUCTION*/
+	"RefreshBuildingQueueSeconds": 120, // Interval to retry building entry that need more resources
+
+	/*INFLUENCE POINTS*/
+	"InfrastructurePointsStart": 0, // available IP any empire has when created
+	"InfrastructurePointsPerLevel": 1, // additional available IP an empire gets when leveling up
+	"IpReserveHours": 24, // hours until IPs become available again after a station or troop carrier was lost in combat (resets each time another one is lost)
+
+	/*Policies*/
+	"RemovePolicyCost": 50, // command cards paid to remove a policy
+	"PolicySlotCooldownInHours": 20, // hours a assigned policy is locked before it can be removed
+	"PolicyFactionCooldownInHours": 72, // hours factions are locked before they can be changed
+	"UnlockFactionsLevel": 1, // level when factions become selectable
+
+	/*ESA PROTECTION*/
+	"EsaProtectionEnabled": true, // forbid offensive movements targeting new players
+	"EsaProtectionPeriod": 7, // days new players are protected
+
+	/*SUPER STRUCTURES*/
+	"RequiredStrategicHexCountForSuperStructure": 4, // how many Grand Terestrials in a sector an alliance needs to claim the dyson sphere
+
+	/*EVENT SPEED*/
+	"BuildingConstructionSpeedModifier": 1,
+	"UnitProductionSpeedModifier": 1,
+	"UnitSpeedModifier": 1,
+
+	/*OUTPOST BOOST*/
+	"OutpostHighBoostScoreValue": 1.0, // should be merge, as there no longer is high/low boost just augmentation
+	"OutpostLowBoostScoreValue": 1.0,
+
+	/*DEPARTURE TIME TAKEN IN MINUTES*/
+	"DepartureTimeNeeded": 0, // minutes fleets need to prepare for a movement
+
+	/*REMOVE CARD TO INVENTORY COST*/
+	"ModuleCardToInventoryCreditCost": 100, // credits payed to move an equipped module card to the inventory
+	"CardToInventoryCostMultiplier": 10, // credits payed to move an equipped ship or station card to the inventory "cost = x * (rarity + 1)"
+	"BoostCardBreakdownCost": [ 1, 2, 4, 8 ], // command cards payed to unlock bonus salvage reward
+	"BoostCardBreakdownMultiplier": 1.5, // multiplier for bonus salvage reward (1.0 would be no bonus)
+
+	/*COMMANDER OVERHAUL COSTS*/
+	"CommanderOverhaulCardId": 8500, // which card is used to pay everything below
+	"MoveCapitalCost": 5, // select a new station as capital
+	"RecycleDailyChallengeCost": 2, // reroll a daily challenge
+	"EmpireEventCommanderOverhaulCost": [ 0, 2, 3, 4, 5 ], // instantly complete an empire event
+	"RetainXpOnFleetChangeCost": 4, // change a fleets type without loosing any experience
+
+	/*UNIT TRANSFER RESTRICTIONS*/
+	"AllowFreightingUnitsToSuperStructures": false,
+	"AllowFreightingUnitsToAllianceStations": false,
+	"AllowFreightingUnitsToFOBs": false,
+	"AllowDepositUnitsOnSuperStructures": false,
+	"AllowDepositUnitsOnAllianceStations": false,
+	"AllowDepositUnitsOnFOBs": false,
+
+	"AllowAllianceStationRallyPoint": true,
+	"AllowSuperStructureRallyPoint": false,
+	"AllowFOBRallyPoint": false,
+
+	/*SCAN*/
+	"MaxScanRadius": 29, // maximum scan radius any structure can have (for performance optimization)
+
+	/* RESETS */
+	"WeeklyResetDay": "Saturday", // Saturday, 00:00
+	"DaysInMonthlyReset": 28,
+
+	/* MAP PINS */
+	"MaxPrivateMapPins": 15,
+	"MaxPublicMapPins": 1,
+	"MaxAllianceMapPins": 15,
+	"MaxCoalitionMapPins": 5,
+
+	/*GENERAL*/
+	"MaxTopBattlesOfGame": 10,
+	"MaxTopRecentBattles": 100,
+	"NumMinutesForTopRecentBattles": 1440,
+	"MaxDestroyedStations": 50,
+	"NumMinutesForDestroyedStations": 1440,
+	"MissionToHexRatio": 0.07,
+	"MissionHintInterference": [ 10, 20, 30, 40, 100 ],
+	"NumberOfNpcs": 5000,
+	"OutOfSupplyPenaltyModifier": 0.1,
+	"CapitalStationDestructionAllowed": true,
+
+	"DefaultAvatarImageIds": {
+		"BountyHunter_Black": "BountyHunter",
+		"BountyHunter_Green": "BountyHunter",
+		"BountyHunter_Purple": "BountyHunter",
+		"BountyHunter_Red": "BountyHunter",
+
+		"Commander_Black": "Commander",
+		"Commander_Green": "Commander",
+		"Commander_Purple": "Commander",
+		"Commander_Red": "Commander",
+
+		"Corporation_Black": "Corporation",
+		"Corporation_Green": "Corporation",
+		"Corporation_Purple": "Corporation",
+		"Corporation_Red": "Corporation",
+
+		"FemalePilot_Black": "FemalePilot",
+		"FemalePilot_Green": "FemalePilot",
+		"FemalePilot_Purple": "FemalePilot",
+		"FemalePilot_Red": "FemalePilot",
+
+		"Royalty_Black": "Royalty",
+		"Royalty_Green": "Royalty",
+		"Royalty_Purple": "Royalty",
+		"Royalty_Red": "Royalty",
+
+		"Spacemarine_Black": "Spacemarine",
+		"Spacemarine_Green": "Spacemarine",
+		"Spacemarine_Purple": "Spacemarine",
+		"Spacemarine_Red": "Spacemarine",
+
+		"SpecialForces_Black": "SpecialForces",
+		"SpecialForces_Green": "SpecialForces",
+		"SpecialForces_Purple": "SpecialForces",
+		"SpecialForces_Red": "SpecialForces",
+
+		"Tech_Black": "Tech",
+		"Tech_Green": "Tech",
+		"Tech_Purple": "Tech",
+		"Tech_Red": "Tech"
+	},
+
+	"BaseMovementSignalInterference": {
+		"Return": 0,
+
+		"Deployment": 100,
+		"ReturnFromDeployment": 100,
+
+		"Assault": 0,
+		"ReturnFromAttack": 0,
+
+		"Raid": 0,
+		"ReturnFromRaid": 0,
+
+		"BuildStation": 100,
+		"ReturnFromBuildStation": 100,
+
+		"BuildAllianceStation": 100,
+		"ReturnFromBuildAllianceStation": 100,
+
+		"BuildOutpost": 100,
+		"ReturnFromBuildOutpost": 100,
+
+		"UpgradeOutpost ": 100,
+		"ReturnFromUpgradeOutpost": 100,
+
+		"BoostOutpost": 100,
+		"ReturnFromBoostOutpost": 100,
+
+		"Scan": 200,
+		"ReturnFromScan": 200,
+
+		"Freight": 100,
+		"ReturnFromFreight": 100,
+
+		"Sabotage": 200,
+		"ReturnFromSabotage": 200,
+
+		"SabotageStation": 200,
+		"ReturnFromSabotageStation": 200,
+
+		"CompleteFleetEvent": 100,
+		"ReturnFromEvent": 100,
+
+		"CompleteMission": 100,
+		"ReturnFromMission": 100,
+
+		"CompleteStarMission ": 100,
+		"ReturnFromStarMission": 100
+	},
+
+	"EmpireBaseStats": {
+		"OPERATIVES_COUNT": 1,
+		"OPERATIVES_STRENGTH": 30,
+		"OPERATIVES_POINT_REGEN_MODIFIER": 1,
+		"OPERATIVES_RANDOM_FACTOR": 21,
+		"STAT_FLEETLIM": 6,
+		"BOOST_OUTPOST_POINTS_COUNT": 0,
+		"EMPIRE_BOMBER_TARGET_COUNT": 2,
+		"EMPIRE_PRESTIGE_BREAKDOWN_MULTIPLIER": 1,
+		"ALLIANCE_MAX_FLEETS_PER_OPERATION": 20,
+		"ALLIANCE_MAX_PARTICIPANTS_PER_ASSAULT": 5,
+		"ALLIANCE_MAX_PARTICIPANTS_PER_BUILD": 15,
+		"ALLIANCE_MAX_OPERATIONS_PER_TYPE": 3,
+		"BOOST_OUTPOST_POINT_REGEN_MODIFIER": 1,
+		"UNIT_SCAN_RADIUS": 2,
+		"EMPIRE_STATION_SABOTAGE_DURATION_MODIFIER_SELF": 1,
+		"EMPIRE_STATION_SABOTAGE_DURATION_RIVAL": 5,
+		"EMPIRE_CONSTR_Q": 0,
+		"EMPIRE_PROD_Q": 0,
+		"EMPIRE_MOVEMENT_SPEEDBOOST_CHARGES_MAX": 5,
+		"EMPIRE_MOVEMENT_SPEEDBOOST_MODIFIER": 300
+	},
+
+
+	"PremiumEffects": [
+		{
+			"Target": "Station",
+			"Destination": "EmpireStations",
+			"Origin": "Premium",
+			"TargetAttribute": "EMPIRE_CONSTR_Q",
+			"Modifier": 240,
+			"Type": "Modifier"
+		},
+		{
+			"Target": "Station",
+			"Destination": "EmpireStations",
+			"Origin": "Premium",
+			"TargetAttribute": "EMPIRE_PROD_Q",
+			"Modifier": 720,
+			"Type": "Modifier"
+		}
+	]
+}

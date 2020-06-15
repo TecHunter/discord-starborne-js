@@ -1,0 +1,382 @@
+﻿[
+	{
+		"Id": 1,
+		"FreeReward": {
+			"Resources": {
+				"Metals": 750,
+				"Gases": 750,
+				"Crystals": 750
+			},
+			"CacheIds": [ 0 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"FleetCap": 1,
+			"Resources": {
+				"Metals": 2000,
+				"Gases": 2000,
+				"Crystals": 2000
+			}
+		}
+	},
+	{
+		"Id": 2,
+		"FreeReward": {
+			"Resources": {
+				"Metals": 750,
+				"Gases": 750,
+				"Crystals": 750
+			},
+			"CacheIds": [ 0 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"Resources": {
+				"Metals": 2000,
+				"Gases": 2000,
+				"Crystals": 2000
+			},
+			"Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500 ]
+		}
+	},
+	{
+		"Id": 3,
+		"FreeReward": {
+			"Resources": {
+				"Metals": 750,
+				"Gases": 750,
+				"Crystals": 750
+			},
+			"CacheIds": [ 0 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"Resources": {
+				"Metals": 2000,
+				"Gases": 2000,
+				"Crystals": 2000
+			},
+			"CacheIds": [ 10 ]
+		}
+	},
+	{
+		"Id": 4,
+		"FreeReward": {
+			"Resources": {
+				"Metals": 750,
+				"Gases": 750,
+				"Crystals": 750
+			},
+			"CacheIds": [ 0 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"Resources": {
+				"Metals": 2000,
+				"Gases": 2000,
+				"Crystals": 2000
+			},
+			"Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500 ]
+		}
+	},
+	{
+		"Id": 5,
+		"FreeReward": {
+			"Resources": {
+				"Metals": 750,
+				"Gases": 750,
+				"Crystals": 750
+			},
+			"CacheIds": [ 0 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"Resources": {
+				"Metals": 2000,
+				"Gases": 2000,
+				"Crystals": 2000
+			},
+			"CacheIds": [ 10 ]
+		}
+	},
+	{
+		"Id": 6,
+		"FreeReward": {
+			"Resources": {
+				"Metals": 750,
+				"Gases": 750,
+				"Crystals": 750
+			},
+			"CacheIds": [ 0 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"Resources": {
+				"Metals": 2000,
+				"Gases": 2000,
+				"Crystals": 2000
+			},
+			"Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500 ]
+		}
+	},
+	{
+		"Id": 7,
+		"FreeReward": {
+			"Resources": {
+				"Metals": 2250,
+				"Gases": 2250,
+				"Crystals": 2250
+			},
+			"CacheIds": [ 0 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"Resources": {
+				"Metals": 6000,
+				"Gases": 6000,
+				"Crystals": 6000
+			},
+			"CacheIds": [ 10 ]
+		}
+	},
+	{
+		"Id": 8,
+		"FreeReward": {
+			"Prestige": 8,
+			"CacheIds": [ 1 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": { "Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8006, 8006, 8006, 8006 ] }
+	},
+	{
+		"Id": 9,
+		"FreeReward": {
+			"Prestige": 10,
+			"CacheIds": [ 1 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"CacheIds": [ 11 ],
+			"Cards": [ 8006, 8006, 8006, 8006 ]
+		}
+	},
+	{
+		"Id": 10,
+		"FreeReward": {
+			"Prestige": 12,
+			"CacheIds": [ 1 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": { "Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8006, 8006, 8006, 8006 ] }
+	},
+	{
+		"Id": 11,
+		"FreeReward": {
+			"Prestige": 14,
+			"CacheIds": [ 1 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"CacheIds": [ 11 ],
+			"Cards": [ 8006, 8006, 8006, 8006 ]
+		}
+	},
+	{
+		"Id": 12,
+		"FreeReward": {
+			"Prestige": 16,
+			"CacheIds": [ 1 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": { "Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8006, 8006, 8006, 8006 ] }
+	},
+	{
+		"Id": 13,
+		"FreeReward": {
+			"Prestige": 18,
+			"CacheIds": [ 1 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"CacheIds": [ 11 ],
+			"Cards": [ 8006, 8006, 8006, 8006 ]
+		}
+	},
+	{
+		"Id": 14,
+		"FreeReward": {
+			"Prestige": 20,
+			"CacheIds": [ 1 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": { "Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8006, 8006, 8006, 8006 ] }
+	},
+	{
+		"Id": 15,
+		"FreeReward": {
+			"Prestige": 22,
+			"CacheIds": [ 2 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"CacheIds": [ 12 ],
+			"Cards": [ 8006, 8006, 8006, 8006 ]
+		}
+	},
+	{
+		"Id": 16,
+		"FreeReward": {
+			"Prestige": 24,
+			"CacheIds": [ 2 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": { "Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8000, 8000, 8000 ] }
+	},
+	{
+		"Id": 17,
+		"FreeReward": {
+			"Prestige": 26,
+			"CacheIds": [ 2 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"CacheIds": [ 12 ],
+			"Cards": [ 8000, 8000, 8000 ]
+		}
+	},
+	{
+		"Id": 18,
+		"FreeReward": {
+			"Prestige": 28,
+			"CacheIds": [ 2 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": { "Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8000, 8000, 8000 ] }
+	},
+	{
+		"Id": 19,
+		"FreeReward": {
+			"Prestige": 30,
+			"CacheIds": [ 2 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"CacheIds": [ 12 ],
+			"Cards": [ 8000, 8000, 8000 ]
+		}
+	},
+	{
+		"Id": 20,
+		"FreeReward": {
+			"Prestige": 32,
+			"CacheIds": [ 2 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": { "Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8000, 8000, 8000 ] }
+	},
+	{
+		"Id": 21,
+		"FreeReward": {
+			"Prestige": 34,
+			"CacheIds": [ 2 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"CacheIds": [ 13 ],
+			"Cards": [ 8000, 8000, 8000 ]
+		}
+	},
+	{
+		"Id": 22,
+		"FreeReward": {
+			"Prestige": 36,
+			"CacheIds": [ 3 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": { "Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8000, 8000, 8000 ] }
+	},
+	{
+		"Id": 23,
+		"FreeReward": {
+			"Prestige": 38,
+			"CacheIds": [ 3 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"CacheIds": [ 13 ],
+			"Cards": [ 8000, 8000, 8000 ]
+		}
+	},
+	{
+		"Id": 24,
+		"FreeReward": {
+			"Prestige": 40,
+			"CacheIds": [ 3 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": { "Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8000, 8000, 8000, 8000 ] }
+	},
+	{
+		"Id": 25,
+		"FreeReward": {
+			"Prestige": 42,
+			"CacheIds": [ 3 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"CacheIds": [ 13 ],
+			"Cards": [ 8000, 8000, 8000 ]
+		}
+	},
+	{
+		"Id": 26,
+		"FreeReward": {
+			"Prestige": 44,
+			"CacheIds": [ 3 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": { "Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8000, 8000, 8000 ] }
+	},
+	{
+		"Id": 27,
+		"FreeReward": {
+			"Prestige": 46,
+			"CacheIds": [ 3 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"CacheIds": [ 14 ],
+			"Cards": [ 8000, 8000, 8000 ]
+		}
+	},
+	{
+		"Id": 28,
+		"FreeReward": {
+			"Prestige": 48,
+			"CacheIds": [ 3 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": { "Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8000, 8000, 8000, 8000 ] }
+	},
+	{
+		"Id": 29,
+		"FreeReward": {
+			"Prestige": 50,
+			"CacheIds": [ 4 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": {
+			"CacheIds": [ 14 ],
+			"Cards": [ 8000, 8000, 8000 ]
+		}
+	},
+	{
+		"Id": 30,
+		"FreeReward": {
+			"Prestige": 52,
+			"CacheIds": [ 4 ],
+			"Cards": [ 8500, 8500 ]
+		},
+		"PremiumReward": { "Cards": [ 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8000, 8000, 8000 ] }
+	}
+]

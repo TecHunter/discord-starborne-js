@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+message SpyReport {
+  string agent = 1;
+  string name = 2;
+  sint32 x = 3;
+  sint32 y = 4;
+  
+
+  repeated Structure buildings = 10;
+  repeated Structure outposts = 11;
+  repeated Fleet fleets = 12;
+
+}
+
+message Ship{
+
+}
+
+message Fleet{
+
+}
+
+message Structure{
+
+}
+
+message Card{
+  uint32 id = 1;
+  string name = 2;
+
+}
+

@@ -1,0 +1,116 @@
+﻿[
+	{
+		"ID": 1,
+		"ZoneId": 0,
+		"ColorId": 0,
+		"Name": "Coalition 1"
+	},
+	{
+		"ID": 2,
+		"ZoneId": 1,
+		"ColorId": 0,
+		"Name": "Coalition 2"
+	},
+	{
+		"ID": 3,
+		"ZoneId": 2,
+		"ColorId": 0,
+		"Name": "Coalition 3"
+	},
+	{
+		"ID": 4,
+		"ZoneId": 3,
+		"ColorId": 0,
+		"Name": "Coalition 4"
+	},
+	{
+		"ID": 5,
+		"ZoneId": 4,
+		"ColorId": 0,
+		"Name": "Coalition 5"
+	},
+	{
+		"ID": 6,
+		"ZoneId": 5,
+		"ColorId": 0,
+		"Name": "Coalition 6"
+	},
+	{
+		"ID": 7,
+		"ZoneId": 6,
+		"ColorId": 0,
+		"Name": "Coalition 7"
+	},
+	{
+		"ID": 8,
+		"ZoneId": 7,
+		"ColorId": 0,
+		"Name": "Coalition 8"
+	},
+	{
+		"ID": 9,
+		"ZoneId": 8,
+		"ColorId": 0,
+		"Name": "Coalition 9"
+	},
+	{
+		"ID": 10,
+		"ZoneId": 9,
+		"ColorId": 0,
+		"Name": "Coalition 10"
+	},
+	{
+		"ID": 11,
+		"ZoneId": 10,
+		"ColorId": 0,
+		"Name": "Coalition 11"
+	},
+	{
+		"ID": 12,
+		"ZoneId": 11,
+		"ColorId": 0,
+		"Name": "Coalition 12"
+	},
+	{
+		"ID": 13,
+		"ZoneId": 12,
+		"ColorId": 0,
+		"Name": "Coalition 13"
+	},
+	{
+		"ID": 14,
+		"ZoneId": 13,
+		"ColorId": 0,
+		"Name": "Coalition 14"
+	},
+	{
+		"ID": 15,
+		"ZoneId": 14,
+		"ColorId": 0,
+		"Name": "Coalition 15"
+	},
+	{
+		"ID": 16,
+		"ZoneId": 15,
+		"ColorId": 0,
+		"Name": "Coalition 16"
+	},
+	{
+		"ID": 17,
+		"ZoneId": 16,
+		"ColorId": 0,
+		"Name": "Coalition 17"
+	},
+	{
+		"ID": 18,
+		"ZoneId": 17,
+		"ColorId": 0,
+		"Name": "Coalition 18"
+	},
+	{
+		"ID": 19,
+		"ZoneId": 18,
+		"ColorId": 0,
+		"Name": "Coalition 19"
+	}
+]

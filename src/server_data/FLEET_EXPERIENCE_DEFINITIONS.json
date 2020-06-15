@@ -1,0 +1,44 @@
+﻿{
+
+	// (BaseValue + ((Tier - 1) * 100)) * Level)
+	"OutpostInteractionXpReward": {
+		"BaseValue": 7,
+		"TierMultiplier": 1
+	},
+
+	// ProbeBaseValue + (RevealMissionBaseValue * Mission levels discovered)
+	"ProbeXpReward": {
+		"ProbeBaseValue": 5,
+		"RevealMissionBaseValue": 5
+	},
+
+	// BaseValue * Tier * Level
+	"SabotageOutpostXpReward": {
+		"BaseValue": 25
+	},
+
+	// BaseValue * Level
+	"SabotageStationXpReward": {
+		"BaseValue": 10
+	},
+
+	"BuildStationXpReward": {
+		"BaseValue": 100
+	},
+
+	// Mission: BaseValue * Level * (1 or EscortMultiplier if escorting fleet)
+	"MissionXpReward": {
+		"BaseValue": 15,
+		"EscortMultiplier": 0.2
+	},
+
+	// Solar Harvest: BaseValue * Difficulty
+	"SolarHarvestXpReward": {
+		"BaseValue": 30
+	},
+
+	"CombatXpReward": {
+		"BombingBaseValue": 2, // BombingBaseValue * Tier * Level
+		"StationDestroyedBaseValue": 200 // StationDestroyedBaseValue * level
+	}
+}

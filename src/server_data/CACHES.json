@@ -1,0 +1,245 @@
+﻿[
+	{
+		"$type": "RandomCache",
+		"TemplateId": 0,
+		"Name": "Steel Mission Cache",
+		"CacheType": "Mission",
+		"CacheRarity": 0,
+		"Description": "Earned by completing level 1 Missions.",
+		"LootTableIds": [ 1001, 1001, 1002 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 1,
+		"Name": "Carbon Mission Cache",
+		"CacheType": "Mission",
+		"CacheRarity": 1,
+		"Description": "Earned by completing level 2 Missions.",
+		"LootTableIds": [ 1001, 1002, 1003 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 2,
+		"Name": "Bronze Mission Cache",
+		"CacheType": "Mission",
+		"CacheRarity": 2,
+		"Description": "Earned by completing level 3 Missions.",
+		"LootTableIds": [ 1002, 1003, 1004 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 3,
+		"Name": "Silver Mission Cache",
+		"CacheType": "Mission",
+		"CacheRarity": 3,
+		"Description": "Earned by completing level 4 Missions.",
+		"LootTableIds": [ 1003, 1004, 1006 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 4,
+		"Name": "Gold Mission Cache",
+		"CacheType": "Mission",
+		"CacheRarity": 4,
+		"Description": "Earned by completing level 5 Missions.",
+		"LootTableIds": [ 1005, 1006, 1007 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 5,
+		"Name": "Steel Slab Cache",
+		"CacheType": "Commodity",
+		"CacheRarity": 0,
+		"Description": "Earned by completing level 1 Events.",
+		"LootTableIds": [ 1015 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 6,
+		"Name": "Carbon Plate Cache",
+		"CacheType": "Commodity",
+		"CacheRarity": 1,
+		"Description": "Earned by completing level 2 Events.",
+		"LootTableIds": [ 1016 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 7,
+		"Name": "Titanium Block Cache",
+		"CacheType": "Commodity",
+		"CacheRarity": 2,
+		"Description": "Earned by completing level 3 Events.",
+		"LootTableIds": [ 1017 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 8,
+		"Name": "Diamond Nanorod Cache",
+		"CacheType": "Commodity",
+		"CacheRarity": 3,
+		"Description": "Earned by completing level 4 Events.",
+		"LootTableIds": [ 1018 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 10,
+		"Name": "Steel Challenge Cache",
+		"CacheType": "Challenge",
+		"CacheRarity": 0,
+		"Description": "Earned by completing level 1 Challenges.",
+		"LootTableIds": [ 1008, 1008, 1010 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 11,
+		"Name": "Carbon Challenge Cache",
+		"CacheType": "Challenge",
+		"CacheRarity": 1,
+		"Description": "Earned by completing level 2 Challenges.",
+		"LootTableIds": [ 1008, 1009, 1010 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 12,
+		"Name": "Bronze Challenge Cache",
+		"CacheType": "Challenge",
+		"CacheRarity": 2,
+		"Description": "Earned by completing level 3 Challenges.",
+		"LootTableIds": [ 1008, 1010, 1011 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 13,
+		"Name": "Silver Challenge Cache",
+		"CacheType": "Challenge",
+		"CacheRarity": 3,
+		"Description": "Earned by completing level 4 Challenges.",
+		"LootTableIds": [ 1008, 1011, 1012 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 14,
+		"Name": "Gold Challenge Cache",
+		"CacheType": "Challenge",
+		"CacheRarity": 4,
+		"Description": "Earned by completing level 5 Challenges.",
+		"LootTableIds": [ 1008, 1012, 1013 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 15,
+		"Name": "Premium Steel Slab Cache",
+		"CacheType": "Commodity",
+		"CacheRarity": 0,
+		"Description": "Earned by completing level 1 Events.",
+		"LootTableIds": [ 1019 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 16,
+		"Name": "Premium Carbon Plate Cache",
+		"CacheType": "Commodity",
+		"CacheRarity": 1,
+		"Description": "Earned by completing level 2 Events.",
+		"LootTableIds": [ 1020 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 17,
+		"Name": "Premium Titanium Block Cache",
+		"CacheType": "Commodity",
+		"CacheRarity": 2,
+		"Description": "Earned by completing level 3 Events.",
+		"LootTableIds": [ 1021 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 18,
+		"Name": "Premium Diamond Nanorod Cache",
+		"CacheType": "Commodity",
+		"CacheRarity": 3,
+		"Description": "Earned by completing level 4 Events.",
+		"LootTableIds": [ 1022 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 1100,
+		"Name": "Starter Cache",
+		"CacheType": "Challenge",
+		"CacheRarity": 4,
+		"Description": "Received by purchasing the Starter Pack.",
+		"LootTableIds": [ 2003, 2012, 2012, 2013, 2014 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 1101,
+		"Name": "Commission Package",
+		"CacheType": "Challenge",
+		"CacheRarity": 4,
+		"Description": "Earned by referring another player.",
+		"LootTableIds": [ 2004 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 1102,
+		"Name": "Care Package",
+		"CacheType": "Challenge",
+		"CacheRarity": 4,
+		"Description": "Earned by being referred by another player.",
+		"LootTableIds": [ 2003, 2003 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 1103,
+		"Name": "Challenger Cache",
+		"CacheType": "Challenge",
+		"CacheRarity": 4,
+		"Description": "Earned by reaching a high rank in a classic game.",
+		"LootTableIds": [ 2005 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 1104,
+		"Name": "Special Cache",
+		"CacheType": "Challenge",
+		"CacheRarity": 4,
+		"Description": "Earned from a special occasion.",
+		"LootTableIds": [ 1003, 1004, 1006 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 1105,
+		"Name": "Premium Cache",
+		"CacheType": "Challenge",
+		"CacheRarity": 4,
+		"Description": "Premium Bonus",
+		"LootTableIds": [ 2005 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 1106,
+		"Name": "Research Grant Cache",
+		"CacheType": "Challenge",
+		"CacheRarity": 4,
+		"Description": "Earned by purchasing a bundle.",
+		"LootTableIds": [ 2007 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 1107,
+		"Name": "Research Grant Cache",
+		"CacheType": "Challenge",
+		"CacheRarity": 4,
+		"Description": "Earned by purchasing a bundle.",
+		"LootTableIds": [ 2007 ]
+	},
+	{
+		"$type": "RandomCache",
+		"TemplateId": 1108,
+		"Name": "Research Grant Cache",
+		"CacheType": "Challenge",
+		"CacheRarity": 4,
+		"Description": "Earned by purchasing a bundle.",
+		"LootTableIds": [ 2007 ]
+	}
+]

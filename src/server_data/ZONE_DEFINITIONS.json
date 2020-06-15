@@ -1,0 +1,348 @@
+[
+	// We need one of these for each zone
+	{
+		// Libra
+		"ZoneId": 0,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": false,
+		"HasDysonSphere": false,
+		"ShowName": true,
+		"Type": "StartingZone",
+		"Effects": [
+			{
+				"Origin": "Zone",
+				"Destination": "Station",
+				"Target": "Station",
+				"TargetAttribute": "STAT_INC_RAID_NULLIFIED",
+				"Type": "Modifier",
+				"Modifier": 1
+			}
+		]
+	},
+	{
+		// Gemini
+		"ZoneId": 1,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": false,
+		"HasDysonSphere": false,
+		"ShowName": true,
+		"Type": "StartingZone",
+		"Effects": [
+			{
+				"Origin": "Zone",
+				"Destination": "Station",
+				"Target": "Station",
+				"TargetAttribute": "STAT_INC_RAID_NULLIFIED",
+				"Type": "Modifier",
+				"Modifier": 1
+			}
+		]
+	},
+	{
+		// Draco Malfoy
+		"ZoneId": 2,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": false,
+		"HasDysonSphere": false,
+		"ShowName": true,
+		"Type": "StartingZone",
+		"Effects": [
+			{
+				"Origin": "Zone",
+				"Destination": "Station",
+				"Target": "Station",
+				"TargetAttribute": "STAT_INC_RAID_NULLIFIED",
+				"Type": "Modifier",
+				"Modifier": 1
+			}
+		]
+	},
+	{
+		// Cygnus
+		"ZoneId": 3,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": false,
+		"HasDysonSphere": false,
+		"ShowName": true,
+		"Type": "StartingZone",
+		"Effects": [
+			{
+				"Origin": "Zone",
+				"Destination": "Station",
+				"Target": "Station",
+				"TargetAttribute": "STAT_INC_RAID_NULLIFIED",
+				"Type": "Modifier",
+				"Modifier": 1
+			}
+		]
+	},
+	{
+		// Taurus
+		"ZoneId": 4,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": false,
+		"HasDysonSphere": false,
+		"ShowName": true,
+		"Type": "StartingZone",
+		"Effects": [
+			{
+				"Origin": "Zone",
+				"Destination": "Station",
+				"Target": "Station",
+				"TargetAttribute": "STAT_INC_RAID_NULLIFIED",
+				"Type": "Modifier",
+				"Modifier": 1
+			}
+		]
+	},
+	{
+		// Sagitta
+		"ZoneId": 5,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": false,
+		"HasDysonSphere": false,
+		"ShowName": true,
+		"Type": "StartingZone",
+		"Effects": [
+			{
+				"Origin": "Zone",
+				"Destination": "Station",
+				"Target": "Station",
+				"TargetAttribute": "STAT_INC_RAID_NULLIFIED",
+				"Type": "Modifier",
+				"Modifier": 1
+			}
+		]
+	},
+	{
+		// Yngvi
+		"ZoneId": 6,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": true,
+		"HasDysonSphere": false,
+		"ShowName": true,
+		"Type": "LowValueZone",
+		"Effects": []
+	},
+	{
+		// Aires
+		"ZoneId": 7,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": true,
+		"HasDysonSphere": false,
+		"ShowName": true,
+		"Type": "LowValueZone",
+		"Effects": []
+	},
+	{
+		// Vulpecula
+		"ZoneId": 8,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": true,
+		"HasDysonSphere": false,
+		"ShowName": true,
+		"Type": "LowValueZone",
+		"Effects": []
+	},
+	{
+		// Orion
+		"ZoneId": 9,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": true,
+		"HasDysonSphere": false,
+		"ShowName": true,
+		"Type": "LowValueZone",
+		"Effects": []
+	},
+	{
+		// Virgo
+		"ZoneId": 10,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": true,
+		"HasDysonSphere": false,
+		"ShowName": true,
+		"Type": "LowValueZone",
+		"Effects": []
+	},
+	{
+		// Monoceros
+		"ZoneId": 11,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": true,
+		"HasDysonSphere": false,
+		"ShowName": true,
+		"Type": "LowValueZone",
+		"Effects": []
+	},
+	{
+		// Equuleus
+		"ZoneId": 12,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": true,
+		"HasDysonSphere": true,
+		"ShowName": true,
+		"Type": "MedValueZone",
+		"Effects": []
+	},
+	{
+		// Fornax
+		"ZoneId": 13,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": true,
+		"HasDysonSphere": true,
+		"ShowName": true,
+		"Type": "MedValueZone",
+		"Effects": []
+	},
+	{
+		// Lupus
+		"ZoneId": 14,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": true,
+		"HasDysonSphere": true,
+		"ShowName": true,
+		"Type": "MedValueZone",
+		"Effects": []
+	},
+	{
+		// Serpens
+		"ZoneId": 15,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": true,
+		"HasDysonSphere": true,
+		"ShowName": true,
+		"Type": "MedValueZone",
+		"Effects": []
+	},
+	{
+		// Cassiopeia
+		"ZoneId": 16,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": true,
+		"HasDysonSphere": true,
+		"ShowName": true,
+		"Type": "MedValueZone",
+		"Effects": []
+	},
+	{
+		// Phoenix
+		"ZoneId": 17,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": true,
+		"HasDysonSphere": true,
+		"ShowName": true,
+		"Type": "MedValueZone",
+		"Effects": []
+	},
+	{
+		// Black Hole
+		"ZoneId": 18,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": false,
+		"HasDysonSphere": false,
+		"ShowName": false,
+		"Type": "HighValueZone",
+		"UnlocksOnGameDay": 36,
+		"Effects": [
+			{
+				"Origin": "Zone",
+				"Destination": "Fleets",
+				"Target": "Fleet",
+				"TargetAttribute": "UNIT_SPD",
+				"Type": "Multiplier",
+				"Modifier": -0.75
+			}
+		]
+	},
+	{
+		// Outer PvE
+		"ZoneId": 19,
+		"Restricted": true,
+		"IsCountedForTerritorialVictory": true,
+		"HasDysonSphere": false,
+		"ShowName": false,
+		"Type": "RestrictedZone",
+		"Effects": []
+	},
+	{
+		// Inner PvE
+		"ZoneId": 20,
+		"Restricted": true,
+		"IsCountedForTerritorialVictory": true,
+		"HasDysonSphere": false,
+		"ShowName": false,
+		"Type": "RestrictedZone",
+		"Effects": [
+		]
+	},
+	{
+		// The Descent
+		"ZoneId": 21,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": true,
+		"HasDysonSphere": false,
+		"ShowName": false,
+		"Type": "MedValueZone",
+		"Effects": []
+	},
+	{
+		// Yngvi Ice Belt
+		"ZoneId": 22,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": true,
+		"HasDysonSphere": false,
+		"ShowName": false,
+		"Type": "MedValueZone",
+		"Effects": []
+	},
+	{
+		// 23: Aires Ice Belt
+		"ZoneId": 23,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": true,
+		"HasDysonSphere": false,
+		"ShowName": false,
+		"Type": "MedValueZone",
+		"Effects": []
+	},
+	{
+		// 24: Vulpecula Ice Belt
+		"ZoneId": 24,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": true,
+		"HasDysonSphere": false,
+		"ShowName": false,
+		"Type": "MedValueZone",
+		"Effects": []
+	},
+	{
+		// 25: Orion Ice Belt
+		"ZoneId": 25,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": true,
+		"HasDysonSphere": false,
+		"ShowName": false,
+		"Type": "MedValueZone",
+		"Effects": []
+	},
+	{
+		// 26: Virgo Ice Belt
+		"ZoneId": 26,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": true,
+		"HasDysonSphere": false,
+		"ShowName": false,
+		"Type": "MedValueZone",
+		"Effects": []
+	},
+	{
+		// 27: Monoceros Ice Belt
+		"ZoneId": 27,
+		"Restricted": false,
+		"IsCountedForTerritorialVictory": true,
+		"HasDysonSphere": false,
+		"ShowName": false,
+		"Type": "MedValueZone",
+		"Effects": []
+	}
+]

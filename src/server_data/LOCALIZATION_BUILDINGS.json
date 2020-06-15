@@ -1,0 +1,407 @@
+[
+	{
+		"Id": 0,
+		"Name": "Command Center",
+		"Branch": "Root",
+		"Description": "Increases the building construction queue time cap by <color=green>12</color> minutes per level.\nDecreases building construction time by <color=green>2%</color> by level."
+	},
+	{
+		"Id": 600,
+		"Name": "Warehouse",
+		"Branch": "General",
+		"Description": "Increases the maximum amount of each resource this station can store."
+	},
+	{
+		"Id": 610,
+		"Name": "Warehouse Extension",
+		"Branch": "General",
+		"Description": "Increases the maximum amount of each resource this station can store."
+	},
+	{
+		"Id": 500,
+		"Name": "Living Quarters",
+		"Branch": "ResourceProducer",
+		"Description": "Increases labor for the station.\n\nThis building requires no labor upkeep."
+	},
+	{
+		"Id": 501,
+		"Name": "Life Support",
+		"Branch": "ResourceProducer",
+		"Description": "Increases labor for the station.\n\nThis building requires no labor upkeep."
+	},
+	{
+		"Id": 502,
+		"Name": "Air Filtration",
+		"Branch": "ResourceProducer",
+		"Description": "Increases labor for the station.\n\nThis building requires no labor upkeep."
+	},
+	{
+		"Id": 503,
+		"Name": "Recreational Area",
+		"Branch": "ResourceProducer",
+		"Description": "Increases labor for the station.\n\nThis building requires no labor upkeep."
+	},
+	{
+		"Id": 510,
+		"Name": "Metal Refinery",
+		"Branch": "ResourceProducer",
+		"Description": "Produces metal for the station."
+	},
+	{
+		"Id": 511,
+		"Name": "Metal Conveyor Line",
+		"Branch": "ResourceProducer",
+		"Description": "Produces metal for the station."
+	},
+	{
+		"Id": 512,
+		"Name": "Metal Processing Plant",
+		"Branch": "ResourceProducer",
+		"Description": "Produces metal for the station."
+	},
+	{
+		"Id": 513,
+		"Name": "Metal Forge",
+		"Branch": "ResourceProducer",
+		"Description": "Produces metal for the station."
+	},
+	{
+		"Id": 520,
+		"Name": "Gas Refinery",
+		"Branch": "ResourceProducer",
+		"Description": "Produces gas for the station."
+	},
+	{
+		"Id": 521,
+		"Name": "Gas Conveyor Line",
+		"Branch": "ResourceProducer",
+		"Description": "Produces gas for the station."
+	},
+	{
+		"Id": 522,
+		"Name": "Gas Processing Plant",
+		"Branch": "ResourceProducer",
+		"Description": "Produces gas for the station."
+	},
+	{
+		"Id": 523,
+		"Name": "Gas Distillery",
+		"Branch": "ResourceProducer",
+		"Description": "Produces gas for the station."
+	},
+	{
+		"Id": 530,
+		"Name": "Crystal Refinery",
+		"Branch": "ResourceProducer",
+		"Description": "Produces crystal for the station."
+	},
+	{
+		"Id": 531,
+		"Name": "Crystal Conveyor Line",
+		"Branch": "ResourceProducer",
+		"Description": "Produces crystal for the station."
+	},
+	{
+		"Id": 532,
+		"Name": "Crystal Processing Plant",
+		"Branch": "ResourceProducer",
+		"Description": "Produces crystal for the station."
+	},
+	{
+		"Id": 533,
+		"Name": "Crystal Cutting",
+		"Branch": "ResourceProducer",
+		"Description": "Produces crystal for the station."
+	},
+	{
+		"Id": 103,
+		"Name": "Warhead Factory",
+		"Branch": "General",
+		"Description": "Allows the production of Gunships at this station."
+	},
+	{
+		"Id": 200,
+		"Name": "Shipyard",
+		"Branch": "Military",
+		"Description": "Light units take <color=green>2%</color> less time to build per level."
+	},
+	{
+		"Id": 210,
+		"Name": "Military Barracks",
+		"Branch": "Military",
+		"Description": "Your fleets operating from this station cost <color=green>3</color> less labor per level.\n\nThis building requires no labor upkeep."
+	},
+	{
+		"Id": 212,
+		"Name": "Strike Command",
+		"Branch": "Military",
+		"Description": "Fleets raiding from this station gain <color=green>5%</color> more Cargo Space per level."
+	},
+	{
+		"Id": 211,
+		"Name": "Barricades",
+		"Branch": "Military",
+		"Description": "Protects the station's resources from raiders by hiding <color=green>250</color> metal, gas and crystal. \nEach level doubles the amount hidden.\n\nHidden resources do not show up on espionage reports and can only be stolen by fleets with plunder.\n\nIncreases the hit points of all buildings by <color=green>2%</color> per level."
+	},
+	{
+		"Id": 220,
+		"Name": "Fleet Docks",
+		"Branch": "Military",
+		"Description": "Corvettes and Patrol Ships take <color=green>2%</color> less time to build per level."
+	},
+	{
+		"Id": 221,
+		"Name": "Department of Acquisitions",
+		"Branch": "Military",
+		"Description": "Fleets raiding from this station gain <color=green>2%</color> Plunder per level.\n\nYour armada's average plunder value lowers the amount of resources hidden by a defender's Barricades building."
+	},
+	{
+		"Id": 222,
+		"Name": "Military Hangars",
+		"Branch": "Military",
+		"Description": "Protects the station's hangared units from attacks by hiding <color=green>1000</color> units of each ship type in its hangars per level.\n\nHidden units do not show up on espionage reports and can not be targeted by attackers.\n\nAll fleets operating from a station (including visiting fleets) cost 10% more labor for each fleet docked at the station (including visiting fleets) above its operating limit.\n\nAdds <color=green>4</color> station capture defense per level."
+	},
+	{
+		"Id": 232,
+		"Name": "Space Academy",
+		"Branch": "Military",
+		"Description": "Corvette, Patrol Ship, Destroyer and Frigate fleets supplied by this station cost <color=green>0.5%</color> less labor per level.\n\nCorvette, Patrol Ship, Destroyer and Frigate fleets supplied by this station gain [ <color=green>0.8</color> | <color=green>4</color> ] firepower and [ <color=green>2</color> | <color=green>10</color> ] hit points per level."
+	},
+	{
+		"Id": 230,
+		"Name": "Civilian Militia",
+		"Branch": "Military",
+		"Description": "Increases the tactical firepower boost cap for this station by <color=green>0.5%</color> per level.\n\nIncrease the Fleet Operating Limit of this station by 1 per level.\n\n<color=green>At level 10, if this station owns a Mining Colony, establish Prospect Inc.</color>\n\n<color=green>At level 10, if this station owns a Habitation Dome, establish Civic Intelligence.</color>"
+	},
+	{
+		"Id": 231,
+		"Name": "Sector Command",
+		"Branch": "Military",
+		"Description": "Increase the Fleet Operating Limit of this station by <color=green>2</color> per level.\n\nAll fleets operating from a station (including visiting fleets) cost 10% more labor for each fleet docked at the station (including visiting fleets) above its operating limit."
+	},
+	{
+		"Id": 300,
+		"Name": "Surveillance Office",
+		"Branch": "Dominion",
+		"Description": "Station scan radius increased by <color=green>1</color> per level."
+	},
+	{
+		"Id": 311,
+		"Name": "Strategic Division",
+		"Branch": "Dominion",
+		"Description": "Scouts and Recons supplied by this station gain <color=green>2</color> speed per level while scanning."
+	},
+	{
+		"Id": 310,
+		"Name": "Patrol Station",
+		"Branch": "Dominion",
+		"Description": "Lowers the mission requirements for fleets running missions from this station by <color=green>-1%</color> per level.\n\n\n<color=green>At level 10, lower the mission escort requirement for fleets running missions from this station by 1.</color>"
+	},
+	{
+		"Id": 312,
+		"Name": "Administration Office",
+		"Branch": "Dominion",
+		"Description": "Buildings cost <color=green>2%</color> less labor per level.\n\nThis building requires no labor upkeep."
+	},
+	{
+		"Id": 320,
+		"Name": "Docking Bay",
+		"Branch": "Dominion",
+		"Description": "Scouts take <color=green>2%</color> less time to build per level."
+	},
+	{
+		"Id": 321,
+		"Name": "Search and Rescue HQ",
+		"Branch": "Dominion",
+		"Description": "Lowers the mission requirements for fleets running missions from this station by <color=green>-1%</color> per level.\n\n\n<color=green>At level 10, fleets running missions from this station gain 2 speed.</color>"
+	},
+	{
+		"Id": 322,
+		"Name": "Astro Farm",
+		"Branch": "Dominion",
+		"Description": "Increase the labor output of buildings by <color=green>2%</color> per level.\n\nThis building requires no labor upkeep."
+	},
+	{
+		"Id": 332,
+		"Name": "Scout Command",
+		"Branch": "Dominion",
+		"Description": "Scout, Recon and Gunship fleets supplied by this station cost <color=green>0.5%</color> less labor per level.\n\n[ Scout | Recon ] units supplied by this station gain [ <color=green>0.8</color> | <color=green>4</color> ] firepower and [ <color=green>2</color> | <color=green>10</color> ] hit points per level."
+	},
+	{
+		"Id": 330,
+		"Name": "Communication Array",
+		"Branch": "Dominion",
+		"Description": "Station scan strength increased by <color=green>10</color> per level.\n\n<color=green>At level 10, if this station owns a Navy Base, establish Bellicose Industries.</color>\n\n<color=green>At level 10, if this station owns a Mining Colony, establish Trans-Galactic Exports.</color>"
+	},
+	{
+		"Id": 331,
+		"Name": "Station Hall",
+		"Branch": "Dominion",
+		"Description": "Increases the station's claim strength by <color=green>1</color> every two levels."
+	},
+	{
+		"Id": 400,
+		"Name": "Smelting Plant",
+		"Branch": "Industry",
+		"Description": "Reduces construction cost of production buildings in this station by <color=green>2%</color> by level."
+	},
+	{
+		"Id": 412,
+		"Name": "Department of Infrastructure",
+		"Branch": "Industry",
+		"Description": "Industrial fleets supplied by this station gain <color=green>2</color> speed per level when operating on outposts."
+	},
+	{
+		"Id": 411,
+		"Name": "Plasma Chamber",
+		"Branch": "Industry",
+		"Description": "Increases the plasma cargo for industrial fleets harvesting solar flares from this station by <color=green>0.015</color> per level.  \n\nPlasma cargo is used for resources harvested from solar flares."
+	},
+	{
+		"Id": 410,
+		"Name": "Shipping Zone",
+		"Branch": "Industry",
+		"Description": "Each level provides <color=green>1</color> freighter for Global Freighter Pool. \n"
+	},
+	{
+		"Id": 420,
+		"Name": "Industrial Docks",
+		"Branch": "Industry",
+		"Description": "Industrials take <color=green>2%</color> less time to build per level."
+	},
+	{
+		"Id": 422,
+		"Name": "Plasma Refinery",
+		"Branch": "Industry",
+		"Description": "Increases the cargo space for industrial fleets harvesting solar flares from this station by <color=green>4</color> per level.\n\n<color=green>At level 10, increase the speed of industrial fleets harvesting solar flares from this station by <color=green>2</color>.</color>"
+	},
+	{
+		"Id": 421,
+		"Name": "Merchant House",
+		"Branch": "Industry",
+		"Description": "Freighters departing from this station gain <color=green>10</color> cargo per level.\n\n<color=green>At level 10, lower resource exchange rate for this station by 1.</color>"
+	},
+	{
+		"Id": 431,
+		"Name": "Transit Nexus",
+		"Branch": "Industry",
+		"Description": "Industrial, Carrier and Dreadnought fleets supplied by this station cost <color=green>0.5%</color> less labor per level.\n\nIndustrial fleets supplied by this station gain <color=green>4</color> Cargo Space per level. \n\nCarrier and Dreadnought fleets supplied by this station gain <color=green>20</color> firepower per level.\n\nCarrier and Dreadnought fleets supplied by this station gain <color=green>50</color> hit points per level."
+	},
+	{
+		"Id": 430,
+		"Name": "Survey Department",
+		"Branch": "Industry",
+		"Description": "Increase resources harvested by the station by <color=green>2%</color> per level. \n\n<color=green>At level 10, if this station owns a Habitation Dome, establish WALL Industrial Security.</color>\n\n<color=green>At level 10, if this station owns a Heavy Ship Assembly, establish Gubernatorial Colonial.</color>"
+	},
+	{
+		"Id": 432,
+		"Name": "Industrial Complex",
+		"Branch": "Industry",
+		"Description": "Increases the total metal, gas and crystal production of the station by <color=green>1%</color> per level."
+	},
+	//Alliance Station
+	{
+		"Id": 710,
+		"Name": "Century Warehouse",
+		"Branch": "Universal",
+		"Description": "Increases the maximum amount of each resource this station can store."
+	},
+	{
+		"Id": 720,
+		"Name": "Alliance Command",
+		"Branch": "Universal",
+		"Description": "Increases the fleets allowed in alliance movements by <color=green>3</color> per level.\n\nIncreaseses the amount of alliance members that can participate in alliance assaults by <color=green>3</color> per level.\n\nIncreaseses the amount of concurrent alliance movements by <color=green>3</color>, <color=green>5</color>, <color=green>7</color>, <color=green>10</color>, <color=green>15</color> at levels 1-5, respectively. "
+	},
+	{
+		"Id": 730,
+		"Name": "Alliance Traffic Control",
+		"Branch": "Universal",
+		"Description": "Increases the speed for alliance memebers when deploying to allied stations, forward operating bases and alliance station by <color=green>5</color> per level."
+	},
+	{
+		"Id": 740,
+		"Name": "Federate Manufacturers",
+		"Branch": "Universal",
+		"Description": "Allows the construction of units in the alliance station.\n\nReduces unit time cost by <color=green>25%</color> per level.\n\nLevel 1 unlocks light units.\nLevel 2 unlocks heavy units.\nLevel 3 unlocks capital units."
+	},
+	{
+		"Id": 750,
+		"Name": "Alliance Logistics Base",
+		"Branch": "Universal",
+		"Description": "Increases the fleet operting limit of the alliance station by <color=green>10</color> per level."
+	},
+	{
+		"Id": 760,
+		"Name": "Operations Center",
+		"Branch": "Universal",
+		"Description": "Allows the construction and operation of <color=green>1</color> Forward Operating Base per level."
+	},
+	{
+		"Id": 770,
+		"Name": "Federal Armory",
+		"Branch": "Universal",
+		"Description": "<color=green>[ +1 | +5 | +25 ]</color> firepower for allied combat and raiding fleets.\n\n<color=green>[ +2.5 | +12.5 | +62.5 ]</color> hit points for allied combat and raiding fleets."
+	},
+	// Forward Base
+	{
+		"Id": 910,
+		"Name": "Drive Core",
+		"Branch": "Universal",
+		"Description": "Decreases the Forward Operating Base's jump preparation time by <color=green>2</color> hours per level.\n\nForward Operating Base buildings require no labor upkeep."
+	},
+	{
+		"Id": 920,
+		"Name": "Particle Accelerator",
+		"Branch": "Universal",
+		"Description": "Increases the Forward Operating Base's jump range by <color=green>10</color> per level.\n\nForward Operating Base buildings require no labor upkeep."
+	},
+	{
+		"Id": 930,
+		"Name": "Navigation Beacon",
+		"Branch": "Universal",
+		"Description": "Increases the speed of incoming deployments by <color=green>5</color> per level.\n\nForward Operating Base buildings require no labor upkeep."
+	},
+	{
+		"Id": 940,
+		"Name": "Hangar Bay",
+		"Branch": "Universal",
+		"Description": "Increases the fleet operting limit of the Forward Operating Base by <color=green>10</color> per level.\n\nForward Operating Base buildings require no labor upkeep."
+	},
+	{
+		"Id": 950,
+		"Name": "Cargo Bay",
+		"Branch": "Universal",
+		"Description": "Increases the maximum amount of each resource the Forward Operating Base can store.\n\nForward Operating Base buildings require no labor upkeep."
+	},
+	// Dyson Sphere
+	{
+		"Id": 810,
+		"Name": "Ring Structure",
+		"Branch": "Universal",
+		"Description": "Your confederacy needs to own 4 or more Grand Terrestrial hexes to unlock this building (these GTs can be in any sector).\n\nIncreases the fleet operating limit of the Dyson Sphere by 20 per level."
+	},
+	{
+		"Id": 820,
+		"Name": "Dyson Shell",
+		"Branch": "Universal",
+		"Description": "Your confederacy needs to own 8 or more Grand Terrestrial hexes to unlock this building (these GTs can be in any sector).\n\nWhen the game ends, confederacies gain 1 Victory Point for each Grand Terrestrial hex they own.  \nIn addition, each Grand Terrestrial hex that is in the same sector as this Dyson Sphere grants 0.1 Victory Points to your confederacy per level of this building.\n\nGame ends when any confederacy completes this building or the game time runs out."
+	},
+	{
+		"Id": 830,
+		"Name": "Magazine",
+		"Branch": "Universal",
+		"Description": "Your confederacy needs to own 2 or more Grand Terrestrial hexes to unlock this building (these GTs can be in any sector).\n\nIncreases the maximum amount of each resource the Dyson Sphere can store."
+	},
+	{
+		"Id": 840,
+		"Name": "Federal Court",
+		"Branch": "Universal",
+		"Description": "Your confederacy needs to own 7 or more Grand Terrestrial hexes to unlock this building (these GTs can be in any sector).\n\nIncreases the number of alliances allowed in the confederacy by 2."
+	},
+	{
+		"Id": 850,
+		"Name": "Navigation Beacon",
+		"Branch": "Universal",
+		"Description": "Increases the speed of incoming deployments by <color=green>5</color> per level.\n\nDyson Sphere buildings require no labor upkeep."
+	}
+]
